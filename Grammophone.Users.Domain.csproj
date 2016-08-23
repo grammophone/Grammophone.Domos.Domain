@@ -70,6 +70,12 @@
     <Compile Include="UserGroupTrackingEntity.cs" />
     <Compile Include="UserSegregationTrackingEntity.cs" />
     <Compile Include="UserTrackingEntity.cs" />
+    <Compile Include="Workflow\IStateful.cs" />
+    <Compile Include="Workflow\State.cs" />
+    <Compile Include="Workflow\StateGroup.cs" />
+    <Compile Include="Workflow\StatePath.cs" />
+    <Compile Include="Workflow\StateTransition.cs" />
+    <Compile Include="Workflow\WorkflowGraph.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="RegistrationStatusResources.resx">

@@ -8,6 +8,8 @@ namespace Grammophone.Users.Domain
 {
 	/// <summary>
 	/// Implemented by entities supporting group ownership.
+	/// Remember to eager fetch the <see cref="OwnerUsers"/> property
+	/// when retrieving a list of entities implementing this interface to avoid a 'n+1' performance penalty.
 	/// </summary>
 	/// <typeparam name="U">The type of user, derived from <see cref="User"/>.</typeparam>
 	public interface IUserGroupTrackingEntity<U> : ITrackingEntity<U>
