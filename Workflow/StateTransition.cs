@@ -16,6 +16,12 @@ namespace Grammophone.Users.Domain.Workflow
 	public class StateTransition<U> : UserGroupTrackingEntity<U>
 		where U : User
 	{
+		#region Private fields
+
+		private ICollection<Attachment<U>> attachments;
+
+		#endregion
+
 		#region Primitive properties
 
 		/// <summary>
@@ -43,6 +49,23 @@ namespace Grammophone.Users.Domain.Workflow
 		/// The <see cref="StatePath"/> which was executed for the transition.
 		/// </summary>
 		public virtual StatePath Path { get; set; }
+
+		/// <summary>
+		/// Optional attachments accompanying this state transition.
+		/// </summary>
+		public virtual ICollection<Attachment<U>> Attachments
+		{
+			get
+			{
+				return attachments ?? (attachments = new HashSet<Attachment<U>>());
+			}
+			set
+			{
+				if (value == null) throw new ArgumentNullException(nameof(value));
+
+				attachments = value;
+			}
+		}
 
 		#endregion
 	}

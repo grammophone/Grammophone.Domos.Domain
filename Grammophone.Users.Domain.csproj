@@ -70,6 +70,8 @@
     <Compile Include="UserGroupTrackingEntity.cs" />
     <Compile Include="UserSegregationTrackingEntity.cs" />
     <Compile Include="UserTrackingEntity.cs" />
+    <Compile Include="Workflow\Attachment.cs" />
+    <Compile Include="Workflow\AttachmentContent.cs" />
     <Compile Include="Workflow\IStateful.cs" />
     <Compile Include="Workflow\State.cs" />
     <Compile Include="Workflow\StateGroup.cs" />
