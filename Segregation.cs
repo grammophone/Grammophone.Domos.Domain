@@ -22,6 +22,9 @@ namespace Grammophone.Users.Domain
 		/// </summary>
 		public virtual long ID { get; set; }
 
+		/// <summary>
+		/// This property is bound to <see cref="ID"/>.
+		/// </summary>
 		long ISegregationTrackingEntity.SegregationID
 		{
 			get
