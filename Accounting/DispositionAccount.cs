@@ -34,16 +34,16 @@ namespace Grammophone.Users.Domain.Accounting
 		/// Once set, cannot be changed.
 		/// </summary>
 		[IgnoreDataMember]
-		public virtual long OwnerDispositionID
+		public virtual long OwningDispositionID
 		{
 			get
 			{
-				return dispositionTrackingTrait.OwnerDispositionID;
+				return dispositionTrackingTrait.OwningDispositionID;
 			}
 
 			set
 			{
-				dispositionTrackingTrait.OwnerDispositionID = value;
+				dispositionTrackingTrait.OwningDispositionID = value;
 			}
 		}
 
@@ -52,15 +52,15 @@ namespace Grammophone.Users.Domain.Accounting
 		/// Once set, cannot be changed.
 		/// </summary>
 		[IgnoreDataMember]
-		public virtual D OwnerDisposition
+		public virtual D OwningDisposition
 		{
 			get
 			{
-				return dispositionTrackingTrait.OwnerDisposition;
+				return dispositionTrackingTrait.OwningDisposition;
 			}
 			set
 			{
-				dispositionTrackingTrait.OwnerDisposition = value;
+				dispositionTrackingTrait.OwningDisposition = value;
 			}
 		}
 

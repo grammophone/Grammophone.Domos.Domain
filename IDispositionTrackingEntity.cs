@@ -16,7 +16,7 @@ namespace Grammophone.Users.Domain
 		/// The ID of the disposition which owns this entity.
 		/// Once set, cannot be changed.
 		/// </summary>
-		long OwnerDispositionID { get; set; }
+		long OwningDispositionID { get; set; }
 	}
 
 	/// <summary>
@@ -36,6 +36,6 @@ namespace Grammophone.Users.Domain
 		/// The disposition which owns this entity.
 		/// Once set, cannot be changed.
 		/// </summary>
-		D OwnerDisposition { get; set; }
+		D OwningDisposition { get; set; }
 	}
 }

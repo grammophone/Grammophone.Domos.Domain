@@ -16,9 +16,9 @@ namespace Grammophone.Users.Domain
 	{
 		#region Private fields
 
-		private long ownerUserID;
+		private long owningUserID;
 
-		private U ownerUser;
+		private U owningUser;
 
 		#endregion
 
@@ -28,20 +28,20 @@ namespace Grammophone.Users.Domain
 		/// The ID of the user who owns the entity.
 		/// Once set, cannot be changed.
 		/// </summary>
-		public long OwnerUserID
+		public long OwningUserID
 		{
 			get
 			{
-				return ownerUserID;
+				return owningUserID;
 			}
 			set
 			{
-				if (ownerUserID != value)
+				if (owningUserID != value)
 				{
-					if (ownerUserID != 0L)
+					if (owningUserID != 0L)
 						throw new DomainAccessDeniedException("The owner of the entity cannot be changed.", this);
 
-					ownerUserID = value;
+					owningUserID = value;
 				}
 			}
 		}
@@ -50,22 +50,22 @@ namespace Grammophone.Users.Domain
 		/// The owner of the entity.
 		/// Once set, cannot be changed.
 		/// </summary>
-		public U OwnerUser
+		public U OwningUser
 		{
 			get
 			{
-				return ownerUser;
+				return owningUser;
 			}
 			set
 			{
 				if (value == null) throw new ArgumentNullException(nameof(value));
 
-				if (ownerUser != value)
+				if (owningUser != value)
 				{
-					if (ownerUser != null)
+					if (owningUser != null)
 						throw new DomainAccessDeniedException("The owner of the entity cannot be changed.", this);
 
-					ownerUser = value;
+					owningUser = value;
 				}
 			}
 		}

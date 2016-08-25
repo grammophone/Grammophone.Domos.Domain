@@ -28,15 +28,15 @@ namespace Grammophone.Users.Domain.Accounting
 		/// Once set, cannot be changed.
 		/// </summary>
 		[IgnoreDataMember]
-		public virtual long OwnerUserID
+		public virtual long OwningUserID
 		{
 			get
 			{
-				return userTrackingTrait.OwnerUserID;
+				return userTrackingTrait.OwningUserID;
 			}
 			set
 			{
-				userTrackingTrait.OwnerUserID = value;
+				userTrackingTrait.OwningUserID = value;
 			}
 		}
 
@@ -45,15 +45,15 @@ namespace Grammophone.Users.Domain.Accounting
 		/// Once set, cannot be changed.
 		/// </summary>
 		[IgnoreDataMember]
-		public virtual U OwnerUser
+		public virtual U OwningUser
 		{
 			get
 			{
-				return userTrackingTrait.OwnerUser;
+				return userTrackingTrait.OwningUser;
 			}
 			set
 			{
-				userTrackingTrait.OwnerUser = value;
+				userTrackingTrait.OwningUser = value;
 			}
 		}
 

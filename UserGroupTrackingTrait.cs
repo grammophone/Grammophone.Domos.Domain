@@ -16,7 +16,7 @@ namespace Grammophone.Users.Domain
 	{
 		#region Private fields
 
-		private ICollection<U> ownerUsers;
+		private ICollection<U> owningUsers;
 
 		#endregion
 
@@ -27,17 +27,17 @@ namespace Grammophone.Users.Domain
 		/// At least when querying for lists of entities, 
 		/// please remember to early fetch the owners to avoid a 'n+1' performance hit.
 		/// </summary>
-		public ICollection<U> OwnerUsers
+		public ICollection<U> OwningUsers
 		{
 			get
 			{
-				return ownerUsers ?? (ownerUsers = new HashSet<U>());
+				return owningUsers ?? (owningUsers = new HashSet<U>());
 			}
 			set
 			{
 				if (value == null) throw new ArgumentNullException(nameof(value));
 
-				ownerUsers = value;
+				owningUsers = value;
 			}
 		}
 

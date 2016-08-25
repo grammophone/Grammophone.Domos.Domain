@@ -18,9 +18,9 @@ namespace Grammophone.Users.Domain
 	{
 		#region Private fields
 
-		private long ownerDispositionID;
+		private long owningDispositionID;
 
-		private D ownerDisposition;
+		private D owningDisposition;
 
 		#endregion
 
@@ -30,20 +30,20 @@ namespace Grammophone.Users.Domain
 		/// The ID of the disposition which owns this entity.
 		/// Once set, cannot be changed.
 		/// </summary>
-		public long OwnerDispositionID
+		public long OwningDispositionID
 		{
 			get
 			{
-				return ownerDispositionID;
+				return owningDispositionID;
 			}
 			set
 			{
-				if (ownerDispositionID != value)
+				if (owningDispositionID != value)
 				{
-					if (ownerDispositionID != 0L)
-						throw new DomainAccessDeniedException("The owner disposition ID cannot be changed.", this);
+					if (owningDispositionID != 0L)
+						throw new DomainAccessDeniedException("The owning disposition ID cannot be changed.", this);
 
-					ownerDispositionID = value;
+					owningDispositionID = value;
 				}
 			}
 		}
@@ -52,20 +52,20 @@ namespace Grammophone.Users.Domain
 		/// The disposition which owns this entity.
 		/// Once set, cannot be changed.
 		/// </summary>
-		public D OwnerDisposition
+		public D OwningDisposition
 		{
 			get
 			{
-				return ownerDisposition;
+				return owningDisposition;
 			}
 			set
 			{
-				if (ownerDisposition != value)
+				if (owningDisposition != value)
 				{
-					if (ownerDisposition != null)
-						throw new DomainAccessDeniedException("The owner disposition ID cannot be changed.", this);
+					if (owningDisposition != null)
+						throw new DomainAccessDeniedException("The owning disposition ID cannot be changed.", this);
 
-					ownerDisposition = value;
+					owningDisposition = value;
 				}
 			}
 		}

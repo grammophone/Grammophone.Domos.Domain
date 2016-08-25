@@ -16,7 +16,7 @@ namespace Grammophone.Users.Domain
 		/// The ID of the user who owns the entity.
 		/// Once set, cannot be changed.
 		/// </summary>
-		long OwnerUserID { get; set; }
+		long OwningUserID { get; set; }
 	}
 
 	/// <summary>
@@ -30,6 +30,6 @@ namespace Grammophone.Users.Domain
 		/// The owner of the entity.
 		/// Once set, cannot be changed.
 		/// </summary>
-		U OwnerUser { get; set; }
+		U OwningUser { get; set; }
 	}
 }

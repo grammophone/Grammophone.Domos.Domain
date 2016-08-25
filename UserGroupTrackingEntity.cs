@@ -29,15 +29,15 @@ namespace Grammophone.Users.Domain
 		/// please remember to early fetch the owners to avoid a 'n+1' performance hit.
 		/// </summary>
 		[IgnoreDataMember]
-		public virtual ICollection<U> OwnerUsers
+		public virtual ICollection<U> OwningUsers
 		{
 			get
 			{
-				return userGroupTrackingTrait.OwnerUsers;
+				return userGroupTrackingTrait.OwningUsers;
 			}
 			set
 			{
-				userGroupTrackingTrait.OwnerUsers = value;
+				userGroupTrackingTrait.OwningUsers = value;
 			}
 		}
 
