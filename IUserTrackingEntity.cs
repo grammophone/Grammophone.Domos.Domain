@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Grammophone.Users.Domain
 {
 	/// <summary>
-	/// Base interface implemented by entities supporting user ownership
+	/// Contract for entities supporting user ownership
 	/// and change tracking.
 	/// </summary>
 	public interface IUserTrackingEntity : ITrackingEntity
@@ -20,7 +20,7 @@ namespace Grammophone.Users.Domain
 	}
 
 	/// <summary>
-	/// Implemented by entities supporting user ownership and change tracking.
+	/// Strong-type contract for entities supporting user ownership and change tracking.
 	/// </summary>
 	/// <typeparam name="U">The type of user, derived from <see cref="User"/>.</typeparam>
 	public interface IUserTrackingEntity<U> : IUserTrackingEntity, ITrackingEntity<U>

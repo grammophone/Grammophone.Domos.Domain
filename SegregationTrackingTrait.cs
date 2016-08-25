@@ -7,18 +7,20 @@ using System.Threading.Tasks;
 namespace Grammophone.Users.Domain
 {
 	/// <summary>
-	/// Base for entities belonging to a segregation.
+	/// A trait to aid implementation of <see cref="ISegregationTrackingEntity"/>.
 	/// </summary>
 	/// <typeparam name="U">The type of the user, derived from <see cref="User"/>.</typeparam>
 	/// <typeparam name="S">The type of the segregation, derived from <see cref="Segregation{U}"/></typeparam>
 	[Serializable]
-	public abstract class SegregationTrackingEntity<U, S> : ISegregationTrackingEntity<U, S>
+	public struct SegregationTrackingTrait<U, S>
 		where U : User
 		where S : Segregation<U>
 	{
 		#region Private fields
 
-		private SegregationTrackingTrait<U, S> segregationTrackingTrait;
+		private long segregationID;
+
+		private S segregation;
 
 		#endregion
 
@@ -28,15 +30,20 @@ namespace Grammophone.Users.Domain
 		/// The ID of the segregation where this entity belongs.
 		/// Once set, cannot be changed.
 		/// </summary>
-		public virtual long SegregationID
+		public long SegregationID
 		{
 			get
 			{
-				return segregationTrackingTrait.SegregationID;
+				return segregationID;
 			}
 			set
 			{
-				segregationTrackingTrait.SegregationID = value;
+				if (segregationID != value)
+				{
+					if (segregationID != 0L) throw new DomainAccessDeniedException("The segregation cannot be changed.", this);
+
+					segregationID = value;
+				}
 			}
 		}
 
@@ -44,15 +51,20 @@ namespace Grammophone.Users.Domain
 		/// The segregation where this entity belongs.
 		/// Once set, cannot be changed.
 		/// </summary>
-		public virtual S Segregation
+		public S Segregation
 		{
 			get
 			{
-				return segregationTrackingTrait.Segregation;
+				return segregation;
 			}
 			set
 			{
-				segregationTrackingTrait.Segregation = value;
+				if (segregation != value)
+				{
+					if (segregation != null) throw new DomainAccessDeniedException("The segregation cannot be changed.", this);
+
+					segregation = value;
+				}
 			}
 		}
 

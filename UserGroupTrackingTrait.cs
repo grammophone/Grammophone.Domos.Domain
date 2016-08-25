@@ -1,23 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Grammophone.Users.Domain
 {
 	/// <summary>
-	/// Base for entities supporting group ownership.
+	/// A trait to aid implementation of <see cref="IUserGroupTrackingEntity{U}"/>.
 	/// </summary>
-	/// <typeparam name="U">The type of user, derived from <see cref="User"/>.</typeparam>
+	/// <typeparam name="U">The type of the user, derived from <see cref="User"/>.</typeparam>
 	[Serializable]
-	public abstract class UserGroupTrackingEntity<U> : TrackingEntity<U>, IUserGroupTrackingEntity<U>
+	public struct UserGroupTrackingTrait<U>
 		where U : User
 	{
 		#region Private fields
 
-		private UserGroupTrackingTrait<U> userGroupTrackingTrait;
+		private ICollection<U> ownerUsers;
 
 		#endregion
 
@@ -28,16 +27,17 @@ namespace Grammophone.Users.Domain
 		/// At least when querying for lists of entities, 
 		/// please remember to early fetch the owners to avoid a 'n+1' performance hit.
 		/// </summary>
-		[IgnoreDataMember]
-		public virtual ICollection<U> OwnerUsers
+		public ICollection<U> OwnerUsers
 		{
 			get
 			{
-				return userGroupTrackingTrait.OwnerUsers;
+				return ownerUsers ?? (ownerUsers = new HashSet<U>());
 			}
 			set
 			{
-				userGroupTrackingTrait.OwnerUsers = value;
+				if (value == null) throw new ArgumentNullException(nameof(value));
+
+				ownerUsers = value;
 			}
 		}
 

@@ -5,23 +5,23 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Grammophone.Users.Domain
+namespace Grammophone.Users.Domain.Accounting
 {
 	/// <summary>
-	/// Base class for entities belonging to a segregation 
-	/// and supporting user disposition ownership and change tracking against that segregation.
+	/// An account owned by a <see cref="Disposition"/>
 	/// </summary>
 	/// <typeparam name="U">The type of the user, derived from <see cref="User"/>.</typeparam>
 	/// <typeparam name="S">The type of the segregation, derived from <see cref="Segregation{U}"/>.</typeparam>
 	/// <typeparam name="D">The type of the disposition, derived from <see cref="Disposition{U}"/>.</typeparam>
 	[Serializable]
-	public abstract class DispositionTrackingEntity<U, S, D> : 
-		UserSegregationTrackingEntity<U, S>, IDispositionTrackingEntity<U, S, D>
+	public class DispositionAccount<U, S, D> : UserAccount<U>, IDispositionTrackingEntity<U, S, D>
 		where U : User
 		where S : Segregation<U>
 		where D : Disposition<U>
 	{
 		#region Private fields
+
+		private SegregationTrackingTrait<U, S> segregationTrackingTrait;
 
 		private DispositionTrackingTrait<U, D> dispositionTrackingTrait;
 
@@ -40,6 +40,7 @@ namespace Grammophone.Users.Domain
 			{
 				return dispositionTrackingTrait.OwnerDispositionID;
 			}
+
 			set
 			{
 				dispositionTrackingTrait.OwnerDispositionID = value;
@@ -60,6 +61,39 @@ namespace Grammophone.Users.Domain
 			set
 			{
 				dispositionTrackingTrait.OwnerDisposition = value;
+			}
+		}
+
+		/// <summary>
+		/// The ID of the segregation where this entity belongs.
+		/// Once set, cannot be changed.
+		/// </summary>
+		public virtual long SegregationID
+		{
+			get
+			{
+				return segregationTrackingTrait.SegregationID;
+			}
+
+			set
+			{
+				segregationTrackingTrait.SegregationID = value;
+			}
+		}
+
+		/// <summary>
+		/// The segregation where this entity belongs.
+		/// Once set, cannot be changed.
+		/// </summary>
+		public virtual S Segregation
+		{
+			get
+			{
+				return segregationTrackingTrait.Segregation;
+			}
+			set
+			{
+				segregationTrackingTrait.Segregation = value;
 			}
 		}
 

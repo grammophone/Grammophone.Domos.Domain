@@ -17,11 +17,7 @@ namespace Grammophone.Users.Domain
 	{
 		#region Private fields
 
-		private DateTime creationDate;
-
-		private long creatorUserID;
-
-		private U creatorUser;
+		private TrackingTrait<U> trackingTrait;
 
 		#endregion
 
@@ -37,17 +33,11 @@ namespace Grammophone.Users.Domain
 		{
 			get
 			{
-				return creationDate;
+				return trackingTrait.CreationDate;
 			}
 			set
 			{
-				if (creationDate != value)
-				{
-					if (creationDate != default(DateTime))
-						throw new DomainAccessDeniedException("The creation date cannot be changed.", this);
-
-					creationDate = value;
-				}
+				trackingTrait.CreationDate = value;
 			}
 		}
 
@@ -56,7 +46,17 @@ namespace Grammophone.Users.Domain
 		/// Set by the system.
 		/// </summary>
 		[IgnoreDataMember]
-		public virtual DateTime LastModificationDate { get; set; }
+		public virtual DateTime LastModificationDate
+		{
+			get
+			{
+				return trackingTrait.LastModificationDate;
+			}
+			set
+			{
+				trackingTrait.LastModificationDate = value;
+			}
+		}
 
 		#endregion
 
@@ -71,17 +71,11 @@ namespace Grammophone.Users.Domain
 		{
 			get
 			{
-				return creatorUserID;
+				return trackingTrait.CreatorUserID;
 			}
 			set
 			{
-				if (creatorUserID != value)
-				{
-					if (creatorUserID != 0L)
-						throw new DomainAccessDeniedException("The creator of the entity cannot be changed.", this);
-
-					creatorUserID = value;
-				}
+				trackingTrait.CreatorUserID = value;
 			}
 		}
 
@@ -94,19 +88,11 @@ namespace Grammophone.Users.Domain
 		{
 			get
 			{
-				return creatorUser;
+				return trackingTrait.CreatorUser;
 			}
 			set
 			{
-				if (value == null) throw new ArgumentNullException(nameof(value));
-
-				if (creatorUser != value)
-				{
-					if (creatorUser != null)
-						throw new DomainAccessDeniedException("The creator of the entity cannot be changed.", this);
-
-					creatorUser = value;
-				}
+				trackingTrait.CreatorUser = value;
 			}
 		}
 
@@ -114,13 +100,33 @@ namespace Grammophone.Users.Domain
 		/// ID of the user who modified the entity last.
 		/// </summary>
 		[IgnoreDataMember]
-		public virtual long LastModifierUserID { get; set; }
+		public virtual long LastModifierUserID
+		{
+			get
+			{
+				return trackingTrait.LastModifierUserID;
+			}
+			set
+			{
+				trackingTrait.LastModifierUserID = value;
+			}
+		}
 
 		/// <summary>
 		/// The user who modified the entity last.
 		/// </summary>
 		[IgnoreDataMember]
-		public virtual U LastModifierUser { get; set; }
+		public virtual U LastModifierUser
+		{
+			get
+			{
+				return trackingTrait.LastModifierUser;
+			}
+			set
+			{
+				trackingTrait.LastModifierUser = value;
+			}
+		}
 
 		#endregion
 	}

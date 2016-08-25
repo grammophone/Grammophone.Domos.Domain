@@ -12,13 +12,16 @@ namespace Grammophone.Users.Domain
 	/// as well as belonging to a segregation.
 	/// </summary>
 	/// <typeparam name="U">The type of user, derived from <see cref="User"/>.</typeparam>
+	/// <typeparam name="S">The type of the segregation, derived from <see cref="Segregation{U}"/>.</typeparam>
 	[Serializable]
-	public abstract class UserSegregationTrackingEntity<U> : UserTrackingEntity<U>, ISegregationTrackingEntity
+	public abstract class UserSegregationTrackingEntity<U, S> : 
+		UserTrackingEntity<U>, ISegregationTrackingEntity<U, S>
 		where U : User
+		where S : Segregation<U>
 	{
 		#region Private fields
 
-		private long segregationID;
+		private SegregationTrackingTrait<U, S> segregationTrackingTrait;
 
 		#endregion
 
@@ -32,16 +35,27 @@ namespace Grammophone.Users.Domain
 		{
 			get
 			{
-				return segregationID;
+				return segregationTrackingTrait.SegregationID;
 			}
 			set
 			{
-				if (segregationID != value)
-				{
-					if (segregationID != 0L) throw new DomainAccessDeniedException("The segregation cannot be changed.", this);
+				segregationTrackingTrait.SegregationID = value;
+			}
+		}
 
-					segregationID = value;
-				}
+		/// <summary>
+		/// The segregation where this entity belongs.
+		/// Once set, cannot be changed.
+		/// </summary>
+		public virtual S Segregation
+		{
+			get
+			{
+				return segregationTrackingTrait.Segregation;
+			}
+			set
+			{
+				segregationTrackingTrait.Segregation = value;
 			}
 		}
 

@@ -42,8 +42,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Accounting\Account.cs" />
+    <Compile Include="Accounting\DispositionAccount.cs" />
+    <Compile Include="Accounting\IAccount.cs" />
+    <Compile Include="Accounting\UserAccount.cs" />
+    <Compile Include="Accounting\UserGroupAccount.cs" />
     <Compile Include="Disposition.cs" />
     <Compile Include="DispositionTrackingEntity.cs" />
+    <Compile Include="DispositionTrackingTrait.cs" />
     <Compile Include="DispositionType.cs" />
     <Compile Include="DomainAccessDeniedException.cs" />
     <Compile Include="EntityAccess.cs" />
@@ -64,12 +70,17 @@
     </Compile>
     <Compile Include="RegistrationStatus.cs" />
     <Compile Include="Role.cs" />
+    <Compile Include="Segregation.cs" />
     <Compile Include="SegregationTrackingEntity.cs" />
+    <Compile Include="SegregationTrackingTrait.cs" />
     <Compile Include="TrackingEntity.cs" />
+    <Compile Include="TrackingTrait.cs" />
     <Compile Include="User.cs" />
     <Compile Include="UserGroupTrackingEntity.cs" />
+    <Compile Include="UserGroupTrackingTrait.cs" />
     <Compile Include="UserSegregationTrackingEntity.cs" />
     <Compile Include="UserTrackingEntity.cs" />
+    <Compile Include="UserTrackingTrait.cs" />
     <Compile Include="Workflow\Attachment.cs" />
     <Compile Include="Workflow\AttachmentContent.cs" />
     <Compile Include="Workflow\IStateful.cs" />

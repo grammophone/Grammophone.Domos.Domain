@@ -5,14 +5,14 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Grammophone.Users.Domain
+namespace Grammophone.Users.Domain.Accounting
 {
 	/// <summary>
-	/// Base class for entities supporting user ownership and change tracking.
+	/// Account which belongs to a user.
 	/// </summary>
-	/// <typeparam name="U">The type of user, derived from <see cref="User"/>.</typeparam>
+	/// <typeparam name="U">The type of the user, derived from <see cref="User"/>.</typeparam>
 	[Serializable]
-	public class UserTrackingEntity<U> : TrackingEntity<U>, IUserTrackingEntity<U>
+	public class UserAccount<U> : Account<U>, IUserTrackingEntity<U>
 		where U : User
 	{
 		#region Private fields
