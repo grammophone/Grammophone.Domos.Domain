@@ -11,11 +11,34 @@ namespace Grammophone.Users.Domain
 	/// </summary>
 	public enum RegistrationProvider
 	{
+		/// <summary>
+		/// Registrationn using password.
+		/// </summary>
 		Native,
+
+		/// <summary>
+		/// Registration using Facebook.
+		/// </summary>
 		Facebook,
+
+		/// <summary>
+		/// Registgration using LinkedIn.
+		/// </summary>
 		LinkedIn,
+
+		/// <summary>
+		/// Registration using Twitter.
+		/// </summary>
 		Twitter,
+
+		/// <summary>
+		/// Registration using Google.
+		/// </summary>
 		Google,
+
+		/// <summary>
+		/// Registration using Mocrosoft's Live.
+		/// </summary>
 		Microsoft
 	}
 }

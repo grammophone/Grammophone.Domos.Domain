@@ -36,7 +36,7 @@ namespace Grammophone.Users.Domain
 
 		/// <summary>
 		/// If true, the user can read entities created by her of the requested 
-		/// type. This applies to entities derived from <see cref="TrackedEntityWithID{U}"/>.
+		/// type. This applies to entities implementing <see cref="IUserTrackingEntity{U}"/>.
 		/// </summary>
 		public virtual bool CanReadOwn { get; set; }
 
@@ -47,7 +47,7 @@ namespace Grammophone.Users.Domain
 
 		/// <summary>
 		/// If true, the user can read entities created by her of the requested 
-		/// type. This applies to entities derived from <see cref="TrackedEntityWithID{U}"/>.
+		/// type. This applies to entities implementing <see cref="IUserTrackingEntity{U}"/>.
 		/// </summary>
 		public virtual bool CanWriteOwn { get; set; }
 
@@ -58,7 +58,7 @@ namespace Grammophone.Users.Domain
 
 		/// <summary>
 		/// If true, the user can delete entities created by her of the requested 
-		/// type. This applies to entities derived from <see cref="TrackedEntityWithID{U}"/>.
+		/// type. This applies to entities implementing <see cref="IUserTrackingEntity{U}"/>.
 		/// </summary>
 		public virtual bool CanDeleteOwn { get; set; }
 

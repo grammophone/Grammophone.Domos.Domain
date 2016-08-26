@@ -20,6 +20,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Grammophone.Users.Domain.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -28,6 +29,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\Grammophone.Users.Domain.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -44,6 +46,7 @@
   <ItemGroup>
     <Compile Include="Accounting\Account.cs" />
     <Compile Include="Accounting\Batch.cs" />
+    <Compile Include="Accounting\BatchRemittance.cs" />
     <Compile Include="Accounting\CreditSystem.cs" />
     <Compile Include="Accounting\DispositionAccount.cs" />
     <Compile Include="Accounting\IAccount.cs" />
@@ -55,11 +58,14 @@
     <Compile Include="Accounting\UserGroupAccount.cs" />
     <Compile Include="Disposition.cs" />
     <Compile Include="DispositionTrackingEntity.cs" />
+    <Compile Include="DispositionTrackingEntityWithID.cs" />
     <Compile Include="DispositionTrackingTrait.cs" />
     <Compile Include="DispositionType.cs" />
     <Compile Include="DomainAccessDeniedException.cs" />
     <Compile Include="EntityAccess.cs" />
+    <Compile Include="EntityWithID.cs" />
     <Compile Include="IDispositionTrackingEntity.cs" />
+    <Compile Include="IEntityWithID.cs" />
     <Compile Include="ISegregationTrackingEntity.cs" />
     <Compile Include="ITrackingEntity.cs" />
     <Compile Include="IUserGroupTrackingEntity.cs" />
@@ -78,14 +84,19 @@
     <Compile Include="Role.cs" />
     <Compile Include="Segregation.cs" />
     <Compile Include="SegregationTrackingEntity.cs" />
+    <Compile Include="SegregationTrackingEntityWithID.cs" />
     <Compile Include="SegregationTrackingTrait.cs" />
     <Compile Include="TrackingEntity.cs" />
+    <Compile Include="TrackingEntityWithID.cs" />
     <Compile Include="TrackingTrait.cs" />
     <Compile Include="User.cs" />
     <Compile Include="UserGroupTrackingEntity.cs" />
+    <Compile Include="UserGroupTrackingEntityWithID.cs" />
     <Compile Include="UserGroupTrackingTrait.cs" />
     <Compile Include="UserSegregationTrackingEntity.cs" />
+    <Compile Include="UserSegregationTrackingEntityWithID.cs" />
     <Compile Include="UserTrackingEntity.cs" />
+    <Compile Include="UserTrackingEntityWithID.cs" />
     <Compile Include="UserTrackingTrait.cs" />
     <Compile Include="Workflow\Attachment.cs" />
     <Compile Include="Workflow\AttachmentContent.cs" />

@@ -11,15 +11,10 @@ namespace Grammophone.Users.Domain.Accounting
 	/// </summary>
 	/// <typeparam name="U">The type of the user, derived from <see cref="User"/>.</typeparam>
 	[Serializable]
-	public abstract class Account<U> : TrackingEntity<U>, IAccount
+	public abstract class Account<U> : TrackingEntityWithID<U, long>, IAccount
 		where U : User
 	{
 		#region Primitive properties
-
-		/// <summary>
-		/// Primary key.
-		/// </summary>
-		public virtual long ID { get; set; }
 
 		/// <summary>
 		/// The balance of the account.

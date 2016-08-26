@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Grammophone.Users.Domain
 {
 	/// <summary>
-	/// A trait to aid implementation of <see cref="IDispositionTrackingEntity{U}"/>.
+	/// A trait to aid implementation of <see cref="IDispositionTrackingEntity{U, S, D}"/>.
 	/// </summary>
 	/// <typeparam name="U">The type of the user, derived from <see cref="User"/>.</typeparam>
 	/// <typeparam name="D">The type of the disposition, derived from <see cref="Disposition{U}"/>.</typeparam>

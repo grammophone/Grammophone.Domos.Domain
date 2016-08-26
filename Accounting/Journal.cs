@@ -11,7 +11,7 @@ namespace Grammophone.Users.Domain.Accounting
 	/// </summary>
 	/// <typeparam name="U">The type of the user, derived from <see cref="User"/>.</typeparam>
 	[Serializable]
-	public class Journal<U> : UserGroupTrackingEntity<U>
+	public class Journal<U> : UserGroupTrackingEntityWithID<U, long>
 		where U : User
 	{
 		#region Private fields
@@ -21,11 +21,6 @@ namespace Grammophone.Users.Domain.Accounting
 		#endregion
 
 		#region Primitive properties
-
-		/// <summary>
-		/// Primary key.
-		/// </summary>
-		public virtual long ID { get; set; }
 
 		/// <summary>
 		/// Applicatoin-defined categorization of the journal.

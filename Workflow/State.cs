@@ -11,14 +11,9 @@ namespace Grammophone.Users.Domain.Workflow
 	/// A vertex in a workflow graph.
 	/// </summary>
 	[Serializable]
-	public class State
+	public class State : EntityWithID<long>
 	{
 		#region Primitive properties
-
-		/// <summary>
-		/// Primary key.
-		/// </summary>
-		public virtual long ID { get; set; }
 
 		/// <summary>
 		/// A code name for the state.

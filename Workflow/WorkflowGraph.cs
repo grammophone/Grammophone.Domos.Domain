@@ -11,7 +11,7 @@ namespace Grammophone.Users.Domain.Workflow
 	/// A directged graph of states representing a workflow.
 	/// </summary>
 	[Serializable]
-	public class WorkflowGraph
+	public class WorkflowGraph : EntityWithID<long>
 	{
 		#region Private fields
 
@@ -20,11 +20,6 @@ namespace Grammophone.Users.Domain.Workflow
 		#endregion
 
 		#region Primitive properties
-
-		/// <summary>
-		/// The primary key.
-		/// </summary>
-		public virtual long ID { get; set; }
 
 		/// <summary>
 		/// The code name of the workflow graph.

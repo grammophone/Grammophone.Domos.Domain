@@ -12,7 +12,7 @@ namespace Grammophone.Users.Domain
 	/// </summary>
 	/// <typeparam name="U">The type of user, derived from <see cref="User"/>.</typeparam>
 	[Serializable]
-	public abstract class TrackingEntity<U>
+	public abstract class TrackingEntity<U> : ITrackingEntity<U>
 		where U : User
 	{
 		#region Private fields

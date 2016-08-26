@@ -12,7 +12,7 @@ namespace Grammophone.Users.Domain.Workflow
 	/// ie an edge in a workflow graph.
 	/// </summary>
 	[Serializable]
-	public class StatePath
+	public class StatePath : EntityWithID<long>
 	{
 		#region Private fields
 
@@ -23,11 +23,6 @@ namespace Grammophone.Users.Domain.Workflow
 		#endregion
 
 		#region Primitive properties
-
-		/// <summary>
-		/// Primary key.
-		/// </summary>
-		public virtual long ID { get; set; }
 
 		/// <summary>
 		/// The path's code name.
@@ -65,12 +60,12 @@ namespace Grammophone.Users.Domain.Workflow
 		public virtual int Visibility { get; set; }
 
 		/// <summary>
-		/// Applied with AND operator to an <see cref="IStateful.ChangeStamp"/> upon successful execution.
+		/// Applied with AND operator to an <see cref="IStateful{U}.ChangeStamp"/> upon successful execution.
 		/// </summary>
 		public virtual int ChangeStampANDMask { get; set; }
 
 		/// <summary>
-		/// Applied with OR operator to an <see cref="IStateful.ChangeStamp"/> upon successful execution.
+		/// Applied with OR operator to an <see cref="IStateful{U}.ChangeStamp"/> upon successful execution.
 		/// </summary>
 		public virtual int ChangeStampORMask { get; set; }
 

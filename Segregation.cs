@@ -12,18 +12,13 @@ namespace Grammophone.Users.Domain
 	/// </summary>
 	/// <typeparam name="U">The type of the user, derived from <see cref="User"/>.</typeparam>
 	[Serializable]
-	public abstract class Segregation<U> : UserTrackingEntity<U>, ISegregationTrackingEntity
+	public abstract class Segregation<U> : UserTrackingEntityWithID<U, long>, ISegregationTrackingEntity
 		where U : User
 	{
 		#region Primitive properties
 
 		/// <summary>
-		/// Primary key.
-		/// </summary>
-		public virtual long ID { get; set; }
-
-		/// <summary>
-		/// This property is bound to <see cref="ID"/>.
+		/// This property is bound to <see cref="UserTrackingEntityWithID{U, K}.ID"/>.
 		/// </summary>
 		long ISegregationTrackingEntity.SegregationID
 		{

@@ -11,15 +11,10 @@ namespace Grammophone.Users.Domain.Accounting
 	/// </summary>
 	/// <typeparam name="U">The type of the user, derived from <see cref="User"/>.</typeparam>
 	[Serializable]
-	public abstract class JournalLine<U> : UserGroupTrackingEntity<U>
+	public abstract class JournalLine<U> : UserGroupTrackingEntityWithID<U, long>
 		where U : User
 	{
 		#region Primitive properties
-
-		/// <summary>
-		/// The primary key.
-		/// </summary>
-		public virtual long ID { get; set; }
 
 		/// <summary>
 		/// The amount added to the <see cref="Account"/>, if positive, or subtracted, if negative.

@@ -13,7 +13,7 @@ namespace Grammophone.Users.Domain.Workflow
 	/// </summary>
 	/// <typeparam name="U">The type of the user, derived from <see cref="User"/>.</typeparam>
 	[Serializable]
-	public class StateTransition<U> : UserGroupTrackingEntity<U>
+	public class StateTransition<U> : UserGroupTrackingEntityWithID<U, long>
 		where U : User
 	{
 		#region Private fields

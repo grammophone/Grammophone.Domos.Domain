@@ -12,15 +12,10 @@ namespace Grammophone.Users.Domain.Workflow
 	/// </summary>
 	/// <typeparam name="U">The type of the user, derived from <see cref="User"/>.</typeparam>
 	[Serializable]
-	public class Attachment<U> : UserGroupTrackingEntity<U>
+	public class Attachment<U> : UserGroupTrackingEntityWithID<U, long>
 		where U : User
 	{
 		#region Primitive properties
-
-		/// <summary>
-		/// The primary key.
-		/// </summary>
-		public virtual long ID { get; set; }
 
 		/// <summary>
 		/// An application-defined attachment type.

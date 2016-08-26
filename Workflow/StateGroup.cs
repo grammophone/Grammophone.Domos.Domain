@@ -11,7 +11,7 @@ namespace Grammophone.Users.Domain.Workflow
 	/// A grouping of workflow states.
 	/// </summary>
 	[Serializable]
-	public class StateGroup
+	public class StateGroup : EntityWithID<long>
 	{
 		#region Private fields
 
@@ -21,12 +21,7 @@ namespace Grammophone.Users.Domain.Workflow
 
 		#region Primitive properties
 
-		/// <summary>
-		/// The primary key.
-		/// </summary>
-		public virtual long ID { get; set; }
-
-		/// <summary>
+	/// <summary>
 		/// The code name of the state group.
 		/// </summary>
 		[Required]

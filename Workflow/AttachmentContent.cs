@@ -13,7 +13,7 @@ namespace Grammophone.Users.Domain.Workflow
 	/// </summary>
 	/// <typeparam name="U">The type of the user, derived from <see cref="User"/>.</typeparam>
 	[Serializable]
-	public class AttachmentContent<U> : UserGroupTrackingEntity<U>
+	public class AttachmentContent<U> : UserGroupTrackingEntity<U>, IEntityWithID<long>
 		where U : User
 	{
 		#region Primitive properties

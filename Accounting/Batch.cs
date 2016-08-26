@@ -12,7 +12,7 @@ namespace Grammophone.Users.Domain.Accounting
 	/// external system inflow or outflow, where a double-entry recording cannot be kept.
 	/// </summary>
 	[Serializable]
-	public class Batch<U> : UserGroupTrackingEntity<U>
+	public class Batch<U> : UserGroupTrackingEntityWithID<U, long>
 		where U : User
 	{
 		#region Private fields
@@ -22,11 +22,6 @@ namespace Grammophone.Users.Domain.Accounting
 		#endregion
 
 		#region Primitive properties
-
-		/// <summary>
-		/// The primary key.
-		/// </summary>
-		public virtual long ID { get; set; }
 
 		/// <summary>
 		/// The ID of the transaction according to the <see cref="CreditSystem"/>.

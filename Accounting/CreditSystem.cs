@@ -12,14 +12,9 @@ namespace Grammophone.Users.Domain.Accounting
 	/// through which
 	/// </summary>
 	[Serializable]
-	public class CreditSystem
+	public class CreditSystem : EntityWithID<long>
 	{
 		#region Primitive properties
-
-		/// <summary>
-		/// The primary key.
-		/// </summary>
-		public virtual long ID { get; set; }
 
 		/// <summary>
 		/// The name of the credit system.
