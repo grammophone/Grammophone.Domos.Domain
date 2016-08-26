@@ -21,7 +21,7 @@ namespace Grammophone.Users.Domain.Accounting
 	{
 		#region Private fields
 
-		private SegregationTrackingTrait<U, S> segregationTrackingTrait;
+		private SegregatedTrait<U, S> segregationTrackingTrait;
 
 		private DispositionTrackingTrait<U, D> dispositionTrackingTrait;
 

@@ -10,7 +10,7 @@ namespace Grammophone.Users.Domain
 	/// Contract for entities supporting user disposition ownership and change tracking.
 	/// These are entities that inherently belong to a <see cref="Segregation{U}"/>.
 	/// </summary>
-	public interface IDispositionTrackingEntity : ITrackingEntity, ISegregationTrackingEntity
+	public interface IDispositionTrackingEntity : ITrackingEntity, ISegregatedEntity
 	{
 		/// <summary>
 		/// The ID of the disposition which owns this entity.
@@ -27,7 +27,7 @@ namespace Grammophone.Users.Domain
 	/// <typeparam name="S">The type of the segregation, derived from <see cref="Segregation{U}"/>.</typeparam>
 	/// <typeparam name="D">The type of the disposition, derived from <see cref="Disposition{U}"/>.</typeparam>
 	public interface IDispositionTrackingEntity<U, S, D> : 
-		IDispositionTrackingEntity, ITrackingEntity<U>, ISegregationTrackingEntity<U, S>
+		IDispositionTrackingEntity, ITrackingEntity<U>, ISegregatedEntity<U, S>
 		where U : User
 		where S : Segregation<U>
 		where D : Disposition<U>

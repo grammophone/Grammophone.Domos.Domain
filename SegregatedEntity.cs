@@ -12,13 +12,13 @@ namespace Grammophone.Users.Domain
 	/// <typeparam name="U">The type of the user, derived from <see cref="User"/>.</typeparam>
 	/// <typeparam name="S">The type of the segregation, derived from <see cref="Segregation{U}"/></typeparam>
 	[Serializable]
-	public abstract class SegregationTrackingEntity<U, S> : ISegregationTrackingEntity<U, S>
+	public abstract class SegregatedEntity<U, S> : ISegregatedEntity<U, S>
 		where U : User
 		where S : Segregation<U>
 	{
 		#region Private fields
 
-		private SegregationTrackingTrait<U, S> segregationTrackingTrait;
+		private SegregatedTrait<U, S> segregatedTrait;
 
 		#endregion
 
@@ -32,11 +32,11 @@ namespace Grammophone.Users.Domain
 		{
 			get
 			{
-				return segregationTrackingTrait.SegregationID;
+				return segregatedTrait.SegregationID;
 			}
 			set
 			{
-				segregationTrackingTrait.SegregationID = value;
+				segregatedTrait.SegregationID = value;
 			}
 		}
 
@@ -48,11 +48,11 @@ namespace Grammophone.Users.Domain
 		{
 			get
 			{
-				return segregationTrackingTrait.Segregation;
+				return segregatedTrait.Segregation;
 			}
 			set
 			{
-				segregationTrackingTrait.Segregation = value;
+				segregatedTrait.Segregation = value;
 			}
 		}
 

@@ -9,7 +9,7 @@ namespace Grammophone.Users.Domain
 	/// <summary>
 	/// Contract for entities belonging to a segregation.
 	/// </summary>
-	public interface ISegregationTrackingEntity
+	public interface ISegregatedEntity
 	{
 		/// <summary>
 		/// The ID of the abstract segregation where this entity belongs to.
@@ -24,7 +24,7 @@ namespace Grammophone.Users.Domain
 	/// </summary>
 	/// <typeparam name="U">The type of the user, derived from <see cref="User"/>.</typeparam>
 	/// <typeparam name="S">The type of the segregation, derived from <see cref="Segregation{U}"/></typeparam>
-	public interface ISegregationTrackingEntity<U, S> : ISegregationTrackingEntity
+	public interface ISegregatedEntity<U, S> : ISegregatedEntity
 		where U : User
 		where S : Segregation<U>
 	{

@@ -66,7 +66,7 @@
     <Compile Include="EntityWithID.cs" />
     <Compile Include="IDispositionTrackingEntity.cs" />
     <Compile Include="IEntityWithID.cs" />
-    <Compile Include="ISegregationTrackingEntity.cs" />
+    <Compile Include="ISegregatedEntity.cs" />
     <Compile Include="ITrackingEntity.cs" />
     <Compile Include="IUserGroupTrackingEntity.cs" />
     <Compile Include="IUserTrackingEntity.cs" />
@@ -83,9 +83,9 @@
     <Compile Include="RegistrationStatus.cs" />
     <Compile Include="Role.cs" />
     <Compile Include="Segregation.cs" />
-    <Compile Include="SegregationTrackingEntity.cs" />
-    <Compile Include="SegregationTrackingEntityWithID.cs" />
-    <Compile Include="SegregationTrackingTrait.cs" />
+    <Compile Include="SegregatedEntity.cs" />
+    <Compile Include="SegregatedEntityWithID.cs" />
+    <Compile Include="SegregatedTrait.cs" />
     <Compile Include="TrackingEntity.cs" />
     <Compile Include="TrackingEntityWithID.cs" />
     <Compile Include="TrackingTrait.cs" />
@@ -93,8 +93,8 @@
     <Compile Include="UserGroupTrackingEntity.cs" />
     <Compile Include="UserGroupTrackingEntityWithID.cs" />
     <Compile Include="UserGroupTrackingTrait.cs" />
-    <Compile Include="UserSegregationTrackingEntity.cs" />
-    <Compile Include="UserSegregationTrackingEntityWithID.cs" />
+    <Compile Include="SegregatedUserTrackingEntity.cs" />
+    <Compile Include="SegregatedUserTrackingEntityWithID.cs" />
     <Compile Include="UserTrackingEntity.cs" />
     <Compile Include="UserTrackingEntityWithID.cs" />
     <Compile Include="UserTrackingTrait.cs" />

@@ -16,7 +16,7 @@ namespace Grammophone.Users.Domain
 	/// <typeparam name="D">The type of the disposition, derived from <see cref="Disposition{U}"/>.</typeparam>
 	[Serializable]
 	public abstract class DispositionTrackingEntity<U, S, D> :
-		SegregationTrackingEntity<U, S>, IDispositionTrackingEntity<U, S, D>
+		SegregatedEntity<U, S>, IDispositionTrackingEntity<U, S, D>
 		where U : User
 		where S : Segregation<U>
 		where D : Disposition<U>

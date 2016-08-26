@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 namespace Grammophone.Users.Domain
 {
 	/// <summary>
-	/// A trait to aid implementation of <see cref="ISegregationTrackingEntity"/>.
+	/// A trait to aid implementation of <see cref="ISegregatedEntity"/>.
 	/// </summary>
 	/// <typeparam name="U">The type of the user, derived from <see cref="User"/>.</typeparam>
 	/// <typeparam name="S">The type of the segregation, derived from <see cref="Segregation{U}"/></typeparam>
 	[Serializable]
-	public struct SegregationTrackingTrait<U, S>
+	public struct SegregatedTrait<U, S>
 		where U : User
 		where S : Segregation<U>
 	{
