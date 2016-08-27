@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Grammophone.Users.Domain.Workflow
+namespace Grammophone.Domos.Domain.Workflow
 {
 	/// <summary>
 	/// A directged graph of states representing a workflow.

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Grammophone.Users.Domain.Workflow
+namespace Grammophone.Domos.Domain.Workflow
 {
 	/// <summary>
 	/// Contract for entities having a state in a workflow.

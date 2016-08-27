@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Grammophone.Users.Domain.Workflow
+namespace Grammophone.Domos.Domain.Workflow
 {
 	/// <summary>
 	/// Holds optional binary contents of an <see cref="Attachment"/>.

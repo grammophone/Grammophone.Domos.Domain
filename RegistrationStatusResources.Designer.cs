@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Grammophone.Users.Domain {
+namespace Grammophone.Domos.Domain {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Grammophone.Users.Domain {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Grammophone.Users.Domain.RegistrationStatusResources", typeof(RegistrationStatusResources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Grammophone.Domos.Domain.RegistrationStatusResources", typeof(RegistrationStatusResources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Grammophone.Users.Domain
+namespace Grammophone.Domos.Domain
 {
 	/// <summary>
 	/// Base class for entities having a primary key annd belonging to a segregation 

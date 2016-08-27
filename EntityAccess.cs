@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Grammophone.Users.Domain
+namespace Grammophone.Domos.Domain
 {
 	/// <summary>
 	/// Defines access to en entity type by a user or a user's disposition.

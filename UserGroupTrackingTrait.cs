@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Grammophone.Users.Domain
+namespace Grammophone.Domos.Domain
 {
 	/// <summary>
 	/// A trait to aid implementation of <see cref="IUserGroupTrackingEntity{U}"/>.

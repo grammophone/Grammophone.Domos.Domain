@@ -7,8 +7,8 @@
     <ProjectGuid>{D758EE48-75DF-42D6-B6D4-9FABDAE41F1C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Grammophone.Users.Domain</RootNamespace>
-    <AssemblyName>Grammophone.Users.Domain</AssemblyName>
+    <RootNamespace>Grammophone.Domos.Domain</RootNamespace>
+    <AssemblyName>Grammophone.Domos.Domain</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -20,7 +20,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Debug\Grammophone.Users.Domain.XML</DocumentationFile>
+    <DocumentationFile>bin\Debug\Grammophone.Domos.Domain.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -29,7 +29,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Release\Grammophone.Users.Domain.XML</DocumentationFile>
+    <DocumentationFile>bin\Release\Grammophone.Domos.Domain.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />

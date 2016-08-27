@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Grammophone.Users.Domain
+namespace Grammophone.Domos.Domain
 {
 	/// <summary>
 	/// The provider by which the user is registered to the system.

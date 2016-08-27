@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Grammophone.Users.Domain.Accounting
+namespace Grammophone.Domos.Domain.Accounting
 {
 	/// <summary>
 	/// Contract for an entity representing an account.

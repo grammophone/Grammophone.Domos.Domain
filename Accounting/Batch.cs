@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Grammophone.Users.Domain.Accounting
+namespace Grammophone.Domos.Domain.Accounting
 {
 	/// <summary>
 	/// A batch of single-entry accounting records intended to represent

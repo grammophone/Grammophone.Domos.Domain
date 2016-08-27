@@ -5,7 +5,7 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Grammophone.Users.Domain.Accounting
+namespace Grammophone.Domos.Domain.Accounting
 {
 	/// <summary>
 	/// An account owned by a <see cref="Disposition"/>
