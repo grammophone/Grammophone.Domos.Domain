@@ -1,4 +1,4 @@
-# Grammophone.Users.Domain
+# Grammophone.Domos.Domain
 This project contains the basic entity definitions 
 of the integrated session system.
 
