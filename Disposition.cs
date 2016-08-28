@@ -137,6 +137,8 @@ namespace Grammophone.Domos.Domain
 	{
 		#region Private fields
 
+		private U user;
+
 		private U creatorUser;
 
 		#endregion
@@ -146,7 +148,24 @@ namespace Grammophone.Domos.Domain
 		/// <summary>
 		/// The the owner of the disposition.
 		/// </summary>
-		public virtual U User { get; set; }
+		public virtual U User
+		{
+			get
+			{
+				return user;
+			}
+			set
+			{
+				if (value == null) throw new ArgumentNullException(nameof(value));
+
+				this.user = value;
+
+				// Sync the foreign key manually, because the base Disposition entity 
+				// only knows the UserID property as a foreign key, not the User property and 
+				// the Object-Relational mappers will fail to cope automatically.
+				this.UserID = value.ID;
+			}
+		}
 
 		/// <summary>
 		/// The user who created the entity.
