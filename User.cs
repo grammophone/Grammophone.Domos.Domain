@@ -30,10 +30,19 @@ namespace Grammophone.Domos.Domain
 		public virtual long ID { get; set; }
 
 		/// <summary>
-		/// The user's e-mail serving as the user's name.
+		/// The user's code name.
+		/// </summary>
+		[Required]
+		[MaxLength(256)]
+		[IgnoreDataMember]
+		public virtual string UserName { get; set; }
+
+		/// <summary>
+		/// The user's e-mail.
 		/// </summary>
 		[EmailAddress]
 		[Required]
+		[MaxLength(256)]
 		[IgnoreDataMember]
 		public virtual string Email { get; set; }
 
