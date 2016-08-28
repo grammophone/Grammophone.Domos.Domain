@@ -11,7 +11,7 @@ namespace Grammophone.Domos.Domain
 	/// An abstraction of allowed behavior.
 	/// </summary>
 	[Serializable]
-	public class Permission
+	public class Permission : EntityWithID<string>
 	{
 		#region Private fields
 
@@ -22,13 +22,6 @@ namespace Grammophone.Domos.Domain
 		#endregion
 
 		#region Primitive fields
-
-		/// <summary>
-		/// A unique code name for the permission.
-		/// </summary>
-		[Required]
-		[Key]
-		public virtual string ID { get; set; }
 
 		/// <summary>
 		/// A descriptive name of the permission.

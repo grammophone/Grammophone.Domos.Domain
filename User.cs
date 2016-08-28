@@ -12,7 +12,7 @@ namespace Grammophone.Domos.Domain
 	/// A user in the system.
 	/// </summary>
 	[Serializable]
-	public class User
+	public class User : EntityWithID<long>
 	{
 		#region Private fields
 
@@ -23,11 +23,6 @@ namespace Grammophone.Domos.Domain
 		#endregion
 
 		#region Primitive properties
-
-		/// <summary>
-		/// The primary key.
-		/// </summary>
-		public virtual long ID { get; set; }
 
 		/// <summary>
 		/// The user's code name.

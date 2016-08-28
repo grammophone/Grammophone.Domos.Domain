@@ -11,7 +11,7 @@ namespace Grammophone.Domos.Domain
 	/// Role assigned to users.
 	/// </summary>
 	[Serializable]
-	public class Role
+	public class Role : EntityWithID<long>
 	{
 		#region Private fields
 
@@ -20,11 +20,6 @@ namespace Grammophone.Domos.Domain
 		#endregion
 
 		#region Primitive properties
-
-		/// <summary>
-		/// The primary key.
-		/// </summary>
-		public virtual long ID { get; set; }
 
 		/// <summary>
 		/// The name of the role.

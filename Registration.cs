@@ -12,14 +12,9 @@ namespace Grammophone.Domos.Domain
 	/// A registration via a <see cref="RegistrationProvider"/>
 	/// </summary>
 	[Serializable]
-	public class Registration
+	public class Registration : EntityWithID<long>
 	{
 		#region Primitive properties
-
-		/// <summary>
-		/// The primary key.
-		/// </summary>
-		public virtual long ID { get; set; }
 
 		/// <summary>
 		/// Method for logging in.
