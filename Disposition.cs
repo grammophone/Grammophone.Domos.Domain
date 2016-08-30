@@ -14,9 +14,9 @@ namespace Grammophone.Domos.Domain
 	{
 		#region Private fields
 
-		internal TrackingTrait trackingTrait;
+		private TrackingTrait trackingTrait;
 
-		internal UserTrackingTrait userTrackingTrait;
+		private UserTrackingTrait userTrackingTrait;
 
 		#endregion
 
