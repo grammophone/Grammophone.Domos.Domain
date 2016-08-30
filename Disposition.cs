@@ -14,9 +14,9 @@ namespace Grammophone.Domos.Domain
 	{
 		#region Private fields
 
-		private DateTime creationDate;
+		internal TrackingTrait trackingTrait;
 
-		private long creatorUserID;
+		internal UserTrackingTrait userTrackingTrait;
 
 		#endregion
 
@@ -41,17 +41,11 @@ namespace Grammophone.Domos.Domain
 		{
 			get
 			{
-				return creationDate;
+				return trackingTrait.CreationDate;
 			}
 			set
 			{
-				if (creationDate != value)
-				{
-					if (creationDate != default(DateTime))
-						throw new DomainAccessDeniedException("The creation date cannot be changed.", this);
-
-					creationDate = value;
-				}
+				trackingTrait.CreationDate = value;
 			}
 		}
 
@@ -59,7 +53,17 @@ namespace Grammophone.Domos.Domain
 		/// Date of the last modification of the entity.
 		/// Set by the system.
 		/// </summary>
-		public virtual DateTime LastModificationDate { get; set; }
+		public virtual DateTime LastModificationDate
+		{
+			get
+			{
+				return trackingTrait.LastModificationDate;
+			}
+			set
+			{
+				trackingTrait.LastModificationDate = value;
+			}
+		}
 
 		#endregion
 
@@ -67,8 +71,19 @@ namespace Grammophone.Domos.Domain
 
 		/// <summary>
 		/// The ID of the owner of the disposition.
+		/// Once set, cannot be changed.
 		/// </summary>
-		public virtual long UserID { get; set; }
+		public virtual long OwningUserID
+		{
+			get
+			{
+				return userTrackingTrait.OwningUserID;
+			}
+			set
+			{
+				userTrackingTrait.OwningUserID = value;
+			}
+		}
 
 		/// <summary>
 		/// The ID of the type of the disposition for this <see cref="SegregationID"/>.
@@ -88,38 +103,26 @@ namespace Grammophone.Domos.Domain
 		{
 			get
 			{
-				return creatorUserID;
+				return trackingTrait.CreatorUserID;
 			}
 			set
 			{
-				if (creatorUserID != value)
-				{
-					if (creatorUserID != 0L)
-						throw new DomainAccessDeniedException("The creator of the entity cannot be changed.", this);
-
-					creatorUserID = value;
-				}
+				trackingTrait.CreatorUserID = value;
 			}
 		}
 
 		/// <summary>
 		/// ID of the user who modified the entity last.
 		/// </summary>
-		public virtual long LastModifierUserID { get; set; }
-
-		/// <summary>
-		/// This explicit interface implementation 
-		/// is maped to <see cref="UserID"/> property.
-		/// </summary>
-		long IUserTrackingEntity.OwningUserID
+		public virtual long LastModifierUserID
 		{
 			get
 			{
-				return this.UserID;
+				return trackingTrait.LastModifierUserID;
 			}
 			set
 			{
-				this.UserID = value;
+				trackingTrait.LastModifierUserID = value;
 			}
 		}
 
@@ -137,7 +140,7 @@ namespace Grammophone.Domos.Domain
 	{
 		#region Private fields
 
-		private U user;
+		private U owningUser;
 
 		private U creatorUser;
 
@@ -148,22 +151,28 @@ namespace Grammophone.Domos.Domain
 		/// <summary>
 		/// The the owner of the disposition.
 		/// </summary>
-		public virtual U User
+		public virtual U OwningUser
 		{
 			get
 			{
-				return user;
+				return owningUser;
 			}
 			set
 			{
 				if (value == null) throw new ArgumentNullException(nameof(value));
 
-				this.user = value;
+				if (value != owningUser)
+				{
+					if (owningUser != null)
+						throw new DomainAccessDeniedException("The User cannot be changed.", this);
 
-				// Sync the foreign key manually, because the base Disposition entity 
-				// only knows the UserID property as a foreign key, not the User property and 
-				// the Object-Relational mappers will fail to cope automatically.
-				this.UserID = value.ID;
+					// Sync the foreign key manually, because the base Disposition entity 
+					// only knows the UserID property as a foreign key, not the User property and 
+					// the Object-Relational mappers will fail to cope automatically.
+					this.OwningUserID = value.ID;
+
+					owningUser = value;
+				}
 			}
 		}
 
@@ -195,22 +204,6 @@ namespace Grammophone.Domos.Domain
 		/// The user who modified the entity last.
 		/// </summary>
 		public virtual U LastModifierUser { get; set; }
-
-		/// <summary>
-		/// This explicit interface implementation 
-		/// is mapped to <see cref="User"/> property.
-		/// </summary>
-		U IUserTrackingEntity<U>.OwningUser
-		{
-			get
-			{
-				return this.User;
-			}
-			set
-			{
-				this.User = value;
-			}
-		}
 
 		#endregion
 	}

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Grammophone.Domos.Domain
 {
 	/// <summary>
-	/// Base class for entities supporting change tracking.
+	/// String-type base class for entities supporting change tracking.
 	/// </summary>
 	/// <typeparam name="U">The type of user, derived from <see cref="User"/>.</typeparam>
 	[Serializable]

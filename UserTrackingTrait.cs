@@ -7,6 +7,44 @@ using System.Threading.Tasks;
 namespace Grammophone.Domos.Domain
 {
 	/// <summary>
+	/// A trait to aid implementation of <see cref="IUserTrackingEntity"/>.
+	/// </summary>
+	public struct UserTrackingTrait
+	{
+		#region Private fields
+
+		private long owningUserID;
+
+		#endregion
+
+		#region Relations
+
+		/// <summary>
+		/// The ID of the user who owns the entity.
+		/// Once set, cannot be changed.
+		/// </summary>
+		public long OwningUserID
+		{
+			get
+			{
+				return owningUserID;
+			}
+			set
+			{
+				if (owningUserID != value)
+				{
+					if (owningUserID != 0L)
+						throw new DomainAccessDeniedException("The owner of the entity cannot be changed.", this);
+
+					owningUserID = value;
+				}
+			}
+		}
+
+		#endregion
+	}
+
+	/// <summary>
 	/// A trait to aid implementation of <see cref="IUserTrackingEntity{U}"/>.
 	/// </summary>
 	/// <typeparam name="U">The type of the user, derived from <see cref="User"/>.</typeparam>
