@@ -8,63 +8,16 @@ using System.Threading.Tasks;
 namespace Grammophone.Domos.Domain.Accounting
 {
 	/// <summary>
-	/// Base for accounting record lines in a journal.
-	/// </summary>
-	[Serializable]
-	public abstract class JournalLine : EntityWithID<long>
-	{
-		#region Primitive properties
-
-		/// <summary>
-		/// The amount added to the <see cref="Account"/>, if positive, or subtracted, if negative.
-		/// </summary>
-		public virtual decimal Amount { get; set; }
-
-		/// <summary>
-		/// Optional description of the journal line.
-		/// </summary>
-		public virtual string Description { get; set; }
-
-		#endregion
-
-		#region Relations
-
-		/// <summary>
-		/// The ID of the account where this journal line applies.
-		/// </summary>
-		public virtual long AccountID { get; set; }
-
-		/// <summary>
-		/// The account where this journal line applies.
-		/// </summary>
-		public virtual Account Account { get; set; }
-
-		/// <summary>
-		/// The ID of the journal where this line belongs.
-		/// </summary>
-		public virtual long JournalID { get; set; }
-
-		/// <summary>
-		/// The journal where this line belongs.
-		/// </summary>
-		public virtual Journal Journal { get; set; }
-
-		#endregion
-	}
-
-	/// <summary>
-	/// Base for accounting record lines in a journal, having group ownership.
+	/// Base for accounts recording creation and last modification.
 	/// </summary>
 	/// <typeparam name="U">The type of the user, derived from <see cref="User"/>.</typeparam>
 	[Serializable]
-	public abstract class JournalLine<U> : JournalLine, IUserGroupTrackingEntity<U>
+	public class TrackingAccount<U> : Account, ITrackingEntity<U>
 		where U : User
 	{
 		#region Private fields
 
 		private TrackingTrait<U> trackingTrait;
-
-		private UserGroupTrackingTrait<U> userGroupTrackingTrait;
 
 		#endregion
 
@@ -84,7 +37,7 @@ namespace Grammophone.Domos.Domain.Accounting
 			}
 			set
 			{
-				trackingTrait.CreationDate = value;
+				throw new NotImplementedException();
 			}
 		}
 
@@ -97,11 +50,11 @@ namespace Grammophone.Domos.Domain.Accounting
 		{
 			get
 			{
-				return trackingTrait.LastModificationDate;
+				throw new NotImplementedException();
 			}
 			set
 			{
-				trackingTrait.LastModificationDate = value;
+				throw new NotImplementedException();
 			}
 		}
 
@@ -172,24 +125,6 @@ namespace Grammophone.Domos.Domain.Accounting
 			set
 			{
 				trackingTrait.LastModifierUser = value;
-			}
-		}
-
-		/// <summary>
-		/// The owners of the entity. 
-		/// At least when querying for lists of entities, 
-		/// please remember to early fetch the owners to avoid a 'n+1' performance hit.
-		/// </summary>
-		[IgnoreDataMember]
-		public virtual ICollection<U> OwningUsers
-		{
-			get
-			{
-				return userGroupTrackingTrait.OwningUsers;
-			}
-			set
-			{
-				userGroupTrackingTrait.OwningUsers = value;
 			}
 		}
 

@@ -14,7 +14,7 @@ namespace Grammophone.Domos.Domain.Accounting
 	/// property to avoid a 'n+1' performance hit.
 	/// </summary>
 	/// <typeparam name="U">The type of the user, derived from <see cref="User"/>.</typeparam>
-	public class UserGroupAccount<U> : Account<U>, IUserGroupTrackingEntity<U>
+	public class UserGroupAccount<U> : TrackingAccount<U>, IUserGroupTrackingEntity<U>
 		where U : User
 	{
 		#region Private fields

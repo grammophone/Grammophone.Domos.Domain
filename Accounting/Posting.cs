@@ -8,10 +8,10 @@ namespace Grammophone.Domos.Domain.Accounting
 {
 	/// <summary>
 	/// A double-entry accounting record to represent internal credit flow. 
-	/// It is always balanced with other postings in <see cref="Journal{U}.Lines"/>.
+	/// It is always balanced with other postings in <see cref="Journal.Lines"/>.
 	/// </summary>
 	[Serializable]
-	public class Posting<U> : JournalLine<U>
+	public abstract class Posting<U> : JournalLine<U>
 		where U : User
 	{
 	}

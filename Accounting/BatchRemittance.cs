@@ -14,7 +14,7 @@ namespace Grammophone.Domos.Domain.Accounting
 	/// </summary>
 	/// <typeparam name="U">The type of the user, derived from <see cref="User"/>.</typeparam>
 	[Serializable]
-	public class BatchRemittance<U> : JournalLine<U>
+	public abstract class BatchRemittance<U> : JournalLine<U>
 		where U : User
 	{
 		#region Primitive properties
@@ -38,7 +38,7 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// <summary>
 		/// The batch where this remittance belongs.
 		/// </summary>
-		public virtual Batch<U> Batch { get; set; }
+		public virtual Batch Batch { get; set; }
 
 		#endregion
 	}

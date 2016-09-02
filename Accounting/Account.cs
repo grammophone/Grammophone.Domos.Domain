@@ -9,10 +9,8 @@ namespace Grammophone.Domos.Domain.Accounting
 	/// <summary>
 	/// Base for account entities.
 	/// </summary>
-	/// <typeparam name="U">The type of the user, derived from <see cref="User"/>.</typeparam>
 	[Serializable]
-	public abstract class Account<U> : TrackingEntityWithID<U, long>, IAccount
-		where U : User
+	public abstract class Account : EntityWithID<long>, IAccount
 	{
 		#region Primitive properties
 

@@ -14,9 +14,8 @@ namespace Grammophone.Domos.Domain
 		/// <summary>
 		/// The ID of the abstract segregation where this entity belongs to.
 		/// For example, in a platform-as-a-service scenario, this could be the company ID.
-		/// Once set, cannot be changed.
 		/// </summary>
-		long SegregationID { get; set; }
+		long SegregationID { get; }
 	}
 
 	/// <summary>
@@ -24,15 +23,14 @@ namespace Grammophone.Domos.Domain
 	/// </summary>
 	/// <typeparam name="U">The type of the user, derived from <see cref="User"/>.</typeparam>
 	/// <typeparam name="S">The type of the segregation, derived from <see cref="Segregation{U}"/></typeparam>
-	public interface ISegregatedEntity<U, S> : ISegregatedEntity
+	public interface ISegregatedEntity<U, out S> : ISegregatedEntity
 		where U : User
 		where S : Segregation<U>
 	{
 		/// <summary>
 		/// The segregation where this entity belongs to.
 		/// For example, in a platform-as-a-service scenario, this could be the company.
-		/// Once set, cannot be changed.
 		/// </summary>
-		S Segregation { get; set; }
+		S Segregation { get; }
 	}
 }

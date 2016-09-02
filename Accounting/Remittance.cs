@@ -30,13 +30,13 @@ namespace Grammophone.Domos.Domain.Accounting
 
 		/// <summary>
 		/// The ID of the credit system through which 
-		/// the <see cref="JournalLine{U}.Amount"/> is being transferred.
+		/// the <see cref="JournalLine.Amount"/> is being transferred.
 		/// </summary>
 		public virtual long CreditSystemID { get; set; }
 
 		/// <summary>
 		/// The credit system through which 
-		/// the <see cref="JournalLine{U}.Amount"/> is being transferred.
+		/// the <see cref="JournalLine.Amount"/> is being transferred.
 		/// </summary>
 		public virtual CreditSystem CreditSystem { get; set; }
 

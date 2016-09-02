@@ -13,15 +13,9 @@ namespace Grammophone.Domos.Domain.Workflow
 	/// </summary>
 	/// <typeparam name="U">The type of the user, derived from <see cref="User"/>.</typeparam>
 	[Serializable]
-	public class StateTransition<U> : UserGroupTrackingEntityWithID<U, long>
+	public abstract class StateTransition<U> : UserGroupTrackingEntityWithID<U, long>
 		where U : User
 	{
-		#region Private fields
-
-		private ICollection<Attachment<U>> attachments;
-
-		#endregion
-
 		#region Primitive properties
 
 		/// <summary>
@@ -49,23 +43,6 @@ namespace Grammophone.Domos.Domain.Workflow
 		/// The <see cref="StatePath"/> which was executed for the transition.
 		/// </summary>
 		public virtual StatePath Path { get; set; }
-
-		/// <summary>
-		/// Optional attachments accompanying this state transition.
-		/// </summary>
-		public virtual ICollection<Attachment<U>> Attachments
-		{
-			get
-			{
-				return attachments ?? (attachments = new HashSet<Attachment<U>>());
-			}
-			set
-			{
-				if (value == null) throw new ArgumentNullException(nameof(value));
-
-				attachments = value;
-			}
-		}
 
 		#endregion
 	}
