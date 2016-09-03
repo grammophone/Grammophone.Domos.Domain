@@ -25,12 +25,12 @@ namespace Grammophone.Domos.Domain
 	/// </summary>
 	/// <typeparam name="U">The type of the user, derived from <see cref="User"/>.</typeparam>
 	/// <typeparam name="S">The type of the segregation, derived from <see cref="Segregation{U}"/>.</typeparam>
-	/// <typeparam name="D">The type of the disposition, derived from <see cref="Disposition{U}"/>.</typeparam>
+	/// <typeparam name="D">The type of the disposition, derived from <see cref="Disposition{U, S}"/>.</typeparam>
 	public interface IDispositionTrackingEntity<U, S, D> : 
 		IDispositionTrackingEntity, ITrackingEntity<U>, ISegregatedEntity<U, S>
 		where U : User
 		where S : Segregation<U>
-		where D : Disposition<U>
+		where D : Disposition<U, S>
 	{
 		/// <summary>
 		/// The disposition which owns this entity.

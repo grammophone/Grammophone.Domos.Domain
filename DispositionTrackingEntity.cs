@@ -13,17 +13,17 @@ namespace Grammophone.Domos.Domain
 	/// </summary>
 	/// <typeparam name="U">The type of the user, derived from <see cref="User"/>.</typeparam>
 	/// <typeparam name="S">The type of the segregation, derived from <see cref="Segregation{U}"/>.</typeparam>
-	/// <typeparam name="D">The type of the disposition, derived from <see cref="Disposition{U}"/>.</typeparam>
+	/// <typeparam name="D">The type of the disposition, derived from <see cref="Disposition{U, S}"/>.</typeparam>
 	[Serializable]
 	public abstract class DispositionTrackingEntity<U, S, D> :
 		SegregatedEntity<U, S>, IDispositionTrackingEntity<U, S, D>
 		where U : User
 		where S : Segregation<U>
-		where D : Disposition<U>
+		where D : Disposition<U, S>
 	{
 		#region Private fields
 
-		private DispositionTrackingTrait<U, D> dispositionTrackingTrait;
+		private DispositionTrackingTrait<U, S, D> dispositionTrackingTrait;
 
 		private TrackingTrait<U> trackingTrait;
 

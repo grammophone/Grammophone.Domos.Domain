@@ -9,23 +9,23 @@ namespace Grammophone.Domos.Domain
 	/// <summary>
 	/// A participation of a user to a segregation of the system.
 	/// </summary>
+	/// <remarks>
+	/// In derived classes, if you want to create a foreign key from <see cref="SegregationID"/>
+	/// to a strong-type navigation property, typically of type <see cref="Segregation{U}"/>,
+	/// either add a [ForeignKey("SegregationID")] attribute to it or set it manually
+	/// according to your data access implementation. 
+	/// For Entity Framework 6.1.x, only the first approach seems to work.
+	/// </remarks>
+	/// <example>
+	/// <code>
+	/// [ForeignKey("SegregationID")]
+	/// public virtual Companies.Company Company { get; set; }
+	/// </code> 
+	/// </example>
 	[Serializable]
-	public class Disposition : EntityWithID<long>, IUserTrackingEntity
+	public abstract class Disposition : UserTrackingEntityWithID<User, long>
 	{
-		#region Private fields
-
-		private TrackingTrait trackingTrait;
-
-		private UserTrackingTrait userTrackingTrait;
-
-		#endregion
-
 		#region Primitive properties
-
-		/// <summary>
-		/// The ID of the segregation.
-		/// </summary>
-		public virtual long SegregationID { get; set; }
 
 		/// <summary>
 		/// The state of this disposition.
@@ -33,98 +33,42 @@ namespace Grammophone.Domos.Domain
 		public virtual DispositionState State { get; set; }
 
 		/// <summary>
-		/// Date when the entity was created.
-		/// Set by the system.
-		/// Once set, cannot be changed.
+		/// The ID of the segregation.
 		/// </summary>
-		public virtual DateTime CreationDate
-		{
-			get
-			{
-				return trackingTrait.CreationDate;
-			}
-			set
-			{
-				trackingTrait.CreationDate = value;
-			}
-		}
-
-		/// <summary>
-		/// Date of the last modification of the entity.
-		/// Set by the system.
-		/// </summary>
-		public virtual DateTime LastModificationDate
-		{
-			get
-			{
-				return trackingTrait.LastModificationDate;
-			}
-			set
-			{
-				trackingTrait.LastModificationDate = value;
-			}
-		}
+		public virtual long SegregationID { get; set; }
 
 		#endregion
 
-		#region Relationships
+		#region Relations
 
 		/// <summary>
-		/// The ID of the owner of the disposition.
-		/// Once set, cannot be changed.
+		/// The owner of the disposition.
 		/// </summary>
-		public virtual long OwningUserID
+		/// <remarks>
+		/// This override removes the inherited IgnoreMember attribute,
+		/// in order to make the property accessible.
+		/// </remarks>
+		public override User OwningUser
 		{
 			get
 			{
-				return userTrackingTrait.OwningUserID;
+				return base.OwningUser;
 			}
 			set
 			{
-				userTrackingTrait.OwningUserID = value;
+				base.OwningUser = value;
 			}
 		}
 
 		/// <summary>
-		/// The ID of the type of the disposition for this <see cref="SegregationID"/>.
+		/// The ID of the type of this disposition.
 		/// </summary>
 		public virtual long TypeID { get; set; }
 
 		/// <summary>
-		/// The type of the disposition for this <see cref="SegregationID"/>.
+		/// The type of this disposition.
 		/// </summary>
 		public virtual DispositionType Type { get; set; }
-
-		/// <summary>
-		/// ID of the user who created the entity.
-		/// Once set, cannot be changed.
-		/// </summary>
-		public virtual long CreatorUserID
-		{
-			get
-			{
-				return trackingTrait.CreatorUserID;
-			}
-			set
-			{
-				trackingTrait.CreatorUserID = value;
-			}
-		}
-
-		/// <summary>
-		/// ID of the user who modified the entity last.
-		/// </summary>
-		public virtual long LastModifierUserID
-		{
-			get
-			{
-				return trackingTrait.LastModifierUserID;
-			}
-			set
-			{
-				trackingTrait.LastModifierUserID = value;
-			}
-		}
 
 		#endregion
 	}
@@ -134,76 +78,17 @@ namespace Grammophone.Domos.Domain
 	/// with strong-type reference to the user.
 	/// </summary>
 	/// <typeparam name="U">The type of the user.</typeparam>
+	/// <typeparam name="S">The type of segregation, derived from <see cref="Segregation{U}"/>.</typeparam>
 	[Serializable]
-	public class Disposition<U> : Disposition, IUserTrackingEntity<U>
+	public abstract class Disposition<U, S> : Disposition
 		where U : User
 	{
-		#region Private fields
-
-		private U owningUser;
-
-		private U creatorUser;
-
-		#endregion
-
 		#region Relations
 
 		/// <summary>
-		/// The the owner of the disposition.
+		/// The segregation.
 		/// </summary>
-		public virtual U OwningUser
-		{
-			get
-			{
-				return owningUser;
-			}
-			set
-			{
-				if (value == null) throw new ArgumentNullException(nameof(value));
-
-				if (value != owningUser)
-				{
-					if (owningUser != null)
-						throw new DomainAccessDeniedException("The User cannot be changed.", this);
-
-					// Sync the foreign key manually, because the base Disposition entity 
-					// only knows the UserID property as a foreign key, not the User property and 
-					// the Object-Relational mappers will fail to cope automatically.
-					this.OwningUserID = value.ID;
-
-					owningUser = value;
-				}
-			}
-		}
-
-		/// <summary>
-		/// The user who created the entity.
-		/// Once set, cannot be changed.
-		/// </summary>
-		public U CreatorUser
-		{
-			get
-			{
-				return creatorUser;
-			}
-			set
-			{
-				if (value == null) throw new ArgumentNullException(nameof(value));
-
-				if (creatorUser != value)
-				{
-					if (creatorUser != null)
-						throw new DomainAccessDeniedException("The creator of the entity cannot be changed.", this);
-
-					creatorUser = value;
-				}
-			}
-		}
-
-		/// <summary>
-		/// The user who modified the entity last.
-		/// </summary>
-		public virtual U LastModifierUser { get; set; }
+		public virtual S Segregation { get; set; }
 
 		#endregion
 	}

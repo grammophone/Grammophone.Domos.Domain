@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Grammophone.Domos.Domain
 {
 	/// <summary>
-	/// The state of a <see cref="Disposition{U}"/>.
+	/// The state of a <see cref="Disposition"/>.
 	/// </summary>
 	public enum DispositionState
 	{

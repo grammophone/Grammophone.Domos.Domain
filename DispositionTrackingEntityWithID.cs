@@ -14,13 +14,13 @@ namespace Grammophone.Domos.Domain
 	/// <typeparam name="U">The type of the user, derived from <see cref="User"/>.</typeparam>
 	/// <typeparam name="K">The type of primary key.</typeparam>
 	/// <typeparam name="S">The type of the segregation, derived from <see cref="Segregation{U}"/>.</typeparam>
-	/// <typeparam name="D">The type of the disposition, derived from <see cref="Disposition{U}"/>.</typeparam>
+	/// <typeparam name="D">The type of the disposition, derived from <see cref="Disposition{U, S}"/>.</typeparam>
 	[Serializable]
 	public abstract class DispositionTrackingEntityWithID<U, K, S, D> :
 		DispositionTrackingEntity<U, S, D>, IEntityWithID<K>
 		where U : User
 		where S : Segregation<U>
-		where D : Disposition<U>
+		where D : Disposition<U, S>
 	{
 		/// <summary>
 		/// The primary key.

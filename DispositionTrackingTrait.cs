@@ -10,11 +10,13 @@ namespace Grammophone.Domos.Domain
 	/// A trait to aid implementation of <see cref="IDispositionTrackingEntity{U, S, D}"/>.
 	/// </summary>
 	/// <typeparam name="U">The type of the user, derived from <see cref="User"/>.</typeparam>
-	/// <typeparam name="D">The type of the disposition, derived from <see cref="Disposition{U}"/>.</typeparam>
+	/// <typeparam name="S">The type of the segregation, derived from <see cref="Segregation{U}"/>.</typeparam>
+	/// <typeparam name="D">The type of the disposition, derived from <see cref="Disposition{U, S}"/>.</typeparam>
 	[Serializable]
-	public struct DispositionTrackingTrait<U, D>
+	public struct DispositionTrackingTrait<U, S, D>
 		where U : User
-		where D : Disposition<U>
+		where S : Segregation<U>
+		where D : Disposition<U, S>
 	{
 		#region Private fields
 
