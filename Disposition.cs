@@ -33,9 +33,9 @@ namespace Grammophone.Domos.Domain
 		public virtual DispositionState State { get; set; }
 
 		/// <summary>
-		/// The ID of the segregation.
+		/// The ID of the segregation. Map this to the foreign key to the segregating entity.
 		/// </summary>
-		public virtual long SegregationID { get; set; }
+		public abstract long SegregationID { get; }
 
 		#endregion
 

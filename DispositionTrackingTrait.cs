@@ -11,12 +11,12 @@ namespace Grammophone.Domos.Domain
 	/// </summary>
 	/// <typeparam name="U">The type of the user, derived from <see cref="User"/>.</typeparam>
 	/// <typeparam name="S">The type of the segregation, derived from <see cref="Segregation{U}"/>.</typeparam>
-	/// <typeparam name="D">The type of the disposition, derived from <see cref="Disposition{U, S}"/>.</typeparam>
+	/// <typeparam name="D">The type of the disposition, derived from <see cref="Disposition"/>.</typeparam>
 	[Serializable]
 	public struct DispositionTrackingTrait<U, S, D>
 		where U : User
 		where S : Segregation<U>
-		where D : Disposition<U, S>
+		where D : Disposition
 	{
 		#region Private fields
 

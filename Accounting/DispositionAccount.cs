@@ -12,18 +12,59 @@ namespace Grammophone.Domos.Domain.Accounting
 	/// </summary>
 	/// <typeparam name="U">The type of the user, derived from <see cref="User"/>.</typeparam>
 	/// <typeparam name="S">The type of the segregation, derived from <see cref="Segregation{U}"/>.</typeparam>
-	/// <typeparam name="D">The type of the disposition, derived from <see cref="Disposition{U, S}"/>.</typeparam>
+	/// <typeparam name="D">The type of the disposition, derived from <see cref="Disposition"/>.</typeparam>
 	[Serializable]
-	public class DispositionAccount<U, S, D> : UserAccount<U>, IDispositionTrackingEntity<U, S, D>
+	public class DispositionAccount<U, S, D> : Account, IDispositionTrackingEntity<U, S, D>
 		where U : User
 		where S : Segregation<U>
-		where D : Disposition<U, S>
+		where D : Disposition
 	{
 		#region Private fields
+
+		private TrackingTrait<U> trackingTrait;
 
 		private SegregatedTrait<U, S> segregationTrackingTrait;
 
 		private DispositionTrackingTrait<U, S, D> dispositionTrackingTrait;
+
+		#endregion
+
+		#region Primitive properties
+
+		/// <summary>
+		/// Date when the entity was created.
+		/// Set by the system.
+		/// Once set, cannot be changed.
+		/// </summary>
+		[IgnoreDataMember]
+		public virtual DateTime CreationDate
+		{
+			get
+			{
+				return trackingTrait.CreationDate;
+			}
+			set
+			{
+				trackingTrait.CreationDate = value;
+			}
+		}
+
+		/// <summary>
+		/// Date of the last modification of the entity.
+		/// Set by the system.
+		/// </summary>
+		[IgnoreDataMember]
+		public virtual DateTime LastModificationDate
+		{
+			get
+			{
+				return trackingTrait.LastModificationDate;
+			}
+			set
+			{
+				trackingTrait.LastModificationDate = value;
+			}
+		}
 
 		#endregion
 
@@ -94,6 +135,72 @@ namespace Grammophone.Domos.Domain.Accounting
 			set
 			{
 				segregationTrackingTrait.Segregation = value;
+			}
+		}
+
+		/// <summary>
+		/// ID of the user who created the entity.
+		/// Once set, cannot be changed.
+		/// </summary>
+		[IgnoreDataMember]
+		public virtual long CreatorUserID
+		{
+			get
+			{
+				return trackingTrait.CreatorUserID;
+			}
+			set
+			{
+				trackingTrait.CreatorUserID = value;
+			}
+		}
+
+		/// <summary>
+		/// The user who created the entity.
+		/// Once set, cannot be changed.
+		/// </summary>
+		[IgnoreDataMember]
+		public virtual U CreatorUser
+		{
+			get
+			{
+				return trackingTrait.CreatorUser;
+			}
+			set
+			{
+				trackingTrait.CreatorUser = value;
+			}
+		}
+
+		/// <summary>
+		/// ID of the user who modified the entity last.
+		/// </summary>
+		[IgnoreDataMember]
+		public virtual long LastModifierUserID
+		{
+			get
+			{
+				return trackingTrait.LastModifierUserID;
+			}
+			set
+			{
+				trackingTrait.LastModifierUserID = value;
+			}
+		}
+
+		/// <summary>
+		/// The user who modified the entity last.
+		/// </summary>
+		[IgnoreDataMember]
+		public virtual U LastModifierUser
+		{
+			get
+			{
+				return trackingTrait.LastModifierUser;
+			}
+			set
+			{
+				trackingTrait.LastModifierUser = value;
 			}
 		}
 
