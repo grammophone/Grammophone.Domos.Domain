@@ -8,105 +8,35 @@ using System.Threading.Tasks;
 namespace Grammophone.Domos.Domain.Accounting
 {
 	/// <summary>
-	/// Base for accounting journals.
+	/// Base for accounting journals, having group ownership.
 	/// </summary>
+	/// <typeparam name="U">The type of the user, derived from <see cref="User"/>.</typeparam>
+	/// <typeparam name="ST">The type of state transition, derived from <see cref="Workflow.StateTransition{U}"/>.</typeparam>
+	/// <typeparam name="A">The type of accounts, derived from <see cref="Account{U}"/>.</typeparam>
+	/// <typeparam name="P">The type of the postings, derived from <see cref="Posting{U, A}"/>.</typeparam>
+	/// <typeparam name="R">The type of remittances, derived from <see cref="Remittance{U, A}"/>.</typeparam>
 	[Serializable]
-	public abstract class Journal : EntityWithID<long>
+	public abstract class Journal<U, ST, A, P, R> : UserGroupTrackingEntityWithID<U, long>
+		where U : User
+		where ST : Workflow.StateTransition<U>
+		where A : Account<U>
+		where P : Posting<U, A>
+		where R : Remittance<U, A>
 	{
 		#region Private fields
 
-		private ICollection<JournalLine> lines;
+		private ICollection<P> postings;
+
+		private ICollection<R> remittances;
 
 		#endregion
 
 		#region Primitive properties
-
-		/// <summary>
-		/// Applicatoin-defined categorization of the journal.
-		/// </summary>
-		public virtual int Type { get; set; }
 
 		/// <summary>
 		/// Optional description of the journal.
 		/// </summary>
 		public virtual string Description { get; set; }
-
-		#endregion
-
-		#region Relations
-
-		/// <summary>
-		/// The lines contained in this journal.
-		/// </summary>
-		public virtual ICollection<JournalLine> Lines
-		{
-			get
-			{
-				return lines ?? (lines = new HashSet<JournalLine>());
-			}
-			set
-			{
-				if (value == null) throw new ArgumentNullException(nameof(value));
-
-				lines = value;
-			}
-		}
-
-		#endregion
-	}
-
-	/// <summary>
-	/// Base for accounting journals, having group ownership.
-	/// </summary>
-	/// <typeparam name="U">The type of the user, derived from <see cref="User"/>.</typeparam>
-	[Serializable]
-	public abstract class Journal<U> : Journal, IUserGroupTrackingEntity<U>
-		where U : User
-	{
-		#region Private fields
-
-		private TrackingTrait<U> trackingTrait;
-
-		private UserGroupTrackingTrait<U> userGroupTrackingTrait;
-
-		#endregion
-
-		#region Primitive properties
-
-		/// <summary>
-		/// Date when the entity was created.
-		/// Set by the system.
-		/// Once set, cannot be changed.
-		/// </summary>
-		[IgnoreDataMember]
-		public virtual DateTime CreationDate
-		{
-			get
-			{
-				return trackingTrait.CreationDate;
-			}
-			set
-			{
-				trackingTrait.CreationDate = value;
-			}
-		}
-
-		/// <summary>
-		/// Date of the last modification of the entity.
-		/// Set by the system.
-		/// </summary>
-		[IgnoreDataMember]
-		public virtual DateTime LastModificationDate
-		{
-			get
-			{
-				return trackingTrait.LastModificationDate;
-			}
-			set
-			{
-				trackingTrait.LastModificationDate = value;
-			}
-		}
 
 		#endregion
 
@@ -120,89 +50,39 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// <summary>
 		/// Optional workflow state transition associated with this journal.
 		/// </summary>
-		public virtual Workflow.StateTransition<U> StateTransition { get; set; }
+		public virtual ST StateTransition { get; set; }
 
 		/// <summary>
-		/// ID of the user who created the entity.
-		/// Once set, cannot be changed.
+		/// The postings in this journal.
 		/// </summary>
-		[IgnoreDataMember]
-		public virtual long CreatorUserID
+		public virtual ICollection<P> Postings
 		{
 			get
 			{
-				return trackingTrait.CreatorUserID;
+				return postings ?? (postings = new HashSet<P>());
 			}
 			set
 			{
-				trackingTrait.CreatorUserID = value;
+				if (value == null) throw new ArgumentNullException(nameof(value));
+
+				postings = value;
 			}
 		}
 
 		/// <summary>
-		/// The user who created the entity.
-		/// Once set, cannot be changed.
+		/// The remittances in this journal.
 		/// </summary>
-		[IgnoreDataMember]
-		public virtual U CreatorUser
+		public virtual ICollection<R> Remittances
 		{
 			get
 			{
-				return trackingTrait.CreatorUser;
+				return remittances ?? (remittances = new HashSet<R>());
 			}
 			set
 			{
-				trackingTrait.CreatorUser = value;
-			}
-		}
+				if (value == null) throw new ArgumentNullException(nameof(value));
 
-		/// <summary>
-		/// ID of the user who modified the entity last.
-		/// </summary>
-		[IgnoreDataMember]
-		public virtual long LastModifierUserID
-		{
-			get
-			{
-				return trackingTrait.LastModifierUserID;
-			}
-			set
-			{
-				trackingTrait.LastModifierUserID = value;
-			}
-		}
-
-		/// <summary>
-		/// The user who modified the entity last.
-		/// </summary>
-		[IgnoreDataMember]
-		public virtual U LastModifierUser
-		{
-			get
-			{
-				return trackingTrait.LastModifierUser;
-			}
-			set
-			{
-				trackingTrait.LastModifierUser = value;
-			}
-		}
-
-		/// <summary>
-		/// The owners of the entity. 
-		/// At least when querying for lists of entities, 
-		/// please remember to early fetch the owners to avoid a 'n+1' performance hit.
-		/// </summary>
-		[IgnoreDataMember]
-		public virtual ICollection<U> OwningUsers
-		{
-			get
-			{
-				return userGroupTrackingTrait.OwningUsers;
-			}
-			set
-			{
-				userGroupTrackingTrait.OwningUsers = value;
+				remittances = value;
 			}
 		}
 

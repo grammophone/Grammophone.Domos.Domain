@@ -10,7 +10,8 @@ namespace Grammophone.Domos.Domain.Accounting
 	/// Base for account entities.
 	/// </summary>
 	[Serializable]
-	public abstract class Account : EntityWithID<long>, IAccount
+	public abstract class Account<U> : UserGroupTrackingEntityWithID<U, long>, IAccount
+		where U : User
 	{
 		#region Primitive properties
 
