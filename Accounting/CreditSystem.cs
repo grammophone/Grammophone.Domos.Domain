@@ -20,12 +20,14 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// The name of the credit system.
 		/// </summary>
 		[Required]
+		[MaxLength(256)]
 		public virtual string Name { get; set; }
 
 		/// <summary>
 		/// The code name of the credit system.
 		/// </summary>
 		[Required]
+		[MaxLength(256)]
 		public virtual string Code { get; set; }
 
 		#endregion
