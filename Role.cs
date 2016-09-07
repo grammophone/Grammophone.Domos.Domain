@@ -13,12 +13,6 @@ namespace Grammophone.Domos.Domain
 	[Serializable]
 	public class Role : EntityWithID<long>
 	{
-		#region Private fields
-
-		private ICollection<User> users;
-
-		#endregion
-
 		#region Primitive properties
 
 		/// <summary>
@@ -27,26 +21,6 @@ namespace Grammophone.Domos.Domain
 		[Required]
 		[MaxLength(128)]
 		public virtual string Name { get; set; }
-
-		#endregion
-
-		#region Relations
-
-		/// <summary>
-		/// The set of users having the role.
-		/// </summary>
-		public virtual ICollection<User> Users
-		{
-			get
-			{
-				return users ?? (users = new HashSet<User>());
-			}
-			set
-			{
-				if (value == null) throw new ArgumentNullException(nameof(value));
-				users = value;
-			}
-		}
 
 		#endregion
 	}
