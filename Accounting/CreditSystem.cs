@@ -24,7 +24,7 @@ namespace Grammophone.Domos.Domain.Accounting
 		public virtual string Name { get; set; }
 
 		/// <summary>
-		/// The code name of the credit system.
+		/// The unique code name of the credit system.
 		/// </summary>
 		[Required]
 		[MaxLength(256)]
