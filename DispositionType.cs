@@ -16,11 +16,18 @@ namespace Grammophone.Domos.Domain
 		#region Primitive properties
 
 		/// <summary>
-		/// The name of a segregation-wide role.
+		/// The name of the segregation-wide role.
 		/// </summary>
 		[Required]
-		[MaxLength(256)]
+		[MaxLength(128)]
 		public virtual string Name { get; set; }
+
+		/// <summary>
+		/// The code name of a the segregation-wide role.
+		/// </summary>
+		[Required]
+		[MaxLength(128)]
+		public virtual string CodeName { get; set; }
 
 		/// <summary>
 		/// The full .NET class name of dispositions of this type.

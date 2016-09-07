@@ -22,6 +22,13 @@ namespace Grammophone.Domos.Domain
 		[MaxLength(128)]
 		public virtual string Name { get; set; }
 
+		/// <summary>
+		/// The code name of the role.
+		/// </summary>
+		[Required]
+		[MaxLength(128)]
+		public virtual string CodeName { get; set; }
+
 		#endregion
 	}
 }
