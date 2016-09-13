@@ -30,6 +30,6 @@ namespace Grammophone.Domos.Domain.Workflow
 		/// <summary>
 		/// The history of state transitions of this object.
 		/// </summary>
-		ICollection<StateTransition<U>> Transitions { get; }
+		IEnumerable<StateTransition<U>> Transitions { get; }
 	}
 }
