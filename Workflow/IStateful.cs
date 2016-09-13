@@ -10,7 +10,7 @@ namespace Grammophone.Domos.Domain.Workflow
 	/// Contract for entities having a state in a workflow.
 	/// </summary>
 	/// <typeparam name="U">The type of the user, derived from <see cref="User"/>.</typeparam>
-	public interface IStateful<U> : ITrackingEntity<U>
+	public interface IStateful<U> : ITrackingEntity<U>, IEntityWithID<long>
 		where U : User
 	{
 		/// <summary>

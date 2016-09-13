@@ -40,7 +40,7 @@ namespace Grammophone.Domos.Domain
 			{
 				if (segregationID != value)
 				{
-					if (segregationID != 0L) throw new DomainAccessDeniedException("The segregation cannot be changed.", this);
+					if (segregationID != 0L) throw new AccessDeniedDomainException("The segregation cannot be changed.", this);
 
 					segregationID = value;
 				}
@@ -61,7 +61,7 @@ namespace Grammophone.Domos.Domain
 			{
 				if (segregation != value)
 				{
-					if (segregation != null) throw new DomainAccessDeniedException("The segregation cannot be changed.", this);
+					if (segregation != null) throw new AccessDeniedDomainException("The segregation cannot be changed.", this);
 
 					segregation = value;
 				}

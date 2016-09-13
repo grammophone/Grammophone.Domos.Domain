@@ -45,5 +45,18 @@ namespace Grammophone.Domos.Domain.Workflow
 		public virtual StatePath Path { get; set; }
 
 		#endregion
+
+		#region Public methods
+
+		/// <summary>
+		/// Bind this transition to an <see cref="IStateful{U}"/> instance.
+		/// </summary>
+		/// <exception cref="DomainException">
+		/// Thrown when the <paramref name="stateful"/> instance is not compatible
+		/// to this state transition.
+		/// </exception>
+		public abstract void BindToStateful(IStateful<U> stateful);
+
+		#endregion
 	}
 }

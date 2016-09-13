@@ -43,7 +43,7 @@ namespace Grammophone.Domos.Domain
 				if (owningDispositionID != value)
 				{
 					if (owningDispositionID != 0L)
-						throw new DomainAccessDeniedException("The owning disposition ID cannot be changed.", this);
+						throw new AccessDeniedDomainException("The owning disposition ID cannot be changed.", this);
 
 					owningDispositionID = value;
 				}
@@ -65,7 +65,7 @@ namespace Grammophone.Domos.Domain
 				if (owningDisposition != value)
 				{
 					if (owningDisposition != null)
-						throw new DomainAccessDeniedException("The owning disposition ID cannot be changed.", this);
+						throw new AccessDeniedDomainException("The owning disposition ID cannot be changed.", this);
 
 					owningDisposition = value;
 				}

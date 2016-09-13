@@ -34,7 +34,7 @@ namespace Grammophone.Domos.Domain
 				if (owningUserID != value)
 				{
 					if (owningUserID != 0L)
-						throw new DomainAccessDeniedException("The owner of the entity cannot be changed.", this);
+						throw new AccessDeniedDomainException("The owner of the entity cannot be changed.", this);
 
 					owningUserID = value;
 				}
@@ -77,7 +77,7 @@ namespace Grammophone.Domos.Domain
 				if (owningUserID != value)
 				{
 					if (owningUserID != 0L)
-						throw new DomainAccessDeniedException("The owner of the entity cannot be changed.", this);
+						throw new AccessDeniedDomainException("The owner of the entity cannot be changed.", this);
 
 					owningUserID = value;
 				}
@@ -101,7 +101,7 @@ namespace Grammophone.Domos.Domain
 				if (owningUser != value)
 				{
 					if (owningUser != null)
-						throw new DomainAccessDeniedException("The owner of the entity cannot be changed.", this);
+						throw new AccessDeniedDomainException("The owner of the entity cannot be changed.", this);
 
 					owningUser = value;
 				}

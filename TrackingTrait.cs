@@ -37,7 +37,7 @@ namespace Grammophone.Domos.Domain
 				if (creationDate != value)
 				{
 					if (creationDate != default(DateTime))
-						throw new DomainAccessDeniedException("The creation date cannot be changed.", this);
+						throw new AccessDeniedDomainException("The creation date cannot be changed.", this);
 
 					creationDate = value;
 				}
@@ -69,7 +69,7 @@ namespace Grammophone.Domos.Domain
 				if (creatorUserID != value)
 				{
 					if (creatorUserID != 0L)
-						throw new DomainAccessDeniedException("The creator of the entity cannot be changed.", this);
+						throw new AccessDeniedDomainException("The creator of the entity cannot be changed.", this);
 
 					creatorUserID = value;
 				}
@@ -120,7 +120,7 @@ namespace Grammophone.Domos.Domain
 				if (creationDate != value)
 				{
 					if (creationDate != default(DateTime))
-						throw new DomainAccessDeniedException("The creation date cannot be changed.", this);
+						throw new AccessDeniedDomainException("The creation date cannot be changed.", this);
 
 					creationDate = value;
 				}
@@ -152,7 +152,7 @@ namespace Grammophone.Domos.Domain
 				if (creatorUserID != value)
 				{
 					if (creatorUserID != 0L)
-						throw new DomainAccessDeniedException("The creator of the entity cannot be changed.", this);
+						throw new AccessDeniedDomainException("The creator of the entity cannot be changed.", this);
 
 					creatorUserID = value;
 				}
@@ -176,7 +176,7 @@ namespace Grammophone.Domos.Domain
 				if (creatorUser != value)
 				{
 					if (creatorUser != null)
-						throw new DomainAccessDeniedException("The creator of the entity cannot be changed.", this);
+						throw new AccessDeniedDomainException("The creator of the entity cannot be changed.", this);
 
 					creatorUser = value;
 				}

@@ -57,7 +57,8 @@
     <Compile Include="DispositionTrackingEntityWithID.cs" />
     <Compile Include="DispositionTrackingTrait.cs" />
     <Compile Include="DispositionType.cs" />
-    <Compile Include="DomainAccessDeniedException.cs" />
+    <Compile Include="AccessDeniedDomainException.cs" />
+    <Compile Include="DomainException.cs" />
     <Compile Include="EntityAccess.cs" />
     <Compile Include="EntityWithID.cs" />
     <Compile Include="IDispositionTrackingEntity.cs" />
