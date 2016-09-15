@@ -26,7 +26,7 @@ namespace Grammophone.Domos.Domain.Workflow
 		/// </summary>
 		[Required]
 		[MaxLength(128)]
-		public virtual string Code { get; set; }
+		public virtual string CodeName { get; set; }
 
 		/// <summary>
 		/// The name of the workflow graph.
