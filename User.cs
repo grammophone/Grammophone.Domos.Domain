@@ -66,11 +66,13 @@ namespace Grammophone.Domos.Domain
 		/// <summary>
 		/// True if this is a system account.
 		/// </summary>
+		[IgnoreDataMember]
 		public virtual bool IsSystem { get; set; }
 
 		/// <summary>
 		/// True if the user is the special "Anonymous" one.
 		/// </summary>
+		[IgnoreDataMember]
 		public virtual bool IsAnonymous { get; set; }
 
 		/// <summary>
