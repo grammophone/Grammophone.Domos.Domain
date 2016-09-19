@@ -60,6 +60,7 @@
     <Compile Include="AccessDeniedDomainException.cs" />
     <Compile Include="DomainException.cs" />
     <Compile Include="EntityAccess.cs" />
+    <Compile Include="EntityExtensionMethods.cs" />
     <Compile Include="EntityWithID.cs" />
     <Compile Include="IDispositionTrackingEntity.cs" />
     <Compile Include="IEntityWithID.cs" />
