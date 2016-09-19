@@ -28,7 +28,7 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// </summary>
 		[Required]
 		[MaxLength(256)]
-		public virtual string Code { get; set; }
+		public virtual string CodeName { get; set; }
 
 		#endregion
 	}
