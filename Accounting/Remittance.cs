@@ -24,13 +24,13 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// The ID of the external system transaction.
 		/// </summary>
 		[Required]
-		[MaxLength(256)]
+		[MaxLength(225)]
 		public virtual string TransactionID { get; set; }
 
 		/// <summary>
 		/// Optional ID of the line, when the remittance is part of a batch.
 		/// </summary>
-		[MaxLength(256)]
+		[MaxLength(225)]
 		public virtual string LineID { get; set; }
 
 		#endregion
