@@ -52,7 +52,7 @@
     <Compile Include="Accounting\Posting.cs" />
     <Compile Include="Accounting\Remittance.cs" />
     <Compile Include="Disposition.cs" />
-    <Compile Include="DispositionState.cs" />
+    <Compile Include="DispositionStatus.cs" />
     <Compile Include="DispositionTrackingEntity.cs" />
     <Compile Include="DispositionTrackingEntityWithID.cs" />
     <Compile Include="DispositionTrackingTrait.cs" />

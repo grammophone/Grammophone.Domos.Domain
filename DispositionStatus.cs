@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 namespace Grammophone.Domos.Domain
 {
 	/// <summary>
-	/// The state of a <see cref="Disposition"/>.
+	/// The status of a <see cref="Disposition"/>.
 	/// </summary>
-	public enum DispositionState
+	public enum DispositionStatus
 	{
 		/// <summary>
 		/// Assigned to a user but not verified.

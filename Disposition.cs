@@ -30,7 +30,7 @@ namespace Grammophone.Domos.Domain
 		/// <summary>
 		/// The state of this disposition.
 		/// </summary>
-		public virtual DispositionState State { get; set; }
+		public virtual DispositionStatus Status { get; set; }
 
 		/// <summary>
 		/// The ID of the segregation. Map this to the foreign key to the segregating entity.
