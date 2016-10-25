@@ -14,14 +14,6 @@ namespace Grammophone.Domos.Domain.Workflow
 	[Serializable]
 	public class StatePath : EntityWithID<long>
 	{
-		#region Private fields
-
-		private ICollection<Role> allowingRoles;
-
-		private ICollection<DispositionType> allowingDispositionTypes;
-
-		#endregion
-
 		#region Primitive properties
 
 		/// <summary>
@@ -92,40 +84,6 @@ namespace Grammophone.Domos.Domain.Workflow
 		/// Destination <see cref="State"/>.
 		/// </summary>
 		public virtual State ToState { get; set; }
-
-		/// <summary>
-		/// The system-wide roles which allow the execution of this path.
-		/// </summary>
-		public virtual ICollection<Role> AllowingRoles
-		{
-			get
-			{
-				return allowingRoles ?? (allowingRoles = new HashSet<Role>());
-			}
-			set
-			{
-				if (value == null) throw new ArgumentNullException(nameof(value));
-
-				allowingRoles = value;
-			}
-		}
-
-		/// <summary>
-		/// The segregation-wide roles which allow the execution of this path.
-		/// </summary>
-		public virtual ICollection<DispositionType> AllowingDispositionTypes
-		{
-			get
-			{
-				return allowingDispositionTypes ?? (allowingDispositionTypes = new HashSet<DispositionType>());
-			}
-			set
-			{
-				if (value == null) throw new ArgumentNullException(nameof(value));
-
-				allowingDispositionTypes = value;
-			}
-		}
 
 		#endregion
 	}
