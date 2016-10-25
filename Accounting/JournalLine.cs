@@ -17,10 +17,6 @@ namespace Grammophone.Domos.Domain.Accounting
 		where U : User
 		where A : Account<U>
 	{
-		#region Private fields
-
-		#endregion
-
 		#region Primitive properties
 
 		/// <summary>
@@ -46,6 +42,11 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// The account where this journal line applies.
 		/// </summary>
 		public virtual A Account { get; set; }
+
+		/// <summary>
+		/// The ID of the journal where this line belongs.
+		/// </summary>
+		public virtual long JournalID { get; set; }
 
 		#endregion
 	}
