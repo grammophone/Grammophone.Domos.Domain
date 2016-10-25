@@ -38,6 +38,16 @@ namespace Grammophone.Domos.Domain.Workflow
 		#region Relations
 
 		/// <summary>
+		/// The ID of the workflow graph where this group of states belongs.
+		/// </summary>
+		public virtual long WorkflowGraphID { get; set; }
+
+		/// <summary>
+		/// The workflow graph where this group of states belongs.
+		/// </summary>
+		public virtual WorkflowGraph WorkflowGraph { get; set; }
+
+		/// <summary>
 		/// The states belonging to this group.
 		/// </summary>
 		public virtual ICollection<State> States
