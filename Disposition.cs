@@ -8,6 +8,7 @@ namespace Grammophone.Domos.Domain
 {
 	/// <summary>
 	/// A participation of a user to a segregation of the system.
+	/// It is a kind of role within a segregation.
 	/// </summary>
 	/// <remarks>
 	/// In derived classes, if you want to create a foreign key from <see cref="SegregationID"/>
