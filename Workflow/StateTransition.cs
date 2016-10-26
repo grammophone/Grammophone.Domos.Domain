@@ -19,13 +19,13 @@ namespace Grammophone.Domos.Domain.Workflow
 		#region Primitive properties
 
 		/// <summary>
-		/// The value of the stateful object's <see cref="IStateful{U}.ChangeStamp"/> before the execution
+		/// The value of the stateful object's <see cref="IStateful{U, ST}.ChangeStamp"/> before the execution
 		/// of the <see cref="Path"/>.
 		/// </summary>
 		public virtual int ChangeStampBefore { get; set; }
 
 		/// <summary>
-		/// The value of the stateful object's <see cref="IStateful{U}.ChangeStamp"/> after the execution
+		/// The value of the stateful object's <see cref="IStateful{U, ST}.ChangeStamp"/> after the execution
 		/// of the <see cref="Path"/>.
 		/// </summary>
 		public virtual int ChangeStampAfter { get; set; }
@@ -49,13 +49,13 @@ namespace Grammophone.Domos.Domain.Workflow
 		#region Public methods
 
 		/// <summary>
-		/// Bind this transition to an <see cref="IStateful{U}"/> instance.
+		/// Bind this transition to an <see cref="IStateful{U, ST}"/> instance.
 		/// </summary>
 		/// <exception cref="DomainException">
 		/// Thrown when the <paramref name="stateful"/> instance is not compatible
 		/// to this state transition.
 		/// </exception>
-		public abstract void BindToStateful(IStateful<U> stateful);
+		public abstract void BindToStateful(IStateful<U, StateTransition<U>> stateful);
 
 		#endregion
 	}
