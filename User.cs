@@ -20,6 +20,8 @@ namespace Grammophone.Domos.Domain
 
 		private ICollection<Disposition> dispositions;
 
+		private ICollection<Registration> registrations;
+
 		#endregion
 
 		#region Primitive properties
@@ -140,6 +142,23 @@ namespace Grammophone.Domos.Domain
 				if (value == null) throw new ArgumentNullException(nameof(value));
 
 				dispositions = value;
+			}
+		}
+
+		/// <summary>
+		/// The external login registrations of the user.
+		/// </summary>
+		public virtual ICollection<Registration> Registrations
+		{
+			get
+			{
+				return registrations ?? (registrations = new HashSet<Registration>());
+			}
+			set
+			{
+				if (value == null) throw new ArgumentNullException(nameof(value));
+
+				registrations = value;
 			}
 		}
 
