@@ -93,6 +93,18 @@ namespace Grammophone.Domos.Domain
 		/// </summary>
 		public virtual DateTime CreationDate { get; set; }
 
+		/// <summary>
+		/// An optional unique identifier for the user.
+		/// </summary>
+		/// <remarks>
+		/// This is not elected as the primary key for two reasons:
+		/// <list type="bullet">
+		/// <item>It is intended to be unpredictable.</item>
+		/// <item>The <see cref="EntityWithID{K}.ID"/> is more lightweight as a primary and foreign key.</item>
+		/// </list>
+		/// </remarks>
+		public virtual Guid Guid { get; set; }
+
 		#endregion
 
 		#region Relations
