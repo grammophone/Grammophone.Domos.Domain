@@ -62,6 +62,11 @@
     <Compile Include="EntityAccess.cs" />
     <Compile Include="EntityExtensionMethods.cs" />
     <Compile Include="EntityWithID.cs" />
+    <Compile Include="Files\ContentType.cs" />
+    <Compile Include="Files\File.cs" />
+    <Compile Include="Files\IFile.cs" />
+    <Compile Include="Files\TrackingFile.cs" />
+    <Compile Include="Files\UserTrackingFile.cs" />
     <Compile Include="IDispositionTrackingEntity.cs" />
     <Compile Include="IEntityWithID.cs" />
     <Compile Include="ISegregatedEntity.cs" />
