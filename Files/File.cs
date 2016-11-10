@@ -45,6 +45,11 @@ namespace Grammophone.Domos.Domain.Files
 		[MaxLength(512)]
 		public virtual string Name { get; set; }
 
+		/// <summary>
+		/// If true, the file contents are encrypted.
+		/// </summary>
+		public bool IsEncrypted { get; set; }
+
 		#endregion
 
 		#region Relations

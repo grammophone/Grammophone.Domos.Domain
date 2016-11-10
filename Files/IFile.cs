@@ -31,6 +31,11 @@ namespace Grammophone.Domos.Domain.Files
 		/// </summary>
 		string Name { get; set; }
 
+		/// <summary>
+		/// If true, the file contents are encrypted.
+		/// </summary>
+		bool IsEncrypted { get; set; }
+
 		#endregion
 
 		#region Relations
