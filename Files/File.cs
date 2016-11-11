@@ -32,6 +32,13 @@ namespace Grammophone.Domos.Domain.Files
 		public virtual string ContainerName { get; set; }
 
 		/// <summary>
+		/// The name of the storage provider name.
+		/// If null, it specifies the default storage provider.
+		/// </summary>
+		[MaxLength(32)]
+		public virtual string ProviderName { get; set; }
+
+		/// <summary>
 		/// The full name of the file relative to its container.
 		/// </summary>
 		[Required]
@@ -48,7 +55,7 @@ namespace Grammophone.Domos.Domain.Files
 		/// <summary>
 		/// If true, the file contents are encrypted.
 		/// </summary>
-		public bool IsEncrypted { get; set; }
+		public virtual bool IsEncrypted { get; set; }
 
 		#endregion
 
