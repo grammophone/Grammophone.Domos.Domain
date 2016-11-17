@@ -22,6 +22,12 @@ namespace Grammophone.Domos.Domain.Files
 		string ContainerName { get; set; }
 
 		/// <summary>
+		/// The name of the storage provider name.
+		/// If null, it specifies the default storage provider.
+		/// </summary>
+		string ProviderName { get; set; }
+
+		/// <summary>
 		/// The full name of the file relative to its container.
 		/// </summary>
 		string FullName { get; set; }
