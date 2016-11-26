@@ -85,6 +85,16 @@ namespace Grammophone.Domos.Domain.Workflow
 		/// </summary>
 		public virtual State ToState { get; set; }
 
+		/// <summary>
+		/// The ID of the workflow graph where this path vertex belongs.
+		/// </summary>
+		public virtual long WorkflowGraphID { get; set; }
+
+		/// <summary>
+		/// The workflow graph where this path vertex belongs.
+		/// </summary>
+		public virtual WorkflowGraph WorkflowGraph { get; set; }
+
 		#endregion
 	}
 }
