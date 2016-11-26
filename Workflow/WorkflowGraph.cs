@@ -38,6 +38,16 @@ namespace Grammophone.Domos.Domain.Workflow
 		/// </summary>
 		public virtual string Description { get; set; }
 
+		/// <summary>
+		/// The full name of the <see cref="StateTransition{U}"/> descendant type which
+		/// is assigned to work in this workflow graph.
+		/// It defines the type of <see cref="IStateful{U, ST}"/> objects 
+		/// this workflow graph works on, since ST is the type of the state transition.
+		/// </summary>
+		[Required]
+		[MaxLength(256)]
+		public virtual string StateTransitionTypeName { get; set; }
+
 		#endregion
 
 		#region Relations
