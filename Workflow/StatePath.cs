@@ -68,22 +68,22 @@ namespace Grammophone.Domos.Domain.Workflow
 		/// <summary>
 		/// ID of originating <see cref="State"/>.
 		/// </summary>
-		public virtual long FromStateID { get; set; }
+		public virtual long PreviousStateID { get; set; }
 
 		/// <summary>
 		/// Originating <see cref="State"/>.
 		/// </summary>
-		public virtual State FromState { get; set; }
+		public virtual State PreviousState { get; set; }
 
 		/// <summary>
 		/// ID of destination <see cref="State"/>.
 		/// </summary>
-		public virtual long ToStateID { get; set; }
+		public virtual long NextStateID { get; set; }
 
 		/// <summary>
 		/// Destination <see cref="State"/>.
 		/// </summary>
-		public virtual State ToState { get; set; }
+		public virtual State NextState { get; set; }
 
 		/// <summary>
 		/// The ID of the workflow graph where this path vertex belongs.
