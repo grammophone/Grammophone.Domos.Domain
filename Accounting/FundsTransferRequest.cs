@@ -1,0 +1,112 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Grammophone.Domos.Domain.Accounting
+{
+	/// <summary>
+	/// Represents an Electronic Funds Transfer (EFT/ACH) request.
+	/// </summary>
+	[Serializable]
+	public class FundsTransferRequest : EntityWithID<long>
+	{
+		#region Private fields
+
+		private BankAccountInfo bankAccountInfo;
+
+		private ICollection<FundsTransferEvent> events;
+
+		#endregion
+
+		#region Primitive properties
+
+		/// <summary>
+		/// The UTC date and time when the event is registered.
+		/// </summary>
+		public virtual DateTime Date { get; set; }
+
+		/// <summary>
+		/// If positive, The amount is added to the bank account specified
+		/// by <see cref="BankAccountInfo"/>, else it is subtracted.
+		/// </summary>
+		public virtual decimal Amount { get; set; }
+
+		/// <summary>
+		/// The state of this transfer request.
+		/// </summary>
+		public virtual FundsTransferState State { get; set; }
+
+		/// <summary>
+		/// The ID of the external system transaction.
+		/// </summary>
+		[Required]
+		[MaxLength(225)]
+		public virtual string TransactionID { get; set; }
+
+		/// <summary>
+		/// Optional ID of the line, when the transfer is part of a batch.
+		/// </summary>
+		[MaxLength(225)]
+		public virtual string LineID { get; set; }
+
+		/// <summary>
+		/// Optional comments.
+		/// </summary>
+		[MaxLength(256)]
+		public virtual string Comments { get; set; }
+
+		/// <summary>
+		/// The bank account from which the <see cref="Amount"/> is withdrawed, if negative,
+		/// or deposited, if positive.
+		/// </summary>
+		public virtual BankAccountInfo BankAccountInfo
+		{
+			get
+			{
+				return bankAccountInfo ?? (bankAccountInfo = new BankAccountInfo());
+			}
+			set
+			{
+				if (value == null) throw new ArgumentNullException(nameof(value));
+
+				bankAccountInfo = value;
+			}
+		}
+
+		#endregion
+
+		#region Relations
+
+		/// <summary>
+		/// The ID of the credit provider for the funds transfer.
+		/// </summary>
+		public virtual long CreditSystemID { get; set; }
+
+		/// <summary>
+		/// The credit provider for the funds transfer.
+		/// </summary>
+		public virtual CreditSystem CreditSystem { get; set; }
+
+		/// <summary>
+		/// The events recorded for this request.
+		/// </summary>
+		public virtual ICollection<FundsTransferEvent> Events
+		{
+			get
+			{
+				return events ?? (events = new HashSet<FundsTransferEvent>());
+			}
+			set
+			{
+				if (value == null) throw new ArgumentNullException(nameof(value));
+
+				events = value;
+			}
+		}
+
+		#endregion
+	}
+}
