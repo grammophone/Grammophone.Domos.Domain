@@ -11,7 +11,7 @@ namespace Grammophone.Domos.Domain.Accounting
 	/// Embeddable record for the encrypted specification of a bank account.
 	/// </summary>
 	[Serializable]
-	public class BankAccountInfo
+	public class EncryptedBankAccountInfo
 	{
 		#region Public properties
 
@@ -47,9 +47,9 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// <summary>
 		/// Clone this intance.
 		/// </summary>
-		public BankAccountInfo Clone()
+		public EncryptedBankAccountInfo Clone()
 		{
-			return new BankAccountInfo
+			return new EncryptedBankAccountInfo
 			{
 				EncryptedAccountNumber = this.EncryptedAccountNumber,
 				BankNumber = this.BankNumber,

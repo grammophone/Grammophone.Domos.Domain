@@ -45,7 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Accounting\Account.cs" />
-    <Compile Include="Accounting\BankAccountInfo.cs" />
+    <Compile Include="Accounting\EncryptedBankAccountInfo.cs" />
     <Compile Include="Accounting\CreditSystem.cs" />
     <Compile Include="Accounting\FundsTransferEvent.cs" />
     <Compile Include="Accounting\FundsTransferEventType.cs" />

@@ -15,7 +15,7 @@ namespace Grammophone.Domos.Domain.Accounting
 	{
 		#region Private fields
 
-		private BankAccountInfo bankAccountInfo;
+		private EncryptedBankAccountInfo bankAccountInfo;
 
 		private ICollection<FundsTransferEvent> events;
 
@@ -30,7 +30,7 @@ namespace Grammophone.Domos.Domain.Accounting
 
 		/// <summary>
 		/// If positive, The amount is added to the bank account specified
-		/// by <see cref="BankAccountInfo"/>, else it is subtracted.
+		/// by <see cref="EncryptedBankAccountInfo"/>, else it is subtracted.
 		/// </summary>
 		public virtual decimal Amount { get; set; }
 
@@ -59,14 +59,15 @@ namespace Grammophone.Domos.Domain.Accounting
 		public virtual string Comments { get; set; }
 
 		/// <summary>
-		/// The bank account from which the <see cref="Amount"/> is withdrawed, if negative,
+		/// The encrypted bank account from which the <see cref="Amount"/> is withdrawed, if negative,
 		/// or deposited, if positive.
+		/// This is an embedded entity, not a relation.
 		/// </summary>
-		public virtual BankAccountInfo BankAccountInfo
+		public virtual EncryptedBankAccountInfo EncryptedBankAccountInfo
 		{
 			get
 			{
-				return bankAccountInfo ?? (bankAccountInfo = new BankAccountInfo());
+				return bankAccountInfo ?? (bankAccountInfo = new EncryptedBankAccountInfo());
 			}
 			set
 			{
