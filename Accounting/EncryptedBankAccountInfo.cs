@@ -45,7 +45,7 @@ namespace Grammophone.Domos.Domain.Accounting
 		#region Public methods
 
 		/// <summary>
-		/// Clone this intance.
+		/// Clone this instance.
 		/// </summary>
 		public EncryptedBankAccountInfo Clone()
 		{

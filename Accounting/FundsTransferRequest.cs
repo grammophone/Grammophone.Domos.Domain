@@ -29,8 +29,8 @@ namespace Grammophone.Domos.Domain.Accounting
 		public virtual DateTime Date { get; set; }
 
 		/// <summary>
-		/// If positive, The amount is added to the bank account specified
-		/// by <see cref="EncryptedBankAccountInfo"/>, else it is subtracted.
+		/// If positive, The amount is deposited to the bank account specified
+		/// by <see cref="EncryptedBankAccountInfo"/>, else it is withdrawed.
 		/// </summary>
 		public virtual decimal Amount { get; set; }
 
