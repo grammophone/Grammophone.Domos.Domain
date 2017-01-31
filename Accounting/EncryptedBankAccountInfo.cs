@@ -41,23 +41,5 @@ namespace Grammophone.Domos.Domain.Accounting
 		public virtual string AccountCode { get; set; }
 
 		#endregion
-
-		#region Public methods
-
-		/// <summary>
-		/// Clone this instance.
-		/// </summary>
-		public EncryptedBankAccountInfo Clone()
-		{
-			return new EncryptedBankAccountInfo
-			{
-				EncryptedAccountNumber = this.EncryptedAccountNumber,
-				BankNumber = this.BankNumber,
-				EncryptedTransitNumber = this.EncryptedTransitNumber,
-				AccountCode = this.AccountCode
-			};
-		}
-
-		#endregion
 	}
 }
