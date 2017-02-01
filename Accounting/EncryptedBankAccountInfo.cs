@@ -40,6 +40,13 @@ namespace Grammophone.Domos.Domain.Accounting
 		[MaxLength(6)]
 		public virtual string AccountCode { get; set; }
 
+		/// <summary>
+		/// Optional type, when the system supports many bank account
+		/// formats at the same time.
+		/// </summary>
+		[MaxLength(12)]
+		public virtual string Type { get; set; }
+
 		#endregion
 	}
 }
