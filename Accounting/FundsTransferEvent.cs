@@ -20,7 +20,6 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// The response code as returned by the Electronic Funds
 		/// Transfer (EFT/ACH) system.
 		/// </summary>
-		[Required]
 		[MaxLength(3)]
 		public virtual string ResponseCode { get; set; }
 
@@ -33,7 +32,6 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// Unique code for event tracing.
 		/// </summary>
 		[MaxLength(36)]
-		[Required]
 		public virtual string TraceCode { get; set; }
 
 		/// <summary>
