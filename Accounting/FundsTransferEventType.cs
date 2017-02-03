@@ -18,13 +18,19 @@ namespace Grammophone.Domos.Domain.Accounting
 		Submitted = 0,
 
 		/// <summary>
+		/// The transfer has been accepted by the EFT/ACH system
+		/// but has not yet succeeded or failed.
+		/// </summary>
+		Accepted = 1,
+
+		/// <summary>
 		/// The transfer has failed.
 		/// </summary>
-		Failed = 1,
+		Failed = 2,
 
 		/// <summary>
 		/// The transfer has been successful.
 		/// </summary>
-		Succeeded = 2
+		Succeeded = 3
 	}
 }
