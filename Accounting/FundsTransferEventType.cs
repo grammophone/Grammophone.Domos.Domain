@@ -12,10 +12,10 @@ namespace Grammophone.Domos.Domain.Accounting
 	public enum FundsTransferEventType
 	{
 		/// <summary>
-		/// The transfer is been accepted by the EFT/ACH system
+		/// The transfer has been submitted to the EFT/ACH system
 		/// but has not yet succeeded or failed.
 		/// </summary>
-		Accepted = 0,
+		Submitted = 0,
 
 		/// <summary>
 		/// The transfer has failed.
