@@ -47,10 +47,10 @@ namespace Grammophone.Domos.Domain.Accounting
 		public virtual string TransactionID { get; set; }
 
 		/// <summary>
-		/// Optional ID of the line, when the transfer is part of a batch.
+		/// Optional ID of the batch, when the transfer is part of a batch.
 		/// </summary>
 		[MaxLength(225)]
-		public virtual string LineID { get; set; }
+		public virtual string BatchID { get; set; }
 
 		/// <summary>
 		/// Optional comments.
