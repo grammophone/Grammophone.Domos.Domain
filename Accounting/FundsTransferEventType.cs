@@ -12,25 +12,30 @@ namespace Grammophone.Domos.Domain.Accounting
 	public enum FundsTransferEventType
 	{
 		/// <summary>
+		/// The transfer has been queued for submission.
+		/// </summary>
+		Queued = 0,
+
+		/// <summary>
+		/// The transfer has failed.
+		/// </summary>
+		Failed = 1,
+
+		/// <summary>
 		/// The transfer has been submitted to the EFT/ACH system
 		/// but has not yet succeeded or failed.
 		/// </summary>
-		Submitted = 0,
+		Submitted = 2,
 
 		/// <summary>
 		/// The transfer has been accepted by the EFT/ACH system
 		/// but has not yet succeeded or failed.
 		/// </summary>
-		Accepted = 1,
-
-		/// <summary>
-		/// The transfer has failed.
-		/// </summary>
-		Failed = 2,
+		Accepted = 3,
 
 		/// <summary>
 		/// The transfer has been successful.
 		/// </summary>
-		Succeeded = 3
+		Succeeded = 4
 	}
 }

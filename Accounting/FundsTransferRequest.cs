@@ -24,11 +24,6 @@ namespace Grammophone.Domos.Domain.Accounting
 		#region Primitive properties
 
 		/// <summary>
-		/// The UTC date and time when the event is registered.
-		/// </summary>
-		public virtual DateTime Date { get; set; }
-
-		/// <summary>
 		/// If positive, The amount is deposited to the bank account specified
 		/// by <see cref="EncryptedBankAccountInfo"/>, else it is withdrawed.
 		/// </summary>
@@ -59,7 +54,7 @@ namespace Grammophone.Domos.Domain.Accounting
 		public virtual string Comments { get; set; }
 
 		/// <summary>
-		/// The encrypted bank account from which the <see cref="Amount"/> is withdrawed, if negative,
+		/// The encrypted bank account from which the <see cref="Amount"/> is withdrawn, if negative,
 		/// or deposited, if positive.
 		/// This is an embedded entity, not a relation.
 		/// </summary>
