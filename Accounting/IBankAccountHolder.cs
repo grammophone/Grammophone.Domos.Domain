@@ -15,6 +15,6 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// <summary>
 		/// The encrypted bank account.
 		/// </summary>
-		EncryptedBankAccountInfo EncryptedBankAccountInfo { get; }
+		EncryptedBankAccountInfo EncryptedBankAccountInfo { get; set; }
 	}
 }
