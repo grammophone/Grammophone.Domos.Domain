@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Grammophone.Domos.Domain.Accounting;
 
 namespace Grammophone.Domos.Domain.Workflow
 {
@@ -43,6 +44,16 @@ namespace Grammophone.Domos.Domain.Workflow
 		/// The <see cref="StatePath"/> which was executed for the transition.
 		/// </summary>
 		public virtual StatePath Path { get; set; }
+
+		/// <summary>
+		/// The ID of an optional funds transfer event associated with the state transition.
+		/// </summary>
+		public virtual long? FundsTransferEventID { get; set; }
+
+		/// <summary>
+		/// Optional funds transfer event associated with the state transition.
+		/// </summary>
+		public virtual FundsTransferEvent FundsTransferEvent { get; set; }
 
 		#endregion
 
