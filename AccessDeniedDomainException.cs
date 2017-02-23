@@ -13,9 +13,9 @@ namespace Grammophone.Domos.Domain
 	public class AccessDeniedDomainException : DomainException
 	{
 		/// <summary>
-		/// The entity under violation.
+		/// The name of the entity under violation.
 		/// </summary>
-		public object Entity { get; private set; }
+		public string EntityName { get; private set; }
 
 		/// <summary>
 		/// Create.
@@ -25,7 +25,7 @@ namespace Grammophone.Domos.Domain
 		public AccessDeniedDomainException(string message, object entity) 
 			: base(message)
 		{
-			this.Entity = entity;
+			this.EntityName = GetEntityTypeName(entity);
 		}
 
 		/// <summary>
@@ -34,5 +34,20 @@ namespace Grammophone.Domos.Domain
 		protected AccessDeniedDomainException(
 		System.Runtime.Serialization.SerializationInfo info,
 		System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+
+		/// <summary>
+		/// Takes care of possible proxy classes containing '_' in their name.
+		/// </summary>
+		private static string GetEntityTypeName(object entity)
+		{
+			if (entity == null) throw new ArgumentNullException(nameof(entity));
+
+			Type type = entity.GetType();
+
+			if (type.Name.Contains('_') && type.BaseType != null)
+				return type.BaseType.FullName;
+			else
+				return type.FullName;
+		}
 	}
 }
