@@ -10,10 +10,10 @@ namespace Grammophone.Domos.Domain
 	/// Thrown when there is a violation of the security defined for the entities of the domain model.
 	/// </summary>
 	[Serializable]
-	public class AccessDeniedDomainException : DomainException
+	public class AccessDeniedDomainException : DomainException, IEntityAccessDeniedException
 	{
 		/// <summary>
-		/// The name of the entity under violation.
+		/// The type name of the entity under violation.
 		/// </summary>
 		public string EntityName { get; private set; }
 

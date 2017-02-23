@@ -73,7 +73,9 @@
     <Compile Include="Files\IFile.cs" />
     <Compile Include="Files\TrackingFile.cs" />
     <Compile Include="Files\UserTrackingFile.cs" />
+    <Compile Include="IAccessDeniedException.cs" />
     <Compile Include="IDispositionTrackingEntity.cs" />
+    <Compile Include="IEntityAccessDeniedException.cs" />
     <Compile Include="IEntityWithID.cs" />
     <Compile Include="ISegregatedEntity.cs" />
     <Compile Include="ITrackingEntity.cs" />
