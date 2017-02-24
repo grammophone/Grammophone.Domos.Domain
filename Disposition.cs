@@ -24,7 +24,8 @@ namespace Grammophone.Domos.Domain
 	/// </code> 
 	/// </example>
 	[Serializable]
-	public abstract class Disposition : UserTrackingEntityWithID<User, long>
+	public abstract class Disposition
+		: UserTrackingEntityWithID<User, long>, IDisposition
 	{
 		#region Primitive properties
 
@@ -83,6 +84,7 @@ namespace Grammophone.Domos.Domain
 	[Serializable]
 	public abstract class Disposition<U, S> : Disposition
 		where U : User
+		where S : Segregation<U>
 	{
 		#region Relations
 
