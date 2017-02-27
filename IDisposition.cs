@@ -45,6 +45,11 @@ namespace Grammophone.Domos.Domain
 		/// <summary>
 		/// The segregation.
 		/// </summary>
-		S Segregation { get; set; }
+		S Segregation { get; }
+
+		/// <summary>
+		/// Set the <see cref="Segregation"/>.
+		/// </summary>
+		void SetSegregation(S segregation);
 	}
 }
