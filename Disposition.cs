@@ -74,33 +74,4 @@ namespace Grammophone.Domos.Domain
 
 		#endregion
 	}
-
-	/// <summary>
-	/// A participation of a user to a segregation of the system,
-	/// with strong-type reference to the user.
-	/// </summary>
-	/// <typeparam name="U">The type of the user.</typeparam>
-	/// <typeparam name="S">The type of segregation, derived from <see cref="Segregation{U}"/>.</typeparam>
-	[Serializable]
-	public abstract class Disposition<U, S> : Disposition, IDisposition<U, S>
-		where U : User
-		where S : Segregation<U>
-	{
-		#region Relations
-
-		/// <summary>
-		/// The segregation.
-		/// </summary>
-		public virtual S Segregation { get; set; }
-
-		/// <summary>
-		/// Maps to setting the <see cref="Segregation"/>.
-		/// </summary>
-		void IDisposition<U, S>.SetSegregation(S segregation)
-		{
-			this.Segregation = segregation;
-		}
-
-		#endregion
-	}
 }
