@@ -53,6 +53,8 @@
     <Compile Include="Accounting\FundsTransferState.cs" />
     <Compile Include="Accounting\IAccount.cs" />
     <Compile Include="Accounting\IBankAccountHolder.cs" />
+    <Compile Include="Accounting\IWithdrawableFundsHolder.cs" />
+    <Compile Include="Accounting\IWithdrawableFundsHolderWithBankAccount.cs" />
     <Compile Include="Accounting\Journal.cs" />
     <Compile Include="Accounting\JournalLine.cs" />
     <Compile Include="Accounting\Posting.cs" />
