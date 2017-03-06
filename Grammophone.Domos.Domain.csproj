@@ -53,12 +53,15 @@
     <Compile Include="Accounting\FundsTransferState.cs" />
     <Compile Include="Accounting\IAccount.cs" />
     <Compile Include="Accounting\IBankAccountHolder.cs" />
-    <Compile Include="Accounting\IWithdrawableFundsHolder.cs" />
-    <Compile Include="Accounting\IWithdrawableFundsHolderWithBankAccount.cs" />
+    <Compile Include="Accounting\ITransferableFundsHolder.cs" />
+    <Compile Include="Accounting\ITransferableFundsHolderWithBankAccount.cs" />
     <Compile Include="Accounting\Journal.cs" />
     <Compile Include="Accounting\JournalLine.cs" />
     <Compile Include="Accounting\Posting.cs" />
     <Compile Include="Accounting\Remittance.cs" />
+    <Compile Include="Accounting\TrackingAccount.cs" />
+    <Compile Include="Accounting\UserAccount.cs" />
+    <Compile Include="Accounting\UserGroupAccount.cs" />
     <Compile Include="Disposition.cs" />
     <Compile Include="DispositionStatus.cs" />
     <Compile Include="DispositionTrackingEntity.cs" />

@@ -46,5 +46,33 @@ namespace Grammophone.Domos.Domain
 
 			targetEntity.OwningUsers.Add(sourceEntity.OwningUser);
 		}
+
+		/// <summary>
+		/// Inherit the owners of an entity.
+		/// </summary>
+		/// <typeparam name="U">The type of user, derived from <see cref="User"/>.</typeparam>
+		/// <param name="targetEntity">The receiving entity.</param>
+		/// <param name="sourceEntity">The source entity.</param>
+		public static void InheritOwnersFrom<U>(this IUserGroupTrackingEntity<U> targetEntity, object sourceEntity)
+			where U : User
+		{
+			if (targetEntity == null) throw new ArgumentNullException(nameof(targetEntity));
+
+			var userTrackingEntity = sourceEntity as IUserTrackingEntity<U>;
+
+			if (userTrackingEntity != null)
+			{
+				targetEntity.InheritOwnerFrom(userTrackingEntity);
+			}
+			else
+			{
+				var userGroupTrackingEntity = sourceEntity as IUserGroupTrackingEntity<U>;
+
+				if (userGroupTrackingEntity != null)
+				{
+					targetEntity.InheritOwnersFrom(userGroupTrackingEntity);
+				}
+			}
+		}
 	}
 }

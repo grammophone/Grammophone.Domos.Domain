@@ -11,11 +11,9 @@ namespace Grammophone.Domos.Domain.Accounting
 	/// Base for accounting record lines in a journal, having group ownership.
 	/// </summary>
 	/// <typeparam name="U">The type of the user, derived from <see cref="User"/>.</typeparam>
-	/// <typeparam name="A">The type of account, derived from <see cref="Account{U}"/>.</typeparam>
 	[Serializable]
-	public abstract class JournalLine<U, A> : UserGroupTrackingEntityWithID<U, long>
+	public abstract class JournalLine<U> : UserGroupTrackingEntityWithID<U, long>
 		where U : User
-		where A : Account<U>
 	{
 		#region Primitive properties
 
@@ -41,7 +39,7 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// <summary>
 		/// The account where this journal line applies.
 		/// </summary>
-		public virtual A Account { get; set; }
+		public virtual Account Account { get; set; }
 
 		/// <summary>
 		/// The ID of the journal where this line belongs.

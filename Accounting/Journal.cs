@@ -14,16 +14,14 @@ namespace Grammophone.Domos.Domain.Accounting
 	/// <typeparam name="BST">
 	/// The base type of system's state transitions, derived from <see cref="Workflow.StateTransition{U}"/>.
 	/// </typeparam>
-	/// <typeparam name="A">The type of accounts, derived from <see cref="Account{U}"/>.</typeparam>
-	/// <typeparam name="P">The type of the postings, derived from <see cref="Posting{U, A}"/>.</typeparam>
-	/// <typeparam name="R">The type of remittances, derived from <see cref="Remittance{U, A}"/>.</typeparam>
+	/// <typeparam name="P">The type of the postings, derived from <see cref="Posting{U}"/>.</typeparam>
+	/// <typeparam name="R">The type of remittances, derived from <see cref="Remittance{U}"/>.</typeparam>
 	[Serializable]
-	public abstract class Journal<U, BST, A, P, R> : UserGroupTrackingEntityWithID<U, long>
+	public abstract class Journal<U, BST, P, R> : UserGroupTrackingEntityWithID<U, long>
 		where U : User
 		where BST : Workflow.StateTransition<U>
-		where A : Account<U>
-		where P : Posting<U, A>
-		where R : Remittance<U, A>
+		where P : Posting<U>
+		where R : Remittance<U>
 	{
 		#region Private fields
 

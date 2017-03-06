@@ -87,6 +87,48 @@ namespace Grammophone.Domos.Domain.Accounting
 		public virtual CreditSystem CreditSystem { get; set; }
 
 		/// <summary>
+		/// The ID of the account on which the <see cref="Amount"/> is charged.
+		/// </summary>
+		public virtual long MainAccountID { get; set; }
+
+		/// <summary>
+		/// The account on which the <see cref="Amount"/> is charged.
+		/// </summary>
+		public virtual Account MainAccount { get; set; }
+
+		/// <summary>
+		/// If the <see cref="Amount"/> is positive, this is the 
+		/// ID of the account which collects the <see cref="Amount"/> under transfer
+		/// when an event of type <see cref="FundsTransferEventType.Failed"/>
+		/// is received. It can point to the same account as <see cref="MainAccount"/>.
+		/// </summary>
+		public virtual long? ErrorAccountID { get; set; }
+
+		/// <summary>
+		/// If the <see cref="Amount"/> is positive, this is the 
+		/// account collects the <see cref="Amount"/> under transfer
+		/// when an event of type <see cref="FundsTransferEventType.Failed"/>
+		/// is received. It can point to the same account as <see cref="MainAccount"/>.
+		/// </summary>
+		public virtual Account ErrorAccount { get; set; }
+
+		/// <summary>
+		/// If the <see cref="Amount"/> is positive, this is the 
+		/// ID of the account which holds the <see cref="Amount"/> under transfer temporarily
+		/// until an event of type <see cref="FundsTransferEventType.Succeeded"/>
+		/// or <see cref="FundsTransferEventType.Failed"/> is received.
+		/// </summary>
+		public virtual long? EscrowAccountID { get; set; }
+
+		/// <summary>
+		/// If the <see cref="Amount"/> is positive, this is the 
+		/// account which holds the <see cref="Amount"/> under transfer temporarily
+		/// until an event of type <see cref="FundsTransferEventType.Succeeded"/>
+		/// or <see cref="FundsTransferEventType.Failed"/> is received.
+		/// </summary>
+		public virtual Account EscrowAccount { get; set; }
+
+		/// <summary>
 		/// The events recorded for this request.
 		/// </summary>
 		public virtual ICollection<FundsTransferEvent> Events

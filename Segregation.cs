@@ -20,13 +20,7 @@ namespace Grammophone.Domos.Domain
 		/// <summary>
 		/// This property is bound to <see cref="UserTrackingEntityWithID{U, K}.ID"/>.
 		/// </summary>
-		long ISegregatedEntity.SegregationID
-		{
-			get
-			{
-				return this.ID;
-			}
-		}
+		long ISegregatedEntity.SegregationID => this.ID;
 
 		#endregion
 	}

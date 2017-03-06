@@ -12,11 +12,9 @@ namespace Grammophone.Domos.Domain.Accounting
 	/// external system inflow or outflow, where a double-entry recording cannot be kept.
 	/// </summary>
 	/// <typeparam name="U">The type of the user, derived from <see cref="User"/>.</typeparam>
-	/// <typeparam name="A">The type of account, derived from <see cref="Account{U}"/>.</typeparam>
 	[Serializable]
-	public abstract class Remittance<U, A> : JournalLine<U, A>
+	public abstract class Remittance<U> : JournalLine<U>
 		where U : User
-		where A : Account<U>
 	{
 		#region Primitive properties
 
@@ -39,13 +37,13 @@ namespace Grammophone.Domos.Domain.Accounting
 
 		/// <summary>
 		/// The ID of the credit system through which 
-		/// the <see cref="JournalLine{U, A}.Amount"/> is being transferred.
+		/// the <see cref="JournalLine{U}.Amount"/> is being transferred.
 		/// </summary>
 		public virtual long CreditSystemID { get; set; }
 
 		/// <summary>
 		/// The credit system through which 
-		/// the <see cref="JournalLine{U, A}.Amount"/> is being transferred.
+		/// the <see cref="JournalLine{U}.Amount"/> is being transferred.
 		/// </summary>
 		public virtual CreditSystem CreditSystem { get; set; }
 
