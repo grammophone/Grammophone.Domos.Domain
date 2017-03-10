@@ -49,7 +49,7 @@ namespace Grammophone.Domos.Domain
 		/// </summary>
 		[MaxLength(1024)]
 		[IgnoreDataMember]
-		public virtual string PaswordHash { get; set; }
+		public virtual string PasswordHash { get; set; }
 
 		/// <summary>
 		/// First name.
