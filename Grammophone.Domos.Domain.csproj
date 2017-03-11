@@ -70,7 +70,6 @@
     <Compile Include="DispositionType.cs" />
     <Compile Include="AccessDeniedDomainException.cs" />
     <Compile Include="DomainException.cs" />
-    <Compile Include="EntityAccess.cs" />
     <Compile Include="EntityExtensionMethods.cs" />
     <Compile Include="EntityWithID.cs" />
     <Compile Include="Files\ContentType.cs" />
@@ -87,8 +86,6 @@
     <Compile Include="ITrackingEntity.cs" />
     <Compile Include="IUserGroupTrackingEntity.cs" />
     <Compile Include="IUserTrackingEntity.cs" />
-    <Compile Include="ManagerAccess.cs" />
-    <Compile Include="Permission.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registration.cs" />
     <Compile Include="RegistrationProvider.cs" />
@@ -103,7 +100,6 @@
     <Compile Include="SegregatedEntity.cs" />
     <Compile Include="SegregatedEntityWithID.cs" />
     <Compile Include="SegregatedTrait.cs" />
-    <Compile Include="StatePathAccess.cs" />
     <Compile Include="TrackingEntity.cs" />
     <Compile Include="TrackingEntityWithID.cs" />
     <Compile Include="TrackingTrait.cs" />
