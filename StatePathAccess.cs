@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,10 +7,10 @@ using System.Threading.Tasks;
 namespace Grammophone.Domos.Domain
 {
 	/// <summary>
-	/// An abstraction for a session API access.
+	/// Depicts an allowed access to a <see cref="Workflow.StatePath"/>.
 	/// </summary>
 	[Serializable]
-	public class ManagerAccess : IEntityWithID<int>
+	public class StatePathAccess : IEntityWithID<int>
 	{
 		#region Primitive properties
 
@@ -21,11 +20,10 @@ namespace Grammophone.Domos.Domain
 		public virtual int ID { get; set; }
 
 		/// <summary>
-		/// A session manager class name serving the permission.
+		/// The <see cref="Workflow.StatePath.CodeName"/> of
+		/// the <see cref="Workflow.StatePath"/>.
 		/// </summary>
-		[Required]
-		[MaxLength(1024)]
-		public virtual string ClassName { get; set; }
+		public virtual string StatePathCodeName { get; set; }
 
 		#endregion
 	}

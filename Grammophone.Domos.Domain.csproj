@@ -103,6 +103,7 @@
     <Compile Include="SegregatedEntity.cs" />
     <Compile Include="SegregatedEntityWithID.cs" />
     <Compile Include="SegregatedTrait.cs" />
+    <Compile Include="StatePathAccess.cs" />
     <Compile Include="TrackingEntity.cs" />
     <Compile Include="TrackingEntityWithID.cs" />
     <Compile Include="TrackingTrait.cs" />

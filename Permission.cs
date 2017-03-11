@@ -11,7 +11,7 @@ namespace Grammophone.Domos.Domain
 	/// An abstraction of allowed behavior.
 	/// </summary>
 	[Serializable]
-	public class Permission : EntityWithID<string>
+	public class Permission : IEntityWithID<int>
 	{
 		#region Private fields
 
@@ -19,14 +19,22 @@ namespace Grammophone.Domos.Domain
 
 		private ICollection<ManagerAccess> managerAccesses;
 
+		private ICollection<StatePathAccess> statePathAccesses;
+
 		#endregion
 
-		#region Primitive fields
+		#region Primitive properties
+
+		/// <summary>
+		/// Primary key. Used only if the instance is stored in the database.
+		/// </summary>
+		public virtual int ID { get; set; }
 
 		/// <summary>
 		/// A descriptive name of the permission.
 		/// </summary>
 		[Required]
+		[MaxLength(256)]
 		public virtual string Name { get; set; }
 
 		#endregion
@@ -34,12 +42,8 @@ namespace Grammophone.Domos.Domain
 		#region Relations
 
 		/// <summary>
-		/// Only when these are persisted in database, 
-		/// these are the entity accesses associated to the permission.
+		/// These are the entity accesses associated to the permission.
 		/// </summary>
-		/// <remarks>
-		/// This collection is not used when the entity accesses are defined elsewhere.
-		/// </remarks>
 		public virtual ICollection<EntityAccess> EntityAccesses
 		{
 			get
@@ -55,12 +59,8 @@ namespace Grammophone.Domos.Domain
 		}
 
 		/// <summary>
-		/// Only when these are persisted in database, 
-		/// these are the entity accesses associated to the permission.
+		/// These are the entity accesses associated to the permission.
 		/// </summary>
-		/// <remarks>
-		/// This collection is not used when the entity accesses are defined elsewhere.
-		/// </remarks>
 		public virtual ICollection<ManagerAccess> ManagerAccesses
 		{
 			get
@@ -72,6 +72,23 @@ namespace Grammophone.Domos.Domain
 				if (value == null) throw new ArgumentNullException(nameof(value));
 
 				managerAccesses = value;
+			}
+		}
+
+		/// <summary>
+		/// These are the state path accesses associated to the permission.
+		/// </summary>
+		public virtual ICollection<StatePathAccess> StatePathAccesses
+		{
+			get
+			{
+				return statePathAccesses ?? (statePathAccesses = new HashSet<StatePathAccess>());
+			}
+			set
+			{
+				if (value == null) throw new ArgumentNullException(nameof(value));
+
+				statePathAccesses = value;
 			}
 		}
 
