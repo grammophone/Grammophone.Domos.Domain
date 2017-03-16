@@ -9,17 +9,12 @@ namespace Grammophone.Domos.Domain
 	/// <summary>
 	/// Interface for disposition entities.
 	/// </summary>
-	public interface IDisposition : IUserTrackingEntity<User>
+	public interface IDisposition : IUserTrackingEntity<User>, ISegregatedEntity
 	{
 		/// <summary>
 		/// The state of this disposition.
 		/// </summary>
 		DispositionStatus Status { get; set; }
-
-		/// <summary>
-		/// The ID of the segregation.
-		/// </summary>
-		long SegregationID { get; }
 
 		/// <summary>
 		/// The ID of the type of this disposition.
@@ -38,17 +33,12 @@ namespace Grammophone.Domos.Domain
 	/// </summary>
 	/// <typeparam name="U">The type of user, derived from <see cref="User"/>.</typeparam>
 	/// <typeparam name="S">The type of segregation, derived from <see cref="Segregation{U}"/>.</typeparam>
-	public interface IDisposition<U, S> : IDisposition
+	public interface IDisposition<U, S> : IDisposition, ISegregatedEntity<U, S>
 		where U : User
 		where S : Segregation<U>
 	{
 		/// <summary>
-		/// The segregation.
-		/// </summary>
-		S Segregation { get; }
-
-		/// <summary>
-		/// Set the <see cref="Segregation"/>.
+		/// Set the <see cref="ISegregatedEntity{U, S}.Segregation"/>.
 		/// </summary>
 		void SetSegregation(S segregation);
 	}
