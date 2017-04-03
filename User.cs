@@ -32,6 +32,7 @@ namespace Grammophone.Domos.Domain
 		[Required]
 		[MaxLength(256)]
 		[IgnoreDataMember]
+		[Display(ResourceType = typeof(UserResources), Name = nameof(UserResources.UserName_Name))]
 		public virtual string UserName { get; set; }
 
 		/// <summary>
@@ -41,6 +42,7 @@ namespace Grammophone.Domos.Domain
 		[Required]
 		[MaxLength(256)]
 		[IgnoreDataMember]
+		[Display(ResourceType = typeof(UserResources), Name = nameof(UserResources.Email_Name))]
 		public virtual string Email { get; set; }
 
 		/// <summary>
@@ -56,6 +58,7 @@ namespace Grammophone.Domos.Domain
 		/// </summary>
 		[Required]
 		[MaxLength(256)]
+		[Display(ResourceType = typeof(UserResources), Name = nameof(UserResources.FirstName_Name))]
 		public virtual string FirstName { get; set; }
 
 		/// <summary>
@@ -63,23 +66,27 @@ namespace Grammophone.Domos.Domain
 		/// </summary>
 		[Required]
 		[MaxLength(256)]
+		[Display(ResourceType = typeof(UserResources), Name = nameof(UserResources.LastName_Name))]
 		public virtual string LastName { get; set; }
 
 		/// <summary>
 		/// True if this is a system account.
 		/// </summary>
 		[IgnoreDataMember]
+		[Display(ResourceType = typeof(UserResources), Name = nameof(UserResources.IsSystem_Name))]
 		public virtual bool IsSystem { get; set; }
 
 		/// <summary>
 		/// True if the user is the special "Anonymous" one.
 		/// </summary>
 		[IgnoreDataMember]
+		[Display(ResourceType = typeof(UserResources), Name = nameof(UserResources.IsAnonymous_Name))]
 		public virtual bool IsAnonymous { get; set; }
 
 		/// <summary>
 		/// The registration status of the user.
 		/// </summary>
+		[Display(ResourceType = typeof(UserResources), Name = nameof(UserResources.RegistrationStatus_Name))]
 		public virtual RegistrationStatus RegistrationStatus { get; set; }
 
 		/// <summary>
@@ -93,6 +100,7 @@ namespace Grammophone.Domos.Domain
 		/// <summary>
 		/// Date when the user was created.
 		/// </summary>
+		[Display(ResourceType = typeof(UserResources), Name = nameof(UserResources.CreationDate_Name))]
 		public virtual DateTime CreationDate { get; set; }
 
 		/// <summary>
