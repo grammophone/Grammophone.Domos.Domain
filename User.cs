@@ -24,6 +24,18 @@ namespace Grammophone.Domos.Domain
 
 		#endregion
 
+		#region Construction
+
+		/// <summary>
+		/// Create.
+		/// </summary>
+		public User()
+		{
+			this.SecurityStamp = String.Empty;
+		}
+
+		#endregion
+
 		#region Primitive properties
 
 		/// <summary>
