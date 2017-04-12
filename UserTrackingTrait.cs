@@ -76,7 +76,7 @@ namespace Grammophone.Domos.Domain
 			{
 				if (owningUserID != value)
 				{
-					if (owningUserID != 0L)
+					if (owningUserID != 0L && value != 0L)
 						throw new AccessDeniedDomainException("The owner of the entity cannot be changed.", this);
 
 					owningUserID = value;
