@@ -136,6 +136,18 @@ namespace Grammophone.Domos.Domain.Accounting
 			}
 		}
 
+		/// <summary>
+		/// Test whether a user is the owner of the account.
+		/// </summary>
+		/// <param name="userID">The ID of the user.</param>
+		public bool IsOwnedBy(long userID) => this.OwningUsers.Any(u => u.ID == userID);
+
+		/// <summary>
+		/// Test whether a user is the owner of the account.
+		/// </summary>
+		/// <param name="user">The user.</param>
+		public bool IsOwnedBy(U user) => this.OwningUsers.Contains(user);
+
 		#endregion
 	}
 }

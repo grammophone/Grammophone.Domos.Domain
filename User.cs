@@ -12,7 +12,7 @@ namespace Grammophone.Domos.Domain
 	/// A user in the system.
 	/// </summary>
 	[Serializable]
-	public class User : EntityWithID<long>
+	public class User : EntityWithID<long>, IOwnedEntity<User>
 	{
 		#region Private fields
 
@@ -181,6 +181,17 @@ namespace Grammophone.Domos.Domain
 				registrations = value;
 			}
 		}
+
+		/// <summary>
+		/// Returns true when the given user is the same.
+		/// </summary>
+		bool IOwnedEntity<User>.IsOwnedBy(User user) => this == user;
+
+		/// <summary>
+		/// Returns true when the given <paramref name="userID"/> is
+		/// equal to this user's ID.
+		/// </summary>
+		bool IOwnedEntity.IsOwnedBy(long userID) => this.ID == userID;
 
 		#endregion
 	}

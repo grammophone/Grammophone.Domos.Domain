@@ -54,6 +54,26 @@ namespace Grammophone.Domos.Domain.Files
 			}
 		}
 
+		/// <summary>
+		/// Test whether a user is the owner of the file.
+		/// </summary>
+		/// <param name="userID">The ID of the user.</param>
+		public bool IsOwnedBy(long userID)
+		{
+			return userID == this.OwningUserID;
+		}
+
+		/// <summary>
+		/// Test whether a user is the owner of the file.
+		/// </summary>
+		/// <param name="user">The user.</param>
+		public bool IsOwnedBy(U user)
+		{
+			if (user == null) throw new ArgumentNullException(nameof(user));
+
+			return user.ID == this.OwningUserID;
+		}
+
 		#endregion
 	}
 }

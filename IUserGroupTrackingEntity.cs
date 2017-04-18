@@ -12,7 +12,7 @@ namespace Grammophone.Domos.Domain
 	/// when retrieving a list of entities implementing this interface to avoid a 'n+1' performance penalty.
 	/// </summary>
 	/// <typeparam name="U">The type of user, derived from <see cref="User"/>.</typeparam>
-	public interface IUserGroupTrackingEntity<U> : ITrackingEntity<U>
+	public interface IUserGroupTrackingEntity<U> : ITrackingEntity<U>, IOwnedEntity<U>
 		where U : User
 	{
 		/// <summary>

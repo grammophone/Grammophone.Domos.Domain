@@ -58,5 +58,29 @@ namespace Grammophone.Domos.Domain
 		}
 
 		#endregion
+
+		#region Public methods
+
+		/// <summary>
+		/// Test whether a user is the owner of the entity.
+		/// </summary>
+		/// <param name="userID">The ID of the user.</param>
+		public bool IsOwnedBy(long userID)
+		{
+			return userID == this.OwningUserID;
+		}
+
+		/// <summary>
+		/// Test whether a user is the owner of the entity.
+		/// </summary>
+		/// <param name="user">The user.</param>
+		public bool IsOwnedBy(U user)
+		{
+			if (user == null) throw new ArgumentNullException(nameof(user));
+
+			return user.ID == this.OwningUserID;
+		}
+
+		#endregion
 	}
 }

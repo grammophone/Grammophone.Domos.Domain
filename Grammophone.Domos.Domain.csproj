@@ -82,6 +82,7 @@
     <Compile Include="IDispositionTrackingEntity.cs" />
     <Compile Include="IEntityAccessDeniedException.cs" />
     <Compile Include="IEntityWithID.cs" />
+    <Compile Include="IOwnedEntity.cs" />
     <Compile Include="ISegregatedEntity.cs" />
     <Compile Include="ITrackingEntity.cs" />
     <Compile Include="IUserGroupTrackingEntity.cs" />
