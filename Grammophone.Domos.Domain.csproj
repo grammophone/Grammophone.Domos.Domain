@@ -63,6 +63,11 @@
     <Compile Include="Accounting\UserAccount.cs" />
     <Compile Include="Accounting\UserGroupAccount.cs" />
     <Compile Include="Disposition.cs" />
+    <Compile Include="DispositionResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DispositionResources.resx</DependentUpon>
+    </Compile>
     <Compile Include="DispositionStatus.cs" />
     <Compile Include="DispositionTrackingEntity.cs" />
     <Compile Include="DispositionTrackingEntityWithID.cs" />
@@ -96,6 +101,11 @@
       <DependentUpon>RegistrationStatusResources.resx</DependentUpon>
     </Compile>
     <Compile Include="RegistrationStatus.cs" />
+    <Compile Include="DispositionStatusResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DispositionStatusResources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Role.cs" />
     <Compile Include="Segregation.cs" />
     <Compile Include="SegregatedEntity.cs" />
@@ -126,10 +136,20 @@
     <Compile Include="Workflow\WorkflowGraph.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="DispositionResources.fr.resx" />
+    <EmbeddedResource Include="DispositionResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>DispositionResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DispositionStatusResources.fr.resx" />
     <EmbeddedResource Include="RegistrationStatusResources.fr.resx" />
     <EmbeddedResource Include="RegistrationStatusResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>RegistrationStatusResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DispositionStatusResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>DispositionStatusResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="UserResources.fr.resx" />
     <EmbeddedResource Include="UserResources.resx">

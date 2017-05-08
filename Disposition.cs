@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,6 +33,9 @@ namespace Grammophone.Domos.Domain
 		/// <summary>
 		/// The state of this disposition.
 		/// </summary>
+		[Display(
+			ResourceType = typeof(DispositionResources),
+			Name = nameof(DispositionResources.Status_Name))]
 		public virtual DispositionStatus Status { get; set; }
 
 		/// <summary>
