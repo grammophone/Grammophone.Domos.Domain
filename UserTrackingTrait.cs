@@ -96,15 +96,7 @@ namespace Grammophone.Domos.Domain
 			}
 			set
 			{
-				if (value == null) throw new ArgumentNullException(nameof(value));
-
-				if (owningUser != value)
-				{
-					if (owningUser != null)
-						throw new AccessDeniedDomainException("The owner of the entity cannot be changed.", this);
-
-					owningUser = value;
-				}
+				owningUser = value;
 			}
 		}
 

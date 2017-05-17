@@ -161,7 +161,6 @@ namespace Grammophone.Domos.Domain
 
 		/// <summary>
 		/// The user who created the entity.
-		/// Once set, cannot be changed.
 		/// </summary>
 		public U CreatorUser
 		{
@@ -171,15 +170,7 @@ namespace Grammophone.Domos.Domain
 			}
 			set
 			{
-				if (value == null) throw new ArgumentNullException(nameof(value));
-
-				if (creatorUser != value)
-				{
-					if (creatorUser != null)
-						throw new AccessDeniedDomainException("The creator of the entity cannot be changed.", this);
-
-					creatorUser = value;
-				}
+				creatorUser = value;
 			}
 		}
 
