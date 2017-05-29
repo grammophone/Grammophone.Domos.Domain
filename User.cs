@@ -12,7 +12,7 @@ namespace Grammophone.Domos.Domain
 	/// A user in the system.
 	/// </summary>
 	[Serializable]
-	public class User : EntityWithID<long>, IOwnedEntity<User>
+	public abstract class User : EntityWithID<long>, IOwnedEntity<User>
 	{
 		#region Private fields
 
