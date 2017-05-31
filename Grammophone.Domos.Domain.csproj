@@ -112,6 +112,11 @@
     <Compile Include="SegregatedEntityWithID.cs" />
     <Compile Include="SegregatedTrait.cs" />
     <Compile Include="TrackingEntity.cs" />
+    <Compile Include="TrackingEntityResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TrackingEntityResources.resx</DependentUpon>
+    </Compile>
     <Compile Include="TrackingEntityWithID.cs" />
     <Compile Include="TrackingTrait.cs" />
     <Compile Include="User.cs" />
@@ -150,6 +155,11 @@
     <EmbeddedResource Include="DispositionStatusResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>DispositionStatusResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrackingEntityResources.fr.resx" />
+    <EmbeddedResource Include="TrackingEntityResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>TrackingEntityResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="UserResources.fr.resx" />
     <EmbeddedResource Include="UserResources.resx">

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
@@ -29,6 +30,9 @@ namespace Grammophone.Domos.Domain
 		/// Once set, cannot be changed.
 		/// </summary>
 		[IgnoreDataMember]
+		[Display(
+			ResourceType = typeof(TrackingEntityResources),
+			Name = nameof(TrackingEntityResources.CreationDate_Name))]
 		public virtual DateTime CreationDate
 		{
 			get
@@ -46,6 +50,9 @@ namespace Grammophone.Domos.Domain
 		/// Set by the system.
 		/// </summary>
 		[IgnoreDataMember]
+		[Display(
+			ResourceType = typeof(TrackingEntityResources),
+			Name = nameof(TrackingEntityResources.CreationDate_Name))]
 		public virtual DateTime LastModificationDate
 		{
 			get
