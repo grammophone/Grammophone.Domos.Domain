@@ -149,9 +149,9 @@ namespace Grammophone.Domos.Domain
 			}
 			set
 			{
-				if (creatorUserID != value && value != 0L)
+				if (creatorUserID != value)
 				{
-					if (creatorUserID != 0L)
+					if (creatorUserID != 0L && value != 0L)
 						throw new AccessDeniedDomainException("The creator of the entity cannot be changed.", this);
 
 					creatorUserID = value;
@@ -170,9 +170,9 @@ namespace Grammophone.Domos.Domain
 			}
 			set
 			{
-				if (creatorUser != value && value != null)
+				if (creatorUser != value)
 				{
-					if (creatorUser != null)
+					if (creatorUser != null && value != null)
 						throw new AccessDeniedDomainException("The creator of the entity cannot be changed.", this);
 
 					creatorUser = value;
