@@ -10,7 +10,7 @@ namespace Grammophone.Domos.Domain
 	/// Contract for entities supporting user ownership
 	/// and change tracking.
 	/// </summary>
-	public interface IUserTrackingEntity : ITrackingEntity, IOwnedEntity
+	public interface IUserTrackingEntity : ITrackingEntity
 	{
 		/// <summary>
 		/// The ID of the user who owns the entity.

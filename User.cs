@@ -187,12 +187,6 @@ namespace Grammophone.Domos.Domain
 		/// </summary>
 		bool IOwnedEntity<User>.IsOwnedBy(User user) => this == user;
 
-		/// <summary>
-		/// Returns true when the given <paramref name="userID"/> is
-		/// equal to this user's ID.
-		/// </summary>
-		bool IOwnedEntity.IsOwnedBy(long userID) => this.ID == userID;
-
 		#endregion
 	}
 }

@@ -12,7 +12,7 @@ namespace Grammophone.Domos.Domain
 	/// A registration via a <see cref="RegistrationProvider"/>
 	/// </summary>
 	[Serializable]
-	public class Registration : EntityWithID<long>
+	public class Registration : EntityWithID<long>, IOwnedEntity<User>
 	{
 		#region Primitive properties
 
@@ -41,6 +41,22 @@ namespace Grammophone.Domos.Domain
 		/// The user.
 		/// </summary>
 		public virtual User User { get; set; }
+
+		#endregion
+
+		#region IOwnedEntity implementation
+
+		/// <summary>
+		/// Returns true when a <paramref name="user"/> has ID equal to <see cref="UserID"/>.
+		/// </summary>
+		/// <param name="user"></param>
+		/// <returns></returns>
+		public bool IsOwnedBy(User user) => user.ID == this.UserID;
+
+		/// <summary>
+		/// Returns true when a <paramref name="userID"/> is equal to <see cref="UserID"/>.
+		/// </summary>
+		public bool IsOwnedBy(long userID) => userID == this.UserID;
 
 		#endregion
 	}

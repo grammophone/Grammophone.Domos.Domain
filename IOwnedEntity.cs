@@ -9,19 +9,7 @@ namespace Grammophone.Domos.Domain
 	/// <summary>
 	/// Implemented by entities which can report ownership.
 	/// </summary>
-	public interface IOwnedEntity
-	{
-		/// <summary>
-		/// Test whether a user is the owner of the entity.
-		/// </summary>
-		/// <param name="userID">The ID of the user.</param>
-		bool IsOwnedBy(long userID);
-	}
-
-	/// <summary>
-	/// Implemented by entities which can report ownership.
-	/// </summary>
-	public interface IOwnedEntity<in U> : IOwnedEntity
+	public interface IOwnedEntity<in U>
 		where U : User
 	{
 		/// <summary>
