@@ -67,6 +67,9 @@ namespace Grammophone.Domos.Domain
 		/// <param name="userID">The ID of the user.</param>
 		public bool IsOwnedBy(long userID)
 		{
+			// If the owner is not set, then the current user will become the owner after saving.
+			if (this.OwningUserID == 0) return true;
+
 			return userID == this.OwningUserID;
 		}
 
@@ -77,6 +80,9 @@ namespace Grammophone.Domos.Domain
 		public bool IsOwnedBy(U user)
 		{
 			if (user == null) throw new ArgumentNullException(nameof(user));
+
+			// If the owner is not set, then the current user will become the owner after saving.
+			if (this.OwningUserID == 0) return true;
 
 			return user.ID == this.OwningUserID;
 		}

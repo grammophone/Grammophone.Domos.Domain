@@ -49,13 +49,15 @@ namespace Grammophone.Domos.Domain
 		/// Test whether a user is the owner of the entity.
 		/// </summary>
 		/// <param name="userID">The ID of the user.</param>
-		public bool IsOwnedBy(long userID) => this.OwningUsers.Any(u => u.ID == userID);
+		public bool IsOwnedBy(long userID)
+			=> this.OwningUsers.Count == 0 || this.OwningUsers.Any(u => u.ID == userID);
 
 		/// <summary>
 		/// Test whether a user is the owner of the entity.
 		/// </summary>
 		/// <param name="user">The user.</param>
-		public bool IsOwnedBy(U user) => this.OwningUsers.Contains(user);
+		public bool IsOwnedBy(U user)
+			=> this.OwningUsers.Count == 0 || this.OwningUsers.Contains(user);
 
 		#endregion
 	}
