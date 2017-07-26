@@ -14,7 +14,7 @@ namespace Grammophone.Domos.Domain.Workflow
 	/// </summary>
 	/// <typeparam name="U">The type of the user, derived from <see cref="User"/>.</typeparam>
 	[Serializable]
-	public abstract class StateTransition<U> : UserGroupTrackingEntityWithID<U, long>
+	public abstract class StateTransition<U> : TrackingEntityWithID<U, long>
 		where U : User
 	{
 		#region Primitive properties
