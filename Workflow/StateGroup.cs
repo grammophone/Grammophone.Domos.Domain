@@ -26,12 +26,28 @@ namespace Grammophone.Domos.Domain.Workflow
 		/// </summary>
 		[Required]
 		[MaxLength(128)]
+		[Display(
+			ResourceType = typeof(StateGroupResources),
+			Name = nameof(StateGroupResources.CodeName_Name))]
 		public virtual string CodeName { get; set; }
 
 		/// <summary>
 		/// The name of the state path.
 		/// </summary>
+		[Required]
+		[MaxLength(256)]
+		[Display(
+			ResourceType = typeof(StateGroupResources),
+			Name = nameof(StateGroupResources.Name_Name))]
 		public virtual string Name { get; set; }
+
+		/// <summary>
+		/// Optional description of the state group.
+		/// </summary>
+		[Display(
+			ResourceType = typeof(StateGroupResources),
+			Name = nameof(StateGroupResources.Description_Name))]
+		public virtual string Description { get; set; }
 
 		#endregion
 

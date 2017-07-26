@@ -20,16 +20,27 @@ namespace Grammophone.Domos.Domain.Workflow
 		/// </summary>
 		[Required]
 		[MaxLength(128)]
+		[Display(
+			ResourceType = typeof(StateResources),
+			Name = nameof(WorkflowGraphResources.CodeName_Name))]
 		public virtual string CodeName { get; set; }
 
 		/// <summary>
 		/// The name of the state.
 		/// </summary>
+		[Required]
+		[MaxLength(256)]
+		[Display(
+			ResourceType = typeof(StateResources),
+			Name = nameof(WorkflowGraphResources.Name_Name))]
 		public virtual string Name { get; set; }
 
 		/// <summary>
-		/// The description of the state.
+		/// Optional description of the state.
 		/// </summary>
+		[Display(
+			ResourceType = typeof(StateResources),
+			Name = nameof(WorkflowGraphResources.Description_Name))]
 		public virtual string Description { get; set; }
 
 		/// <summary>

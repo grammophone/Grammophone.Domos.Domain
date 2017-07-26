@@ -21,16 +21,27 @@ namespace Grammophone.Domos.Domain.Workflow
 		/// </summary>
 		[Required]
 		[MaxLength(128)]
+		[Display(
+			ResourceType = typeof(StatePathResources), 
+			Name = nameof(StatePathResources.CodeName_Name))]
 		public virtual string CodeName { get; set; }
 
 		/// <summary>
 		/// The name of the path.
 		/// </summary>
+		[Required]
+		[MaxLength(256)]
+		[Display(
+			ResourceType = typeof(StatePathResources),
+			Name = nameof(StatePathResources.Name_Name))]
 		public virtual string Name { get; set; }
 
 		/// <summary>
-		/// The description of the path.
+		/// Optional description of the path.
 		/// </summary>
+		[Display(
+			ResourceType = typeof(StatePathResources),
+			Name = nameof(StatePathResources.Description_Name))]
 		public virtual string Description { get; set; }
 
 		/// <summary>

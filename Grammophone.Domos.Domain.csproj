@@ -136,9 +136,29 @@
     <Compile Include="Workflow\IStateful.cs" />
     <Compile Include="Workflow\State.cs" />
     <Compile Include="Workflow\StateGroup.cs" />
+    <Compile Include="Workflow\StateGroupResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StateGroupResources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Workflow\StatePath.cs" />
+    <Compile Include="Workflow\StatePathResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StatePathResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow\StateResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StateResources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Workflow\StateTransition.cs" />
     <Compile Include="Workflow\WorkflowGraph.cs" />
+    <Compile Include="Workflow\WorkflowGraphResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WorkflowGraphResources.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="DispositionResources.fr.resx" />
@@ -165,6 +185,26 @@
     <EmbeddedResource Include="UserResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>UserResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Workflow\StateGroupResources.fr.resx" />
+    <EmbeddedResource Include="Workflow\StateGroupResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>StateGroupResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Workflow\StatePathResources.fr.resx" />
+    <EmbeddedResource Include="Workflow\StatePathResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>StatePathResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Workflow\StateResources.fr.resx" />
+    <EmbeddedResource Include="Workflow\StateResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>StateResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Workflow\WorkflowGraphResources.fr.resx" />
+    <EmbeddedResource Include="Workflow\WorkflowGraphResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>WorkflowGraphResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
