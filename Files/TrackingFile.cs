@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,6 +28,9 @@ namespace Grammophone.Domos.Domain.Files
 		/// Set by the system.
 		/// Once set, cannot be changed.
 		/// </summary>
+		[Display(
+			ResourceType = typeof(FileResources),
+			Name = nameof(FileResources.CreationDate_Name))]
 		public virtual DateTime CreationDate
 		{
 			get
@@ -43,6 +47,9 @@ namespace Grammophone.Domos.Domain.Files
 		/// Date of the last modification of the entity.
 		/// Set by the system.
 		/// </summary>
+		[Display(
+			ResourceType = typeof(FileResources),
+			Name = nameof(FileResources.LastModificationDate_Name))]
 		public virtual DateTime LastModificationDate
 		{
 			get

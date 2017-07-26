@@ -78,7 +78,17 @@
     <Compile Include="EntityExtensionMethods.cs" />
     <Compile Include="EntityWithID.cs" />
     <Compile Include="Files\ContentType.cs" />
+    <Compile Include="Files\ContentTypeResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ContentTypeResources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Files\File.cs" />
+    <Compile Include="Files\FileResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FileResources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Files\IFile.cs" />
     <Compile Include="Files\TrackingFile.cs" />
     <Compile Include="Files\UserTrackingFile.cs" />
@@ -167,6 +177,16 @@
       <LastGenOutput>DispositionResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="DispositionStatusResources.fr.resx" />
+    <EmbeddedResource Include="Files\ContentTypeResources.fr.resx" />
+    <EmbeddedResource Include="Files\ContentTypeResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ContentTypeResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Files\FileResources.fr.resx" />
+    <EmbeddedResource Include="Files\FileResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>FileResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="RegistrationStatusResources.fr.resx" />
     <EmbeddedResource Include="RegistrationStatusResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
@@ -193,17 +213,17 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Workflow\StatePathResources.fr.resx" />
     <EmbeddedResource Include="Workflow\StatePathResources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>StatePathResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Workflow\StateResources.fr.resx" />
     <EmbeddedResource Include="Workflow\StateResources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>StateResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Workflow\WorkflowGraphResources.fr.resx" />
     <EmbeddedResource Include="Workflow\WorkflowGraphResources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>WorkflowGraphResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>

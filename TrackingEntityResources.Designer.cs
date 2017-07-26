@@ -77,5 +77,14 @@ namespace Grammophone.Domos.Domain {
                 return ResourceManager.GetString("LastModificationDate_Name", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Owner.
+        /// </summary>
+        public static string OwningUser_Name {
+            get {
+                return ResourceManager.GetString("OwningUser_Name", resourceCulture);
+            }
+        }
     }
 }

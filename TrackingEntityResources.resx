@@ -123,4 +123,7 @@
   <data name="LastModificationDate_Name" xml:space="preserve">
     <value>Modification Date</value>
   </data>
+  <data name="OwningUser_Name" xml:space="preserve">
+    <value>Owner</value>
+  </data>
 </root>

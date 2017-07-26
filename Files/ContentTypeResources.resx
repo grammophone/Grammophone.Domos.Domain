@@ -117,13 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="CreationDate_Name" xml:space="preserve">
-    <value>Date d’Enregistrement</value>
+  <data name="MIME_Name" xml:space="preserve">
+    <value>MIME</value>
   </data>
-  <data name="LastModificationDate_Name" xml:space="preserve">
-    <value>Date de Modification</value>
-  </data>
-  <data name="OwningUser_Name" xml:space="preserve">
-    <value>Détenteur</value>
+  <data name="Name_Name" xml:space="preserve">
+    <value>Name</value>
   </data>
 </root>

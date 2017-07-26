@@ -43,6 +43,9 @@ namespace Grammophone.Domos.Domain.Files
 		/// </summary>
 		[Required]
 		[MaxLength(1024)]
+		[Display(
+			ResourceType = typeof(FileResources),
+			Name = nameof(FileResources.FullName_Name))]
 		public virtual string FullName { get; set; }
 
 		/// <summary>
@@ -50,6 +53,9 @@ namespace Grammophone.Domos.Domain.Files
 		/// </summary>
 		[Required]
 		[MaxLength(512)]
+		[Display(
+			ResourceType = typeof(FileResources),
+			Name = nameof(FileResources.Name_Name))]
 		public virtual string Name { get; set; }
 
 		/// <summary>

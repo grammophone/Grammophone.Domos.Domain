@@ -120,8 +120,14 @@
   <data name="CreationDate_Name" xml:space="preserve">
     <value>Date d’Enregistrement</value>
   </data>
+  <data name="FullName_Name" xml:space="preserve">
+    <value>Nom Complet</value>
+  </data>
   <data name="LastModificationDate_Name" xml:space="preserve">
     <value>Date de Modification</value>
+  </data>
+  <data name="Name_Name" xml:space="preserve">
+    <value>Nom</value>
   </data>
   <data name="OwningUser_Name" xml:space="preserve">
     <value>Détenteur</value>
