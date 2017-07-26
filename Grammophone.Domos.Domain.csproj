@@ -208,7 +208,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Workflow\StateGroupResources.fr.resx" />
     <EmbeddedResource Include="Workflow\StateGroupResources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>StateGroupResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Workflow\StatePathResources.fr.resx" />
