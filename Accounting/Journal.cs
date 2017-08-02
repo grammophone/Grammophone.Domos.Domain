@@ -17,7 +17,7 @@ namespace Grammophone.Domos.Domain.Accounting
 	/// <typeparam name="P">The type of the postings, derived from <see cref="Posting{U}"/>.</typeparam>
 	/// <typeparam name="R">The type of remittances, derived from <see cref="Remittance{U}"/>.</typeparam>
 	[Serializable]
-	public abstract class Journal<U, BST, P, R> : UserGroupTrackingEntityWithID<U, long>
+	public abstract class Journal<U, BST, P, R> : TrackingEntityWithID<U, long>
 		where U : User
 		where BST : Workflow.StateTransition<U>
 		where P : Posting<U>

@@ -9,8 +9,6 @@ namespace Grammophone.Domos.Domain.Workflow
 {
 	/// <summary>
 	/// A recording of a state transition via a <see cref="StatePath"/>.
-	/// Remember to eager fetch the inherited <see cref="IUserGroupTrackingEntity{U}.OwningUsers"/> property
-	/// when retrieving a list of entities of this type to avoid a 'n+1' performance penalty.
 	/// </summary>
 	/// <typeparam name="U">The type of the user, derived from <see cref="User"/>.</typeparam>
 	[Serializable]

@@ -12,7 +12,7 @@ namespace Grammophone.Domos.Domain.Accounting
 	/// </summary>
 	/// <typeparam name="U">The type of the user, derived from <see cref="User"/>.</typeparam>
 	[Serializable]
-	public abstract class JournalLine<U> : UserGroupTrackingEntityWithID<U, long>
+	public abstract class JournalLine<U> : TrackingEntityWithID<U, long>
 		where U : User
 	{
 		#region Primitive properties
