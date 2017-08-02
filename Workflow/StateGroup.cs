@@ -32,7 +32,7 @@ namespace Grammophone.Domos.Domain.Workflow
 		public virtual string CodeName { get; set; }
 
 		/// <summary>
-		/// The name of the state path.
+		/// The name of the state group.
 		/// </summary>
 		[Required]
 		[MaxLength(256)]
