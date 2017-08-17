@@ -52,7 +52,7 @@ namespace Grammophone.Domos.Domain
 		[IgnoreDataMember]
 		[Display(
 			ResourceType = typeof(TrackingEntityResources),
-			Name = nameof(TrackingEntityResources.CreationDate_Name))]
+			Name = nameof(TrackingEntityResources.LastModificationDate_Name))]
 		public virtual DateTime LastModificationDate
 		{
 			get
