@@ -25,7 +25,7 @@ namespace Grammophone.Domos.Domain
 		#region Primitive properties
 
 		/// <summary>
-		/// Date when the entity was created.
+		/// Date when the entity was created, in UTC.
 		/// Set by the system.
 		/// Once set, cannot be changed.
 		/// </summary>
@@ -46,7 +46,7 @@ namespace Grammophone.Domos.Domain
 		}
 
 		/// <summary>
-		/// Date of the last modification of the entity.
+		/// Date of the last modification of the entity, in UTC.
 		/// Set by the system.
 		/// </summary>
 		[IgnoreDataMember]
