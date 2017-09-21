@@ -30,6 +30,17 @@ namespace Grammophone.Domos.Domain.Workflow
 		int ChangeStamp { get; set; }
 
 		/// <summary>
+		/// The last date, in UTC, when the <see cref="State"/> was changed, if any, else null.
+		/// </summary>
+		DateTime? LastStateChangeDate { get; set; }
+
+		/// <summary>
+		/// Last date, in UTC, when the transition of the <see cref="State"/> has crossed barriers of a state group,
+		/// or null if it didn't happen.
+		/// </summary>
+		DateTime? LastStateGroupChangeDate { get; set; }
+
+		/// <summary>
 		/// The history of state transitions of this object.
 		/// </summary>
 		IEnumerable<ST> StateTransitions { get; }
