@@ -11,7 +11,7 @@ namespace Grammophone.Domos.Domain.Accounting
 	/// Represents an Electronic Funds Transfer (EFT/ACH) request.
 	/// </summary>
 	[Serializable]
-	public class FundsTransferRequest : EntityWithID<long>
+	public class FundsTransferRequest : TrackingEntityWithID<User, long>
 	{
 		#region Private fields
 
@@ -40,12 +40,6 @@ namespace Grammophone.Domos.Domain.Accounting
 		[Required]
 		[MaxLength(225)]
 		public virtual string TransactionID { get; set; }
-
-		/// <summary>
-		/// Optional ID of the batch, when the transfer is part of a batch.
-		/// </summary>
-		[MaxLength(225)]
-		public virtual string BatchID { get; set; }
 
 		/// <summary>
 		/// Optional comments.
@@ -127,6 +121,16 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// or <see cref="FundsTransferEventType.Failed"/> is received.
 		/// </summary>
 		public virtual Account EscrowAccount { get; set; }
+
+		/// <summary>
+		/// Optional ID of the batch, when the transfer is part of one.
+		/// </summary>
+		public virtual Guid? BatchID { get; set; }
+
+		/// <summary>
+		/// Optional batch, when the transfer is part of one.
+		/// </summary>
+		public virtual FundsTransferRequestBatch Batch { get; set; }
 
 		/// <summary>
 		/// The events recorded for this request.

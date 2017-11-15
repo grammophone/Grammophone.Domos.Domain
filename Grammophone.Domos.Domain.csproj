@@ -48,8 +48,10 @@
     <Compile Include="Accounting\EncryptedBankAccountInfo.cs" />
     <Compile Include="Accounting\CreditSystem.cs" />
     <Compile Include="Accounting\FundsTransferEvent.cs" />
+    <Compile Include="Accounting\FundsTransferEventCollation.cs" />
     <Compile Include="Accounting\FundsTransferEventType.cs" />
     <Compile Include="Accounting\FundsTransferRequest.cs" />
+    <Compile Include="Accounting\FundsTransferRequestBatch.cs" />
     <Compile Include="Accounting\FundsTransferState.cs" />
     <Compile Include="Accounting\IAccount.cs" />
     <Compile Include="Accounting\IBankAccountHolder.cs" />

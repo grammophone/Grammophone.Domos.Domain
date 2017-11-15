@@ -12,7 +12,7 @@ namespace Grammophone.Domos.Domain.Accounting
 	/// for a <see cref="FundsTransferRequest"/>.
 	/// </summary>
 	[Serializable]
-	public class FundsTransferEvent : EntityWithID<long>
+	public class FundsTransferEvent : TrackingEntityWithID<User, long>
 	{
 		#region Primitive properties
 
@@ -58,6 +58,16 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// The request.
 		/// </summary>
 		public virtual FundsTransferRequest Request { get; set; }
+
+		/// <summary>
+		/// Optional ID of the collation where the event belongs.
+		/// </summary>
+		public virtual Guid? CollationID { get; set; }
+
+		/// <summary>
+		/// Optional collation where the event belongs.
+		/// </summary>
+		public virtual FundsTransferEventCollation Collation { get; set; }
 
 		#endregion
 	}
