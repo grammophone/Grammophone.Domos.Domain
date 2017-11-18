@@ -42,8 +42,21 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// <summary>
 		/// Optional comments.
 		/// </summary>
-		[MaxLength(256)]
+		[MaxLength(512)]
 		public virtual string Comments { get; set; }
+
+		/// <summary>
+		/// If <see cref="Type"/> is <see cref="FundsTransferEventType.WorkflowFailed"/>,
+		/// this property contains the serialized exception.
+		/// </summary>
+		public virtual byte[] WorkflowExceptionData { get; set; }
+
+		/// <summary>
+		/// If <see cref="Type"/> is <see cref="FundsTransferEventType.WorkflowFailed"/>,
+		/// this property contains the exception exception message.
+		/// </summary>
+		[MaxLength(512)]
+		public virtual string WorkflowExceptionMessage { get; set; }
 
 		#endregion
 
