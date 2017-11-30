@@ -63,7 +63,6 @@
     <Compile Include="Accounting\Remittance.cs" />
     <Compile Include="Accounting\TrackingAccount.cs" />
     <Compile Include="Accounting\UserAccount.cs" />
-    <Compile Include="Accounting\WorkflowExecution.cs" />
     <Compile Include="Disposition.cs" />
     <Compile Include="DispositionResources.Designer.cs">
       <AutoGen>True</AutoGen>

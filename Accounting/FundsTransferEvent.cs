@@ -14,12 +14,6 @@ namespace Grammophone.Domos.Domain.Accounting
 	[Serializable]
 	public class FundsTransferEvent : TrackingEntityWithID<User, long>
 	{
-		#region Private fields
-
-		private ICollection<WorkflowExecution> workflowExecutions;
-
-		#endregion
-
 		#region Primitive properties
 
 		/// <summary>
@@ -51,6 +45,12 @@ namespace Grammophone.Domos.Domain.Accounting
 		[MaxLength(512)]
 		public virtual string Comments { get; set; }
 
+		/// <summary>
+		/// Optional serialized exception. This is set when <see cref="Type"/>
+		/// is <see cref="FundsTransferEventType.WorkflowFailed"/>.
+		/// </summary>
+		public virtual byte[] ExceptionData { get; set; }
+
 		#endregion
 
 		#region Relations
@@ -74,24 +74,6 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// Optional collation where the event belongs.
 		/// </summary>
 		public virtual FundsTransferEventCollation Collation { get; set; }
-
-		/// <summary>
-		/// If the event is associated with workflow, this records the
-		/// attempts of the state path executions.
-		/// </summary>
-		public virtual ICollection<WorkflowExecution> WorkflowExecutions
-		{
-			get
-			{
-				return workflowExecutions ?? (workflowExecutions = new HashSet<WorkflowExecution>());
-			}
-			set
-			{
-				if (value == null) throw new ArgumentNullException(nameof(value));
-
-				workflowExecutions = value;
-			}
-		}
 
 		#endregion
 	}
