@@ -13,6 +13,20 @@ namespace Grammophone.Domos.Domain.Accounting
 	[Serializable]
 	public class FundsTransferRequest : TrackingEntityWithID<User, long>
 	{
+		#region Constants
+
+		/// <summary>
+		/// The maximum length of the <see cref="TransactionID"/> property.
+		/// </summary>
+		public const int TransactionIdLength = 225;
+
+		/// <summary>
+		/// The maximum length of the <see cref="Comments"/> property.
+		/// </summary>
+		public const int CommentsLength = 256;
+
+		#endregion
+
 		#region Private fields
 
 		private EncryptedBankAccountInfo bankAccountInfo;
@@ -38,7 +52,7 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// The ID of the external system transaction.
 		/// </summary>
 		[Required]
-		[MaxLength(225)]
+		[MaxLength(TransactionIdLength)]
 		public virtual string TransactionID { get; set; }
 
 		/// <summary>

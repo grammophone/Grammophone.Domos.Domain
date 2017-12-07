@@ -14,13 +14,32 @@ namespace Grammophone.Domos.Domain.Accounting
 	[Serializable]
 	public class FundsTransferEvent : TrackingEntityWithID<User, long>
 	{
+		#region Constants
+
+		/// <summary>
+		/// The maximum length of the <see cref="ResponseCode"/> property.
+		/// </summary>
+		public const int ResponseCodeLength = 3;
+
+		/// <summary>
+		/// The maximum length of the <see cref="TraceCode"/> property.
+		/// </summary>
+		public const int TraceCodeLength = 36;
+
+		/// <summary>
+		/// The maximum length of the <see cref="Comments"/> property.
+		/// </summary>
+		public const int CommentsLength = 512;
+
+		#endregion
+
 		#region Primitive properties
 
 		/// <summary>
 		/// The response code as returned by the Electronic Funds
 		/// Transfer (EFT/ACH) system.
 		/// </summary>
-		[MaxLength(3)]
+		[MaxLength(ResponseCodeLength)]
 		public virtual string ResponseCode { get; set; }
 
 		/// <summary>
@@ -31,7 +50,7 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// <summary>
 		/// Unique code for event tracing.
 		/// </summary>
-		[MaxLength(36)]
+		[MaxLength(TraceCodeLength)]
 		public virtual string TraceCode { get; set; }
 
 		/// <summary>
@@ -42,7 +61,7 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// <summary>
 		/// Optional comments.
 		/// </summary>
-		[MaxLength(512)]
+		[MaxLength(CommentsLength)]
 		public virtual string Comments { get; set; }
 
 		/// <summary>
