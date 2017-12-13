@@ -10,11 +10,13 @@ namespace Grammophone.Domos.Domain.Accounting
 	/// Optional batch grouping for <see cref="FundsTransferRequest"/>s.
 	/// </summary>
 	[Serializable]
-	public class FundsTransferRequestBatch : TrackingEntityWithID<User, Guid>
+	public class FundsTransferBatch : TrackingEntityWithID<User, Guid>
 	{
 		#region Private fields
 
 		private ICollection<FundsTransferRequest> requests;
+
+		private ICollection<FundsTransferBatchEvent> events;
 
 		#endregion
 
@@ -34,6 +36,23 @@ namespace Grammophone.Domos.Domain.Accounting
 				if (value == null) throw new ArgumentNullException(nameof(value));
 
 				requests = value;
+			}
+		}
+
+		/// <summary>
+		/// The events making the histoery of this batch.
+		/// </summary>
+		public virtual ICollection<FundsTransferBatchEvent> Events
+		{
+			get
+			{
+				return events ?? (events = new HashSet<FundsTransferBatchEvent>());
+			}
+			set
+			{
+				if (value == null) throw new ArgumentNullException(nameof(value));
+
+				events = value;
 			}
 		}
 

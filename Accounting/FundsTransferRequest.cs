@@ -85,16 +85,6 @@ namespace Grammophone.Domos.Domain.Accounting
 		#region Relations
 
 		/// <summary>
-		/// The ID of the credit provider for the funds transfer.
-		/// </summary>
-		public virtual long CreditSystemID { get; set; }
-
-		/// <summary>
-		/// The credit provider for the funds transfer.
-		/// </summary>
-		public virtual CreditSystem CreditSystem { get; set; }
-
-		/// <summary>
 		/// The ID of the account on which the <see cref="Amount"/> is charged.
 		/// </summary>
 		public virtual long MainAccountID { get; set; }
@@ -144,7 +134,7 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// <summary>
 		/// Optional batch, when the transfer is part of one.
 		/// </summary>
-		public virtual FundsTransferRequestBatch Batch { get; set; }
+		public virtual FundsTransferBatch Batch { get; set; }
 
 		/// <summary>
 		/// The events recorded for this request.
