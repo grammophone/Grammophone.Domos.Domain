@@ -23,6 +23,16 @@ namespace Grammophone.Domos.Domain.Accounting
 		#region Relations
 
 		/// <summary>
+		/// The ID of the credit system which processes the batch.
+		/// </summary>
+		public virtual long CreditSystemID { get; set; }
+
+		/// <summary>
+		/// The credit system which processes the batch.
+		/// </summary>
+		public virtual CreditSystem CreditSystem { get; set; }
+
+		/// <summary>
 		/// The funds transfer requests contained in this batch.
 		/// </summary>
 		public virtual ICollection<FundsTransferRequest> Requests
