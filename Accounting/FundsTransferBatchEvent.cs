@@ -19,6 +19,11 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// </summary>
 		public virtual FundsTransferBatchEventType Type { get; set; }
 
+		/// <summary>
+		/// The date and time of the event, in UTC.
+		/// </summary>
+		public virtual DateTime Time { get; set; }
+
 		#endregion
 
 		#region Relations

@@ -45,7 +45,7 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// <summary>
 		/// The UTC date and time of the event.
 		/// </summary>
-		public virtual DateTime Date { get; set; }
+		public virtual DateTime Time { get; set; }
 
 		/// <summary>
 		/// Unique code for event tracing.
