@@ -47,10 +47,9 @@
     <Compile Include="Accounting\Account.cs" />
     <Compile Include="Accounting\EncryptedBankAccountInfo.cs" />
     <Compile Include="Accounting\CreditSystem.cs" />
-    <Compile Include="Accounting\FundsTransferBatchEvent.cs" />
-    <Compile Include="Accounting\FundsTransferBatchEventType.cs" />
+    <Compile Include="Accounting\FundsTransferBatchMessage.cs" />
+    <Compile Include="Accounting\FundsTransferBatchMessageType.cs" />
     <Compile Include="Accounting\FundsTransferEvent.cs" />
-    <Compile Include="Accounting\FundsTransferEventCollation.cs" />
     <Compile Include="Accounting\FundsTransferEventType.cs" />
     <Compile Include="Accounting\FundsTransferRequest.cs" />
     <Compile Include="Accounting\FundsTransferBatch.cs" />

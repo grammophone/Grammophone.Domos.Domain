@@ -87,12 +87,12 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// <summary>
 		/// Optional ID of the collation where the event belongs.
 		/// </summary>
-		public virtual Guid? CollationID { get; set; }
+		public virtual Guid? BatchMessageID { get; set; }
 
 		/// <summary>
 		/// Optional collation where the event belongs.
 		/// </summary>
-		public virtual FundsTransferEventCollation Collation { get; set; }
+		public virtual FundsTransferBatchMessage BatchMessage { get; set; }
 
 		#endregion
 	}

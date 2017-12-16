@@ -16,7 +16,7 @@ namespace Grammophone.Domos.Domain.Accounting
 
 		private ICollection<FundsTransferRequest> requests;
 
-		private ICollection<FundsTransferBatchEvent> events;
+		private ICollection<FundsTransferBatchMessage> messages;
 
 		#endregion
 
@@ -52,17 +52,17 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// <summary>
 		/// The events making the histoery of this batch.
 		/// </summary>
-		public virtual ICollection<FundsTransferBatchEvent> Events
+		public virtual ICollection<FundsTransferBatchMessage> Messages
 		{
 			get
 			{
-				return events ?? (events = new HashSet<FundsTransferBatchEvent>());
+				return messages ?? (messages = new HashSet<FundsTransferBatchMessage>());
 			}
 			set
 			{
 				if (value == null) throw new ArgumentNullException(nameof(value));
 
-				events = value;
+				messages = value;
 			}
 		}
 

@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 namespace Grammophone.Domos.Domain.Accounting
 {
 	/// <summary>
-	/// Type of a <see cref="FundsTransferBatchEvent"/>.
+	/// Type of a <see cref="FundsTransferBatchMessage"/>.
 	/// </summary>
-	public enum FundsTransferBatchEventType
+	public enum FundsTransferBatchMessageType
 	{
 		/// <summary>
 		/// Ther batch is pending to be submitted.
