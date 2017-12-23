@@ -21,6 +21,9 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// </summary>
 		[Required]
 		[MaxLength(256)]
+		[Display(
+			ResourceType = typeof(CreditSystemResources),
+			Name = nameof(CreditSystemResources.Name_Name))]
 		public virtual string Name { get; set; }
 
 		/// <summary>
@@ -28,6 +31,9 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// </summary>
 		[Required]
 		[MaxLength(256)]
+		[Display(
+			ResourceType = typeof(CreditSystemResources),
+			Name = nameof(CreditSystemResources.CodeName_Name))]
 		public virtual string CodeName { get; set; }
 
 		#endregion

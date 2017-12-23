@@ -21,14 +21,28 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// <summary>
 		/// The ID of the external system transaction.
 		/// </summary>
+		/// <remarks>
+		/// This is unrelated to the Domos funds transfer request system, it only refers to an optional
+		/// transaction of an external system.
+		/// </remarks>
 		[Required]
 		[MaxLength(225)]
+		[Display(
+			ResourceType = typeof(RemittanceResources),
+			Name = nameof(RemittanceResources.TransactionID_Name))]
 		public virtual string TransactionID { get; set; }
 
 		/// <summary>
 		/// Optional ID of the batch, when the remittance is part of a batch.
 		/// </summary>
+		/// <remarks>
+		/// This is unrelated to the Domos funds transfer request system, it only refers to an optional
+		/// batch of an external system.
+		/// </remarks>
 		[MaxLength(225)]
+		[Display(
+			ResourceType = typeof(RemittanceResources),
+			Name = nameof(RemittanceResources.BatchID_Name))]
 		public virtual string BatchID { get; set; }
 
 		#endregion

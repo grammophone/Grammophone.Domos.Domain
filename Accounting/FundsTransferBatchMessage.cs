@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,11 +24,18 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// <summary>
 		/// The type of the event.
 		/// </summary>
+		[Display(
+			ResourceType = typeof(FundsTransferBatchMessage),
+			Name = nameof(FundsTransferBatchMessageResources.Type_Name))]
 		public virtual FundsTransferBatchMessageType Type { get; set; }
 
 		/// <summary>
 		/// The date and time of the event, in UTC.
 		/// </summary>
+		[DataType(DataType.DateTime)]
+		[Display(
+			ResourceType = typeof(FundsTransferBatchMessage),
+			Name = nameof(FundsTransferBatchMessageResources.Time_Name))]
 		public virtual DateTime Time { get; set; }
 
 		#endregion

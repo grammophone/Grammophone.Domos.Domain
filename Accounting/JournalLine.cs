@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
@@ -20,11 +21,17 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// <summary>
 		/// The amount added to the <see cref="Account"/>, if positive, or subtracted, if negative.
 		/// </summary>
+		[Display(
+			ResourceType = typeof(JournalLineResources),
+			Name = nameof(JournalLineResources.Amount_Name))]
 		public virtual decimal Amount { get; set; }
 
 		/// <summary>
 		/// Optional description of the journal line.
 		/// </summary>
+		[Display(
+			ResourceType = typeof(JournalLineResources),
+			Name = nameof(JournalLineResources.Description_Name))]
 		public virtual string Description { get; set; }
 
 		#endregion

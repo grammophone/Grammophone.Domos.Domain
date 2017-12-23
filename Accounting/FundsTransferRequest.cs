@@ -36,6 +36,9 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// If positive, The amount is deposited to the bank account specified
 		/// by <see cref="EncryptedBankAccountInfo"/>, else it is withdrawed.
 		/// </summary>
+		[Display(
+			ResourceType = typeof(FundsTransferRequestResources),
+			Name = nameof(FundsTransferRequestResources.Amount_Name))]
 		public virtual decimal Amount { get; set; }
 
 		/// <summary>
@@ -46,12 +49,18 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// <summary>
 		/// The ID of the external system transaction.
 		/// </summary>
+		[Display(
+			ResourceType = typeof(FundsTransferRequestResources),
+			Name = nameof(FundsTransferRequestResources.TransactionID_Name))]
 		public virtual Guid TransactionID { get; set; }
 
 		/// <summary>
 		/// Optional comments.
 		/// </summary>
 		[MaxLength(256)]
+		[Display(
+			ResourceType = typeof(FundsTransferRequestResources),
+			Name = nameof(FundsTransferRequestResources.Comments_Name))]
 		public virtual string Comments { get; set; }
 
 		/// <summary>

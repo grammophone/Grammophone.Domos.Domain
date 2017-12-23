@@ -45,14 +45,49 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Accounting\Account.cs" />
+    <Compile Include="Accounting\AccountResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AccountResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\CreditSystemResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CreditSystemResources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Accounting\EncryptedBankAccountInfo.cs" />
     <Compile Include="Accounting\CreditSystem.cs" />
     <Compile Include="Accounting\FundsTransferBatchMessage.cs" />
+    <Compile Include="Accounting\FundsTransferBatchMessageResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FundsTransferBatchMessageResources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Accounting\FundsTransferBatchMessageType.cs" />
+    <Compile Include="Accounting\FundsTransferBatchMessageTypeResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FundsTransferBatchMessageTypeResources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Accounting\FundsTransferEvent.cs" />
+    <Compile Include="Accounting\FundsTransferEventResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FundsTransferEventResources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Accounting\FundsTransferEventType.cs" />
+    <Compile Include="Accounting\FundsTransferEventTypeResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FundsTransferEventTypeResources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Accounting\FundsTransferRequest.cs" />
     <Compile Include="Accounting\FundsTransferBatch.cs" />
+    <Compile Include="Accounting\FundsTransferRequestResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FundsTransferRequestResources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Accounting\FundsTransferState.cs" />
     <Compile Include="Accounting\IAccount.cs" />
     <Compile Include="Accounting\IBankAccountHolder.cs" />
@@ -60,8 +95,23 @@
     <Compile Include="Accounting\ITransferableFundsHolderWithBankAccount.cs" />
     <Compile Include="Accounting\Journal.cs" />
     <Compile Include="Accounting\JournalLine.cs" />
+    <Compile Include="Accounting\JournalLineResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JournalLineResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\JournalResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JournalResources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Accounting\Posting.cs" />
     <Compile Include="Accounting\Remittance.cs" />
+    <Compile Include="Accounting\RemittanceResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RemittanceResources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Accounting\TrackingAccount.cs" />
     <Compile Include="Accounting\UserAccount.cs" />
     <Compile Include="Disposition.cs" />
@@ -168,6 +218,56 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Accounting\AccountResources.fr.resx" />
+    <EmbeddedResource Include="Accounting\AccountResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AccountResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\CreditSystemResources.fr.resx" />
+    <EmbeddedResource Include="Accounting\CreditSystemResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>CreditSystemResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\FundsTransferBatchMessageResources.fr.resx" />
+    <EmbeddedResource Include="Accounting\FundsTransferBatchMessageResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>FundsTransferBatchMessageResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\FundsTransferBatchMessageTypeResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>FundsTransferBatchMessageTypeResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\FundsTransferBatchMessageTypeResources.fr.resx" />
+    <EmbeddedResource Include="Accounting\FundsTransferEventResources.fr.resx" />
+    <EmbeddedResource Include="Accounting\FundsTransferEventResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>FundsTransferEventResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\FundsTransferEventTypeResources.fr.resx" />
+    <EmbeddedResource Include="Accounting\FundsTransferEventTypeResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>FundsTransferEventTypeResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\FundsTransferRequestResources.fr.resx" />
+    <EmbeddedResource Include="Accounting\FundsTransferRequestResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>FundsTransferRequestResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\JournalLineResources.fr.resx" />
+    <EmbeddedResource Include="Accounting\JournalLineResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>JournalLineResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\JournalResources.fr.resx" />
+    <EmbeddedResource Include="Accounting\JournalResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>JournalResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\RemittanceResources.fr.resx" />
+    <EmbeddedResource Include="Accounting\RemittanceResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>RemittanceResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="DispositionResources.fr.resx" />
     <EmbeddedResource Include="DispositionResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

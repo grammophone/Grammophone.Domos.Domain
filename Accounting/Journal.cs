@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
@@ -36,6 +37,9 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// <summary>
 		/// Optional description of the journal.
 		/// </summary>
+		[Display(
+			ResourceType = typeof(JournalResources),
+			Name = nameof(JournalResources.Description_Name))]
 		public virtual string Description { get; set; }
 
 		#endregion

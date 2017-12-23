@@ -40,34 +40,52 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// Transfer (EFT/ACH) system.
 		/// </summary>
 		[MaxLength(ResponseCodeLength)]
+		[Display(
+			ResourceType = typeof(FundsTransferEventResources),
+			Name = nameof(FundsTransferEventResources.ResponseCode_Name))]
 		public virtual string ResponseCode { get; set; }
 
 		/// <summary>
 		/// The UTC date and time of the event.
 		/// </summary>
+		[Display(
+			ResourceType = typeof(FundsTransferEventResources),
+			Name = nameof(FundsTransferEventResources.Time_Name))]
 		public virtual DateTime Time { get; set; }
 
 		/// <summary>
 		/// Unique code for event tracing.
 		/// </summary>
 		[MaxLength(TraceCodeLength)]
+		[Display(
+			ResourceType = typeof(FundsTransferEventResources),
+			Name = nameof(FundsTransferEventResources.TraceCode_Name))]
 		public virtual string TraceCode { get; set; }
 
 		/// <summary>
 		/// The type of this transfer event.
 		/// </summary>
+		[Display(
+			ResourceType = typeof(FundsTransferEventResources),
+			Name = nameof(FundsTransferEventResources.Type_Name))]
 		public virtual FundsTransferEventType Type { get; set; }
 
 		/// <summary>
 		/// Optional comments.
 		/// </summary>
 		[MaxLength(CommentsLength)]
+		[Display(
+			ResourceType = typeof(FundsTransferEventResources),
+			Name = nameof(FundsTransferEventResources.Comments_Name))]
 		public virtual string Comments { get; set; }
 
 		/// <summary>
 		/// Optional serialized exception. This is set when <see cref="Type"/>
 		/// is <see cref="FundsTransferEventType.WorkflowFailed"/>.
 		/// </summary>
+		[Display(
+			ResourceType = typeof(FundsTransferEventResources),
+			Name = nameof(FundsTransferEventResources.ExceptionData_Name))]
 		public virtual byte[] ExceptionData { get; set; }
 
 		#endregion
@@ -77,6 +95,9 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// <summary>
 		/// The ID of the request.
 		/// </summary>
+		[Display(
+			ResourceType = typeof(FundsTransferEventResources),
+			Name = nameof(FundsTransferEventResources.RequestID_Name))]
 		public virtual long RequestID { get; set; }
 
 		/// <summary>
@@ -87,6 +108,9 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// <summary>
 		/// Optional ID of the collation where the event belongs.
 		/// </summary>
+		[Display(
+			ResourceType = typeof(FundsTransferEventResources),
+			Name = nameof(FundsTransferEventResources.BatchMessageID_Name))]
 		public virtual Guid? BatchMessageID { get; set; }
 
 		/// <summary>
