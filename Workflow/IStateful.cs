@@ -11,7 +11,7 @@ namespace Grammophone.Domos.Domain.Workflow
 	/// </summary>
 	/// <typeparam name="U">The type of the users, derived from <see cref="User"/>.</typeparam>
 	/// <typeparam name="ST">The type of state transitions, derived from <see cref="StateTransition{U}"/>.</typeparam>
-	public interface IStateful<U, out ST> : ITrackingEntity<U>, IEntityWithID<long>
+	public interface IStateful<U, ST> : ITrackingEntity<U>, IEntityWithID<long>
 		where U : User
 		where ST : StateTransition<U>
 	{
@@ -43,6 +43,6 @@ namespace Grammophone.Domos.Domain.Workflow
 		/// <summary>
 		/// The history of state transitions of this object.
 		/// </summary>
-		IEnumerable<ST> StateTransitions { get; }
+		ICollection<ST> StateTransitions { get; }
 	}
 }
