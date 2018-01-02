@@ -43,6 +43,6 @@ namespace Grammophone.Domos.Domain.Workflow
 		/// <summary>
 		/// The history of state transitions of this object.
 		/// </summary>
-		ICollection<ST> StateTransitions { get; }
+		ICollection<ST> StateTransitions { get; set; }
 	}
 }
