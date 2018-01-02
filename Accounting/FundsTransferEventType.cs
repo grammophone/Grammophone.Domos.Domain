@@ -16,7 +16,7 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// The transfer is pending queued for submission.
 		/// </summary>
 		[Display(
-			ResourceType = typeof(FundsTransferEventType),
+			ResourceType = typeof(FundsTransferEventTypeResources),
 			Name = nameof(FundsTransferEventTypeResources.Pending_Name))]
 		Pending = 0,
 
@@ -25,7 +25,7 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// but has not yet succeeded or failed.
 		/// </summary>
 		[Display(
-			ResourceType = typeof(FundsTransferEventType),
+			ResourceType = typeof(FundsTransferEventTypeResources),
 			Name = nameof(FundsTransferEventTypeResources.Submitted_Name))]
 		Submitted = 1,
 
@@ -34,7 +34,7 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// but has not yet succeeded or failed.
 		/// </summary>
 		[Display(
-			ResourceType = typeof(FundsTransferEventType),
+			ResourceType = typeof(FundsTransferEventTypeResources),
 			Name = nameof(FundsTransferEventTypeResources.Accepted_Name))]
 		Accepted = 2,
 
@@ -42,7 +42,7 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// The transfer has failed.
 		/// </summary>
 		[Display(
-			ResourceType = typeof(FundsTransferEventType),
+			ResourceType = typeof(FundsTransferEventTypeResources),
 			Name = nameof(FundsTransferEventTypeResources.Failed_Name))]
 		Failed = 3,
 
@@ -51,7 +51,7 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// has failed.
 		/// </summary>
 		[Display(
-			ResourceType = typeof(FundsTransferEventType),
+			ResourceType = typeof(FundsTransferEventTypeResources),
 			Name = nameof(FundsTransferEventTypeResources.WorkflowFailed_Name))]
 		WorkflowFailed = 4,
 
@@ -59,7 +59,7 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// The transfer has been successful.
 		/// </summary>
 		[Display(
-			ResourceType = typeof(FundsTransferEventType),
+			ResourceType = typeof(FundsTransferEventTypeResources),
 			Name = nameof(FundsTransferEventTypeResources.Succeeded_Name))]
 		Succeeded = 5
 	}
