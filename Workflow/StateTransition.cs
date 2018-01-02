@@ -64,7 +64,7 @@ namespace Grammophone.Domos.Domain.Workflow
 		/// Thrown when the <paramref name="stateful"/> instance is not compatible
 		/// to this state transition.
 		/// </exception>
-		public abstract void BindToStateful(IStateful<U, StateTransition<U>> stateful);
+		public abstract void BindToStateful(object stateful);
 
 		#endregion
 	}
