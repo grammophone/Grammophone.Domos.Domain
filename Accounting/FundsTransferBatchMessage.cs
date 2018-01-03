@@ -25,7 +25,7 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// The type of the event.
 		/// </summary>
 		[Display(
-			ResourceType = typeof(FundsTransferBatchMessage),
+			ResourceType = typeof(FundsTransferBatchMessageResources),
 			Name = nameof(FundsTransferBatchMessageResources.Type_Name))]
 		public virtual FundsTransferBatchMessageType Type { get; set; }
 
@@ -34,7 +34,7 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// </summary>
 		[DataType(DataType.DateTime)]
 		[Display(
-			ResourceType = typeof(FundsTransferBatchMessage),
+			ResourceType = typeof(FundsTransferBatchMessageResources),
 			Name = nameof(FundsTransferBatchMessageResources.Time_Name))]
 		public virtual DateTime Time { get; set; }
 
