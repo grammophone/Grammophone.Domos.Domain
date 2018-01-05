@@ -61,6 +61,24 @@ namespace Grammophone.Domos.Domain.Accounting {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Comments.
+        /// </summary>
+        public static string Comments_Name {
+            get {
+                return ResourceManager.GetString("Comments_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Message Code.
+        /// </summary>
+        public static string MessageCode_Name {
+            get {
+                return ResourceManager.GetString("MessageCode_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Time.
         /// </summary>
         public static string Time_Name {

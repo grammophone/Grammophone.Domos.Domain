@@ -13,6 +13,20 @@ namespace Grammophone.Domos.Domain.Accounting
 	[Serializable]
 	public class FundsTransferBatchMessage : TrackingEntityWithID<User, Guid>
 	{
+		#region Constants
+
+		/// <summary>
+		/// The maximum length of the <see cref="MessageCode"/> property.
+		/// </summary>
+		public const int MessageCodeLength = 16;
+
+		/// <summary>
+		/// The maximum length of the <see cref="Comments"/> property.
+		/// </summary>
+		public const int CommentsLength = 512;
+
+		#endregion
+
 		#region Private fields
 
 		private ICollection<FundsTransferEvent> events;
@@ -37,6 +51,24 @@ namespace Grammophone.Domos.Domain.Accounting
 			ResourceType = typeof(FundsTransferBatchMessageResources),
 			Name = nameof(FundsTransferBatchMessageResources.Time_Name))]
 		public virtual DateTime Time { get; set; }
+
+		/// <summary>
+		/// Optional code for the message. Maximum length is <see cref="MessageCodeLength"/>.
+		/// </summary>
+		[MaxLength(MessageCodeLength)]
+		[Display(
+			ResourceType = typeof(FundsTransferBatchMessageResources),
+			Name = nameof(FundsTransferBatchMessageResources.MessageCode_Name))]
+		public virtual string MessageCode { get; set; }
+
+		/// <summary>
+		/// Optional comments for the message. Maximum length is <see cref="CommentsLength"/>.
+		/// </summary>
+		[MaxLength(CommentsLength)]
+		[Display(
+			ResourceType = typeof(FundsTransferBatchMessageResources),
+			Name = nameof(FundsTransferBatchMessageResources.Comments_Name))]
+		public virtual string Comments { get; set; }
 
 		#endregion
 
