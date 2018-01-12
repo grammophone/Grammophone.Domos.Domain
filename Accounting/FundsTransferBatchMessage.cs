@@ -65,6 +65,7 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// Optional comments for the message. Maximum length is <see cref="CommentsLength"/>.
 		/// </summary>
 		[MaxLength(CommentsLength)]
+		[DataType(DataType.MultilineText)]
 		[Display(
 			ResourceType = typeof(FundsTransferBatchMessageResources),
 			Name = nameof(FundsTransferBatchMessageResources.Comments_Name))]

@@ -74,6 +74,7 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// Optional comments.
 		/// </summary>
 		[MaxLength(CommentsLength)]
+		[DataType(DataType.MultilineText)]
 		[Display(
 			ResourceType = typeof(FundsTransferEventResources),
 			Name = nameof(FundsTransferEventResources.Comments_Name))]

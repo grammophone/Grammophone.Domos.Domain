@@ -57,7 +57,8 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// <summary>
 		/// Optional comments.
 		/// </summary>
-		[MaxLength(256)]
+		[MaxLength(CommentsLength)]
+		[DataType(DataType.MultilineText)]
 		[Display(
 			ResourceType = typeof(FundsTransferRequestResources),
 			Name = nameof(FundsTransferRequestResources.Comments_Name))]
