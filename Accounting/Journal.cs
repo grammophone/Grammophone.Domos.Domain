@@ -57,6 +57,24 @@ namespace Grammophone.Domos.Domain.Accounting
 		public virtual BST StateTransition { get; set; }
 
 		/// <summary>
+		/// Optional ID of associated successful funds transfer event.
+		/// </summary>
+		/// <remarks>
+		/// The event must have <see cref="FundsTransferEvent.Type"/> 
+		/// set to <see cref="FundsTransferEventType.Succeeded"/>.
+		/// </remarks>
+		public virtual long? FundsTransferEventID { get; set; }
+
+		/// <summary>
+		/// Optional associated successful funds transfer event.
+		/// </summary>
+		/// <remarks>
+		/// The event must have <see cref="FundsTransferEvent.Type"/> 
+		/// set to <see cref="FundsTransferEventType.Succeeded"/>.
+		/// </remarks>
+		public virtual FundsTransferEvent FundsTransferEvent { get; set; }
+
+		/// <summary>
 		/// The postings in this journal.
 		/// </summary>
 		public virtual ICollection<P> Postings
