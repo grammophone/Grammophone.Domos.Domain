@@ -83,6 +83,7 @@
     </Compile>
     <Compile Include="Accounting\FundsTransferRequest.cs" />
     <Compile Include="Accounting\FundsTransferBatch.cs" />
+    <Compile Include="Accounting\FundsTransferRequestGroup.cs" />
     <Compile Include="Accounting\FundsTransferRequestResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

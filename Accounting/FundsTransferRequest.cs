@@ -24,7 +24,7 @@ namespace Grammophone.Domos.Domain.Accounting
 
 		#region Private fields
 
-		private EncryptedBankAccountInfo bankAccountInfo;
+		private EncryptedBankAccountInfo encryptedBankAccountInfo;
 
 		private ICollection<FundsTransferEvent> events;
 
@@ -73,13 +73,13 @@ namespace Grammophone.Domos.Domain.Accounting
 		{
 			get
 			{
-				return bankAccountInfo ?? (bankAccountInfo = new EncryptedBankAccountInfo());
+				return encryptedBankAccountInfo ?? (encryptedBankAccountInfo = new EncryptedBankAccountInfo());
 			}
 			set
 			{
 				if (value == null) throw new ArgumentNullException(nameof(value));
 
-				bankAccountInfo = value;
+				encryptedBankAccountInfo = value;
 			}
 		}
 
@@ -138,6 +138,16 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// Optional batch, when the transfer is part of one.
 		/// </summary>
 		public virtual FundsTransferBatch Batch { get; set; }
+
+		/// <summary>
+		/// The ID of the group with common banking info where the request belongs.
+		/// </summary>
+		public virtual long GroupID { get; set; }
+
+		/// <summary>
+		/// The group with common banking info where the request belongs.
+		/// </summary>
+		public virtual FundsTransferRequestGroup Group { get; set; }
 
 		/// <summary>
 		/// The events recorded for this request.
