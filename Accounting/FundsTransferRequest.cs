@@ -49,8 +49,8 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// </summary>
 		[Display(
 			ResourceType = typeof(FundsTransferRequestResources),
-			Name = nameof(FundsTransferRequestResources.TransactionID_Name))]
-		public virtual Guid TransactionID { get; set; }
+			Name = nameof(FundsTransferRequestResources.GUID_Name))]
+		public virtual Guid GUID { get; set; }
 
 		/// <summary>
 		/// Optional comments.

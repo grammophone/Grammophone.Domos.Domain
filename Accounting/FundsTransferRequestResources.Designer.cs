@@ -79,11 +79,11 @@ namespace Grammophone.Domos.Domain.Accounting {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Transaction ID.
+        ///   Looks up a localized string similar to GUID.
         /// </summary>
-        public static string TransactionID_Name {
+        public static string GUID_Name {
             get {
-                return ResourceManager.GetString("TransactionID_Name", resourceCulture);
+                return ResourceManager.GetString("GUID_Name", resourceCulture);
             }
         }
     }
