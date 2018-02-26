@@ -24,8 +24,6 @@ namespace Grammophone.Domos.Domain.Accounting
 
 		#region Private fields
 
-		private EncryptedBankAccountInfo encryptedBankAccountInfo;
-
 		private ICollection<FundsTransferEvent> events;
 
 		#endregion
@@ -63,25 +61,6 @@ namespace Grammophone.Domos.Domain.Accounting
 			ResourceType = typeof(FundsTransferRequestResources),
 			Name = nameof(FundsTransferRequestResources.Comments_Name))]
 		public virtual string Comments { get; set; }
-
-		/// <summary>
-		/// The encrypted bank account from which the <see cref="Amount"/> is withdrawn, if negative,
-		/// or deposited, if positive.
-		/// This is an embedded entity, not a relation.
-		/// </summary>
-		public virtual EncryptedBankAccountInfo EncryptedBankAccountInfo
-		{
-			get
-			{
-				return encryptedBankAccountInfo ?? (encryptedBankAccountInfo = new EncryptedBankAccountInfo());
-			}
-			set
-			{
-				if (value == null) throw new ArgumentNullException(nameof(value));
-
-				encryptedBankAccountInfo = value;
-			}
-		}
 
 		#endregion
 
@@ -132,7 +111,7 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// <summary>
 		/// Optional ID of the batch, when the transfer is part of one.
 		/// </summary>
-		public virtual Guid? BatchID { get; set; }
+		public virtual long? BatchID { get; set; }
 
 		/// <summary>
 		/// Optional batch, when the transfer is part of one.

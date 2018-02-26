@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 namespace Grammophone.Domos.Domain.Accounting
 {
 	/// <summary>
-	/// Grouping of <see cref="FundsTransferRequest"/>s based on
-	/// their <see cref="FundsTransferRequest.EncryptedBankAccountInfo"/>.
+	/// Grouping of <see cref="FundsTransferRequest"/>s based on <see cref="EncryptedBankAccountInfo"/>.
 	/// WARNING: The members of the group might belong to numerous batches.
 	/// In other words, this group is reused when necessary.
 	/// </summary>

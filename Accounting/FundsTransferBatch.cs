@@ -10,13 +10,22 @@ namespace Grammophone.Domos.Domain.Accounting
 	/// Optional batch grouping for <see cref="FundsTransferRequest"/>s.
 	/// </summary>
 	[Serializable]
-	public class FundsTransferBatch : TrackingEntityWithID<User, Guid>
+	public class FundsTransferBatch : TrackingEntityWithID<User, long>
 	{
 		#region Private fields
 
 		private ICollection<FundsTransferRequest> requests;
 
 		private ICollection<FundsTransferBatchMessage> messages;
+
+		#endregion
+
+		#region Primitive properties
+
+		/// <summary>
+		/// GUID for the batch.
+		/// </summary>
+		public virtual Guid GUID { get; set; }
 
 		#endregion
 
