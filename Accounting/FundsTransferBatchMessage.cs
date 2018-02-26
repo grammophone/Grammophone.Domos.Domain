@@ -78,7 +78,7 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// <summary>
 		/// The ID of the funds transfer batch where this event belongs.
 		/// </summary>
-		public virtual Guid BatchID { get; set; }
+		public virtual long BatchID { get; set; }
 
 		/// <summary>
 		/// The funds transfer batch where this event belongs.
