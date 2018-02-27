@@ -11,7 +11,7 @@ namespace Grammophone.Domos.Domain.Accounting
 	/// An event in the history of a <see cref="FundsTransferBatch"/>.
 	/// </summary>
 	[Serializable]
-	public class FundsTransferBatchMessage : TrackingEntityWithID<User, long>
+	public class FundsTransferBatchMessage : TrackingEntityWithID<User, Guid>
 	{
 		#region Constants
 
@@ -70,14 +70,6 @@ namespace Grammophone.Domos.Domain.Accounting
 			ResourceType = typeof(FundsTransferBatchMessageResources),
 			Name = nameof(FundsTransferBatchMessageResources.Comments_Name))]
 		public virtual string Comments { get; set; }
-
-		/// <summary>
-		/// GUID of the message.
-		/// </summary>
-		[Display(
-			ResourceType = typeof(FundsTransferBatchMessageResources),
-			Name = nameof(FundsTransferBatchMessageResources.GUID_Name))]
-		public virtual Guid GUID { get; set; }
 
 		#endregion
 

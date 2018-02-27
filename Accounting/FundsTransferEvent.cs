@@ -112,7 +112,7 @@ namespace Grammophone.Domos.Domain.Accounting
 		[Display(
 			ResourceType = typeof(FundsTransferEventResources),
 			Name = nameof(FundsTransferEventResources.BatchMessageID_Name))]
-		public virtual long? BatchMessageID { get; set; }
+		public virtual Guid? BatchMessageID { get; set; }
 
 		/// <summary>
 		/// Optional collation where the event belongs.
