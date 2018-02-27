@@ -18,8 +18,8 @@ namespace Grammophone.Domos.Domain.Accounting
 		EncryptedBankAccountInfo EncryptedBankAccountInfo { get; set; }
 
 		/// <summary>
-		/// Get the name of the holder of the account.
+		/// Get the name of the holder of the bank account.
 		/// </summary>
-		string GetAccountHolderName();
+		string GetBankAccountHolderName();
 	}
 }
