@@ -120,9 +120,6 @@
   <data name="Comments_Name" xml:space="preserve">
     <value>Commentaires</value>
   </data>
-  <data name="GUID_Name" xml:space="preserve">
-    <value>GUID</value>
-  </data>
   <data name="MessageCode_Name" xml:space="preserve">
     <value>Code de Message</value>
   </data>

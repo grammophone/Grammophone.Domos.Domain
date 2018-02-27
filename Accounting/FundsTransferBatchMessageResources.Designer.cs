@@ -70,15 +70,6 @@ namespace Grammophone.Domos.Domain.Accounting {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to GUID.
-        /// </summary>
-        public static string GUID_Name {
-            get {
-                return ResourceManager.GetString("GUID_Name", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Message Code.
         /// </summary>
         public static string MessageCode_Name {
