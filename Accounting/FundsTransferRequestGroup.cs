@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,15 @@ namespace Grammophone.Domos.Domain.Accounting
 	[Serializable]
 	public class FundsTransferRequestGroup : EntityWithID<long>
 	{
+		#region Constants
+
+		/// <summary>
+		/// The maximum length for the <see cref="AccountHolderName"/> property.
+		/// </summary>
+		public const int AccountHolderNameLength = 64;
+
+		#endregion
+
 		#region Private fields
 
 		private EncryptedBankAccountInfo encryptedBankAccountInfo;
@@ -39,6 +49,13 @@ namespace Grammophone.Domos.Domain.Accounting
 				encryptedBankAccountInfo = value;
 			}
 		}
+
+		/// <summary>
+		/// The name of the account holder.
+		/// </summary>
+		[Required]
+		[MaxLength(AccountHolderNameLength)]
+		public virtual string AccountHolderName { get; set; }
 
 		#endregion
 	}

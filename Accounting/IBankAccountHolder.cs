@@ -16,5 +16,10 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// The encrypted bank account.
 		/// </summary>
 		EncryptedBankAccountInfo EncryptedBankAccountInfo { get; set; }
+
+		/// <summary>
+		/// Get the name of the holder of the account.
+		/// </summary>
+		string GetAccountHolderName();
 	}
 }
