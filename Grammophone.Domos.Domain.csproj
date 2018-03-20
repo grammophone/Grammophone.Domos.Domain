@@ -92,6 +92,21 @@
     <Compile Include="Accounting\FundsTransferState.cs" />
     <Compile Include="Accounting\IAccount.cs" />
     <Compile Include="Accounting\IBankAccountHolder.cs" />
+    <Compile Include="Accounting\Invoice.cs" />
+    <Compile Include="Accounting\InvoiceForm.cs" />
+    <Compile Include="Accounting\InvoiceFormResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InvoiceFormResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\InvoiceLine.cs" />
+    <Compile Include="Accounting\InvoiceLineTax.cs" />
+    <Compile Include="Accounting\InvoiceState.cs" />
+    <Compile Include="Accounting\InvoiceStateResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InvoiceStateResources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Accounting\ITransferableFundsHolder.cs" />
     <Compile Include="Accounting\ITransferableFundsHolderWithBankAccount.cs" />
     <Compile Include="Accounting\Journal.cs" />
@@ -253,6 +268,15 @@
     <EmbeddedResource Include="Accounting\FundsTransferRequestResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>FundsTransferRequestResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\InvoiceFormResources.fr.resx" />
+    <EmbeddedResource Include="Accounting\InvoiceFormResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>InvoiceFormResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\InvoiceStateResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>InvoiceStateResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\JournalLineResources.fr.resx" />
     <EmbeddedResource Include="Accounting\JournalLineResources.resx">
