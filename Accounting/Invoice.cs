@@ -17,7 +17,7 @@ namespace Grammophone.Domos.Domain.Accounting
 	/// <typeparam name="ILT">The type of the invoice lines taxes, derived from <see cref="InvoiceLineTax{U, P, R}"/>.</typeparam>
 	/// <typeparam name="IL">The type of the invoice lines, derived from <see cref="InvoiceLine{U, P, R, ILT}"/>.</typeparam>
 	[Serializable]
-	public abstract class Invoice<U, P, R, ILT, IL>
+	public abstract class Invoice<U, P, R, ILT, IL> : TrackingEntityWithID<U, long>
 		where U : User
 		where P : Posting<U>
 		where R : Remittance<U>
