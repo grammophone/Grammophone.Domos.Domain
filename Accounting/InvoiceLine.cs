@@ -15,7 +15,7 @@ namespace Grammophone.Domos.Domain.Accounting
 	/// <typeparam name="R">the type of remittances, derived from <see cref="Remittance{U}"/>.</typeparam>
 	/// <typeparam name="ILT">The type of the invoice lines taxes, derived from <see cref="InvoiceLineTax{U, P, R}"/>.</typeparam>
 	[Serializable]
-	public class InvoiceLine<U, P, R, ILT>
+	public abstract class InvoiceLine<U, P, R, ILT>
 		where U : User
 		where P : Posting<U>
 		where R : Remittance<U>
@@ -56,7 +56,7 @@ namespace Grammophone.Domos.Domain.Accounting
 		public virtual decimal? Rate { get; set; }
 
 		/// <summary>
-		/// The cost of the line, excluding taxes.
+		/// The net cost of the line, excluding taxes.
 		/// </summary>
 		public virtual decimal Amount { get; set; }
 
@@ -80,6 +80,16 @@ namespace Grammophone.Domos.Domain.Accounting
 				taxes = value;
 			}
 		}
+
+		#endregion
+
+		#region Public methods
+
+		/// <summary>
+		/// Get the gross amount of the line including taxes.
+		/// </summary>
+		public decimal GetGrossAmount()
+			=> this.Amount + this.Taxes.Sum(t => t.Amount);
 
 		#endregion
 	}

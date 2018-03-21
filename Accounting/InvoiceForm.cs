@@ -21,6 +21,14 @@ namespace Grammophone.Domos.Domain.Accounting
 		NormalInvoice,
 
 		/// <summary>
+		/// Receipt.
+		/// </summary>
+		[Display(
+			ResourceType = typeof(InvoiceFormResources),
+			Name = nameof(InvoiceFormResources.Receeipt_Name))]
+		Receipt,
+
+		/// <summary>
 		/// A debit or credit note issued by a buyer or seller.
 		/// </summary>
 		[Display(

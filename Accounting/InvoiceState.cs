@@ -18,7 +18,23 @@ namespace Grammophone.Domos.Domain.Accounting
 		[Display(
 			ResourceType = typeof(InvoiceStateResources),
 			Name = nameof(InvoiceStateResources.Open_Name))]
-		Open,
+		Open = 0,
+
+		/// <summary>
+		/// A requirement for a collaboration or transaction to proceed is submitted.
+		/// </summary>
+		[Display(
+			ResourceType = typeof(InvoiceStateResources),
+			Name = nameof(InvoiceStateResources.ProFormaSubmitted_Name))]
+		ProFormaSubmitted = 100,
+
+		/// <summary>
+		/// A requirement for a collaboration or transaction to proceed is rejected.
+		/// </summary>
+		[Display(
+			ResourceType = typeof(InvoiceStateResources),
+			Name = nameof(InvoiceStateResources.ProFormaRejected_Name))]
+		ProFormaRejected = 110,
 
 		/// <summary>
 		/// The invoice is registered as payable by the buyer but not yet paid.
@@ -26,7 +42,7 @@ namespace Grammophone.Domos.Domain.Accounting
 		[Display(
 			ResourceType = typeof(InvoiceStateResources),
 			Name = nameof(InvoiceStateResources.Payable_Name))]
-		Payable,
+		Payable = 200,
 
 		/// <summary>
 		/// The invoice has been partially paid by the buyer.
@@ -34,7 +50,7 @@ namespace Grammophone.Domos.Domain.Accounting
 		[Display(
 			ResourceType = typeof(InvoiceStateResources),
 			Name = nameof(InvoiceStateResources.PartiallyPaid_Name))]
-		PartiallyPaid,
+		PartiallyPaid = 300,
 
 		/// <summary>
 		/// The invoice as been fully paid by the buyer.
@@ -42,6 +58,6 @@ namespace Grammophone.Domos.Domain.Accounting
 		[Display(
 			ResourceType = typeof(InvoiceStateResources),
 			Name = nameof(InvoiceStateResources.Paid_Name))]
-		Paid
+		Paid = 400
 	}
 }

@@ -274,6 +274,7 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>InvoiceFormResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\InvoiceStateResources.fr.resx" />
     <EmbeddedResource Include="Accounting\InvoiceStateResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>InvoiceStateResources.Designer.cs</LastGenOutput>

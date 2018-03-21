@@ -70,6 +70,15 @@ namespace Grammophone.Domos.Domain.Accounting {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Receipt.
+        /// </summary>
+        public static string Receeipt_Name {
+            get {
+                return ResourceManager.GetString("Receeipt_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Statement.
         /// </summary>
         public static string Statement_Name {

@@ -129,4 +129,10 @@
   <data name="Payable_Name" xml:space="preserve">
     <value>Payable</value>
   </data>
+  <data name="ProFormaRejected_Name" xml:space="preserve">
+    <value>Pro Forma Rejected</value>
+  </data>
+  <data name="ProFormaSubmitted_Name" xml:space="preserve">
+    <value>Pro Forma Submitted</value>
+  </data>
 </root>

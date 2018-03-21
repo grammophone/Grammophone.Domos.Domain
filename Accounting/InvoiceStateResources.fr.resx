@@ -117,13 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="NormalInvoice_Name" xml:space="preserve">
-    <value>Normal Invoice</value>
+  <data name="Open_Name" xml:space="preserve">
+    <value>Ouvert</value>
   </data>
-  <data name="Receeipt_Name" xml:space="preserve">
-    <value>Receipt</value>
+  <data name="Paid_Name" xml:space="preserve">
+    <value>Payé</value>
   </data>
-  <data name="Statement_Name" xml:space="preserve">
-    <value>Statement</value>
+  <data name="PartiallyPaid_Name" xml:space="preserve">
+    <value>Partiellement Payé</value>
+  </data>
+  <data name="Payable_Name" xml:space="preserve">
+    <value>Payable</value>
+  </data>
+  <data name="ProFormaRejected_Name" xml:space="preserve">
+    <value>Pro Forma Rejeté</value>
+  </data>
+  <data name="ProFormaSubmitted_Name" xml:space="preserve">
+    <value>Pro Forma Soumis</value>
   </data>
 </root>

@@ -120,6 +120,9 @@
   <data name="NormalInvoice_Name" xml:space="preserve">
     <value>Facture Normale</value>
   </data>
+  <data name="Receipt_Name" xml:space="preserve">
+    <value>Réception</value>
+  </data>
   <data name="Statement_Name" xml:space="preserve">
     <value>Déclaration</value>
   </data>

@@ -95,5 +95,23 @@ namespace Grammophone.Domos.Domain.Accounting {
                 return ResourceManager.GetString("Payable_Name", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pro Forma Rejected.
+        /// </summary>
+        public static string ProFormaRejected_Name {
+            get {
+                return ResourceManager.GetString("ProFormaRejected_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pro Forma Submitted.
+        /// </summary>
+        public static string ProFormaSubmitted_Name {
+            get {
+                return ResourceManager.GetString("ProFormaSubmitted_Name", resourceCulture);
+            }
+        }
     }
 }
