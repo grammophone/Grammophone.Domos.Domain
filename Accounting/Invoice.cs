@@ -71,6 +71,8 @@ namespace Grammophone.Domos.Domain.Accounting
 
 		private ICollection<R> payingRemittances;
 
+		private ICollection<FundsTransferRequest> servicingFundsTransferRequests;
+
 		#endregion
 
 		#region Primitive properties
@@ -190,6 +192,23 @@ namespace Grammophone.Domos.Domain.Accounting
 				if (value == null) throw new ArgumentNullException(nameof(value));
 
 				payingRemittances = value;
+			}
+		}
+
+		/// <summary>
+		/// The funds transfer requests which may have been assigned to pay this invoice.
+		/// </summary>
+		public virtual ICollection<FundsTransferRequest> ServicingFundsTransferRequests
+		{
+			get
+			{
+				return servicingFundsTransferRequests ?? (servicingFundsTransferRequests = new HashSet<FundsTransferRequest>());
+			}
+			set
+			{
+				if (value == null) throw new ArgumentNullException(nameof(value));
+
+				servicingFundsTransferRequests = value;
 			}
 		}
 
