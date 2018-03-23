@@ -4,7 +4,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Grammophone.Domos.Domain.Workflow;
 
 namespace Grammophone.Domos.Domain.Accounting
 {
@@ -66,10 +65,6 @@ namespace Grammophone.Domos.Domain.Accounting
 		#region Private fields
 
 		private ICollection<IL> lines;
-
-		private ICollection<P> payingPostings;
-
-		private ICollection<R> payingRemittances;
 
 		private ICollection<FundsTransferRequest> servicingFundsTransferRequests;
 
@@ -158,40 +153,6 @@ namespace Grammophone.Domos.Domain.Accounting
 				if (value == null) throw new ArgumentNullException(nameof(value));
 
 				lines = value;
-			}
-		}
-
-		/// <summary>
-		/// Any postings paying this invoice.
-		/// </summary>
-		public virtual ICollection<P> PayingPostings
-		{
-			get
-			{
-				return payingPostings ?? (payingPostings = new HashSet<P>());
-			}
-			set
-			{
-				if (value == null) throw new ArgumentNullException(nameof(value));
-
-				payingPostings = value;
-			}
-		}
-
-		/// <summary>
-		/// Any remittances paying this invoice.
-		/// </summary>
-		public virtual ICollection<R> PayingRemittances
-		{
-			get
-			{
-				return payingRemittances ?? (payingRemittances = new HashSet<R>());
-			}
-			set
-			{
-				if (value == null) throw new ArgumentNullException(nameof(value));
-
-				payingRemittances = value;
 			}
 		}
 

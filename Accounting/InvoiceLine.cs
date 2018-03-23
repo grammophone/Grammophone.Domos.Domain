@@ -65,6 +65,26 @@ namespace Grammophone.Domos.Domain.Accounting
 		#region Relations
 
 		/// <summary>
+		/// Optional ID of the posting related to the invoice line.
+		/// </summary>
+		public virtual long? PostingID { get; set; }
+
+		/// <summary>
+		/// Optional posting related to the invoice event.
+		/// </summary>
+		public virtual P Posting { get; set; }
+
+		/// <summary>
+		/// Optional ID of the remittance related to the invoice line.
+		/// </summary>
+		public virtual long? RemittanceID { get; set; }
+
+		/// <summary>
+		/// Optional remittance related to the invoice event.
+		/// </summary>
+		public virtual R Remittance { get; set; }
+
+		/// <summary>
 		/// The taxes associated with the line.
 		/// </summary>
 		public virtual ICollection<ILT> TaxComponents

@@ -93,6 +93,7 @@
     <Compile Include="Accounting\IAccount.cs" />
     <Compile Include="Accounting\IBankAccountHolder.cs" />
     <Compile Include="Accounting\Invoice.cs" />
+    <Compile Include="Accounting\InvoiceEvent.cs" />
     <Compile Include="Accounting\InvoiceForm.cs" />
     <Compile Include="Accounting\InvoiceFormResources.Designer.cs">
       <AutoGen>True</AutoGen>
