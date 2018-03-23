@@ -8,7 +8,8 @@ using System.Threading.Tasks;
 namespace Grammophone.Domos.Domain.Accounting
 {
 	/// <summary>
-	/// State of an <see cref="Invoice{U, P, R, ILT, IL}"/>.
+	/// State of an <see cref="Invoice{U, P, R, ILT, IL, IE}"/>, as recorded
+	/// in a <see cref="InvoiceEvent{U, P, R}"/>.
 	/// </summary>
 	public enum InvoiceState
 	{

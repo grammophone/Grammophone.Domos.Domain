@@ -15,13 +15,15 @@ namespace Grammophone.Domos.Domain.Accounting
 	/// <typeparam name="R">the type of remittances, derived from <see cref="Remittance{U}"/>.</typeparam>
 	/// <typeparam name="ILT">The type of the invoice lines taxes, derived from <see cref="InvoiceLineTaxComponent{U, P, R}"/>.</typeparam>
 	/// <typeparam name="IL">The type of the invoice lines, derived from <see cref="InvoiceLine{U, P, R, ILT}"/>.</typeparam>
+	/// <typeparam name="IE">The type of the invoce events, derived from <see cref="InvoiceEvent{U, P, R}"/>.</typeparam>
 	[Serializable]
-	public abstract class Invoice<U, P, R, ILT, IL> : TrackingEntityWithID<U, long>
+	public abstract class Invoice<U, P, R, ILT, IL, IE> : TrackingEntityWithID<U, long>
 		where U : User
 		where P : Posting<U>
 		where R : Remittance<U>
 		where ILT : InvoiceLineTaxComponent<U, P, R>
 		where IL : InvoiceLine<U, P, R, ILT>
+		where IE : InvoiceEvent<U, P, R>
 	{
 		#region Constants
 
@@ -66,6 +68,8 @@ namespace Grammophone.Domos.Domain.Accounting
 
 		private ICollection<IL> lines;
 
+		private ICollection<IE> events;
+
 		private ICollection<FundsTransferRequest> servicingFundsTransferRequests;
 
 		#endregion
@@ -81,11 +85,6 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// Optional date when the issue is due, in UTC.
 		/// </summary>
 		public virtual DateTime? DueDate { get; set; }
-
-		/// <summary>
-		/// The state of the invoice.
-		/// </summary>
-		public virtual InvoiceState State { get; set; }
 
 		/// <summary>
 		/// The form of the invoice.
@@ -153,6 +152,23 @@ namespace Grammophone.Domos.Domain.Accounting
 				if (value == null) throw new ArgumentNullException(nameof(value));
 
 				lines = value;
+			}
+		}
+
+		/// <summary>
+		/// Events recording the hostory of the invoice.
+		/// </summary>
+		public virtual ICollection<IE> Events
+		{
+			get
+			{
+				return events ?? (events = new HashSet<IE>());
+			}
+			set
+			{
+				if (value == null) throw new ArgumentNullException(nameof(value));
+
+				events = value;
 			}
 		}
 
