@@ -14,14 +14,14 @@ namespace Grammophone.Domos.Domain.Accounting
 	/// <typeparam name="U">The type of users, derived from <see cref="User"/>.</typeparam>
 	/// <typeparam name="P">The type of postings, derived from <see cref="Posting{U}"/>.</typeparam>
 	/// <typeparam name="R">the type of remittances, derived from <see cref="Remittance{U}"/>.</typeparam>
-	/// <typeparam name="ILT">The type of the invoice lines taxes, derived from <see cref="InvoiceLineTax{U, P, R}"/>.</typeparam>
+	/// <typeparam name="ILT">The type of the invoice lines taxes, derived from <see cref="InvoiceLineTaxComponent{U, P, R}"/>.</typeparam>
 	/// <typeparam name="IL">The type of the invoice lines, derived from <see cref="InvoiceLine{U, P, R, ILT}"/>.</typeparam>
 	[Serializable]
 	public abstract class Invoice<U, P, R, ILT, IL> : TrackingEntityWithID<U, long>
 		where U : User
 		where P : Posting<U>
 		where R : Remittance<U>
-		where ILT : InvoiceLineTax<U, P, R>
+		where ILT : InvoiceLineTaxComponent<U, P, R>
 		where IL : InvoiceLine<U, P, R, ILT>
 	{
 		#region Constants

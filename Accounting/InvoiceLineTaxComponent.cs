@@ -14,7 +14,7 @@ namespace Grammophone.Domos.Domain.Accounting
 	/// <typeparam name="P">The type of postings, derived from <see cref="Posting{U}"/>.</typeparam>
 	/// <typeparam name="R">the type of remittances, derived from <see cref="Remittance{U}"/>.</typeparam>
 	[Serializable]
-	public abstract class InvoiceLineTax<U, P, R> : TrackingEntityWithID<U, long>
+	public abstract class InvoiceLineTaxComponent<U, P, R> : TrackingEntityWithID<U, long>
 		where U : User
 		where P : Posting<U>
 		where R : Remittance<U>

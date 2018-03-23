@@ -13,13 +13,13 @@ namespace Grammophone.Domos.Domain.Accounting
 	/// <typeparam name="U">The type of users, derived from <see cref="User"/>.</typeparam>
 	/// <typeparam name="P">The type of postings, derived from <see cref="Posting{U}"/>.</typeparam>
 	/// <typeparam name="R">the type of remittances, derived from <see cref="Remittance{U}"/>.</typeparam>
-	/// <typeparam name="ILT">The type of the invoice lines taxes, derived from <see cref="InvoiceLineTax{U, P, R}"/>.</typeparam>
+	/// <typeparam name="ILT">The type of the invoice lines taxes, derived from <see cref="InvoiceLineTaxComponent{U, P, R}"/>.</typeparam>
 	[Serializable]
 	public abstract class InvoiceLine<U, P, R, ILT> : TrackingEntityWithID<U, long>
 		where U : User
 		where P : Posting<U>
 		where R : Remittance<U>
-		where ILT : InvoiceLineTax<U, P, R>
+		where ILT : InvoiceLineTaxComponent<U, P, R>
 	{
 		#region Constants
 
@@ -32,7 +32,7 @@ namespace Grammophone.Domos.Domain.Accounting
 
 		#region Private fields
 
-		private ICollection<ILT> taxes; 
+		private ICollection<ILT> taxComponents; 
 
 		#endregion
 
@@ -67,17 +67,17 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// <summary>
 		/// The taxes associated with the line.
 		/// </summary>
-		public virtual ICollection<ILT> Taxes
+		public virtual ICollection<ILT> TaxComponents
 		{
 			get
 			{
-				return taxes ?? (taxes = new HashSet<ILT>());
+				return taxComponents ?? (taxComponents = new HashSet<ILT>());
 			}
 			set
 			{
 				if (value == null) throw new ArgumentNullException(nameof(value));
 
-				taxes = value;
+				taxComponents = value;
 			}
 		}
 
@@ -89,7 +89,7 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// Get the gross amount of the line including taxes.
 		/// </summary>
 		public decimal GetGrossAmount()
-			=> this.Amount + this.Taxes.Sum(t => t.Amount);
+			=> this.Amount + this.TaxComponents.Sum(t => t.Amount);
 
 		#endregion
 	}

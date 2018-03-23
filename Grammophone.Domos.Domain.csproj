@@ -100,7 +100,7 @@
       <DependentUpon>InvoiceFormResources.resx</DependentUpon>
     </Compile>
     <Compile Include="Accounting\InvoiceLine.cs" />
-    <Compile Include="Accounting\InvoiceLineTax.cs" />
+    <Compile Include="Accounting\InvoiceLineTaxComponent.cs" />
     <Compile Include="Accounting\InvoiceState.cs" />
     <Compile Include="Accounting\InvoiceStateResources.Designer.cs">
       <AutoGen>True</AutoGen>
