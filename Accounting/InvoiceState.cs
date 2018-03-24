@@ -38,6 +38,14 @@ namespace Grammophone.Domos.Domain.Accounting
 		ProFormaRejected = 110,
 
 		/// <summary>
+		/// A requirement for a collaboration or transaction to proceed has been accepted.
+		/// </summary>
+		[Display(
+			ResourceType = typeof(InvoiceStateResources),
+			Name = nameof(InvoiceStateResources.ProFormaAccepted_Name))]
+		ProFormaAccepted = 120,
+
+		/// <summary>
 		/// The invoice is registered as payable by the buyer but not yet paid.
 		/// </summary>
 		[Display(
