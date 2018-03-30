@@ -19,6 +19,6 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// <summary>
 		/// Account holding the outgoing funds.
 		/// </summary>
-		Account EscrowAccount { get; }
+		Account TransferAccount { get; }
 	}
 }
