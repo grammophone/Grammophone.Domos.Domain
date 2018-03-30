@@ -98,7 +98,7 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// until an event of type <see cref="FundsTransferEventType.Succeeded"/>
 		/// or <see cref="FundsTransferEventType.Failed"/> is received.
 		/// </summary>
-		public virtual long? EscrowAccountID { get; set; }
+		public virtual long? TransferAccountID { get; set; }
 
 		/// <summary>
 		/// If the <see cref="Amount"/> is positive, this is the 
@@ -106,7 +106,7 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// until an event of type <see cref="FundsTransferEventType.Succeeded"/>
 		/// or <see cref="FundsTransferEventType.Failed"/> is received.
 		/// </summary>
-		public virtual Account EscrowAccount { get; set; }
+		public virtual Account TransferAccount { get; set; }
 
 		/// <summary>
 		/// Optional ID of the batch, when the transfer is part of one.
