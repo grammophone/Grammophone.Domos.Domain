@@ -12,7 +12,8 @@ namespace Grammophone.Domos.Domain.Accounting
 	/// <typeparam name="U">The type of users, derived from <see cref="User"/>.</typeparam>
 	/// <typeparam name="P">The type of postings, derived from <see cref="Posting{U}"/>.</typeparam>
 	/// <typeparam name="R">the type of remittances, derived from <see cref="Remittance{U}"/>.</typeparam>
-	public class InvoiceEvent<U, P, R> : TrackingEntityWithID<U, long>
+	[Serializable]
+	public abstract class InvoiceEvent<U, P, R> : TrackingEntityWithID<U, long>
 		where U : User
 		where P : Posting<U>
 		where R : Remittance<U>
