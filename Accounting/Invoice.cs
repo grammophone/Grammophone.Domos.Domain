@@ -13,16 +13,16 @@ namespace Grammophone.Domos.Domain.Accounting
 	/// <typeparam name="U">The type of users, derived from <see cref="User"/>.</typeparam>
 	/// <typeparam name="P">The type of postings, derived from <see cref="Posting{U}"/>.</typeparam>
 	/// <typeparam name="R">the type of remittances, derived from <see cref="Remittance{U}"/>.</typeparam>
-	/// <typeparam name="ILT">The type of the invoice lines taxes, derived from <see cref="InvoiceLineTaxComponent{U, P, R}"/>.</typeparam>
+	/// <typeparam name="ILTC">The type of the invoice lines taxes, derived from <see cref="InvoiceLineTaxComponent{U, P, R}"/>.</typeparam>
 	/// <typeparam name="IL">The type of the invoice lines, derived from <see cref="InvoiceLine{U, P, R, ILT}"/>.</typeparam>
 	/// <typeparam name="IE">The type of the invoce events, derived from <see cref="InvoiceEvent{U, P, R}"/>.</typeparam>
 	[Serializable]
-	public abstract class Invoice<U, P, R, ILT, IL, IE> : TrackingEntityWithID<U, long>
+	public abstract class Invoice<U, P, R, ILTC, IL, IE> : TrackingEntityWithID<U, long>
 		where U : User
 		where P : Posting<U>
 		where R : Remittance<U>
-		where ILT : InvoiceLineTaxComponent<U, P, R>
-		where IL : InvoiceLine<U, P, R, ILT>
+		where ILTC : InvoiceLineTaxComponent<U, P, R>
+		where IL : InvoiceLine<U, P, R, ILTC>
 		where IE : InvoiceEvent<U, P, R>
 	{
 		#region Constants
