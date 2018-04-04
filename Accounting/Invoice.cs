@@ -27,40 +27,40 @@ namespace Grammophone.Domos.Domain.Accounting
 	{
 		#region Constants
 
-		/// <summary>
-		/// Maximum length of the <see cref="IssuerName"/> property.
-		/// </summary>
-		public const int IssuerNameLength = 384;
+		///// <summary>
+		///// Maximum length of the <see cref="IssuerName"/> property.
+		///// </summary>
+		//public const int IssuerNameLength = 384;
 
-		/// <summary>
-		/// Maximum length of the <see cref="IssuerStreet"/> property.
-		/// </summary>
-		public const int IssuerStreetLength = 256;
+		///// <summary>
+		///// Maximum length of the <see cref="IssuerStreet"/> property.
+		///// </summary>
+		//public const int IssuerStreetLength = 256;
 
-		/// <summary>
-		/// Maximum length of the <see cref="IssuerCity"/> property.
-		/// </summary>
-		public const int IssuerCityLength = 128;
+		///// <summary>
+		///// Maximum length of the <see cref="IssuerCity"/> property.
+		///// </summary>
+		//public const int IssuerCityLength = 128;
 
-		/// <summary>
-		/// Maximum length of the <see cref="IssuerPostalCode"/> property.
-		/// </summary>
-		public const int IssuerPostalCodeLength = 32;
+		///// <summary>
+		///// Maximum length of the <see cref="IssuerPostalCode"/> property.
+		///// </summary>
+		//public const int IssuerPostalCodeLength = 32;
 
-		/// <summary>
-		/// Maximum length of the <see cref="IssuerProvince"/> property.
-		/// </summary>
-		public const int IssuerProvinceLength = 96;
+		///// <summary>
+		///// Maximum length of the <see cref="IssuerProvince"/> property.
+		///// </summary>
+		//public const int IssuerProvinceLength = 96;
 
-		/// <summary>
-		/// Maximum length of the <see cref="IssuerCountry"/> property.
-		/// </summary>
-		public const int IssuerCountryLength = 96;
+		///// <summary>
+		///// Maximum length of the <see cref="IssuerCountry"/> property.
+		///// </summary>
+		//public const int IssuerCountryLength = 96;
 
-		/// <summary>
-		/// Maximum length of the <see cref="IssuerTaxID"/> property.
-		/// </summary>
-		public const int IssuerTaxIdLength = 32;
+		///// <summary>
+		///// Maximum length of the <see cref="IssuerTaxID"/> property.
+		///// </summary>
+		//public const int IssuerTaxIdLength = 32;
 
 		#endregion
 
@@ -91,48 +91,48 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// </summary>
 		public virtual InvoiceForm Form { get; set; }
 
-		/// <summary>
-		/// Records the name of the issuer at the time of the invoice.
-		/// </summary>
-		[Required]
-		[MaxLength(IssuerNameLength)]
-		public virtual string IssuerName { get; set; }
+		///// <summary>
+		///// Records the name of the issuer at the time of the invoice.
+		///// </summary>
+		//[Required]
+		//[MaxLength(IssuerNameLength)]
+		//public virtual string IssuerName { get; set; }
 
-		/// <summary>
-		/// Street and number of the issuer.
-		/// </summary>
-		[MaxLength(IssuerStreetLength)]
-		public virtual string IssuerStreet { get; set; }
+		///// <summary>
+		///// Street and number of the issuer.
+		///// </summary>
+		//[MaxLength(IssuerStreetLength)]
+		//public virtual string IssuerStreet { get; set; }
 
-		/// <summary>
-		/// City of the issuer.
-		/// </summary>
-		[MaxLength(IssuerCityLength)]
-		public virtual string IssuerCity { get; set; }
+		///// <summary>
+		///// City of the issuer.
+		///// </summary>
+		//[MaxLength(IssuerCityLength)]
+		//public virtual string IssuerCity { get; set; }
 
-		/// <summary>
-		/// Postal code of the issuer.
-		/// </summary>
-		[MaxLength(IssuerPostalCodeLength)]
-		public virtual string IssuerPostalCode { get; set; }
+		///// <summary>
+		///// Postal code of the issuer.
+		///// </summary>
+		//[MaxLength(IssuerPostalCodeLength)]
+		//public virtual string IssuerPostalCode { get; set; }
 
-		/// <summary>
-		/// Province of the issuer.
-		/// </summary>
-		[MaxLength(IssuerProvinceLength)]
-		public virtual string IssuerProvince { get; set; }
+		///// <summary>
+		///// Province of the issuer.
+		///// </summary>
+		//[MaxLength(IssuerProvinceLength)]
+		//public virtual string IssuerProvince { get; set; }
 
-		/// <summary>
-		/// Country of the issuer.
-		/// </summary>
-		[MaxLength(IssuerCountryLength)]
-		public virtual string IssuerCountry { get; set; }
+		///// <summary>
+		///// Country of the issuer.
+		///// </summary>
+		//[MaxLength(IssuerCountryLength)]
+		//public virtual string IssuerCountry { get; set; }
 
-		/// <summary>
-		/// Tax ID of the issuer.
-		/// </summary>
-		[MaxLength(IssuerTaxIdLength)]
-		public virtual string IssuerTaxID { get; set; }
+		///// <summary>
+		///// Tax ID of the issuer.
+		///// </summary>
+		//[MaxLength(IssuerTaxIdLength)]
+		//public virtual string IssuerTaxID { get; set; }
 
 		#endregion
 
