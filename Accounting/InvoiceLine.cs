@@ -65,6 +65,11 @@ namespace Grammophone.Domos.Domain.Accounting
 		#region Relations
 
 		/// <summary>
+		/// The ID of the invoice where the line belongs.
+		/// </summary>
+		public virtual long InvoiceID { get; set; }
+
+		/// <summary>
 		/// Optional ID of the posting related to the invoice line.
 		/// </summary>
 		public virtual long? PostingID { get; set; }
