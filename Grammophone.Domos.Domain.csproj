@@ -108,6 +108,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>InvoiceStateResources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Accounting\InvoiceType.cs" />
+    <Compile Include="Accounting\InvoiceTypeResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InvoiceTypeResources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Accounting\ITransferableFundsHolder.cs" />
     <Compile Include="Accounting\ITransferableFundsHolderWithBankAccount.cs" />
     <Compile Include="Accounting\Journal.cs" />
@@ -279,6 +285,11 @@
     <EmbeddedResource Include="Accounting\InvoiceStateResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>InvoiceStateResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\InvoiceTypeResources.fr.resx" />
+    <EmbeddedResource Include="Accounting\InvoiceTypeResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>InvoiceTypeResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\JournalLineResources.fr.resx" />
     <EmbeddedResource Include="Accounting\JournalLineResources.resx">
