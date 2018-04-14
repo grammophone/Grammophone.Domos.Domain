@@ -91,7 +91,7 @@
     </Compile>
     <Compile Include="Accounting\FundsTransferState.cs" />
     <Compile Include="Accounting\IAccount.cs" />
-    <Compile Include="Accounting\IBankAccountHolder.cs" />
+    <Compile Include="Accounting\IBankingDetail.cs" />
     <Compile Include="Accounting\Invoice.cs" />
     <Compile Include="Accounting\InvoiceEvent.cs" />
     <Compile Include="Accounting\InvoiceForm.cs" />

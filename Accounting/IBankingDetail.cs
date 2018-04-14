@@ -8,9 +8,9 @@ namespace Grammophone.Domos.Domain.Accounting
 {
 	/// <summary>
 	/// Interface implemented by entities having
-	/// an <see cref="EncryptedBankAccountInfo"/> property.
+	/// details of a bank account.
 	/// </summary>
-	public interface IBankAccountHolder
+	public interface IBankingDetail
 	{
 		/// <summary>
 		/// The encrypted bank account.

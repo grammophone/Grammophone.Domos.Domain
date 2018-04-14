@@ -16,6 +16,6 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// <summary>
 		/// The banking information.
 		/// </summary>
-		IBankAccountHolder BankingDetail { get; }
+		IBankingDetail BankingDetail { get; }
 	}
 }
