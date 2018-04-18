@@ -123,9 +123,6 @@
   <data name="Comments_Name" xml:space="preserve">
     <value>Commentaires</value>
   </data>
-  <data name="DigestionFailed_Name" xml:space="preserve">
-    <value>Digestion échouée</value>
-  </data>
   <data name="ExceptionData_Name" xml:space="preserve">
     <value>Données d'Exception</value>
   </data>
