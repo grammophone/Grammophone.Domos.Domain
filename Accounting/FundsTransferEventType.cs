@@ -47,15 +47,6 @@ namespace Grammophone.Domos.Domain.Accounting
 		Failed = 3,
 
 		/// <summary>
-		/// The funds transfer has succeeded from the credit source but the associated workflow action
-		/// has failed.
-		/// </summary>
-		[Display(
-			ResourceType = typeof(FundsTransferEventTypeResources),
-			Name = nameof(FundsTransferEventTypeResources.WorkflowFailed_Name))]
-		WorkflowFailed = 4,
-
-		/// <summary>
 		/// The transfer has been successful.
 		/// </summary>
 		[Display(

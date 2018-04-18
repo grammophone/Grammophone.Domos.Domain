@@ -79,6 +79,15 @@ namespace Grammophone.Domos.Domain.Accounting {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Digestion Failed.
+        /// </summary>
+        public static string DigestionFailed_Name {
+            get {
+                return ResourceManager.GetString("DigestionFailed_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception Data.
         /// </summary>
         public static string ExceptionData_Name {

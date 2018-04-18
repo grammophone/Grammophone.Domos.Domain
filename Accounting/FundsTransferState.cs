@@ -29,11 +29,6 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// <summary>
 		/// The transfer has been successful.
 		/// </summary>
-		Succeeded = 3,
-
-		/// <summary>
-		/// The transfer has been successful but the workflow action associated with it has failed.
-		/// </summary>
-		WorkflowFailed = 4
+		Succeeded = 3
 	}
 }
