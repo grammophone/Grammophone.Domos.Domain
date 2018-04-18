@@ -81,22 +81,12 @@ namespace Grammophone.Domos.Domain.Accounting
 		public virtual string Comments { get; set; }
 
 		/// <summary>
-		/// Optional serialized exception. This is set when <see cref="DigestionFailed"/> property
-		/// is true.
+		/// Optional serialized exception. This is set when the digestion of a response fro the EFT/ACH system failed
 		/// </summary>
 		[Display(
 			ResourceType = typeof(FundsTransferEventResources),
 			Name = nameof(FundsTransferEventResources.ExceptionData_Name))]
 		public virtual byte[] ExceptionData { get; set; }
-
-		/// <summary>
-		/// If true, there was an error during the digestion of the item from the EFT/ACH system.
-		/// In this case, the <see cref="ExceptionData"/> property holds the serialized exception.
-		/// </summary>
-		[Display(
-			ResourceType = typeof(FundsTransferEventResources),
-			Name = nameof(FundsTransferEventResources.DigestionFailed_Name))]
-		public virtual bool DigestionFailed { get; set; }
 
 		#endregion
 
