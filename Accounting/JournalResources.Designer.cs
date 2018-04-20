@@ -68,5 +68,14 @@ namespace Grammophone.Domos.Domain.Accounting {
                 return ResourceManager.GetString("Description_Name", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Executed.
+        /// </summary>
+        internal static string HasBeenExecuted_Name {
+            get {
+                return ResourceManager.GetString("HasBeenExecuted_Name", resourceCulture);
+            }
+        }
     }
 }

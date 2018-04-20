@@ -42,6 +42,14 @@ namespace Grammophone.Domos.Domain.Accounting
 			Name = nameof(JournalResources.Description_Name))]
 		public virtual string Description { get; set; }
 
+		/// <summary>
+		/// If true, the journal's lines have been executed and moved amounts to the respective accounts.
+		/// </summary>
+		[Display(
+			ResourceType = typeof(JournalResources),
+			Name = nameof(JournalResources.HasBeenExecuted_Name))]
+		public virtual bool HasBeenExecuted { get; set; }
+
 		#endregion
 
 		#region Relations

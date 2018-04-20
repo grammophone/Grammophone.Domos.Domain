@@ -117,12 +117,13 @@ namespace Grammophone.Domos.Domain
 			}
 			set
 			{
-				if (creationDate != value)
+				if (creationDate == default(DateTime))
 				{
-					if (creationDate != default(DateTime))
-						throw new AccessDeniedDomainException("The creation date cannot be changed.", this);
-
 					creationDate = value;
+				}
+				else if (value < creationDate)
+				{
+					throw new AccessDeniedDomainException("The creation date cannot be changed.", this);
 				}
 			}
 		}
