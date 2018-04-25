@@ -126,6 +126,9 @@
   <data name="Pending_Name" xml:space="preserve">
     <value>En Attente</value>
   </data>
+  <data name="Rejected_Name" xml:space="preserve">
+    <value>Rejeté</value>
+  </data>
   <data name="Submitted_Name" xml:space="preserve">
     <value>Soumis</value>
   </data>

@@ -27,7 +27,15 @@ namespace Grammophone.Domos.Domain.Accounting
 		[Display(
 			ResourceType = typeof(FundsTransferEventTypeResources),
 			Name = nameof(FundsTransferEventTypeResources.Submitted_Name))]
-		Submitted = 1,
+		Submitted = 100,
+
+		/// <summary>
+		/// The transfer has been rejected by the EFT/ACH system because it was malformed.
+		/// </summary>
+		[Display(
+			ResourceType = typeof(FundsTransferEventTypeResources),
+			Name = nameof(FundsTransferEventTypeResources.Rejected_Name))]
+		Rejected = 200,
 
 		/// <summary>
 		/// The transfer has been accepted by the EFT/ACH system
@@ -36,7 +44,7 @@ namespace Grammophone.Domos.Domain.Accounting
 		[Display(
 			ResourceType = typeof(FundsTransferEventTypeResources),
 			Name = nameof(FundsTransferEventTypeResources.Accepted_Name))]
-		Accepted = 2,
+		Accepted = 201,
 
 		/// <summary>
 		/// The transfer has failed.
@@ -44,7 +52,7 @@ namespace Grammophone.Domos.Domain.Accounting
 		[Display(
 			ResourceType = typeof(FundsTransferEventTypeResources),
 			Name = nameof(FundsTransferEventTypeResources.Failed_Name))]
-		Failed = 3,
+		Failed = 300,
 
 		/// <summary>
 		/// The transfer has been successful.
@@ -52,6 +60,6 @@ namespace Grammophone.Domos.Domain.Accounting
 		[Display(
 			ResourceType = typeof(FundsTransferEventTypeResources),
 			Name = nameof(FundsTransferEventTypeResources.Succeeded_Name))]
-		Succeeded = 5
+		Succeeded = 301
 	}
 }

@@ -88,6 +88,15 @@ namespace Grammophone.Domos.Domain.Accounting {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Rejected.
+        /// </summary>
+        public static string Rejected_Name {
+            get {
+                return ResourceManager.GetString("Rejected_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Submitted.
         /// </summary>
         public static string Submitted_Name {
