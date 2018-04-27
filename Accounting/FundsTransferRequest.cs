@@ -40,11 +40,6 @@ namespace Grammophone.Domos.Domain.Accounting
 		public virtual decimal Amount { get; set; }
 
 		/// <summary>
-		/// The state of this transfer request.
-		/// </summary>
-		public virtual FundsTransferState State { get; set; }
-
-		/// <summary>
 		/// The ID of the external system transaction.
 		/// </summary>
 		[Display(
