@@ -36,6 +36,16 @@ namespace Grammophone.Domos.Domain.Accounting
 			Name = nameof(CreditSystemResources.CodeName_Name))]
 		public virtual string CodeName { get; set; }
 
+		/// <summary>
+		/// Optional name of a registered funds transfer file converter to be associated
+		/// with the credit system
+		/// </summary>
+		[MaxLength(128)]
+		[Display(
+			ResourceType = typeof(CreditSystemResources),
+			Name = nameof(CreditSystemResources.FundsTransferFileConverterName_Name))]
+		public virtual string FundsTransferFileConverterName { get; set; }
+
 		#endregion
 	}
 }

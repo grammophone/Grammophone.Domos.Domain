@@ -70,6 +70,15 @@ namespace Grammophone.Domos.Domain.Accounting {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to File Converter.
+        /// </summary>
+        public static string FundsTransferFileConverterName_Name {
+            get {
+                return ResourceManager.GetString("FundsTransferFileConverterName_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Name.
         /// </summary>
         public static string Name_Name {

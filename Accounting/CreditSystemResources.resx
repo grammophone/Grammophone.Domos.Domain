@@ -120,6 +120,9 @@
   <data name="CodeName_Name" xml:space="preserve">
     <value>Code Name</value>
   </data>
+  <data name="FundsTransferFileConverterName_Name" xml:space="preserve">
+    <value>File Converter</value>
+  </data>
   <data name="Name_Name" xml:space="preserve">
     <value>Name</value>
   </data>
