@@ -94,6 +94,11 @@
     <Compile Include="Accounting\IBankingDetail.cs" />
     <Compile Include="Accounting\Invoice.cs" />
     <Compile Include="Accounting\InvoiceEvent.cs" />
+    <Compile Include="Accounting\InvoiceEventResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InvoiceEventResources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Accounting\InvoiceForm.cs" />
     <Compile Include="Accounting\InvoiceFormResources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -101,7 +106,22 @@
       <DependentUpon>InvoiceFormResources.resx</DependentUpon>
     </Compile>
     <Compile Include="Accounting\InvoiceLine.cs" />
+    <Compile Include="Accounting\InvoiceLineResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InvoiceLineResources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Accounting\InvoiceLineTaxComponent.cs" />
+    <Compile Include="Accounting\InvoiceLineTaxComponentResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InvoiceLineTaxComponentResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Accounting\InvoiceResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InvoiceResources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Accounting\InvoiceState.cs" />
     <Compile Include="Accounting\InvoiceStateResources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -149,8 +169,18 @@
     <Compile Include="DispositionTrackingTrait.cs" />
     <Compile Include="DispositionType.cs" />
     <Compile Include="AccessDeniedDomainException.cs" />
+    <Compile Include="DispositionTypeResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DispositionTypeResources.resx</DependentUpon>
+    </Compile>
     <Compile Include="DomainException.cs" />
     <Compile Include="EntityWithID.cs" />
+    <Compile Include="EntityWithIdResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntityWithIdResources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Files\ContentType.cs" />
     <Compile Include="Files\ContentTypeResources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -190,6 +220,11 @@
       <DependentUpon>DispositionStatusResources.resx</DependentUpon>
     </Compile>
     <Compile Include="Role.cs" />
+    <Compile Include="RoleResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RoleResources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Segregation.cs" />
     <Compile Include="SegregatedEntity.cs" />
     <Compile Include="SegregatedEntityWithID.cs" />
@@ -276,10 +311,30 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>FundsTransferRequestResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\InvoiceEventResources.fr.resx" />
+    <EmbeddedResource Include="Accounting\InvoiceEventResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>InvoiceEventResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Accounting\InvoiceFormResources.fr.resx" />
     <EmbeddedResource Include="Accounting\InvoiceFormResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>InvoiceFormResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\InvoiceLineResources.fr.resx" />
+    <EmbeddedResource Include="Accounting\InvoiceLineResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>InvoiceLineResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\InvoiceLineTaxComponentResources.fr.resx" />
+    <EmbeddedResource Include="Accounting\InvoiceLineTaxComponentResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>InvoiceLineTaxComponentResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounting\InvoiceResources.fr.resx" />
+    <EmbeddedResource Include="Accounting\InvoiceResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>InvoiceResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\InvoiceStateResources.fr.resx" />
     <EmbeddedResource Include="Accounting\InvoiceStateResources.resx">
@@ -312,6 +367,16 @@
       <LastGenOutput>DispositionResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="DispositionStatusResources.fr.resx" />
+    <EmbeddedResource Include="DispositionTypeResources.fr.resx" />
+    <EmbeddedResource Include="DispositionTypeResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>DispositionTypeResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntityWithIdResources.fr.resx" />
+    <EmbeddedResource Include="EntityWithIdResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>EntityWithIdResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Files\ContentTypeResources.fr.resx" />
     <EmbeddedResource Include="Files\ContentTypeResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
@@ -330,6 +395,11 @@
     <EmbeddedResource Include="DispositionStatusResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>DispositionStatusResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RoleResources.fr.resx" />
+    <EmbeddedResource Include="RoleResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>RoleResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="TrackingEntityResources.fr.resx" />
     <EmbeddedResource Include="TrackingEntityResources.resx">

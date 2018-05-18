@@ -27,6 +27,9 @@ namespace Grammophone.Domos.Domain
 		/// </summary>
 		[Required]
 		[Key]
+		[Display(
+			ResourceType = typeof(EntityWithIdResources),
+			Name = nameof(EntityWithIdResources.ID_Name))]
 		public virtual K ID { get; set; }
 	}
 }

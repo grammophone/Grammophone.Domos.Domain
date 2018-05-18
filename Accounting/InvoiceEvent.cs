@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,11 +24,17 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// <summary>
 		/// Date and time of the event, in UTC.
 		/// </summary>
+		[Display(
+			ResourceType = typeof(InvoiceEventResources),
+			Name = nameof(InvoiceEventResources.Time_Name))]
 		public virtual DateTime Time { get; set; }
 
 		/// <summary>
 		/// The state of the invoice as changed by the event.
 		/// </summary>
+		[Display(
+			ResourceType = typeof(InvoiceEventResources),
+			Name = nameof(InvoiceEventResources.InvoiceState_Name))]
 		public virtual InvoiceState InvoiceState { get; set; }
 
 		#endregion
@@ -37,6 +44,9 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// <summary>
 		/// The ID of the invoice which the event refers to.
 		/// </summary>
+		[Display(
+			ResourceType = typeof(InvoiceEventResources),
+			Name = nameof(InvoiceEventResources.InvoiceID_Name))]
 		public virtual long InvoiceID { get; set; }
 
 		/// <summary>

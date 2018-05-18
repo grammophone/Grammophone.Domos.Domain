@@ -43,21 +43,33 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// </summary>
 		[Required]
 		[MaxLength(DescriptionLength)]
+		[Display(
+			ResourceType = typeof(InvoiceLineResources),
+			Name = nameof(InvoiceLineResources.Description_Name))]
 		public virtual string Description { get; set; }
 
 		/// <summary>
 		/// Optional quantity indicator.
 		/// </summary>
+		[Display(
+			ResourceType = typeof(InvoiceLineResources),
+			Name = nameof(InvoiceLineResources.Quantity_Name))]
 		public virtual decimal? Quantity { get; set; }
 
 		/// <summary>
 		/// If <see cref="Quantity"/> is specified, this is the rate each unit is charged.
 		/// </summary>
+		[Display(
+			ResourceType = typeof(InvoiceLineResources),
+			Name = nameof(InvoiceLineResources.Rate_Name))]
 		public virtual decimal? Rate { get; set; }
 
 		/// <summary>
 		/// The net cost of the line, excluding taxes.
 		/// </summary>
+		[Display(
+			ResourceType = typeof(InvoiceLineResources),
+			Name = nameof(InvoiceLineResources.Amount_Name))]
 		public virtual decimal Amount { get; set; }
 
 		#endregion
@@ -67,6 +79,9 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// <summary>
 		/// The ID of the invoice where the line belongs.
 		/// </summary>
+		[Display(
+			ResourceType = typeof(InvoiceLineResources),
+			Name = nameof(InvoiceLineResources.InvoiceID_Name))]
 		public virtual long InvoiceID { get; set; }
 
 		/// <summary>

@@ -20,6 +20,9 @@ namespace Grammophone.Domos.Domain
 		/// </summary>
 		[Required]
 		[MaxLength(128)]
+		[Display(
+			ResourceType = typeof(RoleResources),
+			Name = nameof(RoleResources.Name_Name))]
 		public virtual string Name { get; set; }
 
 		/// <summary>
@@ -27,6 +30,9 @@ namespace Grammophone.Domos.Domain
 		/// </summary>
 		[Required]
 		[MaxLength(128)]
+		[Display(
+			ResourceType = typeof(RoleResources),
+			Name = nameof(RoleResources.CodeName_Name))]
 		public virtual string CodeName { get; set; }
 
 		#endregion

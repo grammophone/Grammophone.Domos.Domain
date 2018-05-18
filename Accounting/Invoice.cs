@@ -40,21 +40,33 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// <summary>
 		/// The date when the invoice was issues, in UTC.
 		/// </summary>
+		[Display(
+			ResourceType = typeof(InvoiceResources),
+			Name = nameof(InvoiceResources.IssueDate_Name))]
 		public virtual DateTime IssueDate { get; set; }
 
 		/// <summary>
 		/// Optional date when the issue is due, in UTC.
 		/// </summary>
+		[Display(
+			ResourceType = typeof(InvoiceResources),
+			Name = nameof(InvoiceResources.DueDate_Name))]
 		public virtual DateTime? DueDate { get; set; }
 
 		/// <summary>
 		/// The form of the invoice.
 		/// </summary>
+		[Display(
+			ResourceType = typeof(InvoiceResources),
+			Name = nameof(InvoiceResources.Form_Name))]
 		public virtual InvoiceForm Form { get; set; }
 
 		/// <summary>
 		/// The type of the invoice, either normal charging from seller to customer or reverse from customer to seller.
 		/// </summary>
+		[Display(
+			ResourceType = typeof(InvoiceResources),
+			Name = nameof(InvoiceResources.Type_Name))]
 		public virtual InvoiceType Type { get; set; }
 
 		#endregion

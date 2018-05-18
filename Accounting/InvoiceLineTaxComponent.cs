@@ -35,16 +35,25 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// </summary>
 		[Required]
 		[MaxLength(DescriptionLength)]
+		[Display(
+			ResourceType = typeof(InvoiceLineTaxComponentResources),
+			Name = nameof(InvoiceLineTaxComponentResources.Description_Name))]
 		public virtual string Description { get; set; }
 
 		/// <summary>
 		/// The rate of the tax as a percentage.
 		/// </summary>
+		[Display(
+			ResourceType = typeof(InvoiceLineTaxComponentResources),
+			Name = nameof(InvoiceLineTaxComponentResources.RatePercentFactor))]
 		public virtual decimal? RatePercentFactor { get; set; }
 
 		/// <summary>
 		/// The amount charged.
 		/// </summary>
+		[Display(
+			ResourceType = typeof(InvoiceLineTaxComponentResources),
+			Name = nameof(InvoiceLineTaxComponentResources.Amount_Name))]
 		public virtual decimal Amount { get; set; }
 
 		#endregion
@@ -54,6 +63,9 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// <summary>
 		/// ID of the invoice line where the tax belongs.
 		/// </summary>
+		[Display(
+			ResourceType = typeof(InvoiceLineTaxComponentResources),
+			Name = nameof(InvoiceLineTaxComponentResources.LineID_Name))]
 		public virtual long LineID { get; set; }
 
 		/// <summary>
