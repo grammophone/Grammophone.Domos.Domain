@@ -22,6 +22,14 @@ namespace Grammophone.Domos.Domain.Accounting
 		Open = 0,
 
 		/// <summary>
+		/// The invoice is retracted permanently.
+		/// </summary>
+		[Display(
+			ResourceType = typeof(InvoiceStateResources),
+			Name = nameof(InvoiceStateResources.Retracted_Name))]
+		Retracted = 50,
+
+		/// <summary>
 		/// A requirement for a collaboration or transaction to proceed is submitted.
 		/// </summary>
 		[Display(

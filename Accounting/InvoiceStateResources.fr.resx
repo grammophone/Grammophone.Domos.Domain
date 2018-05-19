@@ -118,24 +118,27 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Open_Name" xml:space="preserve">
-    <value>Ouvert</value>
+    <value>Ouverte</value>
   </data>
   <data name="Paid_Name" xml:space="preserve">
-    <value>Payé</value>
+    <value>Payée</value>
   </data>
   <data name="PartiallyPaid_Name" xml:space="preserve">
-    <value>Partiellement Payé</value>
+    <value>Partiellement Payée</value>
   </data>
   <data name="Payable_Name" xml:space="preserve">
     <value>Payable</value>
   </data>
   <data name="ProFormaAccepted_Name" xml:space="preserve">
-    <value>Pro Forma Accepté</value>
+    <value>Pro Forma Acceptée</value>
   </data>
   <data name="ProFormaRejected_Name" xml:space="preserve">
-    <value>Pro Forma Rejeté</value>
+    <value>Pro Forma Rejetée</value>
   </data>
   <data name="ProFormaSubmitted_Name" xml:space="preserve">
-    <value>Pro Forma Soumis</value>
+    <value>Pro Forma Soumise</value>
+  </data>
+  <data name="Retracted_Name" xml:space="preserve">
+    <value>Rétractée</value>
   </data>
 </root>

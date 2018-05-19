@@ -122,5 +122,14 @@ namespace Grammophone.Domos.Domain.Accounting {
                 return ResourceManager.GetString("ProFormaSubmitted_Name", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Retracted.
+        /// </summary>
+        public static string Retracted_Name {
+            get {
+                return ResourceManager.GetString("Retracted_Name", resourceCulture);
+            }
+        }
     }
 }
