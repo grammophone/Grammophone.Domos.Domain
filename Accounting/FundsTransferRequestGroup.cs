@@ -22,6 +22,11 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// </summary>
 		public const int AccountHolderNameLength = 64;
 
+		/// <summary>
+		/// The maximum length for the <see cref="AccountHolderToken"/> property.
+		/// </summary>
+		public const int AccountHolderTokenLength = 36;
+
 		#endregion
 
 		#region Private fields
@@ -51,11 +56,17 @@ namespace Grammophone.Domos.Domain.Accounting
 		}
 
 		/// <summary>
-		/// The name of the account holder.
+		/// The name of the bank account holder.
 		/// </summary>
 		[Required]
 		[MaxLength(AccountHolderNameLength)]
 		public virtual string AccountHolderName { get; set; }
+
+		/// <summary>
+		/// Optinoal token identifying the bank account holder.
+		/// </summary>
+		[MaxLength(AccountHolderTokenLength)]
+		public virtual string AccountHolderToken { get; set; }
 
 		#endregion
 	}

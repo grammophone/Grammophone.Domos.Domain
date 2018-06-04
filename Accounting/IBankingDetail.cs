@@ -21,5 +21,11 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// Get the name of the holder of the bank account.
 		/// </summary>
 		string GetBankAccountHolderName();
+
+		/// <summary>
+		/// Get a token which uniquely identifies the holder of the bank account.
+		/// </summary>
+		/// <returns></returns>
+		string GetBankAccountHolderToken();
 	}
 }
