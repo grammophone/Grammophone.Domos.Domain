@@ -157,7 +157,7 @@
     <value>The registration status of the user.</value>
   </data>
   <data name="RegistrationStatus_Name" xml:space="preserve">
-    <value>Registration Status</value>
+    <value>Status</value>
   </data>
   <data name="UserName_Description" xml:space="preserve">
     <value>The user's code name.</value>

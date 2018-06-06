@@ -178,7 +178,7 @@ namespace Grammophone.Domos.Domain {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Registration Status.
+        ///   Looks up a localized string similar to Status.
         /// </summary>
         public static string RegistrationStatus_Name {
             get {
