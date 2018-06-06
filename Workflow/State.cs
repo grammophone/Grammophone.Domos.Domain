@@ -22,17 +22,19 @@ namespace Grammophone.Domos.Domain.Workflow
 		[MaxLength(128)]
 		[Display(
 			ResourceType = typeof(StateResources),
-			Name = nameof(WorkflowGraphResources.CodeName_Name))]
+			Name = nameof(StateResources.CodeName_Name),
+			Description = nameof(StateResources.CodeName_Description))]
 		public virtual string CodeName { get; set; }
 
 		/// <summary>
-		/// The name of the state.
+		/// The display name of the state.
 		/// </summary>
 		[Required]
 		[MaxLength(256)]
 		[Display(
 			ResourceType = typeof(StateResources),
-			Name = nameof(WorkflowGraphResources.Name_Name))]
+			Name = nameof(StateResources.Name_Name),
+			Description = nameof(StateResources.Name_Description))]
 		public virtual string Name { get; set; }
 
 		/// <summary>
@@ -40,17 +42,26 @@ namespace Grammophone.Domos.Domain.Workflow
 		/// </summary>
 		[Display(
 			ResourceType = typeof(StateResources),
-			Name = nameof(WorkflowGraphResources.Description_Name))]
+			Name = nameof(StateResources.Description_Name),
+			Description =nameof(StateResources.Description_Description))]
 		public virtual string Description { get; set; }
 
 		/// <summary>
 		/// True if this is intended to be a start state.
 		/// </summary>
+		[Display(
+			ResourceType = typeof(StateResources),
+			Name = nameof(StateResources.IsStart_Name),
+			Description = nameof(StateResources.IsStart_Description))]
 		public virtual bool IsStart { get; set; }
 
 		/// <summary>
 		/// True if this is intended to be an end state.
 		/// </summary>
+		[Display(
+			ResourceType = typeof(StateResources),
+			Name = nameof(StateResources.IsEnd_Name),
+			Description = nameof(StateResources.IsEnd_Description))]
 		public virtual bool IsEnd { get; set; }
 
 		#endregion

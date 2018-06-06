@@ -61,6 +61,15 @@ namespace Grammophone.Domos.Domain.Accounting {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The balance of the account..
+        /// </summary>
+        public static string Balance_Description {
+            get {
+                return ResourceManager.GetString("Balance_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Balance.
         /// </summary>
         public static string Balance_Name {

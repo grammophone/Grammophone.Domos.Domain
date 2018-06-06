@@ -19,7 +19,7 @@ namespace Grammophone.Domos.Domain.Files {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class FileResources {
@@ -70,6 +70,15 @@ namespace Grammophone.Domos.Domain.Files {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The full name of the file..
+        /// </summary>
+        public static string FullName_Description {
+            get {
+                return ResourceManager.GetString("FullName_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Full Name.
         /// </summary>
         public static string FullName_Name {
@@ -84,6 +93,15 @@ namespace Grammophone.Domos.Domain.Files {
         public static string LastModificationDate_Name {
             get {
                 return ResourceManager.GetString("LastModificationDate_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The short name of the file..
+        /// </summary>
+        public static string Name_Description {
+            get {
+                return ResourceManager.GetString("Name_Description", resourceCulture);
             }
         }
         

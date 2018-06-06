@@ -117,8 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="CodeName_Description" xml:space="preserve">
+    <value>The code name of the role, to be referred by the system.</value>
+  </data>
   <data name="CodeName_Name" xml:space="preserve">
     <value>Code Name</value>
+  </data>
+  <data name="Name_Description" xml:space="preserve">
+    <value>The display name of the role.</value>
   </data>
   <data name="Name_Name" xml:space="preserve">
     <value>Name</value>

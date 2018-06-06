@@ -16,23 +16,25 @@ namespace Grammophone.Domos.Domain.Files
 		#region Primitive properties
 
 		/// <summary>
-		/// The MIME type.
+		/// The MIME code.
 		/// </summary>
 		[MaxLength(128)]
 		[Required]
 		[Display(
 			ResourceType = typeof(ContentTypeResources),
-			Name = nameof(ContentTypeResources.MIME_Name))]
+			Name = nameof(ContentTypeResources.MIME_Name),
+			Description = nameof(ContentTypeResources.MIME_Description))]
 		public virtual string MIME { get; set; }
 
 		/// <summary>
-		/// The friendly name of the content type.
+		/// The display name of the content type.
 		/// </summary>
 		[MaxLength(512)]
 		[Required]
 		[Display(
 			ResourceType = typeof(ContentTypeResources),
-			Name = nameof(ContentTypeResources.MIME_Name))]
+			Name = nameof(ContentTypeResources.MIME_Name),
+			Description = nameof(ContentTypeResources.Name_Description))]
 		public virtual string Name { get; set; }
 
 		#endregion

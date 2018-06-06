@@ -61,11 +61,29 @@ namespace Grammophone.Domos.Domain.Accounting {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Optional comments for the message..
+        /// </summary>
+        public static string Comments_Description {
+            get {
+                return ResourceManager.GetString("Comments_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Comments.
         /// </summary>
         public static string Comments_Name {
             get {
                 return ResourceManager.GetString("Comments_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The unique identifier of the message..
+        /// </summary>
+        public static string GUID_Description {
+            get {
+                return ResourceManager.GetString("GUID_Description", resourceCulture);
             }
         }
         
@@ -79,6 +97,15 @@ namespace Grammophone.Domos.Domain.Accounting {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Optional code for the message..
+        /// </summary>
+        public static string MessageCode_Description {
+            get {
+                return ResourceManager.GetString("MessageCode_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Message Code.
         /// </summary>
         public static string MessageCode_Name {
@@ -88,11 +115,29 @@ namespace Grammophone.Domos.Domain.Accounting {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The date and time of the message, in UTC..
+        /// </summary>
+        public static string Time_Description {
+            get {
+                return ResourceManager.GetString("Time_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Time.
         /// </summary>
         public static string Time_Name {
             get {
                 return ResourceManager.GetString("Time_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The type of the messge..
+        /// </summary>
+        public static string Type_Description {
+            get {
+                return ResourceManager.GetString("Type_Description", resourceCulture);
             }
         }
         

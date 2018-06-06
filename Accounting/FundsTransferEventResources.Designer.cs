@@ -70,11 +70,29 @@ namespace Grammophone.Domos.Domain.Accounting {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Optional comments for the event..
+        /// </summary>
+        public static string Comments_Description {
+            get {
+                return ResourceManager.GetString("Comments_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Comments.
         /// </summary>
         public static string Comments_Name {
             get {
                 return ResourceManager.GetString("Comments_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to If the digestion of a response from the Electronic Funds Transfer provider failed, this is the recorded error, otherwise it is empty..
+        /// </summary>
+        public static string ExceptionData_Description {
+            get {
+                return ResourceManager.GetString("ExceptionData_Description", resourceCulture);
             }
         }
         
@@ -97,11 +115,29 @@ namespace Grammophone.Domos.Domain.Accounting {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The response code as returned by the Electronic Funds Transfer provider..
+        /// </summary>
+        public static string ResponseCode_Description {
+            get {
+                return ResourceManager.GetString("ResponseCode_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Response Code.
         /// </summary>
         public static string ResponseCode_Name {
             get {
                 return ResourceManager.GetString("ResponseCode_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The date and time of the event, in UTC..
+        /// </summary>
+        public static string Time_Description {
+            get {
+                return ResourceManager.GetString("Time_Description", resourceCulture);
             }
         }
         
@@ -115,11 +151,29 @@ namespace Grammophone.Domos.Domain.Accounting {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Unique code for event tracing..
+        /// </summary>
+        public static string TraceCode_Description {
+            get {
+                return ResourceManager.GetString("TraceCode_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Trace Code.
         /// </summary>
         public static string TraceCode_Name {
             get {
                 return ResourceManager.GetString("TraceCode_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The type of the event..
+        /// </summary>
+        public static string Type_Description {
+            get {
+                return ResourceManager.GetString("Type_Description", resourceCulture);
             }
         }
         

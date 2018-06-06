@@ -61,11 +61,29 @@ namespace Grammophone.Domos.Domain.Accounting {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The net cost of the line, excluding taxes..
+        /// </summary>
+        public static string Amount_Description {
+            get {
+                return ResourceManager.GetString("Amount_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Amount.
         /// </summary>
         public static string Amount_Name {
             get {
                 return ResourceManager.GetString("Amount_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The description of the line..
+        /// </summary>
+        public static string Description_Description {
+            get {
+                return ResourceManager.GetString("Description_Description", resourceCulture);
             }
         }
         
@@ -79,6 +97,15 @@ namespace Grammophone.Domos.Domain.Accounting {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The ID of the invoice where the line belongs..
+        /// </summary>
+        public static string InvoiceID_Description {
+            get {
+                return ResourceManager.GetString("InvoiceID_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Invoice ID.
         /// </summary>
         public static string InvoiceID_Name {
@@ -88,11 +115,29 @@ namespace Grammophone.Domos.Domain.Accounting {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Optional quantity indicator..
+        /// </summary>
+        public static string Quantity_Description {
+            get {
+                return ResourceManager.GetString("Quantity_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Quantity.
         /// </summary>
         public static string Quantity_Name {
             get {
                 return ResourceManager.GetString("Quantity_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to If quantity is specified, this is the rate each unit is charged..
+        /// </summary>
+        public static string Rate_Description {
+            get {
+                return ResourceManager.GetString("Rate_Description", resourceCulture);
             }
         }
         

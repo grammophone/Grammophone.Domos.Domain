@@ -61,6 +61,15 @@ namespace Grammophone.Domos.Domain {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The full .NET class name of dispositions of this type..
+        /// </summary>
+        public static string ClassName_Description {
+            get {
+                return ResourceManager.GetString("ClassName_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Class Name.
         /// </summary>
         public static string ClassName_Name {
@@ -70,11 +79,29 @@ namespace Grammophone.Domos.Domain {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Identifier of the disposition type, to be referred by the system..
+        /// </summary>
+        public static string CodeName_Description {
+            get {
+                return ResourceManager.GetString("CodeName_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Code Name.
         /// </summary>
         public static string CodeName_Name {
             get {
                 return ResourceManager.GetString("CodeName_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Display name of the disposition type..
+        /// </summary>
+        public static string Name_Description {
+            get {
+                return ResourceManager.GetString("Name_Description", resourceCulture);
             }
         }
         

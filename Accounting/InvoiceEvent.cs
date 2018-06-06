@@ -26,7 +26,8 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// </summary>
 		[Display(
 			ResourceType = typeof(InvoiceEventResources),
-			Name = nameof(InvoiceEventResources.Time_Name))]
+			Name = nameof(InvoiceEventResources.Time_Name),
+			Description = nameof(InvoiceEventResources.Time_Description))]
 		public virtual DateTime Time { get; set; }
 
 		/// <summary>
@@ -34,7 +35,8 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// </summary>
 		[Display(
 			ResourceType = typeof(InvoiceEventResources),
-			Name = nameof(InvoiceEventResources.InvoiceState_Name))]
+			Name = nameof(InvoiceEventResources.InvoiceState_Name),
+			Description = nameof(InvoiceEventResources.InvoiceState_Description))]
 		public virtual InvoiceState InvoiceState { get; set; }
 
 		#endregion
@@ -46,7 +48,8 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// </summary>
 		[Display(
 			ResourceType = typeof(InvoiceEventResources),
-			Name = nameof(InvoiceEventResources.InvoiceID_Name))]
+			Name = nameof(InvoiceEventResources.InvoiceID_Name),
+			Description = nameof(InvoiceEventResources.InvoiceID_Description))]
 		public virtual long InvoiceID { get; set; }
 
 		/// <summary>

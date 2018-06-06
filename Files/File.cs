@@ -45,17 +45,19 @@ namespace Grammophone.Domos.Domain.Files
 		[MaxLength(1024)]
 		[Display(
 			ResourceType = typeof(FileResources),
-			Name = nameof(FileResources.FullName_Name))]
+			Name = nameof(FileResources.FullName_Name),
+			Description = nameof(FileResources.FullName_Description))]
 		public virtual string FullName { get; set; }
 
 		/// <summary>
-		/// The friendly name of the file.
+		/// The name of the file.
 		/// </summary>
 		[Required]
 		[MaxLength(512)]
 		[Display(
 			ResourceType = typeof(FileResources),
-			Name = nameof(FileResources.Name_Name))]
+			Name = nameof(FileResources.Name_Name),
+			Description = nameof(FileResources.Name_Description))]
 		public virtual string Name { get; set; }
 
 		/// <summary>

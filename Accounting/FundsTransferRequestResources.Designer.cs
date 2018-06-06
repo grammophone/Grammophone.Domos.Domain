@@ -61,6 +61,15 @@ namespace Grammophone.Domos.Domain.Accounting {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to If positive, it is the amount is deposited to the bank account specified, else it is withdrawn..
+        /// </summary>
+        public static string Amount_Description {
+            get {
+                return ResourceManager.GetString("Amount_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Amount.
         /// </summary>
         public static string Amount_Name {
@@ -70,11 +79,29 @@ namespace Grammophone.Domos.Domain.Accounting {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Optional comments for the request..
+        /// </summary>
+        public static string Comments_Description {
+            get {
+                return ResourceManager.GetString("Comments_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Comments.
         /// </summary>
         public static string Comments_Name {
             get {
                 return ResourceManager.GetString("Comments_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unique identifier of the request..
+        /// </summary>
+        public static string GUID_Description {
+            get {
+                return ResourceManager.GetString("GUID_Description", resourceCulture);
             }
         }
         

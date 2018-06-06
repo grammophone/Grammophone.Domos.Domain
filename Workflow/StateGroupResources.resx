@@ -117,11 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="CodeName_Description" xml:space="preserve">
+    <value>Identifier of the state group, to be referred by the system.</value>
+  </data>
   <data name="CodeName_Name" xml:space="preserve">
     <value>Code Name</value>
   </data>
+  <data name="Description_Description" xml:space="preserve">
+    <value>Optional description of the state group.</value>
+  </data>
   <data name="Description_Name" xml:space="preserve">
     <value>Description</value>
+  </data>
+  <data name="Name_Description" xml:space="preserve">
+    <value>The name of the state group.</value>
   </data>
   <data name="Name_Name" xml:space="preserve">
     <value>State Group Name</value>

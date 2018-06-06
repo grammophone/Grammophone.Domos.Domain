@@ -61,6 +61,15 @@ namespace Grammophone.Domos.Domain.Accounting {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The ID of the invoice which the event refers to..
+        /// </summary>
+        public static string InvoiceID_Description {
+            get {
+                return ResourceManager.GetString("InvoiceID_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Invoice ID.
         /// </summary>
         public static string InvoiceID_Name {
@@ -70,11 +79,29 @@ namespace Grammophone.Domos.Domain.Accounting {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The state of the invoice as changed by the event..
+        /// </summary>
+        public static string InvoiceState_Description {
+            get {
+                return ResourceManager.GetString("InvoiceState_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Invoice State.
         /// </summary>
         public static string InvoiceState_Name {
             get {
                 return ResourceManager.GetString("InvoiceState_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Date and time of the event, in UTC..
+        /// </summary>
+        public static string Time_Description {
+            get {
+                return ResourceManager.GetString("Time_Description", resourceCulture);
             }
         }
         

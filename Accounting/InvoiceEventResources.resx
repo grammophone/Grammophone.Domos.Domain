@@ -117,11 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="InvoiceID_Description" xml:space="preserve">
+    <value>The ID of the invoice which the event refers to.</value>
+  </data>
   <data name="InvoiceID_Name" xml:space="preserve">
     <value>Invoice ID</value>
   </data>
+  <data name="InvoiceState_Description" xml:space="preserve">
+    <value>The state of the invoice as changed by the event.</value>
+  </data>
   <data name="InvoiceState_Name" xml:space="preserve">
     <value>Invoice State</value>
+  </data>
+  <data name="Time_Description" xml:space="preserve">
+    <value>Date and time of the event, in UTC.</value>
   </data>
   <data name="Time_Name" xml:space="preserve">
     <value>Time</value>

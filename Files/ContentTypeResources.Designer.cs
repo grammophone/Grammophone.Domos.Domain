@@ -19,7 +19,7 @@ namespace Grammophone.Domos.Domain.Files {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class ContentTypeResources {
@@ -61,11 +61,29 @@ namespace Grammophone.Domos.Domain.Files {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The MIME code..
+        /// </summary>
+        public static string MIME_Description {
+            get {
+                return ResourceManager.GetString("MIME_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to MIME.
         /// </summary>
         public static string MIME_Name {
             get {
                 return ResourceManager.GetString("MIME_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The display name of the content type..
+        /// </summary>
+        public static string Name_Description {
+            get {
+                return ResourceManager.GetString("Name_Description", resourceCulture);
             }
         }
         

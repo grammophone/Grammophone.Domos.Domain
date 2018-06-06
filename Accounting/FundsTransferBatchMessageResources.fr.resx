@@ -117,17 +117,32 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Comments_Description" xml:space="preserve">
+    <value>Commentaire optionnel pour le message.</value>
+  </data>
   <data name="Comments_Name" xml:space="preserve">
     <value>Commentaires</value>
+  </data>
+  <data name="GUID_Description" xml:space="preserve">
+    <value>Identificateur unique du message.</value>
   </data>
   <data name="GUID_Name" xml:space="preserve">
     <value>GUID</value>
   </data>
+  <data name="MessageCode_Description" xml:space="preserve">
+    <value>Code optionnel pour le message.</value>
+  </data>
   <data name="MessageCode_Name" xml:space="preserve">
     <value>Code de Message</value>
   </data>
+  <data name="Time_Description" xml:space="preserve">
+    <value>La date et l'heure du message, en UTC.</value>
+  </data>
   <data name="Time_Name" xml:space="preserve">
     <value>Moment</value>
+  </data>
+  <data name="Type_Description" xml:space="preserve">
+    <value>Le type du message.</value>
   </data>
   <data name="Type_Name" xml:space="preserve">
     <value>Type</value>

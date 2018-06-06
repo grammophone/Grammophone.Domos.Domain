@@ -120,8 +120,14 @@
   <data name="BatchMessageID_Name" xml:space="preserve">
     <value>ID du Message du Lot</value>
   </data>
+  <data name="Comments_Description" xml:space="preserve">
+    <value>Commentaires optionnels pour l'événement.</value>
+  </data>
   <data name="Comments_Name" xml:space="preserve">
     <value>Commentaires</value>
+  </data>
+  <data name="ExceptionData_Description" xml:space="preserve">
+    <value>Si la digestion de la réponse du fournisseur de transfert de fonds électronique a échoué, c'est l'erreur enregistrée, autrement vide.</value>
   </data>
   <data name="ExceptionData_Name" xml:space="preserve">
     <value>Données d'Exception</value>
@@ -129,14 +135,26 @@
   <data name="RequestID_Name" xml:space="preserve">
     <value>ID de Demande</value>
   </data>
+  <data name="ResponseCode_Description" xml:space="preserve">
+    <value>Le code de réponse retourné par le fournisseur de Transfert de Fonds Électronique.</value>
+  </data>
   <data name="ResponseCode_Name" xml:space="preserve">
     <value>Code de Réponse</value>
+  </data>
+  <data name="Time_Description" xml:space="preserve">
+    <value>La date et l'heure de l'événement, en UTC.</value>
   </data>
   <data name="Time_Name" xml:space="preserve">
     <value>Moment</value>
   </data>
+  <data name="TraceCode_Description" xml:space="preserve">
+    <value>Code unique pour le traçage des événements.</value>
+  </data>
   <data name="TraceCode_Name" xml:space="preserve">
     <value>Code de Trace</value>
+  </data>
+  <data name="Type_Description" xml:space="preserve">
+    <value>Type de l'événement.</value>
   </data>
   <data name="Type_Name" xml:space="preserve">
     <value>Type</value>

@@ -61,6 +61,15 @@ namespace Grammophone.Domos.Domain.Accounting {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Identifier used by the system..
+        /// </summary>
+        public static string CodeName_Description {
+            get {
+                return ResourceManager.GetString("CodeName_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Code Name.
         /// </summary>
         public static string CodeName_Name {
@@ -70,11 +79,29 @@ namespace Grammophone.Domos.Domain.Accounting {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The name of the funds stransfer file converter associated with the credit system, if any..
+        /// </summary>
+        public static string FundsTransferFileConverterName_Description {
+            get {
+                return ResourceManager.GetString("FundsTransferFileConverterName_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to File Converter.
         /// </summary>
         public static string FundsTransferFileConverterName_Name {
             get {
                 return ResourceManager.GetString("FundsTransferFileConverterName_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Display name of the credit system..
+        /// </summary>
+        public static string Name_Description {
+            get {
+                return ResourceManager.GetString("Name_Description", resourceCulture);
             }
         }
         

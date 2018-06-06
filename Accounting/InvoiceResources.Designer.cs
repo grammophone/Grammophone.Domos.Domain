@@ -61,11 +61,29 @@ namespace Grammophone.Domos.Domain.Accounting {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Optional date when the invoice is due..
+        /// </summary>
+        public static string DueDate_Description {
+            get {
+                return ResourceManager.GetString("DueDate_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Due Date.
         /// </summary>
         public static string DueDate_Name {
             get {
                 return ResourceManager.GetString("DueDate_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The form of the invoice..
+        /// </summary>
+        public static string Form_Description {
+            get {
+                return ResourceManager.GetString("Form_Description", resourceCulture);
             }
         }
         
@@ -79,11 +97,29 @@ namespace Grammophone.Domos.Domain.Accounting {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The date when the invoice was issued..
+        /// </summary>
+        public static string IssueDate_Description {
+            get {
+                return ResourceManager.GetString("IssueDate_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Issue Date.
         /// </summary>
         public static string IssueDate_Name {
             get {
                 return ResourceManager.GetString("IssueDate_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The type of the invoice, either normal charging from seller to customer or reverse from customer to seller..
+        /// </summary>
+        public static string Type_Description {
+            get {
+                return ResourceManager.GetString("Type_Description", resourceCulture);
             }
         }
         

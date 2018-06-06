@@ -117,16 +117,28 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Amount_Description" xml:space="preserve">
+    <value>Le montant de la taxe facturée.</value>
+  </data>
   <data name="Amount_Name" xml:space="preserve">
     <value>Montant</value>
+  </data>
+  <data name="Description_Description" xml:space="preserve">
+    <value>La description du composant de taxation.</value>
   </data>
   <data name="Description_Name" xml:space="preserve">
     <value>Description</value>
   </data>
+  <data name="LineID_Description" xml:space="preserve">
+    <value>ID de la ligne de la facture où le composant de taxation appartient.</value>
+  </data>
   <data name="LineID_Name" xml:space="preserve">
     <value>ID de Ligne de laFacture</value>
   </data>
-  <data name="RatePercentFactor" xml:space="preserve">
+  <data name="RatePercentFactor_Description" xml:space="preserve">
+    <value>Le taux de la taxe.</value>
+  </data>
+  <data name="RatePercentFactor_Name" xml:space="preserve">
     <value>Taux</value>
   </data>
 </root>

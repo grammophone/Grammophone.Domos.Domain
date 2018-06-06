@@ -16,23 +16,25 @@ namespace Grammophone.Domos.Domain
 		#region Primitive properties
 
 		/// <summary>
-		/// The name of the role.
+		/// The display name of the role.
 		/// </summary>
 		[Required]
 		[MaxLength(128)]
 		[Display(
 			ResourceType = typeof(RoleResources),
-			Name = nameof(RoleResources.Name_Name))]
+			Name = nameof(RoleResources.Name_Name),
+			Description = nameof(RoleResources.Name_Description))]
 		public virtual string Name { get; set; }
 
 		/// <summary>
-		/// The code name of the role.
+		/// The code name of the role, to be referred by the system.
 		/// </summary>
 		[Required]
 		[MaxLength(128)]
 		[Display(
 			ResourceType = typeof(RoleResources),
-			Name = nameof(RoleResources.CodeName_Name))]
+			Name = nameof(RoleResources.CodeName_Name),
+			Description = nameof(RoleResources.CodeName_Description))]
 		public virtual string CodeName { get; set; }
 
 		#endregion

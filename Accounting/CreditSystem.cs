@@ -23,7 +23,8 @@ namespace Grammophone.Domos.Domain.Accounting
 		[MaxLength(256)]
 		[Display(
 			ResourceType = typeof(CreditSystemResources),
-			Name = nameof(CreditSystemResources.Name_Name))]
+			Name = nameof(CreditSystemResources.Name_Name),
+			Description = nameof(CreditSystemResources.Name_Description))]
 		public virtual string Name { get; set; }
 
 		/// <summary>
@@ -33,7 +34,8 @@ namespace Grammophone.Domos.Domain.Accounting
 		[MaxLength(256)]
 		[Display(
 			ResourceType = typeof(CreditSystemResources),
-			Name = nameof(CreditSystemResources.CodeName_Name))]
+			Name = nameof(CreditSystemResources.CodeName_Name),
+			Description = nameof(CreditSystemResources.CodeName_Description))]
 		public virtual string CodeName { get; set; }
 
 		/// <summary>
@@ -43,7 +45,8 @@ namespace Grammophone.Domos.Domain.Accounting
 		[MaxLength(128)]
 		[Display(
 			ResourceType = typeof(CreditSystemResources),
-			Name = nameof(CreditSystemResources.FundsTransferFileConverterName_Name))]
+			Name = nameof(CreditSystemResources.FundsTransferFileConverterName_Name),
+			Description = nameof(CreditSystemResources.FundsTransferFileConverterName_Description))]
 		public virtual string FundsTransferFileConverterName { get; set; }
 
 		#endregion

@@ -117,16 +117,28 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Amount_Description" xml:space="preserve">
+    <value>The tax amount charged.</value>
+  </data>
   <data name="Amount_Name" xml:space="preserve">
     <value>Amount</value>
+  </data>
+  <data name="Description_Description" xml:space="preserve">
+    <value>The description of the tax component.</value>
   </data>
   <data name="Description_Name" xml:space="preserve">
     <value>Description</value>
   </data>
+  <data name="LineID_Description" xml:space="preserve">
+    <value>ID of the invoice line where the tax component belongs.</value>
+  </data>
   <data name="LineID_Name" xml:space="preserve">
     <value>Invoice Line ID</value>
   </data>
-  <data name="RatePercentFactor" xml:space="preserve">
+  <data name="RatePercentFactor_Description" xml:space="preserve">
+    <value>The rate of the tax.</value>
+  </data>
+  <data name="RatePercentFactor_Name" xml:space="preserve">
     <value>Rate</value>
   </data>
 </root>

@@ -117,14 +117,26 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="DueDate_Description" xml:space="preserve">
+    <value>Optional date when the invoice is due.</value>
+  </data>
   <data name="DueDate_Name" xml:space="preserve">
     <value>Due Date</value>
+  </data>
+  <data name="Form_Description" xml:space="preserve">
+    <value>The form of the invoice.</value>
   </data>
   <data name="Form_Name" xml:space="preserve">
     <value>Form</value>
   </data>
+  <data name="IssueDate_Description" xml:space="preserve">
+    <value>The date when the invoice was issued.</value>
+  </data>
   <data name="IssueDate_Name" xml:space="preserve">
     <value>Issue Date</value>
+  </data>
+  <data name="Type_Description" xml:space="preserve">
+    <value>The type of the invoice, either normal charging from seller to customer or reverse from customer to seller.</value>
   </data>
   <data name="Type_Name" xml:space="preserve">
     <value>Type</value>

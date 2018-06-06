@@ -117,11 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Amount_Description" xml:space="preserve">
+    <value>Si positif, c'est le montant déposé sur le compte bancaire spécifié, sinon il est retiré.</value>
+  </data>
   <data name="Amount_Name" xml:space="preserve">
     <value>Montant</value>
   </data>
+  <data name="Comments_Description" xml:space="preserve">
+    <value>Commentaires optionnels pour la requête.</value>
+  </data>
   <data name="Comments_Name" xml:space="preserve">
     <value>Commentaires</value>
+  </data>
+  <data name="GUID_Description" xml:space="preserve">
+    <value>Identificateur unique de la requête.</value>
   </data>
   <data name="GUID_Name" xml:space="preserve">
     <value>GUID</value>

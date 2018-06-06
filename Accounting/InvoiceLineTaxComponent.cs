@@ -31,13 +31,14 @@ namespace Grammophone.Domos.Domain.Accounting
 		#region Primitive properties
 
 		/// <summary>
-		/// The description of the tax.
+		/// The description of the tax component.
 		/// </summary>
 		[Required]
 		[MaxLength(DescriptionLength)]
 		[Display(
 			ResourceType = typeof(InvoiceLineTaxComponentResources),
-			Name = nameof(InvoiceLineTaxComponentResources.Description_Name))]
+			Name = nameof(InvoiceLineTaxComponentResources.Description_Name),
+			Description = nameof(InvoiceLineTaxComponentResources.Description_Description))]
 		public virtual string Description { get; set; }
 
 		/// <summary>
@@ -45,15 +46,17 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// </summary>
 		[Display(
 			ResourceType = typeof(InvoiceLineTaxComponentResources),
-			Name = nameof(InvoiceLineTaxComponentResources.RatePercentFactor))]
+			Name = nameof(InvoiceLineTaxComponentResources.RatePercentFactor_Name),
+			Description = nameof(InvoiceLineTaxComponentResources.RatePercentFactor_Description))]
 		public virtual decimal? RatePercentFactor { get; set; }
 
 		/// <summary>
-		/// The amount charged.
+		/// The tax amount charged.
 		/// </summary>
 		[Display(
 			ResourceType = typeof(InvoiceLineTaxComponentResources),
-			Name = nameof(InvoiceLineTaxComponentResources.Amount_Name))]
+			Name = nameof(InvoiceLineTaxComponentResources.Amount_Name),
+			Description = nameof(InvoiceLineTaxComponentResources.Amount_Description))]
 		public virtual decimal Amount { get; set; }
 
 		#endregion
@@ -61,11 +64,12 @@ namespace Grammophone.Domos.Domain.Accounting
 		#region Relations
 
 		/// <summary>
-		/// ID of the invoice line where the tax belongs.
+		/// ID of the invoice line where the tax component belongs.
 		/// </summary>
 		[Display(
 			ResourceType = typeof(InvoiceLineTaxComponentResources),
-			Name = nameof(InvoiceLineTaxComponentResources.LineID_Name))]
+			Name = nameof(InvoiceLineTaxComponentResources.LineID_Name),
+			Description = nameof(InvoiceLineTaxComponentResources.LineID_Description))]
 		public virtual long LineID { get; set; }
 
 		/// <summary>

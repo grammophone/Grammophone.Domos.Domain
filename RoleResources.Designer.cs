@@ -61,11 +61,29 @@ namespace Grammophone.Domos.Domain {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The code name of the role, to be referred by the system..
+        /// </summary>
+        public static string CodeName_Description {
+            get {
+                return ResourceManager.GetString("CodeName_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Code Name.
         /// </summary>
         public static string CodeName_Name {
             get {
                 return ResourceManager.GetString("CodeName_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The display name of the role..
+        /// </summary>
+        public static string Name_Description {
+            get {
+                return ResourceManager.GetString("Name_Description", resourceCulture);
             }
         }
         

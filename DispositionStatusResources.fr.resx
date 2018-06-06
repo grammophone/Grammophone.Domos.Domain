@@ -118,15 +118,15 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Inactive_Name" xml:space="preserve">
-    <value>Inactif(-ve)</value>
+    <value>Inactif</value>
   </data>
   <data name="Revoked_Name" xml:space="preserve">
-    <value>Révoqué(e)</value>
+    <value>Révoqué</value>
   </data>
   <data name="Unverified_Name" xml:space="preserve">
-    <value>Non Vérifié(e)</value>
+    <value>Non Vérifié</value>
   </data>
   <data name="Verified_Name" xml:space="preserve">
-    <value>Vérifié(e)</value>
+    <value>Vérifié</value>
   </data>
 </root>

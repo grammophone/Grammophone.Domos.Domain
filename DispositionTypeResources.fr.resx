@@ -117,11 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ClassName_Description" xml:space="preserve">
+    <value>Nom de classe .net complet des dispositions de ce type.</value>
+  </data>
   <data name="ClassName_Name" xml:space="preserve">
     <value>Nom de la Classe</value>
   </data>
+  <data name="CodeName_Description" xml:space="preserve">
+    <value>Identifiant du type de disposition, à être référé par le système.</value>
+  </data>
   <data name="CodeName_Name" xml:space="preserve">
     <value>Nom de Code</value>
+  </data>
+  <data name="Name_Description" xml:space="preserve">
+    <value>Nom d'affichage du type de disposition.</value>
   </data>
   <data name="Name_Name" xml:space="preserve">
     <value>Nom</value>

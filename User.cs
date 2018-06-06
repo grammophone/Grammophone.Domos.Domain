@@ -66,7 +66,10 @@ namespace Grammophone.Domos.Domain
 		[Required]
 		[MaxLength(256)]
 		[IgnoreDataMember]
-		[Display(ResourceType = typeof(UserResources), Name = nameof(UserResources.UserName_Name))]
+		[Display(
+			ResourceType = typeof(UserResources),
+			Name = nameof(UserResources.UserName_Name),
+			Description = nameof(UserResources.UserName_Description))]
 		public virtual string UserName { get; set; }
 
 		/// <summary>
@@ -76,7 +79,10 @@ namespace Grammophone.Domos.Domain
 		[Required]
 		[MaxLength(256)]
 		[IgnoreDataMember]
-		[Display(ResourceType = typeof(UserResources), Name = nameof(UserResources.Email_Name))]
+		[Display(
+			ResourceType = typeof(UserResources),
+			Name = nameof(UserResources.Email_Name),
+			Description = nameof(UserResources.Email_Description))]
 		public virtual string Email { get; set; }
 
 		/// <summary>
@@ -88,39 +94,54 @@ namespace Grammophone.Domos.Domain
 		public virtual string PasswordHash { get; set; }
 
 		/// <summary>
-		/// First name.
+		/// The user's first name.
 		/// </summary>
 		[Required]
 		[MaxLength(256)]
-		[Display(ResourceType = typeof(UserResources), Name = nameof(UserResources.FirstName_Name))]
+		[Display(
+			ResourceType = typeof(UserResources),
+			Name = nameof(UserResources.FirstName_Name),
+			Description = nameof(UserResources.FirstName_Description))]
 		public virtual string FirstName { get; set; }
 
 		/// <summary>
-		/// Last name.
+		/// The user's last name.
 		/// </summary>
 		[Required]
 		[MaxLength(256)]
-		[Display(ResourceType = typeof(UserResources), Name = nameof(UserResources.LastName_Name))]
+		[Display(
+			ResourceType = typeof(UserResources),
+			Name = nameof(UserResources.LastName_Name),
+			Description = nameof(UserResources.LastName_Description))]
 		public virtual string LastName { get; set; }
 
 		/// <summary>
-		/// True if this is a system account.
+		/// True when the user represents a system account.
 		/// </summary>
 		[IgnoreDataMember]
-		[Display(ResourceType = typeof(UserResources), Name = nameof(UserResources.IsSystem_Name))]
+		[Display(
+			ResourceType = typeof(UserResources),
+			Name = nameof(UserResources.IsSystem_Name),
+			Description = nameof(UserResources.IsSystem_Description))]
 		public virtual bool IsSystem { get; set; }
 
 		/// <summary>
 		/// True if the user is the special "Anonymous" one.
 		/// </summary>
 		[IgnoreDataMember]
-		[Display(ResourceType = typeof(UserResources), Name = nameof(UserResources.IsAnonymous_Name))]
+		[Display(
+			ResourceType = typeof(UserResources),
+			Name = nameof(UserResources.IsAnonymous_Name),
+			Description = nameof(UserResources.IsAnonymous_Description))]
 		public virtual bool IsAnonymous { get; set; }
 
 		/// <summary>
 		/// The registration status of the user.
 		/// </summary>
-		[Display(ResourceType = typeof(UserResources), Name = nameof(UserResources.RegistrationStatus_Name))]
+		[Display(
+			ResourceType = typeof(UserResources),
+			Name = nameof(UserResources.RegistrationStatus_Name),
+			Description = nameof(UserResources.RegistrationStatus_Description))]
 		public virtual RegistrationStatus RegistrationStatus { get; set; }
 
 		/// <summary>
@@ -132,9 +153,12 @@ namespace Grammophone.Domos.Domain
 		public virtual string SecurityStamp { get; set; }
 
 		/// <summary>
-		/// Date when the user was created.
+		/// Date when the user was created, in UTC.
 		/// </summary>
-		[Display(ResourceType = typeof(UserResources), Name = nameof(UserResources.CreationDate_Name))]
+		[Display(
+			ResourceType = typeof(UserResources),
+			Name = nameof(UserResources.CreationDate_Name),
+			Description = nameof(UserResources.CreationDate_Description))]
 		public virtual DateTime CreationDate { get; set; }
 
 		/// <summary>

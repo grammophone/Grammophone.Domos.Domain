@@ -19,7 +19,7 @@ namespace Grammophone.Domos.Domain.Workflow {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class StateGroupResources {
@@ -61,6 +61,15 @@ namespace Grammophone.Domos.Domain.Workflow {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Identifier of the state group, to be referred by the system..
+        /// </summary>
+        public static string CodeName_Description {
+            get {
+                return ResourceManager.GetString("CodeName_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Code Name.
         /// </summary>
         public static string CodeName_Name {
@@ -70,11 +79,29 @@ namespace Grammophone.Domos.Domain.Workflow {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Optional description of the state group..
+        /// </summary>
+        public static string Description_Description {
+            get {
+                return ResourceManager.GetString("Description_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Description.
         /// </summary>
         public static string Description_Name {
             get {
                 return ResourceManager.GetString("Description_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The name of the state group..
+        /// </summary>
+        public static string Name_Description {
+            get {
+                return ResourceManager.GetString("Name_Description", resourceCulture);
             }
         }
         

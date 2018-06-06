@@ -8,7 +8,8 @@ using System.Threading.Tasks;
 namespace Grammophone.Domos.Domain
 {
 	/// <summary>
-	/// A segregation-wide role.
+	/// A segregation-wide role. Uses are linked to this type of roles via descendants of <see cref="Disposition"/>s
+	/// whose classes are specified in the <see cref="ClassName"/> proeprty.
 	/// </summary>
 	[Serializable]
 	public class DispositionType : EntityWithID<long>
@@ -16,23 +17,25 @@ namespace Grammophone.Domos.Domain
 		#region Primitive properties
 
 		/// <summary>
-		/// The name of the segregation-wide role.
+		/// The display name of the disposition type.
 		/// </summary>
 		[Required]
 		[MaxLength(128)]
 		[Display(
 			ResourceType = typeof(DispositionTypeResources),
-			Name = nameof(DispositionTypeResources.Name_Name))]
+			Name = nameof(DispositionTypeResources.Name_Name),
+			Description = nameof(DispositionTypeResources.Name_Description))]
 		public virtual string Name { get; set; }
 
 		/// <summary>
-		/// The code name of a the segregation-wide role.
+		/// The code name of the disposition type.
 		/// </summary>
 		[Required]
 		[MaxLength(128)]
 		[Display(
 			ResourceType = typeof(DispositionTypeResources),
-			Name = nameof(DispositionTypeResources.CodeName_Name))]
+			Name = nameof(DispositionTypeResources.CodeName_Name),
+			Description = nameof(DispositionTypeResources.CodeName_Description))]
 		public virtual string CodeName { get; set; }
 
 		/// <summary>
@@ -42,7 +45,8 @@ namespace Grammophone.Domos.Domain
 		[MaxLength(512)]
 		[Display(
 			ResourceType = typeof(DispositionTypeResources),
-			Name = nameof(DispositionTypeResources.ClassName_Name))]
+			Name = nameof(DispositionTypeResources.ClassName_Name),
+			Description = nameof(DispositionTypeResources.ClassName_Description))]
 		public virtual string ClassName { get; set; }
 
 		#endregion

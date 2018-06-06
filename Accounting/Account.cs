@@ -20,7 +20,8 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// </summary>
 		[Display(
 			ResourceType = typeof(AccountResources),
-			Name = nameof(AccountResources.Balance_Name))]
+			Name = nameof(AccountResources.Balance_Name),
+			Description = nameof(AccountResources.Balance_Description))]
 		public virtual decimal Balance { get; set; }
 
 		#endregion

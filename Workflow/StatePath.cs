@@ -23,17 +23,19 @@ namespace Grammophone.Domos.Domain.Workflow
 		[MaxLength(128)]
 		[Display(
 			ResourceType = typeof(StatePathResources), 
-			Name = nameof(StatePathResources.CodeName_Name))]
+			Name = nameof(StatePathResources.CodeName_Name),
+			Description = nameof(StatePathResources.CodeName_Description))]
 		public virtual string CodeName { get; set; }
 
 		/// <summary>
-		/// The name of the path.
+		/// The display name of the path.
 		/// </summary>
 		[Required]
 		[MaxLength(256)]
 		[Display(
 			ResourceType = typeof(StatePathResources),
-			Name = nameof(StatePathResources.Name_Name))]
+			Name = nameof(StatePathResources.Name_Name),
+			Description = nameof(StatePathResources.Name_Description))]
 		public virtual string Name { get; set; }
 
 		/// <summary>
@@ -41,7 +43,8 @@ namespace Grammophone.Domos.Domain.Workflow
 		/// </summary>
 		[Display(
 			ResourceType = typeof(StatePathResources),
-			Name = nameof(StatePathResources.Description_Name))]
+			Name = nameof(StatePathResources.Description_Name),
+			Description = nameof(StatePathResources.Description_Description))]
 		public virtual string Description { get; set; }
 
 		/// <summary>

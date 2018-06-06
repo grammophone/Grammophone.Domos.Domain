@@ -61,11 +61,29 @@ namespace Grammophone.Domos.Domain.Accounting {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The tax amount charged..
+        /// </summary>
+        public static string Amount_Description {
+            get {
+                return ResourceManager.GetString("Amount_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Amount.
         /// </summary>
         public static string Amount_Name {
             get {
                 return ResourceManager.GetString("Amount_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The description of the tax component..
+        /// </summary>
+        public static string Description_Description {
+            get {
+                return ResourceManager.GetString("Description_Description", resourceCulture);
             }
         }
         
@@ -79,6 +97,15 @@ namespace Grammophone.Domos.Domain.Accounting {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ID of the invoice line where the tax component belongs..
+        /// </summary>
+        public static string LineID_Description {
+            get {
+                return ResourceManager.GetString("LineID_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Invoice Line ID.
         /// </summary>
         public static string LineID_Name {
@@ -88,11 +115,20 @@ namespace Grammophone.Domos.Domain.Accounting {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The rate of the tax..
+        /// </summary>
+        public static string RatePercentFactor_Description {
+            get {
+                return ResourceManager.GetString("RatePercentFactor_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Rate.
         /// </summary>
-        public static string RatePercentFactor {
+        public static string RatePercentFactor_Name {
             get {
-                return ResourceManager.GetString("RatePercentFactor", resourceCulture);
+                return ResourceManager.GetString("RatePercentFactor_Name", resourceCulture);
             }
         }
     }

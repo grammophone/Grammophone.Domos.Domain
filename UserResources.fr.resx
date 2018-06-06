@@ -117,26 +117,50 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="CreationDate_Description" xml:space="preserve">
+    <value>Date when the user was created, in UTC.</value>
+  </data>
   <data name="CreationDate_Name" xml:space="preserve">
     <value>Date d’Enregistrement</value>
+  </data>
+  <data name="Email_Description" xml:space="preserve">
+    <value>L'e-mail de l'utilisateur.</value>
   </data>
   <data name="Email_Name" xml:space="preserve">
     <value>E-mail</value>
   </data>
+  <data name="FirstName_Description" xml:space="preserve">
+    <value>Prénom de l'utilisateur.</value>
+  </data>
   <data name="FirstName_Name" xml:space="preserve">
     <value>Prénom</value>
+  </data>
+  <data name="IsAnonymous_Description" xml:space="preserve">
+    <value>Cette valeur est définie pour l'utilisateur spécial représentant le visiteur anonyme.</value>
   </data>
   <data name="IsAnonymous_Name" xml:space="preserve">
     <value>Anonyme</value>
   </data>
+  <data name="IsSystem_Description" xml:space="preserve">
+    <value>Cette valeur est définie lorsque l'utilisateur représente un compte système.</value>
+  </data>
   <data name="IsSystem_Name" xml:space="preserve">
     <value>Système</value>
+  </data>
+  <data name="LastName_Description" xml:space="preserve">
+    <value>Nom de famille de l'utilisateur.</value>
   </data>
   <data name="LastName_Name" xml:space="preserve">
     <value>Nom de Famille</value>
   </data>
+  <data name="RegistrationStatus_Description" xml:space="preserve">
+    <value>The registration status of the user.</value>
+  </data>
   <data name="RegistrationStatus_Name" xml:space="preserve">
     <value>État d’Enregistrement</value>
+  </data>
+  <data name="UserName_Description" xml:space="preserve">
+    <value>Nom de code de l'utilisateur.</value>
   </data>
   <data name="UserName_Name" xml:space="preserve">
     <value>Nom d’Utilisateur</value>

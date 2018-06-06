@@ -117,17 +117,32 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Amount_Description" xml:space="preserve">
+    <value>The net cost of the line, excluding taxes.</value>
+  </data>
   <data name="Amount_Name" xml:space="preserve">
     <value>Amount</value>
+  </data>
+  <data name="Description_Description" xml:space="preserve">
+    <value>The description of the line.</value>
   </data>
   <data name="Description_Name" xml:space="preserve">
     <value>Description</value>
   </data>
+  <data name="InvoiceID_Description" xml:space="preserve">
+    <value>The ID of the invoice where the line belongs.</value>
+  </data>
   <data name="InvoiceID_Name" xml:space="preserve">
     <value>Invoice ID</value>
   </data>
+  <data name="Quantity_Description" xml:space="preserve">
+    <value>Optional quantity indicator.</value>
+  </data>
   <data name="Quantity_Name" xml:space="preserve">
     <value>Quantity</value>
+  </data>
+  <data name="Rate_Description" xml:space="preserve">
+    <value>If quantity is specified, this is the rate each unit is charged.</value>
   </data>
   <data name="Rate_Name" xml:space="preserve">
     <value>Rate</value>

@@ -21,14 +21,15 @@ namespace Grammophone.Domos.Domain.Workflow
 
 		#region Primitive properties
 
-	/// <summary>
+		/// <summary>
 		/// The code name of the state group.
 		/// </summary>
 		[Required]
 		[MaxLength(128)]
 		[Display(
 			ResourceType = typeof(StateGroupResources),
-			Name = nameof(StateGroupResources.CodeName_Name))]
+			Name = nameof(StateGroupResources.CodeName_Name),
+			Description = nameof(StateGroupResources.CodeName_Description))]
 		public virtual string CodeName { get; set; }
 
 		/// <summary>
@@ -38,7 +39,8 @@ namespace Grammophone.Domos.Domain.Workflow
 		[MaxLength(256)]
 		[Display(
 			ResourceType = typeof(StateGroupResources),
-			Name = nameof(StateGroupResources.Name_Name))]
+			Name = nameof(StateGroupResources.Name_Name),
+			Description = nameof(StateGroupResources.Name_Description))]
 		public virtual string Name { get; set; }
 
 		/// <summary>
@@ -46,7 +48,8 @@ namespace Grammophone.Domos.Domain.Workflow
 		/// </summary>
 		[Display(
 			ResourceType = typeof(StateGroupResources),
-			Name = nameof(StateGroupResources.Description_Name))]
+			Name = nameof(StateGroupResources.Description_Name),
+			Description = nameof(StateGroupResources.Description_Description))]
 		public virtual string Description { get; set; }
 
 		#endregion

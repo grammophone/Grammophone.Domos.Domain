@@ -117,26 +117,50 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="CreationDate_Description" xml:space="preserve">
+    <value>Date when the user was created, in UTC.</value>
+  </data>
   <data name="CreationDate_Name" xml:space="preserve">
     <value>Registration Date</value>
+  </data>
+  <data name="Email_Description" xml:space="preserve">
+    <value>The user's e-mail.</value>
   </data>
   <data name="Email_Name" xml:space="preserve">
     <value>E-mail</value>
   </data>
+  <data name="FirstName_Description" xml:space="preserve">
+    <value>The user's first name.</value>
+  </data>
   <data name="FirstName_Name" xml:space="preserve">
     <value>First Name</value>
+  </data>
+  <data name="IsAnonymous_Description" xml:space="preserve">
+    <value>This is set for the special user representing the anonymous visitor.</value>
   </data>
   <data name="IsAnonymous_Name" xml:space="preserve">
     <value>Is Anonymous</value>
   </data>
+  <data name="IsSystem_Description" xml:space="preserve">
+    <value>This is set when the user represents a system account.</value>
+  </data>
   <data name="IsSystem_Name" xml:space="preserve">
     <value>Is System</value>
+  </data>
+  <data name="LastName_Description" xml:space="preserve">
+    <value>The user's last name.</value>
   </data>
   <data name="LastName_Name" xml:space="preserve">
     <value>Last Name</value>
   </data>
+  <data name="RegistrationStatus_Description" xml:space="preserve">
+    <value>The registration status of the user.</value>
+  </data>
   <data name="RegistrationStatus_Name" xml:space="preserve">
     <value>Registration Status</value>
+  </data>
+  <data name="UserName_Description" xml:space="preserve">
+    <value>The user's code name.</value>
   </data>
   <data name="UserName_Name" xml:space="preserve">
     <value>User Name</value>

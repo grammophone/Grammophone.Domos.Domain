@@ -120,11 +120,17 @@
   <data name="CreationDate_Name" xml:space="preserve">
     <value>Creation Date</value>
   </data>
+  <data name="FullName_Description" xml:space="preserve">
+    <value>The full name of the file.</value>
+  </data>
   <data name="FullName_Name" xml:space="preserve">
     <value>Full Name</value>
   </data>
   <data name="LastModificationDate_Name" xml:space="preserve">
     <value>Modification Date</value>
+  </data>
+  <data name="Name_Description" xml:space="preserve">
+    <value>The short name of the file.</value>
   </data>
   <data name="Name_Name" xml:space="preserve">
     <value>Name</value>

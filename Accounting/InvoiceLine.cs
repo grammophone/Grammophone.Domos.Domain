@@ -45,7 +45,8 @@ namespace Grammophone.Domos.Domain.Accounting
 		[MaxLength(DescriptionLength)]
 		[Display(
 			ResourceType = typeof(InvoiceLineResources),
-			Name = nameof(InvoiceLineResources.Description_Name))]
+			Name = nameof(InvoiceLineResources.Description_Name),
+			Description = nameof(InvoiceLineResources.Description_Description))]
 		public virtual string Description { get; set; }
 
 		/// <summary>
@@ -53,7 +54,8 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// </summary>
 		[Display(
 			ResourceType = typeof(InvoiceLineResources),
-			Name = nameof(InvoiceLineResources.Quantity_Name))]
+			Name = nameof(InvoiceLineResources.Quantity_Name),
+			Description = nameof(InvoiceLineResources.Quantity_Description))]
 		public virtual decimal? Quantity { get; set; }
 
 		/// <summary>
@@ -61,7 +63,8 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// </summary>
 		[Display(
 			ResourceType = typeof(InvoiceLineResources),
-			Name = nameof(InvoiceLineResources.Rate_Name))]
+			Name = nameof(InvoiceLineResources.Rate_Name),
+			Description = nameof(InvoiceLineResources.Rate_Description))]
 		public virtual decimal? Rate { get; set; }
 
 		/// <summary>
@@ -69,7 +72,8 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// </summary>
 		[Display(
 			ResourceType = typeof(InvoiceLineResources),
-			Name = nameof(InvoiceLineResources.Amount_Name))]
+			Name = nameof(InvoiceLineResources.Amount_Name),
+			Description = nameof(InvoiceLineResources.Amount_Description))]
 		public virtual decimal Amount { get; set; }
 
 		#endregion
@@ -81,7 +85,8 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// </summary>
 		[Display(
 			ResourceType = typeof(InvoiceLineResources),
-			Name = nameof(InvoiceLineResources.InvoiceID_Name))]
+			Name = nameof(InvoiceLineResources.InvoiceID_Name),
+			Description = nameof(InvoiceLineResources.InvoiceID_Description))]
 		public virtual long InvoiceID { get; set; }
 
 		/// <summary>

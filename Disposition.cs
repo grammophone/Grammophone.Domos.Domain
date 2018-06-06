@@ -31,11 +31,12 @@ namespace Grammophone.Domos.Domain
 		#region Primitive properties
 
 		/// <summary>
-		/// The state of this disposition.
+		/// The status of the disposition.
 		/// </summary>
 		[Display(
 			ResourceType = typeof(DispositionResources),
-			Name = nameof(DispositionResources.Status_Name))]
+			Name = nameof(DispositionResources.Status_Name),
+			Description = nameof(DispositionResources.Status_Description))]
 		public virtual DispositionStatus Status { get; set; }
 
 		/// <summary>

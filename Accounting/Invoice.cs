@@ -38,19 +38,24 @@ namespace Grammophone.Domos.Domain.Accounting
 		#region Primitive properties
 
 		/// <summary>
-		/// The date when the invoice was issues, in UTC.
+		/// The date when the invoice was issued.
 		/// </summary>
+		/// <remarks>
+		/// Whether this includes time or is defined in UTC, depends on the application.
+		/// </remarks>
 		[Display(
 			ResourceType = typeof(InvoiceResources),
-			Name = nameof(InvoiceResources.IssueDate_Name))]
+			Name = nameof(InvoiceResources.IssueDate_Name),
+			Description = nameof(InvoiceResources.IssueDate_Description))]
 		public virtual DateTime IssueDate { get; set; }
 
 		/// <summary>
-		/// Optional date when the issue is due, in UTC.
+		/// Optional date when the invoice is due.
 		/// </summary>
 		[Display(
 			ResourceType = typeof(InvoiceResources),
-			Name = nameof(InvoiceResources.DueDate_Name))]
+			Name = nameof(InvoiceResources.DueDate_Name),
+			Description = nameof(InvoiceResources.DueDate_Description))]
 		public virtual DateTime? DueDate { get; set; }
 
 		/// <summary>
@@ -58,7 +63,8 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// </summary>
 		[Display(
 			ResourceType = typeof(InvoiceResources),
-			Name = nameof(InvoiceResources.Form_Name))]
+			Name = nameof(InvoiceResources.Form_Name),
+			Description = nameof(InvoiceResources.Form_Description))]
 		public virtual InvoiceForm Form { get; set; }
 
 		/// <summary>
@@ -66,7 +72,8 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// </summary>
 		[Display(
 			ResourceType = typeof(InvoiceResources),
-			Name = nameof(InvoiceResources.Type_Name))]
+			Name = nameof(InvoiceResources.Type_Name),
+			Description = nameof(InvoiceResources.Type_Description))]
 		public virtual InvoiceType Type { get; set; }
 
 		#endregion

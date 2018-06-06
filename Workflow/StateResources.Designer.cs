@@ -19,7 +19,7 @@ namespace Grammophone.Domos.Domain.Workflow {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class StateResources {
@@ -61,11 +61,29 @@ namespace Grammophone.Domos.Domain.Workflow {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Identifier of the state, to be referred by the system..
+        /// </summary>
+        public static string CodeName_Description {
+            get {
+                return ResourceManager.GetString("CodeName_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Code Name.
         /// </summary>
         public static string CodeName_Name {
             get {
                 return ResourceManager.GetString("CodeName_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Optional description of the state..
+        /// </summary>
+        public static string Description_Description {
+            get {
+                return ResourceManager.GetString("Description_Description", resourceCulture);
             }
         }
         
@@ -79,6 +97,15 @@ namespace Grammophone.Domos.Domain.Workflow {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to True intended to be an end state..
+        /// </summary>
+        public static string IsEnd_Description {
+            get {
+                return ResourceManager.GetString("IsEnd_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Is End.
         /// </summary>
         public static string IsEnd_Name {
@@ -88,11 +115,29 @@ namespace Grammophone.Domos.Domain.Workflow {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to True intended to be a start state..
+        /// </summary>
+        public static string IsStart_Description {
+            get {
+                return ResourceManager.GetString("IsStart_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Is Start.
         /// </summary>
         public static string IsStart_Name {
             get {
                 return ResourceManager.GetString("IsStart_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Display name of the state..
+        /// </summary>
+        public static string Name_Description {
+            get {
+                return ResourceManager.GetString("Name_Description", resourceCulture);
             }
         }
         

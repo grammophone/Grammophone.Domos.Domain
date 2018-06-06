@@ -28,17 +28,19 @@ namespace Grammophone.Domos.Domain.Workflow
 		[MaxLength(128)]
 		[Display(
 			ResourceType = typeof(WorkflowGraphResources),
-			Name = nameof(WorkflowGraphResources.CodeName_Name))]
+			Name = nameof(WorkflowGraphResources.CodeName_Name),
+			Description = nameof(WorkflowGraphResources.CodeName_Description))]
 		public virtual string CodeName { get; set; }
 
 		/// <summary>
-		/// The name of the workflow graph.
+		/// The display name of the workflow graph.
 		/// </summary>
 		[Required]
 		[MaxLength(256)]
 		[Display(
 			ResourceType = typeof(WorkflowGraphResources),
-			Name = nameof(WorkflowGraphResources.Name_Name))]
+			Name = nameof(WorkflowGraphResources.Name_Name),
+			Description = nameof(WorkflowGraphResources.Name_Description))]
 		public virtual string Name { get; set; }
 
 		/// <summary>
@@ -46,7 +48,8 @@ namespace Grammophone.Domos.Domain.Workflow
 		/// </summary>
 		[Display(
 			ResourceType = typeof(WorkflowGraphResources),
-			Name = nameof(WorkflowGraphResources.Description_Name))]
+			Name = nameof(WorkflowGraphResources.Description_Name),
+			Description = nameof(WorkflowGraphResources.Description_Description))]
 		public virtual string Description { get; set; }
 
 		/// <summary>

@@ -19,7 +19,7 @@ namespace Grammophone.Domos.Domain {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class UserResources {
@@ -61,11 +61,29 @@ namespace Grammophone.Domos.Domain {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Date when the user was created, in UTC..
+        /// </summary>
+        public static string CreationDate_Description {
+            get {
+                return ResourceManager.GetString("CreationDate_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Registration Date.
         /// </summary>
         public static string CreationDate_Name {
             get {
                 return ResourceManager.GetString("CreationDate_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The user&apos;s e-mail..
+        /// </summary>
+        public static string Email_Description {
+            get {
+                return ResourceManager.GetString("Email_Description", resourceCulture);
             }
         }
         
@@ -79,11 +97,29 @@ namespace Grammophone.Domos.Domain {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The user&apos;s first name..
+        /// </summary>
+        public static string FirstName_Description {
+            get {
+                return ResourceManager.GetString("FirstName_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to First Name.
         /// </summary>
         public static string FirstName_Name {
             get {
                 return ResourceManager.GetString("FirstName_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This is set for the special user representing the anonymous visitor..
+        /// </summary>
+        public static string IsAnonymous_Description {
+            get {
+                return ResourceManager.GetString("IsAnonymous_Description", resourceCulture);
             }
         }
         
@@ -97,11 +133,29 @@ namespace Grammophone.Domos.Domain {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to This is set when the user represents a system account..
+        /// </summary>
+        public static string IsSystem_Description {
+            get {
+                return ResourceManager.GetString("IsSystem_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Is System.
         /// </summary>
         public static string IsSystem_Name {
             get {
                 return ResourceManager.GetString("IsSystem_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The user&apos;s last name..
+        /// </summary>
+        public static string LastName_Description {
+            get {
+                return ResourceManager.GetString("LastName_Description", resourceCulture);
             }
         }
         
@@ -115,11 +169,29 @@ namespace Grammophone.Domos.Domain {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The registration status of the user..
+        /// </summary>
+        public static string RegistrationStatus_Description {
+            get {
+                return ResourceManager.GetString("RegistrationStatus_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Registration Status.
         /// </summary>
         public static string RegistrationStatus_Name {
             get {
                 return ResourceManager.GetString("RegistrationStatus_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The user&apos;s code name..
+        /// </summary>
+        public static string UserName_Description {
+            get {
+                return ResourceManager.GetString("UserName_Description", resourceCulture);
             }
         }
         

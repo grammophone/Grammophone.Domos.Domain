@@ -31,30 +31,33 @@ namespace Grammophone.Domos.Domain.Accounting
 		#region Primitive properties
 
 		/// <summary>
-		/// If positive, The amount is deposited to the bank account specified
-		/// by <see cref="EncryptedBankAccountInfo"/>, else it is withdrawed.
+		/// If positive, it is the amount is deposited to the bank account specified
+		/// by <see cref="EncryptedBankAccountInfo"/>, else it is withdrawn.
 		/// </summary>
 		[Display(
 			ResourceType = typeof(FundsTransferRequestResources),
-			Name = nameof(FundsTransferRequestResources.Amount_Name))]
+			Name = nameof(FundsTransferRequestResources.Amount_Name),
+			Description = nameof(FundsTransferRequestResources.Amount_Description))]
 		public virtual decimal Amount { get; set; }
 
 		/// <summary>
-		/// The ID of the external system transaction.
+		/// GUID of the request.
 		/// </summary>
 		[Display(
 			ResourceType = typeof(FundsTransferRequestResources),
-			Name = nameof(FundsTransferRequestResources.GUID_Name))]
+			Name = nameof(FundsTransferRequestResources.GUID_Name),
+			Description = nameof(FundsTransferRequestResources.GUID_Description))]
 		public virtual Guid GUID { get; set; }
 
 		/// <summary>
-		/// Optional comments.
+		/// Optional comments for the request.
 		/// </summary>
 		[MaxLength(CommentsLength)]
 		[DataType(DataType.MultilineText)]
 		[Display(
 			ResourceType = typeof(FundsTransferRequestResources),
-			Name = nameof(FundsTransferRequestResources.Comments_Name))]
+			Name = nameof(FundsTransferRequestResources.Comments_Name),
+			Description = nameof(FundsTransferRequestResources.Comments_Description))]
 		public virtual string Comments { get; set; }
 
 		#endregion

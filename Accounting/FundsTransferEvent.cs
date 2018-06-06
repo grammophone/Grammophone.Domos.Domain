@@ -42,7 +42,8 @@ namespace Grammophone.Domos.Domain.Accounting
 		[MaxLength(ResponseCodeLength)]
 		[Display(
 			ResourceType = typeof(FundsTransferEventResources),
-			Name = nameof(FundsTransferEventResources.ResponseCode_Name))]
+			Name = nameof(FundsTransferEventResources.ResponseCode_Name),
+			Description = nameof(FundsTransferEventResources.ResponseCode_Description))]
 		public virtual string ResponseCode { get; set; }
 
 		/// <summary>
@@ -50,7 +51,8 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// </summary>
 		[Display(
 			ResourceType = typeof(FundsTransferEventResources),
-			Name = nameof(FundsTransferEventResources.Time_Name))]
+			Name = nameof(FundsTransferEventResources.Time_Name),
+			Description = nameof(FundsTransferEventResources.Time_Description))]
 		public virtual DateTime Time { get; set; }
 
 		/// <summary>
@@ -59,33 +61,37 @@ namespace Grammophone.Domos.Domain.Accounting
 		[MaxLength(TraceCodeLength)]
 		[Display(
 			ResourceType = typeof(FundsTransferEventResources),
-			Name = nameof(FundsTransferEventResources.TraceCode_Name))]
+			Name = nameof(FundsTransferEventResources.TraceCode_Name),
+			Description = nameof(FundsTransferEventResources.TraceCode_Description))]
 		public virtual string TraceCode { get; set; }
 
 		/// <summary>
-		/// The type of this transfer event.
+		/// The type of the transfer event.
 		/// </summary>
 		[Display(
 			ResourceType = typeof(FundsTransferEventResources),
-			Name = nameof(FundsTransferEventResources.Type_Name))]
+			Name = nameof(FundsTransferEventResources.Type_Name),
+			Description = nameof(FundsTransferEventResources.Type_Description))]
 		public virtual FundsTransferEventType Type { get; set; }
 
 		/// <summary>
-		/// Optional comments.
+		/// Optional comments for the event.
 		/// </summary>
 		[MaxLength(CommentsLength)]
 		[DataType(DataType.MultilineText)]
 		[Display(
 			ResourceType = typeof(FundsTransferEventResources),
-			Name = nameof(FundsTransferEventResources.Comments_Name))]
+			Name = nameof(FundsTransferEventResources.Comments_Name),
+			Description = nameof(FundsTransferEventResources.Comments_Description))]
 		public virtual string Comments { get; set; }
 
 		/// <summary>
-		/// Optional serialized exception. This is set when the digestion of a response fro the EFT/ACH system failed
+		/// Optional serialized exception. This is set when the digestion of a response from the EFT/ACH system failed.
 		/// </summary>
 		[Display(
 			ResourceType = typeof(FundsTransferEventResources),
-			Name = nameof(FundsTransferEventResources.ExceptionData_Name))]
+			Name = nameof(FundsTransferEventResources.ExceptionData_Name),
+			Description = nameof(FundsTransferEventResources.ExceptionData_Description))]
 		public virtual byte[] ExceptionData { get; set; }
 
 		#endregion

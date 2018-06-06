@@ -117,17 +117,32 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="CodeName_Description" xml:space="preserve">
+    <value>Identifier of the state, to be referred by the system.</value>
+  </data>
   <data name="CodeName_Name" xml:space="preserve">
     <value>Code Name</value>
+  </data>
+  <data name="Description_Description" xml:space="preserve">
+    <value>Optional description of the state.</value>
   </data>
   <data name="Description_Name" xml:space="preserve">
     <value>Description</value>
   </data>
+  <data name="IsEnd_Description" xml:space="preserve">
+    <value>True intended to be an end state.</value>
+  </data>
   <data name="IsEnd_Name" xml:space="preserve">
     <value>Is End</value>
   </data>
+  <data name="IsStart_Description" xml:space="preserve">
+    <value>True intended to be a start state.</value>
+  </data>
   <data name="IsStart_Name" xml:space="preserve">
     <value>Is Start</value>
+  </data>
+  <data name="Name_Description" xml:space="preserve">
+    <value>Display name of the state.</value>
   </data>
   <data name="Name_Name" xml:space="preserve">
     <value>State Name</value>

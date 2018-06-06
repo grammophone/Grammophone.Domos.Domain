@@ -36,20 +36,22 @@ namespace Grammophone.Domos.Domain.Accounting
 		#region Primitive properties
 
 		/// <summary>
-		/// The type of the event.
+		/// The type of the message.
 		/// </summary>
 		[Display(
 			ResourceType = typeof(FundsTransferBatchMessageResources),
-			Name = nameof(FundsTransferBatchMessageResources.Type_Name))]
+			Name = nameof(FundsTransferBatchMessageResources.Type_Name),
+			Description = nameof(FundsTransferBatchMessageResources.Type_Description))]
 		public virtual FundsTransferBatchMessageType Type { get; set; }
 
 		/// <summary>
-		/// The date and time of the event, in UTC.
+		/// The date and time of the message, in UTC.
 		/// </summary>
 		[DataType(DataType.DateTime)]
 		[Display(
 			ResourceType = typeof(FundsTransferBatchMessageResources),
-			Name = nameof(FundsTransferBatchMessageResources.Time_Name))]
+			Name = nameof(FundsTransferBatchMessageResources.Time_Name),
+			Description = nameof(FundsTransferBatchMessageResources.Time_Description))]
 		public virtual DateTime Time { get; set; }
 
 		/// <summary>
@@ -58,7 +60,8 @@ namespace Grammophone.Domos.Domain.Accounting
 		[MaxLength(MessageCodeLength)]
 		[Display(
 			ResourceType = typeof(FundsTransferBatchMessageResources),
-			Name = nameof(FundsTransferBatchMessageResources.MessageCode_Name))]
+			Name = nameof(FundsTransferBatchMessageResources.MessageCode_Name),
+			Description = nameof(FundsTransferBatchMessageResources.MessageCode_Description))]
 		public virtual string MessageCode { get; set; }
 
 		/// <summary>
@@ -68,7 +71,8 @@ namespace Grammophone.Domos.Domain.Accounting
 		[DataType(DataType.MultilineText)]
 		[Display(
 			ResourceType = typeof(FundsTransferBatchMessageResources),
-			Name = nameof(FundsTransferBatchMessageResources.Comments_Name))]
+			Name = nameof(FundsTransferBatchMessageResources.Comments_Name),
+			Description = nameof(FundsTransferBatchMessageResources.Comments_Description))]
 		public virtual string Comments { get; set; }
 
 		/// <summary>
@@ -76,7 +80,8 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// </summary>
 		[Display(
 			ResourceType = typeof(FundsTransferBatchMessageResources),
-			Name = nameof(FundsTransferBatchMessageResources.GUID_Name))]
+			Name = nameof(FundsTransferBatchMessageResources.GUID_Name),
+			Description = nameof(FundsTransferBatchMessageResources.GUID_Description))]
 		public virtual Guid GUID { get; set; }
 
 		#endregion
