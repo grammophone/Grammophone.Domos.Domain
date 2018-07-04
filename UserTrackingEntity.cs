@@ -12,7 +12,7 @@ namespace Grammophone.Domos.Domain
 	/// </summary>
 	/// <typeparam name="U">The type of user, derived from <see cref="User"/>.</typeparam>
 	[Serializable]
-	public abstract class UserTrackingEntity<U> : TrackingEntity<U>, IUserTrackingEntity<U>
+	public abstract class UserTrackingEntity<U> : TrackingEntity<U>, IUserTrackingEntity<U>, IUpdatableOwnerEntity<U>
 		where U : User
 	{
 		#region Private fields
@@ -25,7 +25,7 @@ namespace Grammophone.Domos.Domain
 
 		/// <summary>
 		/// The ID of the user who owns the entity.
-		/// Once set, cannot be changed.
+		/// Once set, cannot be changed, except via method <see cref="AddOwner(U)"/>.
 		/// </summary>
 		[IgnoreDataMember]
 		public virtual long OwningUserID
@@ -42,7 +42,7 @@ namespace Grammophone.Domos.Domain
 
 		/// <summary>
 		/// The owner of the entity.
-		/// Once set, cannot be changed.
+		/// Once set, cannot be changed, except via method <see cref="AddOwner(U)"/>.
 		/// </summary>
 		[IgnoreDataMember]
 		public virtual U OwningUser
@@ -65,27 +65,26 @@ namespace Grammophone.Domos.Domain
 		/// Test whether a user is the owner of the entity.
 		/// </summary>
 		/// <param name="userID">The ID of the user.</param>
-		public bool IsOwnedBy(long userID)
-		{
-			// If the owner is not set, then the current user will become the owner after saving.
-			if (this.OwningUserID == 0) return true;
-
-			return userID == this.OwningUserID;
-		}
+		public bool IsOwnedBy(long userID) => userTrackingTrait.IsOwnedBy(userID);
 
 		/// <summary>
 		/// Test whether a user is the owner of the entity.
 		/// </summary>
 		/// <param name="user">The user.</param>
-		public bool IsOwnedBy(U user)
-		{
-			if (user == null) throw new ArgumentNullException(nameof(user));
+		public bool IsOwnedBy(U user) => userTrackingTrait.IsOwnedBy(user);
 
-			// If the owner is not set, then the current user will become the owner after saving.
-			if (this.OwningUserID == 0) return true;
+		/// <summary>
+		/// Returns true when the entity has an owner, false otherwise.
+		/// </summary>
+		public bool HasOwners() => userTrackingTrait.HasOwners();
 
-			return user.ID == this.OwningUserID;
-		}
+		/// <summary>
+		/// Set the owner for the entity. Any
+		/// previous owner will be replaced.
+		/// </summary>
+		/// <param name="user">The user to own the entity.</param>
+		/// <returns>Always returns true.</returns>
+		public bool AddOwner(U user) => userTrackingTrait.AddOwner(user);
 
 		#endregion
 	}

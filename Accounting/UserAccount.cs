@@ -58,21 +58,26 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// Test whether a user is the owner of the account.
 		/// </summary>
 		/// <param name="userID">The ID of the user.</param>
-		public bool IsOwnedBy(long userID)
-		{
-			return userID == this.OwningUserID;
-		}
+		public bool IsOwnedBy(long userID) => userTrackingTrait.IsOwnedBy(userID);
 
 		/// <summary>
 		/// Test whether a user is the owner of the account.
 		/// </summary>
 		/// <param name="user">The user.</param>
-		public bool IsOwnedBy(U user)
-		{
-			if (user == null) throw new ArgumentNullException(nameof(user));
+		public bool IsOwnedBy(U user) => userTrackingTrait.IsOwnedBy(user);
 
-			return user.ID == this.OwningUserID;
-		}
+		/// <summary>
+		/// Returns true when the account has an owner, false otherwise.
+		/// </summary>
+		public bool HasOwners() => userTrackingTrait.HasOwners();
+
+		/// <summary>
+		/// Set the <see cref="OwningUser"/> of the account. Any
+		/// previous owner will be replaced.
+		/// </summary>
+		/// <param name="user">The user to own the account.</param>
+		/// <returns>Always returns true.</returns>
+		public bool AddOwner(U user) => userTrackingTrait.AddOwner(user);
 
 		#endregion
 	}

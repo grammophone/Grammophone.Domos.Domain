@@ -230,14 +230,14 @@ namespace Grammophone.Domos.Domain
 			}
 		}
 
-		/// <summary>
-		/// Returns true when the given user is the same.
-		/// </summary>
-		bool IOwnedEntity<User>.IsOwnedBy(User user) => this == user;
-
 		#endregion
 
 		#region Public methods
+
+		/// <summary>
+		/// Returns true when the given user is the same as this instance.
+		/// </summary>
+		bool IOwnedEntity<User>.IsOwnedBy(User user) => this == user;
 
 		/// <summary>
 		/// Get the dispositions of the user against a segregation.

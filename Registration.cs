@@ -49,8 +49,6 @@ namespace Grammophone.Domos.Domain
 		/// <summary>
 		/// Returns true when a <paramref name="user"/> has ID equal to <see cref="UserID"/>.
 		/// </summary>
-		/// <param name="user"></param>
-		/// <returns></returns>
 		public bool IsOwnedBy(User user) => user.ID == this.UserID;
 
 		/// <summary>

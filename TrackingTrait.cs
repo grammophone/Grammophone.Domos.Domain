@@ -191,6 +191,46 @@ namespace Grammophone.Domos.Domain
 		/// </summary>
 		public U LastModifierUser { get; set; }
 
+		/// <summary>
+		/// Record the creator of the entity and the creation time.
+		/// The method can only be called once.
+		/// </summary>
+		/// <param name="user">The user creating the entity.</param>
+		/// <param name="utcTime">The time of creation, in UTC.</param>
+		/// <exception cref="ArgumentException">Thrown when the time is not in UTC.</exception>
+		/// <exception cref="AccessDeniedDomainException">Thrown when the creator has already been set.</exception>
+		public void SetCreator(U user, DateTime utcTime)
+		{
+			if (user == null) throw new ArgumentNullException(nameof(user));
+			if (utcTime.Kind != DateTimeKind.Utc) throw new ArgumentException("The time should be in UTC.", nameof(utcTime));
+
+			long userID = user.ID;
+
+			this.CreatorUser = user;
+			this.CreatorUserID = userID;
+			this.LastModifierUser = user;
+			this.LastModifierUserID = userID;
+
+			this.CreationDate = utcTime;
+			this.LastModificationDate = utcTime;
+		}
+
+		/// <summary>
+		/// Record a change by a user.
+		/// </summary>
+		/// <param name="user">The user changing the entity.</param>
+		/// <param name="utcTime">The time of change of the entity, in UTC.</param>
+		/// <exception cref="ArgumentException">Thrown when the time is not given in UTC.</exception>
+		public void RecordChange(U user, DateTime utcTime)
+		{
+			if (user == null) throw new ArgumentNullException(nameof(user));
+			if (utcTime.Kind != DateTimeKind.Utc) throw new ArgumentException("The time should be in UTC.", nameof(utcTime));
+
+			this.LastModifierUser = user;
+			this.LastModifierUserID = user.ID;
+			this.LastModificationDate = utcTime;
+		}
+
 		#endregion
 	}
 }

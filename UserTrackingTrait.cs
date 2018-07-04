@@ -86,7 +86,7 @@ namespace Grammophone.Domos.Domain
 
 		/// <summary>
 		/// The owner of the entity.
-		/// Once set, cannot be changed.
+		/// Once set, cannot be changed, except via method <see cref="AddOwner(U)"/>.
 		/// </summary>
 		public U OwningUser
 		{
@@ -104,6 +104,47 @@ namespace Grammophone.Domos.Domain
 					owningUser = value;
 				}
 			}
+		}
+
+		/// <summary>
+		/// Test whether a user is the owner of the entity.
+		/// </summary>
+		/// <param name="userID">The ID of the user.</param>
+		public bool IsOwnedBy(long userID)
+		{
+			return userID == owningUserID;
+		}
+
+		/// <summary>
+		/// Test whether a user is the owner of the entity.
+		/// </summary>
+		/// <param name="user">The user.</param>
+		public bool IsOwnedBy(U user)
+		{
+			if (user == null) throw new ArgumentNullException(nameof(user));
+
+			return user.ID == owningUserID;
+		}
+
+		/// <summary>
+		/// Returns true if the entity has an owner.
+		/// </summary>
+		public bool HasOwners() => owningUserID != 0L || owningUser != null;
+
+		/// <summary>
+		/// Set the owner for the entity. Any
+		/// previous owner will be replaced.
+		/// </summary>
+		/// <param name="user">The user to own the entity.</param>
+		/// <returns>Always returns true.</returns>
+		public bool AddOwner(U user)
+		{
+			if (user == null) throw new ArgumentNullException(nameof(user));
+
+			owningUserID = user.ID;
+			owningUser = user;
+
+			return true;
 		}
 
 		#endregion

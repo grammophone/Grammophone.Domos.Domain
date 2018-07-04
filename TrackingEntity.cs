@@ -136,5 +136,27 @@ namespace Grammophone.Domos.Domain
 		}
 
 		#endregion
+
+		#region Public methods
+
+		/// <summary>
+		/// Record the creator of the entity and the creation time.
+		/// The method can only be called once.
+		/// </summary>
+		/// <param name="user">The user creating the entity.</param>
+		/// <param name="utcTime">The time of creation, in UTC.</param>
+		/// <exception cref="ArgumentException">Thrown when the time is not in UTC.</exception>
+		/// <exception cref="AccessDeniedDomainException">Thrown when the creator has already been set.</exception>
+		public void SetCreator(U user, DateTime utcTime) => trackingTrait.SetCreator(user, utcTime);
+
+		/// <summary>
+		/// Record a change by a user.
+		/// </summary>
+		/// <param name="user">The user changing the entity.</param>
+		/// <param name="utcTime">The time of change of the entity, in UTC.</param>
+		/// <exception cref="ArgumentException">Thrown when the time is not given in UTC.</exception>
+		public virtual void RecordChange(U user, DateTime utcTime) => trackingTrait.RecordChange(user, utcTime);
+
+		#endregion
 	}
 }

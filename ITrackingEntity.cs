@@ -43,7 +43,7 @@ namespace Grammophone.Domos.Domain
 	/// Implemented by entities supporting change tracking.
 	/// </summary>
 	/// <typeparam name="U">The type of user, derived from <see cref="User"/>.</typeparam>
-	public interface ITrackingEntity<U> : ITrackingEntity
+	public interface ITrackingEntity<U> : ITrackingEntity, ICreationLoggingEntity<U>, IChangeLoggingEntity<U>
 		where U : User
 	{
 		/// <summary>

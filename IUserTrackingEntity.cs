@@ -23,7 +23,7 @@ namespace Grammophone.Domos.Domain
 	/// Strong-type contract for entities supporting user ownership and change tracking.
 	/// </summary>
 	/// <typeparam name="U">The type of user, derived from <see cref="User"/>.</typeparam>
-	public interface IUserTrackingEntity<U> : IUserTrackingEntity, ITrackingEntity<U>, IOwnedEntity<U>
+	public interface IUserTrackingEntity<U> : IUserTrackingEntity, ITrackingEntity<U>, IUpdatableOwnerEntity<U>
 		where U : User
 	{
 		/// <summary>
