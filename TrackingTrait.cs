@@ -222,7 +222,6 @@ namespace Grammophone.Domos.Domain
 			if (utcTime.Kind != DateTimeKind.Utc) throw new ArgumentException("The time should be in UTC.", nameof(utcTime));
 
 			this.LastModifierUser = user;
-			this.LastModifierUserID = user.ID;
 
 			this.LastModificationDate = utcTime;
 		}
