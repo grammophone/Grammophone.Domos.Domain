@@ -204,15 +204,10 @@ namespace Grammophone.Domos.Domain
 			if (user == null) throw new ArgumentNullException(nameof(user));
 			if (utcTime.Kind != DateTimeKind.Utc) throw new ArgumentException("The time should be in UTC.", nameof(utcTime));
 
-			long userID = user.ID;
-
 			this.CreatorUser = user;
-			this.CreatorUserID = userID;
-			this.LastModifierUser = user;
-			this.LastModifierUserID = userID;
+			this.CreatorUserID = user.ID;
 
 			this.CreationDate = utcTime;
-			this.LastModificationDate = utcTime;
 		}
 
 		/// <summary>
@@ -228,6 +223,7 @@ namespace Grammophone.Domos.Domain
 
 			this.LastModifierUser = user;
 			this.LastModifierUserID = user.ID;
+
 			this.LastModificationDate = utcTime;
 		}
 
