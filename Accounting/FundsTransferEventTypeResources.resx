@@ -129,6 +129,10 @@
   <data name="Rejected_Name" xml:space="preserve">
     <value>Rejected</value>
   </data>
+  <data name="Returned_Name" xml:space="preserve">
+    <value>Returned</value>
+    <comment>[Display(</comment>
+  </data>
   <data name="Submitted_Name" xml:space="preserve">
     <value>Submitted</value>
   </data>

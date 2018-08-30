@@ -30,21 +30,21 @@ namespace Grammophone.Domos.Domain.Accounting
 		Submitted = 100,
 
 		/// <summary>
+		/// The transfer has been rejected by the EFT/ACH system because it was malformed.
+		/// </summary>
+		[Display(
+			ResourceType = typeof(FundsTransferEventTypeResources),
+			Name = nameof(FundsTransferEventTypeResources.Rejected_Name))]
+		Rejected = 200,//1100,
+
+		/// <summary>
 		/// The transfer has been accepted by the EFT/ACH system
 		/// but has not yet succeeded or failed.
 		/// </summary>
 		[Display(
 			ResourceType = typeof(FundsTransferEventTypeResources),
 			Name = nameof(FundsTransferEventTypeResources.Accepted_Name))]
-		Accepted = 200,
-
-		/// <summary>
-		/// The transfer has been successful.
-		/// </summary>
-		[Display(
-			ResourceType = typeof(FundsTransferEventTypeResources),
-			Name = nameof(FundsTransferEventTypeResources.Succeeded_Name))]
-		Succeeded = 300,
+		Accepted = 250,//200,
 
 		/// <summary>
 		/// The transfer has failed.
@@ -52,14 +52,22 @@ namespace Grammophone.Domos.Domain.Accounting
 		[Display(
 			ResourceType = typeof(FundsTransferEventTypeResources),
 			Name = nameof(FundsTransferEventTypeResources.Failed_Name))]
-		Failed = 1000,
+		Failed = 300,//1000,
 
 		/// <summary>
-		/// The transfer has been rejected by the EFT/ACH system because it was malformed.
+		/// The transfer has been successful.
 		/// </summary>
 		[Display(
 			ResourceType = typeof(FundsTransferEventTypeResources),
-			Name = nameof(FundsTransferEventTypeResources.Rejected_Name))]
-		Rejected = 1100
+			Name = nameof(FundsTransferEventTypeResources.Succeeded_Name))]
+		Succeeded = 350,//300,
+
+		/// <summary>
+		/// The transfer request has been anulled by the account owner and the funds have been reversed.
+		/// </summary>
+		[Display(
+			ResourceType = typeof(FundsTransferEventTypeResources),
+			Name = nameof(FundsTransferEventTypeResources.Returned_Name))]
+		Returned = 400
 	}
 }

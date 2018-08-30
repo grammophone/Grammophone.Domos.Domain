@@ -97,6 +97,15 @@ namespace Grammophone.Domos.Domain.Accounting {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Returned.
+        /// </summary>
+        public static string Returned_Name {
+            get {
+                return ResourceManager.GetString("Returned_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Submitted.
         /// </summary>
         public static string Submitted_Name {
