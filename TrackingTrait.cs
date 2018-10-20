@@ -152,10 +152,13 @@ namespace Grammophone.Domos.Domain
 			{
 				if (creatorUserID != value)
 				{
-					if (creatorUserID != 0L && value != 0L)
-						throw new AccessDeniedDomainException("The creator of the entity cannot be changed.", this);
+					if (value != 0L)
+					{
+						if (creatorUserID != 0L)
+							throw new AccessDeniedDomainException("The creator of the entity cannot be changed.", this);
 
-					creatorUserID = value;
+						creatorUserID = value;
+					}
 				}
 			}
 		}
