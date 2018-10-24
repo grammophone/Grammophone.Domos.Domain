@@ -121,10 +121,6 @@ namespace Grammophone.Domos.Domain
 				{
 					creationDate = value;
 				}
-				else if (value < creationDate)
-				{
-					throw new AccessDeniedDomainException("The creation date cannot be changed.", this);
-				}
 			}
 		}
 
