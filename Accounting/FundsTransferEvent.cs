@@ -49,6 +49,7 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// <summary>
 		/// The UTC date and time of the event.
 		/// </summary>
+		[DataType(DataType.DateTime)]
 		[Display(
 			ResourceType = typeof(FundsTransferEventResources),
 			Name = nameof(FundsTransferEventResources.Time_Name),
