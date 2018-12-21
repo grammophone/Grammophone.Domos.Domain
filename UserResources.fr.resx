@@ -154,7 +154,7 @@
     <value>Nom de Famille</value>
   </data>
   <data name="RegistrationStatus_Description" xml:space="preserve">
-    <value>The registration status of the user.</value>
+    <value>Le statut de registration de l'utilisateur.</value>
   </data>
   <data name="RegistrationStatus_Name" xml:space="preserve">
     <value>Statut</value>
