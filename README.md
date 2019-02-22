@@ -34,7 +34,7 @@ The user of a logic session can gain access to any artifact of the aforementione
 If entities implement the `IOwnedEntity` interface, there's also fine-grain access control like 'read own', 'write own' etc.
 
 ## Roles and Disposition Types
-`Role` entities are the typical enablers found in standard RBAC systems for enabling `User`-derived entities to access artifacts, and are connected to `User`-derived entities via a many-to-many relationship.
+`Role` entities are the typical system-wide enablers found in standard RBAC systems for enabling `User`-derived entities to access artifacts, and are connected to `User`-derived entities via a many-to-many relationship.
 
 `DispositionType` entities are much like roles, but they have two differences:
 * They are assigned to a `User`-derived entity only with respect to a `Segregation`.
