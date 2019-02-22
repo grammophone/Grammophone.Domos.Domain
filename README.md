@@ -6,7 +6,7 @@ It is part of the 3rd generation of the Domos integrated session system which wi
 workflow and accounting scenarios.
 
 ## Overview
-This library defines the core entities library required for a Domos system. It includes entities required to define users, internal credentials, external trusted authentication data by Identity Providers such as OAuth implementations and the base security, workflow and accounting mechanism.
+This library defines the core entities required for a Domos system. It includes entities required to define users, internal credentials, external trusted authentication data by Identity Providers such as OAuth implementations and the base security, workflow and accounting mechanism.
 
 Domos is a modular system which can use as much functionality as needed. Three main levels of functionality are offered out of the box:
 * Access Control
