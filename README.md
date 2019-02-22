@@ -28,8 +28,10 @@ These are organized in Permissions which are granted to the logic layer session 
 
 ## Access Rights Assignment
 The user of a logic session can gain access to any artifact of the aforementioned layers by any of the following ways:
-1. Via `Role`s: Roles are system-wide enablers for users possessing them to access entities, managers and `StatePath` executions. If entities implement the `IOwnedEntity` interface, there's also fine-grain access control like 'read own', 'write own' etc.
+1. Via `Role`s: Roles are system-wide enablers for users possessing them to access entities, managers and `StatePath` executions.
 2. Via `Disposition`s: These are role-like assignments but specific only to entities belonging to a `Segregation`. Typical example of segregation can be a Company entity in a Software-As-A-Service scenario. Entities belonging to a segregation implement the `ISegregatedEntity` interface.
+
+If entities implement the `IOwnedEntity` interface, there's also fine-grain access control like 'read own', 'write own' etc.
 
 ## Roles and Disposition Types
 `Role` entities are the typical enablers found in standard RBAC systems for enabling `User`-derived entities to access artifacts, and are connected to `User`-derived entities via a many-to-many relationship.
