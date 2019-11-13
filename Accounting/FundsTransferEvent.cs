@@ -19,7 +19,7 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// <summary>
 		/// The maximum length of the <see cref="ResponseCode"/> property.
 		/// </summary>
-		public const int ResponseCodeLength = 3;
+		public const int ResponseCodeLength = 16;
 
 		/// <summary>
 		/// The maximum length of the <see cref="TraceCode"/> property.
