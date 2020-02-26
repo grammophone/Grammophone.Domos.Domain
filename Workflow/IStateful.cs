@@ -7,13 +7,9 @@ using System.Threading.Tasks;
 namespace Grammophone.Domos.Domain.Workflow
 {
 	/// <summary>
-	/// Contract for entities having a state in a workflow.
+	/// Abstract contract for entities having a state in a workflow.
 	/// </summary>
-	/// <typeparam name="U">The type of the users, derived from <see cref="User"/>.</typeparam>
-	/// <typeparam name="ST">The type of state transitions, derived from <see cref="StateTransition{U}"/>.</typeparam>
-	public interface IStateful<U, ST> : ITrackingEntity<U>, IEntityWithID<long>
-		where U : User
-		where ST : StateTransition<U>
+	public interface IStateful : IEntityWithID<long>
 	{
 		/// <summary>
 		/// The current <see cref="State"/> of the object.
@@ -39,7 +35,17 @@ namespace Grammophone.Domos.Domain.Workflow
 		/// or null if it didn't happen.
 		/// </summary>
 		DateTime? LastStateGroupChangeDate { get; set; }
+	}
 
+	/// <summary>
+	/// Contract for entities having a state in a workflow.
+	/// </summary>
+	/// <typeparam name="U">The type of the users, derived from <see cref="User"/>.</typeparam>
+	/// <typeparam name="ST">The type of state transitions, derived from <see cref="StateTransition{U}"/>.</typeparam>
+	public interface IStateful<U, ST> : IStateful, ITrackingEntity<U>
+		where U : User
+		where ST : StateTransition<U>
+	{
 		/// <summary>
 		/// The history of state transitions of this object.
 		/// </summary>

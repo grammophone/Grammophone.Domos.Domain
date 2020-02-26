@@ -66,12 +66,12 @@ namespace Grammophone.Domos.Domain.Workflow
 		public virtual int Visibility { get; set; }
 
 		/// <summary>
-		/// Applied with AND operator to an <see cref="IStateful{U, ST}.ChangeStamp"/> upon successful execution.
+		/// Applied with AND operator to an <see cref="IStateful.ChangeStamp"/> upon successful execution.
 		/// </summary>
 		public virtual int ChangeStampANDMask { get; set; }
 
 		/// <summary>
-		/// Applied with OR operator to an <see cref="IStateful{U, ST}.ChangeStamp"/> upon successful execution.
+		/// Applied with OR operator to an <see cref="IStateful.ChangeStamp"/> upon successful execution.
 		/// </summary>
 		public virtual int ChangeStampORMask { get; set; }
 

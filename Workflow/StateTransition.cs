@@ -18,13 +18,13 @@ namespace Grammophone.Domos.Domain.Workflow
 		#region Primitive properties
 
 		/// <summary>
-		/// The value of the stateful object's <see cref="IStateful{U, ST}.ChangeStamp"/> before the execution
+		/// The value of the stateful object's <see cref="IStateful.ChangeStamp"/> before the execution
 		/// of the <see cref="Path"/>.
 		/// </summary>
 		public virtual int ChangeStampBefore { get; set; }
 
 		/// <summary>
-		/// The value of the stateful object's <see cref="IStateful{U, ST}.ChangeStamp"/> after the execution
+		/// The value of the stateful object's <see cref="IStateful.ChangeStamp"/> after the execution
 		/// of the <see cref="Path"/>.
 		/// </summary>
 		public virtual int ChangeStampAfter { get; set; }
