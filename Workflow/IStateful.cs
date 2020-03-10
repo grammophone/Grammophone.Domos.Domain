@@ -45,7 +45,7 @@ namespace Grammophone.Domos.Domain.Workflow
 		/// Else, when a domain entity has multiple states and we need an adapter pattern to return
 		/// multiple <see cref="IStateful"/> implementations, return the underlying entity.
 		/// </remarks>
-		object GetBackingEntity();
+		object GetBackingDomainEntity();
 	}
 
 	/// <summary>
