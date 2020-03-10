@@ -35,6 +35,17 @@ namespace Grammophone.Domos.Domain.Workflow
 		/// or null if it didn't happen.
 		/// </summary>
 		DateTime? LastStateGroupChangeDate { get; set; }
+
+		/// <summary>
+		/// Get the domain entity supporting the stateful object.
+		/// </summary>
+		/// <remarks>
+		/// In the common case, where the <see cref="IStateful"/> implementation is
+		/// a domain entity itself, just return 'this'.
+		/// Else, when a domain entity has multiple states and we need an adapter pattern to return
+		/// multiple <see cref="IStateful"/> implementations, return the underlying entity.
+		/// </remarks>
+		object GetBackingEntity();
 	}
 
 	/// <summary>
