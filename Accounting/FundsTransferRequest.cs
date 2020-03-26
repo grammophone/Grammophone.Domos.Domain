@@ -31,6 +31,15 @@ namespace Grammophone.Domos.Domain.Accounting
 		#region Primitive properties
 
 		/// <summary>
+		/// Application-defined category of the funds transfer request.
+		/// </summary>
+		[Display(
+			ResourceType = typeof(FundsTransferRequestResources),
+			Name = nameof(FundsTransferRequestResources.Category_Name),
+			Description = nameof(FundsTransferRequestResources.Category_Description))]
+		public virtual int Category { get; set; }
+
+		/// <summary>
 		/// If positive, it is the amount is deposited to the bank account specified
 		/// by <see cref="EncryptedBankAccountInfo"/>, else it is withdrawn.
 		/// </summary>

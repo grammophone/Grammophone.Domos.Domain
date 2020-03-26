@@ -123,6 +123,12 @@
   <data name="Amount_Name" xml:space="preserve">
     <value>Montant</value>
   </data>
+  <data name="Category_Description" xml:space="preserve">
+    <value>Catégorie de la requête.</value>
+  </data>
+  <data name="Category_Name" xml:space="preserve">
+    <value>Catégorie</value>
+  </data>
   <data name="Comments_Description" xml:space="preserve">
     <value>Commentaires optionnels pour la requête.</value>
   </data>

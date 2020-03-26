@@ -123,6 +123,12 @@
   <data name="Amount_Name" xml:space="preserve">
     <value>Amount</value>
   </data>
+  <data name="Category_Description" xml:space="preserve">
+    <value>Category of the request.</value>
+  </data>
+  <data name="Category_Name" xml:space="preserve">
+    <value>Category</value>
+  </data>
   <data name="Comments_Description" xml:space="preserve">
     <value>Optional comments for the request.</value>
   </data>
