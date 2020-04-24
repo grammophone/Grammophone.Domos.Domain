@@ -347,7 +347,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\InvoiceTypeResources.fr.resx" />
     <EmbeddedResource Include="Accounting\InvoiceTypeResources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>InvoiceTypeResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Accounting\JournalLineResources.fr.resx" />
