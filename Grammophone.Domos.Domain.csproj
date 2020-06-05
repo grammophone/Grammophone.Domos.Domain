@@ -1,447 +1,304 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{D758EE48-75DF-42D6-B6D4-9FABDAE41F1C}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Grammophone.Domos.Domain</RootNamespace>
-    <AssemblyName>Grammophone.Domos.Domain</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
+    <TargetFramework>net472</TargetFramework>
+    <AssemblyTitle>Grammophone.Users.Domain</AssemblyTitle>
+    <Product>Grammophone.Users.Domain</Product>
+    <Copyright>Copyright ©  2016</Copyright>
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <DocumentationFile>bin\$(Configuration)\Grammophone.Domos.Domain.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Debug\Grammophone.Domos.Domain.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Release\Grammophone.Domos.Domain.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Accounting\Account.cs" />
-    <Compile Include="Accounting\AccountResources.Designer.cs">
+    <Compile Update="Accounting\AccountResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AccountResources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Accounting\CreditSystemResources.Designer.cs">
+    <Compile Update="Accounting\CreditSystemResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CreditSystemResources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Accounting\EncryptedBankAccountInfo.cs" />
-    <Compile Include="Accounting\CreditSystem.cs" />
-    <Compile Include="Accounting\FundsTransferBatchMessage.cs" />
-    <Compile Include="Accounting\FundsTransferBatchMessageResources.Designer.cs">
+    <Compile Update="Accounting\FundsTransferBatchMessageResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FundsTransferBatchMessageResources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Accounting\FundsTransferBatchMessageType.cs" />
-    <Compile Include="Accounting\FundsTransferBatchMessageTypeResources.Designer.cs">
+    <Compile Update="Accounting\FundsTransferBatchMessageTypeResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FundsTransferBatchMessageTypeResources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Accounting\FundsTransferEvent.cs" />
-    <Compile Include="Accounting\FundsTransferEventResources.Designer.cs">
+    <Compile Update="Accounting\FundsTransferEventResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FundsTransferEventResources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Accounting\FundsTransferEventType.cs" />
-    <Compile Include="Accounting\FundsTransferEventTypeResources.Designer.cs">
+    <Compile Update="Accounting\FundsTransferEventTypeResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FundsTransferEventTypeResources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Accounting\FundsTransferRequest.cs" />
-    <Compile Include="Accounting\FundsTransferBatch.cs" />
-    <Compile Include="Accounting\FundsTransferRequestGroup.cs" />
-    <Compile Include="Accounting\FundsTransferRequestResources.Designer.cs">
+    <Compile Update="Accounting\FundsTransferRequestResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FundsTransferRequestResources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Accounting\FundsTransferState.cs" />
-    <Compile Include="Accounting\IAccount.cs" />
-    <Compile Include="Accounting\IBankingDetail.cs" />
-    <Compile Include="Accounting\Invoice.cs" />
-    <Compile Include="Accounting\InvoiceEvent.cs" />
-    <Compile Include="Accounting\InvoiceEventResources.Designer.cs">
+    <Compile Update="Accounting\InvoiceEventResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>InvoiceEventResources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Accounting\InvoiceForm.cs" />
-    <Compile Include="Accounting\InvoiceFormResources.Designer.cs">
+    <Compile Update="Accounting\InvoiceFormResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>InvoiceFormResources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Accounting\InvoiceLine.cs" />
-    <Compile Include="Accounting\InvoiceLineResources.Designer.cs">
+    <Compile Update="Accounting\InvoiceLineResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>InvoiceLineResources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Accounting\InvoiceLineTaxComponent.cs" />
-    <Compile Include="Accounting\InvoiceLineTaxComponentResources.Designer.cs">
+    <Compile Update="Accounting\InvoiceLineTaxComponentResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>InvoiceLineTaxComponentResources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Accounting\InvoiceResources.Designer.cs">
+    <Compile Update="Accounting\InvoiceResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>InvoiceResources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Accounting\InvoiceState.cs" />
-    <Compile Include="Accounting\InvoiceStateResources.Designer.cs">
+    <Compile Update="Accounting\InvoiceStateResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>InvoiceStateResources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Accounting\InvoiceType.cs" />
-    <Compile Include="Accounting\InvoiceTypeResources.Designer.cs">
+    <Compile Update="Accounting\InvoiceTypeResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>InvoiceTypeResources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Accounting\ITransferableFundsHolder.cs" />
-    <Compile Include="Accounting\ITransferableFundsHolderWithBankAccount.cs" />
-    <Compile Include="Accounting\Journal.cs" />
-    <Compile Include="Accounting\JournalLine.cs" />
-    <Compile Include="Accounting\JournalLineResources.Designer.cs">
+    <Compile Update="Accounting\JournalLineResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>JournalLineResources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Accounting\JournalResources.Designer.cs">
+    <Compile Update="Accounting\JournalResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>JournalResources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Accounting\Posting.cs" />
-    <Compile Include="Accounting\Remittance.cs" />
-    <Compile Include="Accounting\RemittanceResources.Designer.cs">
+    <Compile Update="Accounting\RemittanceResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RemittanceResources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Accounting\TrackingAccount.cs" />
-    <Compile Include="Accounting\UserAccount.cs" />
-    <Compile Include="Disposition.cs" />
-    <Compile Include="DispositionResources.Designer.cs">
+    <Compile Update="DispositionResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DispositionResources.resx</DependentUpon>
     </Compile>
-    <Compile Include="DispositionStatus.cs" />
-    <Compile Include="DispositionTrackingEntity.cs" />
-    <Compile Include="DispositionTrackingEntityWithID.cs" />
-    <Compile Include="DispositionTrackingTrait.cs" />
-    <Compile Include="DispositionType.cs" />
-    <Compile Include="AccessDeniedDomainException.cs" />
-    <Compile Include="DispositionTypeResources.Designer.cs">
+    <Compile Update="DispositionTypeResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DispositionTypeResources.resx</DependentUpon>
     </Compile>
-    <Compile Include="DomainException.cs" />
-    <Compile Include="EntityWithID.cs" />
-    <Compile Include="EntityWithIdResources.Designer.cs">
+    <Compile Update="EntityWithIdResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>EntityWithIdResources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Files\ContentType.cs" />
-    <Compile Include="Files\ContentTypeResources.Designer.cs">
+    <Compile Update="Files\ContentTypeResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ContentTypeResources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Files\File.cs" />
-    <Compile Include="Files\FileResources.Designer.cs">
+    <Compile Update="Files\FileResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FileResources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Files\IFile.cs" />
-    <Compile Include="Files\TrackingFile.cs" />
-    <Compile Include="Files\UserTrackingFile.cs" />
-    <Compile Include="IAccessDeniedException.cs" />
-    <Compile Include="IChangeLoggingEntity.cs" />
-    <Compile Include="IDisposition.cs" />
-    <Compile Include="IDispositionTrackingEntity.cs" />
-    <Compile Include="IEntityAccessDeniedException.cs" />
-    <Compile Include="IEntityWithID.cs" />
-    <Compile Include="IOwnedEntity.cs" />
-    <Compile Include="ISegregatedEntity.cs" />
-    <Compile Include="ITrackingEntity.cs" />
-    <Compile Include="IUpdatableOwnerEntity.cs" />
-    <Compile Include="ICreationLoggingEntity.cs" />
-    <Compile Include="IUserTrackingEntity.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Registration.cs" />
-    <Compile Include="RegistrationProvider.cs" />
-    <Compile Include="RegistrationStatusResources.Designer.cs">
+    <Compile Update="RegistrationStatusResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RegistrationStatusResources.resx</DependentUpon>
     </Compile>
-    <Compile Include="RegistrationStatus.cs" />
-    <Compile Include="DispositionStatusResources.Designer.cs">
+    <Compile Update="DispositionStatusResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DispositionStatusResources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Role.cs" />
-    <Compile Include="RoleResources.Designer.cs">
+    <Compile Update="RoleResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RoleResources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Segregation.cs" />
-    <Compile Include="SegregatedEntity.cs" />
-    <Compile Include="SegregatedEntityWithID.cs" />
-    <Compile Include="SegregatedTrait.cs" />
-    <Compile Include="TrackingEntity.cs" />
-    <Compile Include="TrackingEntityResources.Designer.cs">
+    <Compile Update="TrackingEntityResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TrackingEntityResources.resx</DependentUpon>
     </Compile>
-    <Compile Include="TrackingEntityWithID.cs" />
-    <Compile Include="TrackingTrait.cs" />
-    <Compile Include="User.cs" />
-    <Compile Include="SegregatedUserTrackingEntity.cs" />
-    <Compile Include="SegregatedUserTrackingEntityWithID.cs" />
-    <Compile Include="UserResources.Designer.cs">
+    <Compile Update="UserResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>UserResources.resx</DependentUpon>
     </Compile>
-    <Compile Include="UserTrackingEntity.cs" />
-    <Compile Include="UserTrackingEntityWithID.cs" />
-    <Compile Include="UserTrackingTrait.cs" />
-    <Compile Include="Workflow\IStateful.cs" />
-    <Compile Include="Workflow\State.cs" />
-    <Compile Include="Workflow\StateGroup.cs" />
-    <Compile Include="Workflow\StateGroupResources.Designer.cs">
+    <Compile Update="Workflow\StateGroupResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>StateGroupResources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Workflow\StatePath.cs" />
-    <Compile Include="Workflow\StatePathResources.Designer.cs">
+    <Compile Update="Workflow\StatePathResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>StatePathResources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Workflow\StateResources.Designer.cs">
+    <Compile Update="Workflow\StateResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>StateResources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Workflow\StateTransition.cs" />
-    <Compile Include="Workflow\WorkflowGraph.cs" />
-    <Compile Include="Workflow\WorkflowGraphResources.Designer.cs">
+    <Compile Update="Workflow\WorkflowGraphResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>WorkflowGraphResources.resx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Accounting\AccountResources.fr.resx" />
-    <EmbeddedResource Include="Accounting\AccountResources.resx">
+		<None Remove=".git" />
+		<None Remove=".gitignore" />
+		<EmbeddedResource Update="Accounting\AccountResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>AccountResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Accounting\CreditSystemResources.fr.resx" />
-    <EmbeddedResource Include="Accounting\CreditSystemResources.resx">
+    <EmbeddedResource Update="Accounting\CreditSystemResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>CreditSystemResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Accounting\FundsTransferBatchMessageResources.fr.resx" />
-    <EmbeddedResource Include="Accounting\FundsTransferBatchMessageResources.resx">
+    <EmbeddedResource Update="Accounting\FundsTransferBatchMessageResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>FundsTransferBatchMessageResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Accounting\FundsTransferBatchMessageTypeResources.resx">
+    <EmbeddedResource Update="Accounting\FundsTransferBatchMessageTypeResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>FundsTransferBatchMessageTypeResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Accounting\FundsTransferBatchMessageTypeResources.fr.resx" />
-    <EmbeddedResource Include="Accounting\FundsTransferEventResources.fr.resx" />
-    <EmbeddedResource Include="Accounting\FundsTransferEventResources.resx">
+    <EmbeddedResource Update="Accounting\FundsTransferEventResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>FundsTransferEventResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Accounting\FundsTransferEventTypeResources.fr.resx" />
-    <EmbeddedResource Include="Accounting\FundsTransferEventTypeResources.resx">
+    <EmbeddedResource Update="Accounting\FundsTransferEventTypeResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>FundsTransferEventTypeResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Accounting\FundsTransferRequestResources.fr.resx" />
-    <EmbeddedResource Include="Accounting\FundsTransferRequestResources.resx">
+    <EmbeddedResource Update="Accounting\FundsTransferRequestResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>FundsTransferRequestResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Accounting\InvoiceEventResources.fr.resx" />
-    <EmbeddedResource Include="Accounting\InvoiceEventResources.resx">
+    <EmbeddedResource Update="Accounting\InvoiceEventResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>InvoiceEventResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Accounting\InvoiceFormResources.fr.resx" />
-    <EmbeddedResource Include="Accounting\InvoiceFormResources.resx">
+    <EmbeddedResource Update="Accounting\InvoiceFormResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>InvoiceFormResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Accounting\InvoiceLineResources.fr.resx" />
-    <EmbeddedResource Include="Accounting\InvoiceLineResources.resx">
+    <EmbeddedResource Update="Accounting\InvoiceLineResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>InvoiceLineResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Accounting\InvoiceLineTaxComponentResources.fr.resx" />
-    <EmbeddedResource Include="Accounting\InvoiceLineTaxComponentResources.resx">
+    <EmbeddedResource Update="Accounting\InvoiceLineTaxComponentResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>InvoiceLineTaxComponentResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Accounting\InvoiceResources.fr.resx" />
-    <EmbeddedResource Include="Accounting\InvoiceResources.resx">
+    <EmbeddedResource Update="Accounting\InvoiceResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>InvoiceResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Accounting\InvoiceStateResources.fr.resx" />
-    <EmbeddedResource Include="Accounting\InvoiceStateResources.resx">
+    <EmbeddedResource Update="Accounting\InvoiceStateResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>InvoiceStateResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Accounting\InvoiceTypeResources.fr.resx" />
-    <EmbeddedResource Include="Accounting\InvoiceTypeResources.resx">
+    <EmbeddedResource Update="Accounting\InvoiceTypeResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>InvoiceTypeResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Accounting\JournalLineResources.fr.resx" />
-    <EmbeddedResource Include="Accounting\JournalLineResources.resx">
+    <EmbeddedResource Update="Accounting\JournalLineResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>JournalLineResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Accounting\JournalResources.fr.resx" />
-    <EmbeddedResource Include="Accounting\JournalResources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>JournalResources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Accounting\RemittanceResources.fr.resx" />
-    <EmbeddedResource Include="Accounting\RemittanceResources.resx">
+    <EmbeddedResource Update="Accounting\RemittanceResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>RemittanceResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="DispositionResources.fr.resx" />
-    <EmbeddedResource Include="DispositionResources.resx">
+    <EmbeddedResource Update="DispositionResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>DispositionResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="DispositionStatusResources.fr.resx" />
-    <EmbeddedResource Include="DispositionTypeResources.fr.resx" />
-    <EmbeddedResource Include="DispositionTypeResources.resx">
+    <EmbeddedResource Update="DispositionTypeResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>DispositionTypeResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="EntityWithIdResources.fr.resx" />
-    <EmbeddedResource Include="EntityWithIdResources.resx">
+    <EmbeddedResource Update="EntityWithIdResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>EntityWithIdResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Files\ContentTypeResources.fr.resx" />
-    <EmbeddedResource Include="Files\ContentTypeResources.resx">
+    <EmbeddedResource Update="Files\ContentTypeResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>ContentTypeResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Files\FileResources.fr.resx" />
-    <EmbeddedResource Include="Files\FileResources.resx">
+    <EmbeddedResource Update="Files\FileResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>FileResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="RegistrationStatusResources.fr.resx" />
-    <EmbeddedResource Include="RegistrationStatusResources.resx">
+    <EmbeddedResource Update="RegistrationStatusResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>RegistrationStatusResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="DispositionStatusResources.resx">
+    <EmbeddedResource Update="DispositionStatusResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>DispositionStatusResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="RoleResources.fr.resx" />
-    <EmbeddedResource Include="RoleResources.resx">
+    <EmbeddedResource Update="RoleResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>RoleResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="TrackingEntityResources.fr.resx" />
-    <EmbeddedResource Include="TrackingEntityResources.resx">
+    <EmbeddedResource Update="TrackingEntityResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>TrackingEntityResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserResources.fr.resx" />
-    <EmbeddedResource Include="UserResources.resx">
+    <EmbeddedResource Update="UserResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>UserResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Workflow\StateGroupResources.fr.resx" />
-    <EmbeddedResource Include="Workflow\StateGroupResources.resx">
+    <EmbeddedResource Update="Workflow\StateGroupResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>StateGroupResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Workflow\StatePathResources.fr.resx" />
-    <EmbeddedResource Include="Workflow\StatePathResources.resx">
+    <EmbeddedResource Update="Workflow\StatePathResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>StatePathResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Workflow\StateResources.fr.resx" />
-    <EmbeddedResource Include="Workflow\StateResources.resx">
+    <EmbeddedResource Update="Workflow\StateResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>StateResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Workflow\WorkflowGraphResources.fr.resx" />
-    <EmbeddedResource Include="Workflow\WorkflowGraphResources.resx">
+    <EmbeddedResource Update="Workflow\WorkflowGraphResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>WorkflowGraphResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>
