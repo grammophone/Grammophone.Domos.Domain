@@ -1,5 +1,5 @@
 # Grammophone.Domos.Domain
-This project contains the basic entity definitions 
+This .NET Standard 2.0 library contains the basic entity definitions 
 of the Domos integrated session system.
 
 It is part of the 3rd generation of the Domos integrated session system which will support SaaS, 
