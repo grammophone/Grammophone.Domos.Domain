@@ -13,7 +13,7 @@ namespace Grammophone.Domos.Domain.Accounting
 	/// In other words, this group is reused when necessary.
 	/// </summary>
 	[Serializable]
-	public class FundsTransferRequestGroup : EntityWithID<long>
+	public class FundsTransferRequestGroup : EntityWithID<long>, IBankingDetail
 	{
 		#region Constants
 
@@ -67,6 +67,16 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// </summary>
 		[MaxLength(AccountHolderTokenLength)]
 		public virtual string AccountHolderToken { get; set; }
+
+		#endregion
+
+		#region Explicit IBankingInfo implementation
+
+		/// <summary>
+		/// Maps to <see cref="AccountHolderName"/>.
+		/// </summary>
+		/// <returns></returns>
+		string IBankingDetail.GetBankAccountHolderName() => this.AccountHolderName;
 
 		#endregion
 	}
