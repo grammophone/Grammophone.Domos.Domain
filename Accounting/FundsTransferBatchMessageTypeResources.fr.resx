@@ -132,4 +132,7 @@
   <data name="Submitted_Name" xml:space="preserve">
     <value>Soumis</value>
   </data>
+  <data name="SubmissionFailed_Name" xml:space="preserve">
+    <value>Échec de la soumission</value>
+  </data>
 </root>

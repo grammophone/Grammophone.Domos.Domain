@@ -21,12 +21,20 @@ namespace Grammophone.Domos.Domain.Accounting
 		Pending = 0,
 
 		/// <summary>
+		/// Ther batch is pending to be submitted.
+		/// </summary>
+		[Display(
+			ResourceType = typeof(FundsTransferBatchMessageTypeResources),
+			Name = nameof(FundsTransferBatchMessageTypeResources.SubmissionFailed_Name))]
+		SubmissionFailed = 50,
+
+		/// <summary>
 		/// The batch has been submitted.
 		/// </summary>
 		[Display(
 			ResourceType = typeof(FundsTransferBatchMessageTypeResources),
 			Name = nameof(FundsTransferBatchMessageTypeResources.Submitted_Name))]
-		Submitted = 1,
+		Submitted = 100,
 
 		/// <summary>
 		/// The batch was found invalid and was rejected by the credit system.
@@ -34,7 +42,7 @@ namespace Grammophone.Domos.Domain.Accounting
 		[Display(
 			ResourceType = typeof(FundsTransferBatchMessageTypeResources),
 			Name = nameof(FundsTransferBatchMessageTypeResources.Rejected_Name))]
-		Rejected = 2,
+		Rejected = 200,
 
 		/// <summary>
 		/// The batch has been accepted by the credit system.
@@ -42,7 +50,7 @@ namespace Grammophone.Domos.Domain.Accounting
 		[Display(
 			ResourceType = typeof(FundsTransferBatchMessageTypeResources),
 			Name = nameof(FundsTransferBatchMessageTypeResources.Accepted_Name))]
-		Accepted = 3,
+		Accepted = 300,
 
 		/// <summary>
 		/// A response for the batch has been received from the credit system.
@@ -50,6 +58,6 @@ namespace Grammophone.Domos.Domain.Accounting
 		[Display(
 			ResourceType = typeof(FundsTransferBatchMessageTypeResources),
 			Name = nameof(FundsTransferBatchMessageTypeResources.Responded_Name))]
-		Responded = 4
+		Responded = 400
 	}
 }
