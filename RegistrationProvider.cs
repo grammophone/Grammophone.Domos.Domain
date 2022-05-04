@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -279,6 +280,11 @@ namespace Grammophone.Domos.Domain
 		/// <summary>
 		/// Registration using Yandex.
 		/// </summary>
-		Yandex
+		Yandex,
+
+		/// <summary>
+		/// Registration using Apple.
+		/// </summary>
+		Apple 
 	}
 }
