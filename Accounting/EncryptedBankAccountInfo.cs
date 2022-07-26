@@ -96,7 +96,7 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// </summary>
 		public static bool operator ==(EncryptedBankAccountInfo left, EncryptedBankAccountInfo right)
 		{
-			if (left == null) return right == null;
+			if (Object.ReferenceEquals(left, null)) return Object.ReferenceEquals(right, null);
 
 			return left.Equals(right);
 		}
