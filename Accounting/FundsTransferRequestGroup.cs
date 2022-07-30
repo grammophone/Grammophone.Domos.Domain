@@ -68,6 +68,11 @@ namespace Grammophone.Domos.Domain.Accounting
 		[MaxLength(AccountHolderTokenLength)]
 		public virtual string AccountHolderToken { get; set; }
 
+		/// <summary>
+		/// The desired effective date of the funds transfer request or null for requesting as soon as possible. 
+		/// </summary>
+		public virtual DateTime? EffectiveDate { get; set; }
+
 		#endregion
 
 		#region Explicit IBankingInfo implementation
