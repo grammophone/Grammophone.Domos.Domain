@@ -118,7 +118,7 @@ namespace Grammophone.Domos.Domain.Accounting
 			
 			if (array1.Length != array2.Length) return false;
 
-			return array2.SequenceEqual(array2);
+			return array1.SequenceEqual(array2);
 		}
 
 		private static int GetByteArrayHashCode(byte[] array)
