@@ -19,7 +19,7 @@ namespace Grammophone.Domos.Domain.Accounting {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class FundsTransferEventTypeResources {
@@ -75,6 +75,15 @@ namespace Grammophone.Domos.Domain.Accounting {
         public static string Failed_Name {
             get {
                 return ResourceManager.GetString("Failed_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bank Info Update.
+        /// </summary>
+        public static string Info_Name {
+            get {
+                return ResourceManager.GetString("Info_Name", resourceCulture);
             }
         }
         

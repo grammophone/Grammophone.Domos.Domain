@@ -123,6 +123,9 @@
   <data name="Failed_Name" xml:space="preserve">
     <value>Échec</value>
   </data>
+  <data name="Info_Name" xml:space="preserve">
+    <value>Mise à jour des informations bancaires</value>
+  </data>
   <data name="Pending_Name" xml:space="preserve">
     <value>En Attente</value>
   </data>

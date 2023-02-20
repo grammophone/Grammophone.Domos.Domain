@@ -68,6 +68,15 @@ namespace Grammophone.Domos.Domain.Accounting
 		[Display(
 			ResourceType = typeof(FundsTransferEventTypeResources),
 			Name = nameof(FundsTransferEventTypeResources.Returned_Name))]
-		Returned = 400
+		Returned = 400,
+
+		/// <summary>
+		/// The transfer request has an info status update. This event type should
+		/// not change the actual current type and should be ignored.
+		/// </summary>
+		[Display(
+			ResourceType = typeof(FundsTransferEventTypeResources),
+			Name = nameof(FundsTransferEventTypeResources.Info_Name))]
+		Info = 600
 	}
 }
