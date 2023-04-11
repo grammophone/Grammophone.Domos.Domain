@@ -194,38 +194,42 @@ namespace Grammophone.Domos.Domain
 		/// Record the creator of the entity and the creation time.
 		/// The method can only be called once.
 		/// </summary>
+		/// <param name="trackingEntity">The entity implementing <see cref="ITrackingEntity{U}"/> to modify.</param>
 		/// <param name="user">The user creating the entity.</param>
 		/// <param name="utcTime">The time of creation, in UTC.</param>
 		/// <exception cref="ArgumentException">Thrown when the time is not in UTC.</exception>
 		/// <exception cref="AccessDeniedDomainException">Thrown when the creator has already been set.</exception>
-		public void SetCreator(U user, DateTime utcTime)
+		public void SetCreator(ITrackingEntity<U> trackingEntity, U user, DateTime utcTime)
 		{
+			if (trackingEntity == null) throw new ArgumentNullException(nameof(trackingEntity));
 			if (user == null) throw new ArgumentNullException(nameof(user));
 			if (utcTime.Kind != DateTimeKind.Utc) throw new ArgumentException("The time should be in UTC.", nameof(utcTime));
 
-			this.CreatorUser = user;
-			this.CreatorUserID = user.ID;
+			trackingEntity.CreatorUser = user;
+			trackingEntity.CreatorUserID = user.ID;
 
-			this.CreationDate = utcTime;
+			trackingEntity.CreationDate = utcTime;
 		}
 
 		/// <summary>
 		/// Record a change by a user.
 		/// </summary>
+		/// <param name="trackingEntity">The entity implementing <see cref="ITrackingEntity{U}"/> to modify.</param>
 		/// <param name="user">The user changing the entity.</param>
 		/// <param name="utcTime">The time of change of the entity, in UTC.</param>
 		/// <exception cref="ArgumentException">Thrown when the time is not given in UTC.</exception>
-		public void RecordChange(U user, DateTime utcTime)
+		public void RecordChange(ITrackingEntity<U> trackingEntity, U user, DateTime utcTime)
 		{
+			if (trackingEntity == null) throw new ArgumentNullException(nameof(trackingEntity));
 			if (user == null) throw new ArgumentNullException(nameof(user));
 			if (utcTime.Kind != DateTimeKind.Utc) throw new ArgumentException("The time should be in UTC.", nameof(utcTime));
 
-			this.LastModifierUser = user;
+			trackingEntity.LastModifierUser = user;
 
 			// Set the foreign key as well only for inserted entities.
-			if (this.LastModifierUserID == 0L) this.LastModifierUserID = user.ID;
+			if (trackingEntity.LastModifierUserID == 0L) trackingEntity.LastModifierUserID = user.ID;
 
-			this.LastModificationDate = utcTime;
+			trackingEntity.LastModificationDate = utcTime;
 		}
 
 		#endregion
