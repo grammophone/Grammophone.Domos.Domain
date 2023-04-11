@@ -27,7 +27,7 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// Set by the system.
 		/// Once set, cannot be changed.
 		/// </summary>
-		public DateTime CreationDate
+		public virtual DateTime CreationDate
 		{
 			get
 			{
@@ -43,7 +43,7 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// The owner of the entity.
 		/// Once set, cannot be changed.
 		/// </summary>
-		public U CreatorUser
+		public virtual U CreatorUser
 		{
 			get
 			{
@@ -59,7 +59,7 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// ID of the user who created the entity.
 		/// Once set, cannot be changed.
 		/// </summary>
-		public long CreatorUserID
+		public virtual long CreatorUserID
 		{
 			get
 			{
@@ -75,7 +75,7 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// Date of the last modification of the entity.
 		/// Set by the system.
 		/// </summary>
-		public DateTime LastModificationDate
+		public virtual DateTime LastModificationDate
 		{
 			get
 			{
@@ -90,7 +90,7 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// <summary>
 		/// The user who modified the entity last.
 		/// </summary>
-		public U LastModifierUser
+		public virtual U LastModifierUser
 		{
 			get
 			{
@@ -105,7 +105,7 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// <summary>
 		/// ID of the user who modified the entity last.
 		/// </summary>
-		public long LastModifierUserID
+		public virtual long LastModifierUserID
 		{
 			get
 			{
