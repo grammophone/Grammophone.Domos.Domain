@@ -34,9 +34,16 @@ namespace Grammophone.Domos.Domain
 		private ICollection<Disposition> dispositions;
 
 		/// <summary>
-		/// Backing field for <see cref="registrations"/>.
+		/// Backing field for <see cref="Registrations"/>.
 		/// </summary>
 		private ICollection<Registration> registrations;
+
+		/// <summary>
+		/// Backing fiend for <see cref="WebAuthnCredentials"/>.
+		/// </summary>
+		private ICollection<WebAuthnCredential> webAuthnCredentials;
+
+		private ICollection<BrowserSession> browserSessions;
 
 		/// <summary>
 		/// Grouping of dispositions by <see cref="Disposition.SegregationID"/>.
@@ -227,6 +234,40 @@ namespace Grammophone.Domos.Domain
 				if (value == null) throw new ArgumentNullException(nameof(value));
 
 				registrations = value;
+			}
+		}
+
+		/// <summary>
+		/// The WebAuthn credentials belonging to this user.
+		/// </summary>
+		public virtual ICollection<WebAuthnCredential> WebAuthnCredentials
+		{
+			get
+			{
+				return webAuthnCredentials ?? (webAuthnCredentials = new HashSet<WebAuthnCredential>());
+			}
+			set
+			{
+				if (value == null) throw new ArgumentNullException(nameof(value));
+
+				webAuthnCredentials = value;
+			}
+		}
+
+		/// <summary>
+		/// The browser sessions the user has created.
+		/// </summary>
+		public virtual ICollection<BrowserSession> Sessions
+		{
+			get
+			{
+				return browserSessions ?? (browserSessions = new HashSet<BrowserSession>());
+			}
+			set
+			{
+				if (value == null) throw new ArgumentNullException(nameof(value));
+
+				browserSessions = value;
 			}
 		}
 

@@ -9,7 +9,7 @@ namespace Grammophone.Domos.Domain
 	/// Describes the type of the credential.
 	/// See more on https://passkeys.dev/device-support/
 	/// </summary>
-	internal enum AuthenticatorPlatformType
+	public enum AuthenticatorPlatformType
 	{
 		/// <summary>
 		/// Unknown platform type.
@@ -42,7 +42,7 @@ namespace Grammophone.Domos.Domain
 	/// Represents a WebAuthn credential.
 	/// </summary>
 	[Serializable]
-	internal class WebAuthnCredential<U> : TrackingEntityWithID<U, long>, IOwnedEntity<U>
+	public class WebAuthnCredential<U> : EntityWithID<long>, IOwnedEntity<U>
 		where U : User
 	{
 		#region Constants
@@ -179,5 +179,12 @@ namespace Grammophone.Domos.Domain
 		public virtual AuthenticatorPlatformType PlatformType { get; set; }
 
 		#endregion
+	}
+
+	/// <summary>
+	/// Represents a WebAuthn credential.
+	/// </summary>
+	public class WebAuthnCredential : WebAuthnCredential<User>
+	{
 	}
 }

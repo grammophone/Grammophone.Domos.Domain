@@ -96,6 +96,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>RemittanceResources.resx</DependentUpon>
     </Compile>
+    <Compile Update="BrowserSessionResources.Designer.cs">
+      <DependentUpon>BrowserSessionResources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="ClientIpAddressResources.Designer.cs">
+      <DependentUpon>ClientIpAddressResources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
     <Compile Update="DispositionResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -233,6 +243,14 @@
     <EmbeddedResource Update="Accounting\RemittanceResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>RemittanceResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="BrowserSessionResources.resx">
+      <LastGenOutput>BrowserSessionResources.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ClientIpAddressResources.resx">
+      <LastGenOutput>ClientIpAddressResources.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="DispositionResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
