@@ -137,7 +137,7 @@ namespace Grammophone.Domos.Domain
 		/// <summary>
 		/// Gets or sets the registration date for this user in UTC.
 		/// </summary>
-		public virtual DateTime RegDate { get; set; }
+		public virtual DateTime RegistrationDate { get; set; }
 
 		/// <summary>
 		/// Gets or sets the Authenticator Attestation GUID (AAGUID) for this user.
