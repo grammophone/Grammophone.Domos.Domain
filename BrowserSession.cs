@@ -87,7 +87,7 @@ namespace Grammophone.Domos.Domain
 		/// The security stamp used of session cryptographic opearation such
 		/// as creating the authentication cookie and validating it.
 		/// </summary>
-		[Required]
+		[Required(AllowEmptyStrings = true)]
 		[MaxLength(SecurityStampLength)]
 		public virtual string SecurityStamp { get; set; }
 
