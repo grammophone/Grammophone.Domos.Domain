@@ -285,6 +285,17 @@ namespace Grammophone.Domos.Domain
 		/// <summary>
 		/// Registration using Apple.
 		/// </summary>
-		Apple 
+		Apple,
+
+		/// <summary>
+		/// Microsoft Personal
+		/// </summary>
+		MicrosoftPersonal,
+
+		/// <summary>
+		/// The Microsoft Work Provider
+		/// </summary>
+		MicrosoftWork
+
 	}
 }
