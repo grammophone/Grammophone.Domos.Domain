@@ -16,7 +16,7 @@ namespace Grammophone.Domos.Domain
 	/// Implements <see cref="IEntityWithID{K}"/>.
 	/// </remarks>
 	[Serializable]
-	public abstract class EntityWithID<K> : IEntityWithID<K>
+	public abstract class EntityWithID<K> : IEntityWithPrimaryKey<K>
 	{
 		/// <summary>
 		/// The primary key.

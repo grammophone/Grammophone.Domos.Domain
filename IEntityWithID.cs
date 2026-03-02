@@ -13,7 +13,7 @@ namespace Grammophone.Domos.Domain
 	public interface IEntityWithID<out K>
 	{
 		/// <summary>
-		/// The primary key.
+		/// The ID field.
 		/// </summary>
 		K ID { get; }
 	}

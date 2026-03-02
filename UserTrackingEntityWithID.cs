@@ -14,7 +14,7 @@ namespace Grammophone.Domos.Domain
 	/// <typeparam name="U">The type of user, derived from <see cref="User"/>.</typeparam>
 	/// <typeparam name="K">The type of primary key.</typeparam>
 	[Serializable]
-	public abstract class UserTrackingEntityWithID<U, K> : UserTrackingEntity<U>, IEntityWithID<K>
+	public abstract class UserTrackingEntityWithID<U, K> : UserTrackingEntity<U>, IEntityWithPrimaryKey<K>
 		where U : User
 	{
 		/// <summary>
