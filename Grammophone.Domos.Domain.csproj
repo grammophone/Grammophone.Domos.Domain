@@ -11,6 +11,9 @@
     <PackageReference Include="System.ComponentModel.Annotations" Version="4.7.0" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Grammophone.GenericContentModel\Grammophone.GenericContentModel.csproj" />
+  </ItemGroup>
+  <ItemGroup>
     <Compile Update="Accounting\AccountResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

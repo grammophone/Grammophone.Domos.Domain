@@ -6,6 +6,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
+using Grammophone.GenericContentModel;
 
 namespace Grammophone.Domos.Domain
 {
@@ -191,7 +192,7 @@ namespace Grammophone.Domos.Domain
 		{
 			get
 			{
-				return roles ?? (roles = new HashSet<Role>());
+				return roles ?? (roles = new ObservableHashSet<Role>());
 			}
 			set
 			{
@@ -227,7 +228,7 @@ namespace Grammophone.Domos.Domain
 		{
 			get
 			{
-				return registrations ?? (registrations = new HashSet<Registration>());
+				return registrations ?? (registrations = new ObservableHashSet<Registration>());
 			}
 			set
 			{
@@ -244,7 +245,7 @@ namespace Grammophone.Domos.Domain
 		{
 			get
 			{
-				return webAuthnCredentials ?? (webAuthnCredentials = new HashSet<WebAuthnCredential>());
+				return webAuthnCredentials ?? (webAuthnCredentials = new ObservableHashSet<WebAuthnCredential>());
 			}
 			set
 			{
@@ -261,7 +262,7 @@ namespace Grammophone.Domos.Domain
 		{
 			get
 			{
-				return browserSessions ?? (browserSessions = new HashSet<BrowserSession>());
+				return browserSessions ?? (browserSessions = new ObservableHashSet<BrowserSession>());
 			}
 			set
 			{

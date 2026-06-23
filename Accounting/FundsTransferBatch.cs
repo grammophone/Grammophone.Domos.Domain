@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Grammophone.GenericContentModel;
 
 namespace Grammophone.Domos.Domain.Accounting
 {
@@ -48,7 +49,7 @@ namespace Grammophone.Domos.Domain.Accounting
 		{
 			get
 			{
-				return requests ?? (requests = new HashSet<FundsTransferRequest>());
+				return requests ?? (requests = new ObservableHashSet<FundsTransferRequest>());
 			}
 			set
 			{
@@ -65,7 +66,7 @@ namespace Grammophone.Domos.Domain.Accounting
 		{
 			get
 			{
-				return messages ?? (messages = new HashSet<FundsTransferBatchMessage>());
+				return messages ?? (messages = new ObservableHashSet<FundsTransferBatchMessage>());
 			}
 			set
 			{

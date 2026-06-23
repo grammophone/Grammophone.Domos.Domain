@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Grammophone.GenericContentModel;
 
 namespace Grammophone.Domos.Domain.Accounting
 {
@@ -116,7 +117,7 @@ namespace Grammophone.Domos.Domain.Accounting
 		{
 			get
 			{
-				return taxComponents ?? (taxComponents = new HashSet<ILTC>());
+				return taxComponents ?? (taxComponents = new ObservableHashSet<ILTC>());
 			}
 			set
 			{

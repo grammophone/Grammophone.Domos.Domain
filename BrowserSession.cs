@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
+using Grammophone.GenericContentModel;
 
 namespace Grammophone.Domos.Domain
 {
@@ -120,7 +121,7 @@ namespace Grammophone.Domos.Domain
 		{
 			get
 			{
-				return ipAddresses ?? (ipAddresses = new HashSet<ClientIpAddress>());
+				return ipAddresses ?? (ipAddresses = new ObservableHashSet<ClientIpAddress>());
 			}
 			set
 			{

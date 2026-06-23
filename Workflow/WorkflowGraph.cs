@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Grammophone.GenericContentModel;
 
 namespace Grammophone.Domos.Domain.Workflow
 {
@@ -73,7 +74,7 @@ namespace Grammophone.Domos.Domain.Workflow
 		{
 			get
 			{
-				return stateGroups ?? (stateGroups = new HashSet<StateGroup>());
+				return stateGroups ?? (stateGroups = new ObservableHashSet<StateGroup>());
 			}
 			set
 			{

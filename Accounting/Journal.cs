@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
+using Grammophone.GenericContentModel;
 
 namespace Grammophone.Domos.Domain.Accounting
 {
@@ -89,7 +90,7 @@ namespace Grammophone.Domos.Domain.Accounting
 		{
 			get
 			{
-				return postings ?? (postings = new HashSet<P>());
+				return postings ?? (postings = new ObservableHashSet<P>());
 			}
 			set
 			{
@@ -106,7 +107,7 @@ namespace Grammophone.Domos.Domain.Accounting
 		{
 			get
 			{
-				return remittances ?? (remittances = new HashSet<R>());
+				return remittances ?? (remittances = new ObservableHashSet<R>());
 			}
 			set
 			{

@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Grammophone.GenericContentModel;
 
 namespace Grammophone.Domos.Domain.Accounting
 {
@@ -87,7 +88,7 @@ namespace Grammophone.Domos.Domain.Accounting
 		{
 			get
 			{
-				return lines ?? (lines = new HashSet<IL>());
+				return lines ?? (lines = new ObservableHashSet<IL>());
 			}
 			set
 			{
@@ -104,7 +105,7 @@ namespace Grammophone.Domos.Domain.Accounting
 		{
 			get
 			{
-				return events ?? (events = new HashSet<IE>());
+				return events ?? (events = new ObservableHashSet<IE>());
 			}
 			set
 			{
@@ -121,7 +122,7 @@ namespace Grammophone.Domos.Domain.Accounting
 		{
 			get
 			{
-				return servicingFundsTransferRequests ?? (servicingFundsTransferRequests = new HashSet<FundsTransferRequest>());
+				return servicingFundsTransferRequests ?? (servicingFundsTransferRequests = new ObservableHashSet<FundsTransferRequest>());
 			}
 			set
 			{
