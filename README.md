@@ -1,4 +1,5 @@
 # Grammophone.Domos.Domain
+
 This .NET Standard 2.0 library contains the basic entity definitions 
 of the Domos integrated session system.
 
@@ -44,3 +45,12 @@ derives from `Disposition`. For example when Bob is an employee of ACME Inc, he 
 Example of a role assignment is "Alice can manage all companies in the system".
 
 Example of a disposition assignment is 'Bob is an Employee of ACME Inc" or "Susan is Company Administrator of ACME Inc".
+
+## Documentation
+
+- [Overview](documentation/overview.md)
+- [Security ontology](documentation/security-ontology.md)
+- [Workflow entities](documentation/workflow-entities.md)
+- [Accounting and funds transfer entities](documentation/accounting-entities.md)
+- [Tracking, ownership and segregation](documentation/tracking-ownership-segregation.md)
+- [Files and credentials](documentation/files-and-credentials.md)
