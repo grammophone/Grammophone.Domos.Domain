@@ -54,3 +54,4 @@ Example of a disposition assignment is 'Bob is an Employee of ACME Inc" or "Susa
 - [Accounting and funds transfer entities](documentation/accounting-entities.md)
 - [Tracking, ownership and segregation](documentation/tracking-ownership-segregation.md)
 - [Files and credentials](documentation/files-and-credentials.md)
+- [Music domain example](documentation/music-domain-example.md)
