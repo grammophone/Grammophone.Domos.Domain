@@ -90,7 +90,7 @@ namespace Grammophone.Domos.Domain.Accounting
 		/// <summary>
 		/// Optional remittance related to the tax.
 		/// </summary>
-		public R Remittance { get; set; }
+		public virtual R Remittance { get; set; }
 
 		#endregion
 	}
