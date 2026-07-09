@@ -17,7 +17,11 @@ namespace Grammophone.Domos.Domain.Files
 	{
 		#region Private fields
 
-		private TrackingTrait<U> trackingTrait;
+		private DateTime creationDate;
+
+		private long creatorUserID;
+
+		private U creatorUser;
 
 		#endregion
 
@@ -35,11 +39,14 @@ namespace Grammophone.Domos.Domain.Files
 		{
 			get
 			{
-				return trackingTrait.CreationDate;
+				return creationDate;
 			}
 			set
 			{
-				trackingTrait.CreationDate = value;
+				if (creationDate == default(DateTime))
+				{
+					creationDate = value;
+				}
 			}
 		}
 
@@ -50,17 +57,7 @@ namespace Grammophone.Domos.Domain.Files
 		[Display(
 			ResourceType = typeof(FileResources),
 			Name = nameof(FileResources.LastModificationDate_Name))]
-		public virtual DateTime LastModificationDate
-		{
-			get
-			{
-				return trackingTrait.LastModificationDate;
-			}
-			set
-			{
-				trackingTrait.LastModificationDate = value;
-			}
-		}
+		public virtual DateTime LastModificationDate { get; set; }
 
 		#endregion
 
@@ -74,11 +71,17 @@ namespace Grammophone.Domos.Domain.Files
 		{
 			get
 			{
-				return trackingTrait.CreatorUser;
+				return creatorUser;
 			}
 			set
 			{
-				trackingTrait.CreatorUser = value;
+				if (creatorUser != value)
+				{
+					if (creatorUser != null && value != null)
+						throw new AccessDeniedDomainException("The creator of the entity cannot be changed.", this);
+
+					creatorUser = value;
+				}
 			}
 		}
 
@@ -90,43 +93,32 @@ namespace Grammophone.Domos.Domain.Files
 		{
 			get
 			{
-				return trackingTrait.CreatorUserID;
+				return creatorUserID;
 			}
 			set
 			{
-				trackingTrait.CreatorUserID = value;
+				if (creatorUserID != value)
+				{
+					if (value != 0L)
+					{
+						if (creatorUserID != 0L)
+							throw new AccessDeniedDomainException("The creator of the entity cannot be changed.", this);
+
+						creatorUserID = value;
+					}
+				}
 			}
 		}
 
 		/// <summary>
 		/// The user who modified the entity last.
 		/// </summary>
-		public virtual U LastModifierUser
-		{
-			get
-			{
-				return trackingTrait.LastModifierUser;
-			}
-			set
-			{
-				trackingTrait.LastModifierUser = value;
-			}
-		}
+		public virtual U LastModifierUser { get; set; }
 
 		/// <summary>
 		/// ID of the user who modified the entity last.
 		/// </summary>
-		public virtual long LastModifierUserID
-		{
-			get
-			{
-				return trackingTrait.LastModifierUserID;
-			}
-			set
-			{
-				trackingTrait.LastModifierUserID = value;
-			}
-		}
+		public virtual long LastModifierUserID { get; set; }
 
 		#endregion
 
@@ -140,7 +132,16 @@ namespace Grammophone.Domos.Domain.Files
 		/// <param name="utcTime">The time of creation, in UTC.</param>
 		/// <exception cref="ArgumentException">Thrown when the time is not in UTC.</exception>
 		/// <exception cref="AccessDeniedDomainException">Thrown when the creator has already been set.</exception>
-		public void SetCreator(U user, DateTime utcTime) => trackingTrait.SetCreator(this, user, utcTime);
+		public void SetCreator(U user, DateTime utcTime)
+		{
+			if (user == null) throw new ArgumentNullException(nameof(user));
+			if (utcTime.Kind != DateTimeKind.Utc) throw new ArgumentException("The time should be in UTC.", nameof(utcTime));
+
+			this.CreatorUser = user;
+			this.CreatorUserID = user.ID;
+
+			this.CreationDate = utcTime;
+		}
 
 		/// <summary>
 		/// Record a change by a user.
@@ -148,7 +149,18 @@ namespace Grammophone.Domos.Domain.Files
 		/// <param name="user">The user changing the file.</param>
 		/// <param name="utcTime">The time of change of the file, in UTC.</param>
 		/// <exception cref="ArgumentException">Thrown when the time is not given in UTC.</exception>
-		public virtual void RecordChange(U user, DateTime utcTime) => trackingTrait.RecordChange(this, user, utcTime);
+		public virtual void RecordChange(U user, DateTime utcTime)
+		{
+			if (user == null) throw new ArgumentNullException(nameof(user));
+			if (utcTime.Kind != DateTimeKind.Utc) throw new ArgumentException("The time should be in UTC.", nameof(utcTime));
+
+			this.LastModifierUser = user;
+
+			// Set the foreign key as well only for inserted entities.
+			if (this.LastModifierUserID == 0L) this.LastModifierUserID = user.ID;
+
+			this.LastModificationDate = utcTime;
+		}
 
 		#endregion
 	}

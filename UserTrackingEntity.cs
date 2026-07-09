@@ -17,7 +17,9 @@ namespace Grammophone.Domos.Domain
 	{
 		#region Private fields
 
-		private UserTrackingTrait<U> userTrackingTrait;
+		private long owningUserID;
+
+		private U owningUser;
 
 		#endregion
 
@@ -32,11 +34,17 @@ namespace Grammophone.Domos.Domain
 		{
 			get
 			{
-				return userTrackingTrait.OwningUserID;
+				return owningUserID;
 			}
 			set
 			{
-				userTrackingTrait.OwningUserID = value;
+				if (owningUserID != value)
+				{
+					if (owningUserID != 0L && value != 0L)
+						throw new AccessDeniedDomainException("The owner of the entity cannot be changed.", this);
+
+					owningUserID = value;
+				}
 			}
 		}
 
@@ -49,11 +57,17 @@ namespace Grammophone.Domos.Domain
 		{
 			get
 			{
-				return userTrackingTrait.OwningUser;
+				return owningUser;
 			}
 			set
 			{
-				userTrackingTrait.OwningUser = value;
+				if (owningUser != value)
+				{
+					if (owningUser != null && value != null)
+						throw new AccessDeniedDomainException("The owner of the entity cannot be changed.", this);
+
+					owningUser = value;
+				}
 			}
 		}
 
@@ -65,18 +79,18 @@ namespace Grammophone.Domos.Domain
 		/// Test whether a user is the owner of the entity.
 		/// </summary>
 		/// <param name="userID">The ID of the user.</param>
-		public bool IsOwnedBy(long userID) => userTrackingTrait.IsOwnedBy(userID);
+		public bool IsOwnedBy(long userID) => userID == owningUserID;
 
 		/// <summary>
 		/// Test whether a user is the owner of the entity.
 		/// </summary>
 		/// <param name="user">The user.</param>
-		public bool IsOwnedBy(U user) => userTrackingTrait.IsOwnedBy(user);
+		public bool IsOwnedBy(U user) => user.ID == owningUserID;
 
 		/// <summary>
 		/// Returns true when the entity has an owner, false otherwise.
 		/// </summary>
-		public bool HasOwners() => userTrackingTrait.HasOwners();
+		public bool HasOwners() => owningUserID != 0L || owningUser != null;
 
 		/// <summary>
 		/// Set the owner for the entity. Any
@@ -84,7 +98,15 @@ namespace Grammophone.Domos.Domain
 		/// </summary>
 		/// <param name="user">The user to own the entity.</param>
 		/// <returns>Always returns true.</returns>
-		public bool AddOwner(U user) => userTrackingTrait.AddOwner(user);
+		public bool AddOwner(U user)
+		{
+			if (user == null) throw new ArgumentNullException(nameof(user));
+
+			owningUserID = user.ID;
+			owningUser = user;
+
+			return true;
+		}
 
 		#endregion
 	}
