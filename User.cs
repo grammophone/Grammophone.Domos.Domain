@@ -44,7 +44,7 @@ namespace Grammophone.Domos.Domain
 		/// </summary>
 		private ICollection<WebAuthnCredential> webAuthnCredentials;
 
-		private ICollection<BrowserSession> browserSessions;
+		private ICollection<BrowserSession> sessions;
 
 		/// <summary>
 		/// Grouping of dispositions by <see cref="Disposition.SegregationID"/>.
@@ -262,13 +262,13 @@ namespace Grammophone.Domos.Domain
 		{
 			get
 			{
-				return browserSessions ?? (browserSessions = new ObservableHashSet<BrowserSession>());
+				return sessions ?? (sessions = new ObservableHashSet<BrowserSession>());
 			}
 			set
 			{
 				if (value == null) throw new ArgumentNullException(nameof(value));
 
-				browserSessions = value;
+				sessions = value;
 			}
 		}
 
