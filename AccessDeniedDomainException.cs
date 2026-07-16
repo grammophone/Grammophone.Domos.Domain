@@ -44,10 +44,16 @@ namespace Grammophone.Domos.Domain
 
 			Type type = entity.GetType();
 
-			if (type.Name.Contains('_') && type.BaseType != null)
-				return type.BaseType.FullName;
-			else
-				return type.FullName;
+			if (type.BaseType != null)
+			{
+				if (type.Name.Contains('_'))
+					return type.BaseType.FullName;
+
+				if (type.Namespace == "Castle.Proxies" || type.Name.EndsWith("Proxy"))
+					return type.BaseType.FullName;
+			}
+
+			return type.FullName;
 		}
 	}
 }
